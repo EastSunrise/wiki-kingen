@@ -1,5 +1,10 @@
-site_name: Kingen's Wiki
+site_name: Kingen
 dev_addr: 127.0.0.1:9999
+repo_name: Gitee
+repo_url: https://gitee.com/eastsunrise/wiki-kingen/
+edit_uri: edit/master/docs
+site_author: Kingen
+use_directory_urls: false
 nav:
   - Home: index.md
   - Java:
