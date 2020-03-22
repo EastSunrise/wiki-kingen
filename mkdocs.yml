@@ -1,0 +1,103 @@
+site_name: Kingen's Wiki
+dev_addr: 127.0.0.1:9999
+nav:
+  - Home: index.md
+  - Java:
+      - Get Started: java/index.md
+      - Language References:
+          - Annotation: java/language/annotation.md
+          - Collection: java/language/collection.md
+      - Library References:
+          - Fastjson: java/library/fastjson.md
+          - Apache Commons: java/library/commons.md
+          - Apache POI: java/library/poi.md
+          - Lombok: java/library/lombok.md
+      - Design Patterns:
+          - State Pattern: java/design/state.md
+          - Singleton Pattern: java/design/singleton.md
+      - Spring Framework:
+          - Get Started: java/spring/index.md
+          - Aspect Oriented Programming: java/spring/aop.md
+          - Transaction: java/spring/transaction.md
+      - Spring Boot:
+          - Get Started: java/spring-boot/index.md
+      - MyBatis: java/mybatis.md
+      - Maven: java/maven.md
+  - CS:
+      - Mathmatics:
+          - Fourier Transform: cs/mathmatics/fourier.md
+      - Algorithms:
+          - Analysis of Algorithms:
+              - Asymptotic Analysis: cs/algorithms/analysis/Asymptotic Analysis.md
+          - Sorting:
+              - Quick Sort: cs/algorithms/sorting/Quick Sort.md
+              - Merge Sort: cs/algorithms/sorting/Merge Sort.md
+              - Heap Sort: cs/algorithms/sorting/Heap Sort.md
+          - Divide and Conquer: cs/algorithms/divide.md
+          - Pattern Searching:
+              - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern/Knuth-Morris-Pratt.md
+          - Cryptography:
+              - RSA: cs/algorithms/cryptography/RSA.md
+              - SHA: cs/algorithms/cryptography/sha.md
+          - Graph:
+              - Dijkstra's Algorithm: cs/algorithms/graph/Dijkstra's Algorithm.md
+          - Other Algorithms:
+              - Knuth-Shuffle Algorithm: cs/algorithms/others/Knuth-Shuffle.md
+              - Monte Carlo Tree Search: cs/algorithms/others/Monte Carlo Tree Search.md
+      - Data Structures:
+          - Disjoint Set: cs/data/disjoint.md
+  - Python:
+      - Get Started: python/index.md
+      - Library References:
+          - logging: python/library/logging.md
+          - PyMySQL: python/library/pymysql.md
+      - Applications:
+          - Spider: python/app/spider.md
+          - Task: python/app/task.md
+  - Development:
+      - References: dev/references.md
+      - MySQL:
+          - Get Started: dev/mysql/index.md
+          - FAQ: dev/mysql/faq.md
+      - Oracle:
+          - Get Stared: dev/oracle.md
+      - Tomcat: dev/tomcat.md
+      - Nginx: dev/nginx.md
+      - Git: dev/git.md
+      - React: dev/react.md
+      - Node.js: dev/nodejs.md
+      - PHP:
+          - Get Started: dev/php.md
+      - OAuth: dev/oauth.md
+  - Misc:
+      - Activation: misc/activation.md
+      - Wiki: misc/wiki.md
+      - LaTeX: misc/latex.md
+      - Markdown: misc/markdown.md
+      - Chrome: misc/chrome.md
+      - Windows: misc/windows.md
+      - IDEA IntelliJ: misc/idea.md
+      - Fiddler: misc/fiddler.md
+      - Charles: misc/charles.md
+theme:
+  name: mkdocs
+  navigation_depth: 5
+extra_javascript:
+  - js/kingen.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+extra_css:
+  - css/kingen.css
+markdown_extensions:
+  - extra
+  - admonition
+  - codehilite
+  - legacy_attrs
+  - legacy_em
+  - meta
+  - nl2br
+  - sane_lists
+  - smarty
+  - toc
+  - wikilinks
+  - mdx_math:
+      enable_dollar_delimiter: True
