@@ -8,7 +8,7 @@
         <meta name="author" content="Kingen">
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Get Started - Kingen</title>
+        <title>MyBatis - Kingen</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="index.html" class="dropdown-item active">Get Started</a>
+    <a href="index.html" class="dropdown-item">Get Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -124,7 +124,7 @@
   </li>
                                     
 <li>
-    <a href="mybatis.html" class="dropdown-item">MyBatis</a>
+    <a href="mybatis.html" class="dropdown-item active">MyBatis</a>
 </li>
                                     
 <li>
@@ -397,17 +397,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../index.html" class="nav-link">
+                                <a rel="prev" href="spring-boot/index.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="language/annotation.html" class="nav-link">
+                                <a rel="next" href="maven.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://gitee.com/eastsunrise/wiki-kingen/edit/master/docs/java/index.md" class="nav-link">Edit on Gitee</a>
+                                <a href="https://gitee.com/eastsunrise/wiki-kingen/edit/master/docs/java/mybatis.md" class="nav-link">Edit on Gitee</a>
                             </li>
                     </ul>
                 </div>
@@ -432,13 +432,48 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#installation" class="nav-link">Installation</a>
+            <li class="nav-item" data-level="4"><a href="#get-started" class="nav-link">Get Started</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="5"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="5"><a href="#example" class="nav-link">Example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="4"><a href="#configuration" class="nav-link">Configuration</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#language-references" class="nav-link">Language References</a>
+            <li class="nav-item" data-level="4"><a href="#mapper-xml-files" class="nav-link">Mapper XML Files</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="4"><a href="#sqlsessions" class="nav-link">SqlSessions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="5"><a href="#sqlsessionfactory" class="nav-link">SqlSessionFactory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="5"><a href="#sqlsession" class="nav-link">SqlSession</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="4"><a href="#faq" class="nav-link">FAQ</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="5"><a href="#batch" class="nav-link">Batch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -452,37 +487,134 @@
                     <div class="col-md-9" role="main">
 
 <h4 id="overview">Overview</h4>
-<p>Learn <a href="https://www.oracle.com/java/">Java</a>, the best programming language in the world. This is based on <a href="https://docs.oracle.com/en/java/javase/11/">Java 11</a>.</p>
-<h4 id="installation">Installation</h4>
-<p>Download and install JDK. Configure paths as follows, assuming in <em>dir</em> folder:</p>
-<pre class="codehilite"><code>JAVA_HOME=%dir%\jdk_version
-path=.;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
-
-# If there are two versions
-JAVA_HOME=%JAVA_HOME11% # specify current version
-JAVA_HOME8=%dir%\jdk1.8
-JAVA_HOME11=%dir%\jdk11</code></pre>
-
-
-<p><strong>Notes</strong>: delete the path added automatically when installing and <em>java.exe</em>, <em>javaw.exe</em>, <em>javaws.exe</em> under <em>C:\Windows\System32</em>.</p>
-<h4 id="language-references">Language References</h4>
+<p>Learn <a href="https://mybatis.org/mybatis-3/">MyBatis</a> and its integration with <a href="spring/index.html">Spring</a> and <a href="spring-boot/index.html">Spring Boot</a>.</p>
+<h4 id="get-started">Get Started</h4>
+<h5 id="installation">Installation</h5>
+<p>Download <a href="https://github.com/mybatis/mybatis-3/releases">mybatis-x.x.x.jar</a> or add <em>Maven</em> dependency: <code>org.mybatis: mybatis: x.x.x</code>.</p>
+<h5 id="example">Example</h5>
 <ol>
-<li><a href="language/annotation.html">Annotation</a></li>
-<li>Object-Oriental Program</li>
-<li>I/O</li>
-<li>Exception</li>
-<li>Net</li>
-<li><a href="language/collection.html">Collection</a></li>
-<li>Concurrence</li>
-<li>Java Virtual Machine</li>
-<li>Misc</li>
+<li>Configure arguments in an <a href="#configuration">XML configuration file</a>, specially <em>mappers</em> to include <a href="#mapper-xml-files">SQL Mapper XML</a> files.</li>
+<li>Load the configuration to build a <em>SqlSessionFactory</em> instance.</li>
+<li>Create <a href="#sqlsessions">SqlSession</a> instances by <em>SqlSessionFactory</em> to execute mapped SQLs.</li>
 </ol>
+<h4 id="configuration">Configuration</h4>
+<h4 id="mapper-xml-files">Mapper XML Files</h4>
+<pre class="codehilite"><code class="language-xml">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
+        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
+&lt;mapper namespace=&quot;${namespace}&quot;&gt;
+&lt;/mapper&gt;</code></pre>
+
+
+<p><strong>Namespace</strong> isolates statements with longer, full-qualified names and <strong>binds XML files with corresponding interfaces</strong>.</p>
+<h4 id="sqlsessions">SqlSessions</h4>
+<p><em>SqlSession</em> is the primary interface to work with MyBatis. This interface is used to execute commands, get mappers and manage transactions. Refer to <a href="https://mybatis.org/mybatis-3/zh/java-api.html#sqlSessions">the latest documents</a>.</p>
+<h5 id="sqlsessionfactory">SqlSessionFactory</h5>
+<p><em>SqlSession</em> instances are created by <em>SqlSessionFactory</em> whose instances can be built by <em>SqlSessionFactoryBuilder</em> based on an XML configuration file or a custom prepared instance of <em>Configuration</em>.</p>
+<h6 id="from-xml">From XML</h6>
+<p>Use a utility class called <em>Resources</em> in MyBatis to load the configuration file from resources directory under classpath. See <a href="#configuration">Configuration</a> to configure an XML configuration file. </p>
+<pre class="codehilite"><code class="language-java">SqlSessionFactory buildFactoryFromXML() {
+    String resource = &quot;mybatis-config.xml&quot;;
+    InputStream inputStream = null;
+    try {
+        inputStream = Resources.getResourceAsStream(resource);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return new SqlSessionFactoryBuilder().build(inputStream);
+}</code></pre>
+
+
+<h6 id="without-xml">Without XML</h6>
+<p>Use utility classes from <code>org.apache.ibatis.session</code>.</p>
+<pre class="codehilite"><code>SqlSessionFactory buildFactoryWithoutXML() {
+    DataSource dataSource = new PooledDataSource(&quot;driver&quot;, &quot;url&quot;, &quot;username&quot;, &quot;password&quot;);
+    TransactionFactory transactionFactory = new JdbcTransactionFactory();
+    Environment environment = new Environment(&quot;development&quot;, transactionFactory, dataSource);
+    Configuration configuration = new Configuration(environment);
+    return new SqlSessionFactoryBuilder().build(configuration);
+}</code></pre>
+
+
+<h5 id="sqlsession">SqlSession</h5>
+<p>Now, get instances of <em>SqlSession</em> by the method <code>SqlSessionFactory.openSession()</code>.</p>
+<h4 id="faq">FAQ</h4>
+<h5 id="batch">Batch</h5>
+<h6 id="loop">Loop</h6>
+<pre class="codehilite"><code class="language-java">int batchInsert(List&lt;User&gt; users) {
+    SqlSession sqlSession = MyConfiguration.getSqlSessionFactory().openSession(false);
+    UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+    int count = 0;
+    for (User user : users) {
+        count += mapper.insertUser(user);
+    }
+    sqlSession.commit();
+    sqlSession.close();
+    return count;
+}</code></pre>
+
+
+<h6 id="batch-mode">Batch Mode</h6>
+<pre class="codehilite"><code class="language-java">int batchInsert(List&lt;User&gt; users) {
+    SqlSession sqlSession = MyConfiguration.getSqlSessionFactory().openSession(ExecutorType.BATCH, false); // only difference to above way
+    UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+    int count = 0;
+    for (User user : users) {
+        count += mapper.insertUser(user);
+    }
+    sqlSession.commit();
+    sqlSession.close();
+    return count;
+}</code></pre>
+
+
+<h6 id="foreach-in-mapper">Foreach in Mapper</h6>
+<pre class="codehilite"><code class="language-java">int batchInsert(List&lt;User&gt; users) {
+    if (users != null &amp;&amp; users.size() &gt; 0) {
+        SqlSession sqlSession = MyConfiguration.getSqlSessionFactory().openSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        int count = mapper.batchInsert(users);
+        sqlSession.commit();
+        sqlSession.close();
+        return count;
+    }
+
+    return 0;
+}</code></pre>
+
+
+<pre class="codehilite"><code class="language-xml">&lt;insert id=&quot;batchInsert&quot;&gt;
+    INSERT INTO example.user (username, age)
+    VALUES
+    &lt;foreach collection=&quot;list&quot; item=&quot;item&quot; separator=&quot;,&quot;&gt;
+        (#{item.username}, #{item.age})
+    &lt;/foreach&gt;
+&lt;/insert&gt;</code></pre>
+
+
+<p><strong>Notes</strong>: Maximum SQL size that MySQL can accept is configured in <em>my.ini</em> as <em>max<em>allowed</em>packet</em>, defaults to 1M.</p>
+<h6 id="tips">Tips</h6>
+<p>The number of items in the condition <code>IN ()</code> shouldn&rsquo;t exceed 1000. Otherwise, split them with <code>OR</code> as follows:</p>
+<pre class="codehilite"><code class="language-xml">&lt;select id=&quot;select&quot;&gt;
+    SELECT * FROM example.user
+    &lt;where&gt;
+        username IN 
+        &lt;foreach collection=&quot;list&quot; item=&quot;item&quot; open=&quot;(&quot; close=&quot;)&quot; separator=&quot;,&quot;&gt;
+            &lt;if test=&quot;(index % 999) == 998&quot;&gt; NULL ) OR username IN (&lt;/if&gt;#{item}
+        &lt;/foreach&gt;
+    &lt;/where&gt;
+&lt;/select&gt;</code></pre>
+
+
 <h4 id="references">References</h4>
 <ol>
-<li>Java 核心技术 10. 卷I &amp; 卷II. \i</li>
-<li><a href="https://lingcoder.gitee.io/onjava8/#/sidebar">On Java 8. 中文版</a>.</li>
-<li><a href="https://docs.oracle.com/javase/8/docs/api/">Overview (Java Platform SE 8 )</a>.</li>
-<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html">Overview (Java SE 11 &amp; JDK 11 )</a>.</li>
+<li><a href="https://mybatis.org/mybatis-3/">mybatis – MyBatis 3</a></li>
+<li><a href="https://mybatis.org/mybatis-3/zh/">mybatis – MyBatis 3 | 中文</a></li>
+<li><a href="https://github.com/mybatis/mybatis-3">GitHub - mybatis/mybatis-3: MyBatis SQL mapper framework for Java</a></li>
+<li><a href="http://mybatis.org/spring/">mybatis-spring – MyBatis-Spring</a></li>
+<li><a href="http://mybatis.org/spring/zh/index.html">mybatis-spring – MyBatis-Spring | 中文</a></li>
+<li><a href="https://github.com/mybatis/spring">GitHub - mybatis/spring: Spring integration for MyBatis 3</a></li>
+<li><a href="http://mybatis.org/spring-boot-starter/">mybatis-spring-boot – About</a></li>
+<li><a href="https://www.cnblogs.com/mengheng/p/3739610.html">MyBatis架构设计及源代码分析系列(一):MyBatis架构 - 孟衡 - 博客园</a></li>
 </ol></div>
             </div>
         </div>
