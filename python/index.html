@@ -130,6 +130,10 @@
 <li>
     <a href="../java/maven.html" class="dropdown-item">Maven</a>
 </li>
+                                    
+<li>
+    <a href="../java/freemarker.html" class="dropdown-item">Freemarker</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -256,7 +260,15 @@
     <ul class="dropdown-menu">
             
 <li>
+    <a href="library/os.html" class="dropdown-item">os</a>
+</li>
+            
+<li>
     <a href="library/logging.html" class="dropdown-item">logging</a>
+</li>
+            
+<li>
+    <a href="library/config.html" class="dropdown-item">ConfigParser</a>
 </li>
             
 <li>
@@ -322,6 +334,10 @@
                                     
 <li>
     <a href="../dev/git.html" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../dev/linux.html" class="dropdown-item">Linux</a>
 </li>
                                     
 <li>
@@ -402,7 +418,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="library/logging.html" class="nav-link">
+                                <a rel="next" href="library/os.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -487,6 +503,11 @@
               </ul>
             </li>
             
+            <li class="nav-item" data-level="4"><a href="#style-guide" class="nav-link">Style Guide</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="4"><a href="#references" class="nav-link">References</a>
               <ul class="nav flex-column">
               </ul>
@@ -553,7 +574,6 @@ trusted-host = https://pypi.douban.com/</code></pre>
 <p>Create a <em>setup.py</em> under the destination directory along with <em>test.py</em>:</p>
 <pre class="codehilite"><code class="language-python"># setup.py
 from distutils.core import setup
-import py2exe
 
 setup(console=['test.py'])</code></pre>
 
@@ -585,6 +605,8 @@ activate # activate the environment</code></pre>
 
 
 <p>Or just use <em>PyCharm</em>.</p>
+<h4 id="style-guide">Style Guide</h4>
+<p>Refer to <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> or <a href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a>.</p>
 <h4 id="references">References</h4>
 <ol>
 <li><a href="https://docs.python.org/3/">Python 3 Documentation</a></li>
