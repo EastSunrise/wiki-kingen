@@ -80,7 +80,6 @@ Create a *setup.py* under the destination directory along with *test.py*:
 ```python
 # setup.py
 from distutils.core import setup
-import py2exe
 
 setup(console=['test.py'])
 ```
@@ -121,6 +120,10 @@ virtualenv --system-site-packages example_env # inherit global modules
 activate # activate the environment
 ```
 Or just use *PyCharm*.
+
+#### Style Guide
+
+Refer to [PEP 8](https://www.python.org/dev/peps/pep-0008/) or [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
 
 #### References
 

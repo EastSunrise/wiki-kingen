@@ -18,6 +18,12 @@ Create a xml file under *conf/Catalina/localhost* with:
 
 Access the website from <ip:port/path/>
 
+#### FAQ
+
+##### Accessed from LAN
+
+Just access the server from <{LAN_ip}:{port}>. If failed, open advanced settings of firewall and then add a *Inbound Rule* for the port of Tomcat, *8080* as usual.
+
 #### References
 
 1. [Apache Tomcat® - Welcome!](http://tomcat.apache.org/)

@@ -1,6 +1,6 @@
 #### Overview
 
-Markdown in Evernote supports *CommonMark* and *GFM (GitHub Flavored Markdown)*.
+Markdown in Evernote supports *CommonMark* and *GFM (GitHub Flavored Markdown)* and that for *mkdocs* is [Python-Markdown](https://python-markdown.github.io/) which inherited from [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/).
 
 #### Markdown
 
@@ -26,6 +26,15 @@ optional title: show when mouse is over the image.
 	![Baidu](https://www.baidu.com/img/baidu_jgylogo3.gif "Baidu")
 	百度
 </center>
+##### Code Block
+
+Supported languages are as follows:
+
+| NAME     | KEY         | mkdocs | Typora |
+| -------- | ----------- | ------ | ------ |
+| Java     | java        |        |        |
+| Markdown | markdown    |        |        |
+| Shell    | bash, shell | N      |        |
 
 #### References
 
