@@ -1,6 +1,6 @@
 #### Overview
 
-Use standard module **logging** to print logs. It defines five levels of logs: *DEBUG < INFO < WARNING < ERROR < CRITICAL* and contains four basic classes: **Logger**, **Handler**, **Filter** and **Formatter**.
+Use standard module [logging](https://docs.python.org/zh-cn/3.7/library/logging.html) to print logs. It defines five levels of logs: *DEBUG < INFO < WARNING < ERROR < CRITICAL* and contains four basic classes: **Logger**, **Handler**, **Filter** and **Formatter**.
 
 #### Get Started
 
@@ -72,7 +72,7 @@ There are three ways to configure logging:
 
 - Creating loggers, handlers, and formatters explicitly using Python code.
 - Creating a logging configuration file and reading it using the **fileConfig()** function.
-- Creating a dictionary of configuration information and passing it to the **dictConfig()** function.
+- Creating a dictionary of configuration information and passing it to the **dictConfig()** function. 
 
 #### References
 
