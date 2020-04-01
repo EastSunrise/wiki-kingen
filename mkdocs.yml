@@ -54,7 +54,6 @@ nav:
           - Disjoint Set: cs/data/disjoint.md
   - Python:
       - Get Started: python/index.md
-      - Language References: python/language/index.md
       - Library References:
           - Operating System Services:
               - os: python/library/os.md
@@ -63,7 +62,7 @@ nav:
               - hashlib: python/library/hashlib.md
           - File Formats:
               - configParser: python/library/config.md
-          - File and Directory Access
+          - File and Directory Access:
               - shutil: python/library/shutil.md
       - Extension References:
           - PyMySQL: python/library/pymysql.md
