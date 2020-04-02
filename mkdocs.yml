@@ -67,6 +67,7 @@ nav:
       - Extension References:
           - PyMySQL: python/library/pymysql.md
           - PyYAML: python/library/pyyaml.md
+          - PyWin32: python/library/pywin32.md
       - Applications:
           - Spider: python/app/spider.md
           - Task: python/app/task.md
