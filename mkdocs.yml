@@ -14,8 +14,8 @@ nav:
           - Collection: java/language/collection.md
       - Library References:
           - Fastjson: java/library/fastjson.md
-          - Apache Commons: java/library/commons.md
-          - Apache POI: java/library/poi.md
+          - Apache Commons: java/library/apache-commons.md
+          - Apache POI: java/library/apache-poi.md
           - Lombok: java/library/lombok.md
       - Design Patterns:
           - State Pattern: java/design/state.md
@@ -30,20 +30,20 @@ nav:
       - Maven: java/maven.md
       - Freemarker: java/freemarker.md
   - CS:
-      - Mathmatics:
-          - Fourier Transform: cs/mathmatics/fourier.md
+      - Mathematics:
+          - Fourier Transform: cs/mathematics/fourier-transform.md
       - Algorithms:
           - Analysis of Algorithms:
-              - Asymptotic Analysis: cs/algorithms/analysis/Asymptotic Analysis.md
+              - Asymptotic Analysis: cs/algorithms/analysis/asymptotic-analysis.md
           - Sorting:
-              - Quick Sort: cs/algorithms/sorting/Quick Sort.md
-              - Merge Sort: cs/algorithms/sorting/Merge Sort.md
-              - Heap Sort: cs/algorithms/sorting/Heap Sort.md
-          - Divide and Conquer: cs/algorithms/divide.md
+              - Quick Sort: cs/algorithms/sorting/quick-sort.md
+              - Merge Sort: cs/algorithms/sorting/merge-sort.md
+              - Heap Sort: cs/algorithms/sorting/heap-sort.md
+          - Divide and Conquer: cs/algorithms/divide-and-conquer.md
           - Pattern Searching:
-              - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern/Knuth-Morris-Pratt.md
+              - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern-searching/Knuth-Morris-Pratt.md
           - Cryptography:
-              - RSA: cs/algorithms/cryptography/RSA.md
+              - RSA: cs/algorithms/cryptography/rsa.md
               - SHA: cs/algorithms/cryptography/sha.md
           - Graph:
               - Dijkstra's Algorithm: cs/algorithms/graph/Dijkstra's Algorithm.md
@@ -51,7 +51,7 @@ nav:
               - Knuth-Shuffle Algorithm: cs/algorithms/others/Knuth-Shuffle.md
               - Monte Carlo Tree Search: cs/algorithms/others/Monte Carlo Tree Search.md
       - Data Structures:
-          - Disjoint Set: cs/data/disjoint.md
+          - Disjoint Set: cs/data-structure/disjoint.md
   - Python:
       - Get Started: python/index.md
       - Library References:
@@ -61,7 +61,7 @@ nav:
           - Cryptographic Services:
               - hashlib: python/library/hashlib.md
           - File Formats:
-              - configParser: python/library/config.md
+              - configParser: python/library/configparser.md
           - File and Directory Access:
               - shutil: python/library/shutil.md
       - Extension References:
@@ -96,6 +96,7 @@ nav:
       - Chrome: misc/chrome.md
       - Windows: misc/windows.md
       - IDEA IntelliJ: misc/idea.md
+      - Visual Studio Code: misc/vscode.md
       - Fiddler: misc/fiddler.md
       - Charles: misc/charles.md
 theme:
