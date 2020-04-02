@@ -8,7 +8,7 @@
         <meta name="author" content="Kingen">
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Heap Sort - Kingen</title>
+        <title>Knuth-Morris-Pratt Algorithm - Kingen</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -68,11 +68,11 @@
 </li>
             
 <li>
-    <a href="../../../java/library/commons.html" class="dropdown-item">Apache Commons</a>
+    <a href="../../../java/library/apache-commons.html" class="dropdown-item">Apache Commons</a>
 </li>
             
 <li>
-    <a href="../../../java/library/poi.html" class="dropdown-item">Apache POI</a>
+    <a href="../../../java/library/apache-poi.html" class="dropdown-item">Apache POI</a>
 </li>
             
 <li>
@@ -141,11 +141,11 @@
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Mathmatics</a>
+    <a href="#" class="dropdown-item">Mathematics</a>
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../mathmatics/fourier.html" class="dropdown-item">Fourier Transform</a>
+    <a href="../../mathematics/fourier-transform.html" class="dropdown-item">Fourier Transform</a>
 </li>
     </ul>
   </li>
@@ -159,7 +159,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../analysis/Asymptotic%20Analysis.html" class="dropdown-item">Asymptotic Analysis</a>
+    <a href="../analysis/asymptotic-analysis.html" class="dropdown-item">Asymptotic Analysis</a>
 </li>
     </ul>
   </li>
@@ -169,21 +169,21 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="Quick%20Sort.html" class="dropdown-item">Quick Sort</a>
+    <a href="../sorting/quick-sort.html" class="dropdown-item">Quick Sort</a>
 </li>
             
 <li>
-    <a href="Merge%20Sort.html" class="dropdown-item">Merge Sort</a>
+    <a href="../sorting/merge-sort.html" class="dropdown-item">Merge Sort</a>
 </li>
             
 <li>
-    <a href="Heap%20Sort.html" class="dropdown-item active">Heap Sort</a>
+    <a href="../sorting/heap-sort.html" class="dropdown-item">Heap Sort</a>
 </li>
     </ul>
   </li>
             
 <li>
-    <a href="../divide.html" class="dropdown-item">Divide and Conquer</a>
+    <a href="../divide-and-conquer.html" class="dropdown-item">Divide and Conquer</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -191,7 +191,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../pattern/Knuth-Morris-Pratt.html" class="dropdown-item">Knuth-Morris-Pratt Algorithm</a>
+    <a href="Knuth-Morris-Pratt.html" class="dropdown-item active">Knuth-Morris-Pratt Algorithm</a>
 </li>
     </ul>
   </li>
@@ -201,7 +201,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../cryptography/RSA.html" class="dropdown-item">RSA</a>
+    <a href="../cryptography/rsa.html" class="dropdown-item">RSA</a>
 </li>
             
 <li>
@@ -241,7 +241,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../data/disjoint.html" class="dropdown-item">Disjoint Set</a>
+    <a href="../../data-structure/disjoint.html" class="dropdown-item">Disjoint Set</a>
 </li>
     </ul>
   </li>
@@ -288,7 +288,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../python/library/config.html" class="dropdown-item">configParser</a>
+    <a href="../../../python/library/configparser.html" class="dropdown-item">configParser</a>
 </li>
     </ul>
   </li>
@@ -315,6 +315,10 @@
             
 <li>
     <a href="../../../python/library/pyyaml.html" class="dropdown-item">PyYAML</a>
+</li>
+            
+<li>
+    <a href="../../../python/library/pywin32.html" class="dropdown-item">PyWin32</a>
 </li>
     </ul>
   </li>
@@ -442,6 +446,10 @@
 </li>
                                     
 <li>
+    <a href="../../../misc/vscode.html" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
     <a href="../../../misc/fiddler.html" class="dropdown-item">Fiddler</a>
 </li>
                                     
@@ -459,17 +467,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="Merge%20Sort.html" class="nav-link">
+                                <a rel="prev" href="../divide-and-conquer.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../divide.html" class="nav-link">
+                                <a rel="next" href="../cryptography/rsa.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://gitee.com/eastsunrise/wiki-kingen/edit/master/docs/cs/algorithms/sorting/Heap Sort.md" class="nav-link">Edit on Gitee</a>
+                                <a href="https://gitee.com/eastsunrise/wiki-kingen/edit/master/docs/cs/algorithms/pattern-searching/Knuth-Morris-Pratt.md" class="nav-link">Edit on Gitee</a>
                             </li>
                     </ul>
                 </div>
@@ -489,34 +497,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="4"><a href="#overview" class="nav-link">Overview</a>
+            <li class="nav-item" data-level="4"><a href="#question" class="nav-link">Question</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#binary-heap" class="nav-link">Binary Heap</a>
+            <li class="nav-item" data-level="4"><a href="#brute-force" class="nav-link">Brute-force</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#algorithm" class="nav-link">Algorithm</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="5"><a href="#heap" class="nav-link">Heap</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="5"><a href="#heap-sort" class="nav-link">Heap Sort</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="5"><a href="#time-complexity" class="nav-link">Time Complexity</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="4"><a href="#notes" class="nav-link">Notes</a>
+            <li class="nav-item" data-level="4"><a href="#kmp" class="nav-link">KMP</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -530,153 +521,105 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h4 id="overview">Overview</h4>
-<p>Heap sort is a comparison-based sorting technique based on Binary Heap data structure.</p>
-<h4 id="binary-heap">Binary Heap</h4>
-<p>A Binary Heap is a Complete Binary Tree where items are stored in a special order such that value in a parent node is greater(or smaller) than the values in its two children nodes. The former is called as max heap and the latter is called min heap.</p>
-<p>The heap can be represented by array. If the parent node is stored at index <script type="math/tex">i</script>, the left child can be calculated by <script type="math/tex">2i+1</script> and right child by <script type="math/tex">2i+2</script> (assuming the indexing starts at 0).</p>
-<h4 id="algorithm">Algorithm</h4>
-<ol>
-<li>Build a max heap from the input data.</li>
-<li>At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of tree.</li>
-<li>Repeat step 2 while size of heap is greater than 1.</li>
-</ol>
-<h5 id="heap">Heap</h5>
-<pre class="codehilite"><code class="language-java">// Data structure of Heap
-public class Heap&lt;V extends Comparable&lt;? super V&gt;&gt; {
-    V[] array;
-    int heapSize;// [0, array.length]
-
-    Heap(V[] array) {
-        this.array = array;
-        heapSize = array.length;
-        buildHeap();
-    }
-
-    // build a max heap
-    void buildHeap() {
-        for (int i = array.length / 2 - 1; i &gt;= 0; i--) {
-            heapify(i);
+<h4 id="question">Question</h4>
+<p>Given a text <strong>s[0&hellip;n-1]</strong> and a pattern <strong>p[0&hellip;m-1]</strong>, write a function <code>search(char[] s, char[] p)</code> that prints all occurrences of p[] within s[]. You may assume that n &gt; m.</p>
+<h4 id="brute-force">Brute-force</h4>
+<pre class="codehilite"><code class="language-java">public int search(char[] s, char[] p) {
+    int i = 0, j = 0;
+    while (i &lt; s.length &amp;&amp; j &lt; p.length) {
+        if (s[i] == p[j]) {
+            i++;
+            j++;
+        } else {
+            i = i - j + 1;
+            j = 0;
         }
     }
 
-    void heapify(int i){
-        while (true) {
-            int l = left(i), r = right(i), largest = i;
-            if (l &lt; heapSize &amp;&amp; array[l].compareTo(array[largest]) &gt; 0) {
-                largest = l;
-            }
-
-            if (r &lt; heapSize &amp;&amp; array[r].compareTo(array[largest]) &gt; 0) {
-                largest = r;
-            }
-
-            if (largest != i) {
-                swap(array, i, largest);
-            } else {
-                break;
-            }
-        }
+    if (j == p.length) {
+        return i - j;
     }
 
-    /* common operations */
-
-    void insert(V key) {
-        if (heapSize == array.length) {
-            throw new ArrayIndexOutOfBoundsException();
-        }
-
-        heapSize++;
-        updateKey(heapSize - 1, key);
-    }
-
-    void delete(int i) {
-        if (isEmpty() || i &lt; 0 || i &gt;= heapSize) {
-            throw new ArrayIndexOutOfBoundsException();
-        }
-
-        updateKey(i, array[heapSize - 1]);
-        heapSize--;
-    }
-
-    void updateKey(int i, V key) {
-        if (i &gt;= heapSize) {
-            throw new IndexOutOfBoundsException();
-        }
-
-        array[i] = key;
-        heapify(i);
-        while (i &gt; 0 &amp;&amp; array[parent(i)].compareTo(array[i]) &lt; 0) {
-            swap(array, i, parent(i));
-            i = parent(i);
-        }
-    }
-
-    V getHead() {
-        return isEmpty() ? null : array[0];
-    }
-
-    V extractHead() {
-        if (isEmpty()) {
-            return null;
-        }
-
-        V max = getHead();
-        array[0] = array[heapSize-- - 1];
-        heapify(0);
-        return max;
-    }
-
-
-    /* Basic methods */
-
-    // Get index of parent node
-    int parent(int i) {
-        return (i - 1) &gt;&gt; 1;
-    }
-
-    // Get index of left child node
-    int left(int i) {
-        return (i &lt;&lt; 1) + 1;
-    }
-
-    // Get index of right child node
-    int right(int i) {
-        return (i + 1) &lt;&lt; 1;
-    }
-
-    int size() {
-        return heapSize;
-    }
-
-    boolean isEmpty() {
-        return heapSize == 0;
-    }
+    return -1;
 }</code></pre>
 
 
-<h5 id="heap-sort">Heap Sort</h5>
-<pre class="codehilite"><code class="language-java">static &lt;T extends Comparable&lt;? super T&gt;&gt; void heapSort(T[] array) {
-    Heap&lt;T&gt; heap = new MaxHeap&lt;&gt;(array);
-    for (int i = heap.size() - 1; i &gt; 0; i--) {
-        Heap.swap(heap.array, i, 0);
-        heap.heapSize--;
-        heap.heapify(0);
+<h4 id="kmp">KMP</h4>
+<pre class="codehilite"><code class="language-java">// JAVA program for implementation of KMP pattern searching algorithm`
+void KMPSearch(String p, String s) {
+    int m = p.length();
+    int n = s.length();
+
+    // create lps[] that will hold the longest prefix suffix values for pattern
+    int lps[] = new int[m];
+    int j = 0; // index for p[]
+
+    // Preprocess the pattern (calculate lps[] array)
+    computeLPSArray(pat, m, lps);
+
+    int i = 0; // index for s[]
+    while (i &lt; n) {
+        if (pat.charAt(j) == txt.charAt(i)) {
+            j++;
+            i++;
+        }
+
+        if (j == m) {
+            System.out.println(&quot;Found pattern at index &quot; + (i - j));
+            j = lps[j - 1];
+        } else if (i &lt; N &amp;&amp; pat.charAt(j) != txt.charAt(i)) { // mismatch after j matches
+            // Do not match lps[0..lps[j-1]] characters, they will match anyway
+            if (j != 0)
+                j = lps[j - 1];
+            else
+                i = i + 1;
+        }
     }
+}
+
+void computeLPSArray(String pat, int m, int lps[]) {
+    // length of the previous longest prefix suffix
+    int len = 0;
+    int i = 1;
+    lps[0] = 0; // lps[0] is always 0
+
+    // the loop calculates lps[i] for i = 1 to m-1
+    while (i &lt; m) {
+        if (pat.charAt(i) == pat.charAt(len)) {
+            len++;
+            lps[i] = len;
+            i++;
+        } else { // (pat[i] != pat[len])
+            // This is tricky. Consider the example.
+            // AAACAAAA and i = 7. The idea is similar
+            // to search step.
+            if (len != 0) {
+                len = lps[len - 1];
+
+                // Also, note that we do not increment
+                // i here
+            } else { // if (len == 0)
+                lps[i] = len;
+                i++;
+            }
+        }
+    }
+}
+
+// Driver program to test above function`
+public static void main(String args[]) {
+    String txt = &quot;ABABDABACDABABCABAB&quot;;
+    String pat = &quot;ABABCABAB&quot;;
+    KMPSearch(pat, txt);
 }</code></pre>
 
 
-<h5 id="time-complexity">Time Complexity</h5>
-<p>Time complexity of <code>heapify()</code> is <script type="math/tex">O(\log{}n)</script>. Time complexity of <code>buildHeap()</code> is <script type="math/tex">O(n)</script> and overall time complexity of Heap Sort is <script type="math/tex">O(n\log{}n)</script>.</p>
-<h4 id="notes">Notes</h4>
-<ol>
-<li>Heap sort is an <strong>in-place</strong> algorithm.</li>
-<li>Its typical implementation is <strong>not stable</strong>.</li>
-<li>Heap sort algorithm has limited uses because Quick Sort and Merge Sort are better in practice. Nevertheless, the Heap data structure itself is enormously used.</li>
-</ol>
+<p><strong>TODO</strong></p>
 <h4 id="references">References</h4>
 <ol>
-<li><a href="https://www.geeksforgeeks.org/heap-sort/">HeapSort - GeeksforGeeks</a></li>
+<li><a href="https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/">KMP Algorithm for Pattern Searching - GeeksforGeeks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm">Knuth–Morris–Pratt algorithm - Wikipedia</a></li>
+<li><a href="https://www.cnblogs.com/yjiyjige/p/3263858.html">（原创）详解KMP算法 - 孤~影 - 博客园</a></li>
 </ol></div>
             </div>
         </div>
