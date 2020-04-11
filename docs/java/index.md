@@ -1,6 +1,8 @@
 #### Overview
 
-Learn [Java](https://www.oracle.com/java/), the best programming language in the world. This is based on [Java 11](https://docs.oracle.com/en/java/javase/11/).
+Learn [Java](https://www.oracle.com/java/), the best programming language in the world. This is based on [Java 11](https://docs.oracle.com/en/java/javase/11/), including [Java tutorials](https://docs.oracle.com/javase/tutorial/index.html) based on JDK 8, [API documentations](https://docs.oracle.com/en/java/javase/11/docs/api/index.html), [Java Virtual Machine](https://docs.oracle.com/en/java/javase/11/vm/index.html), [Java language specifications](https://docs.oracle.com/javase/specs/jls/se11/html/index.html), [JVM specifications](https://docs.oracle.com/javase/specs/jvms/se11/html/index.html), and [tutorials of Java EE 7](https://docs.oracle.com/javaee/7/tutorial/index.html).
+
+Search [here](https://docs.oracle.com/apps/search/search.jsp?category=java&q=) for some help or refer to the [learning route](\img\Java Learning Route.jpg) to learn related technologies.
 
 #### Installation
 

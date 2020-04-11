@@ -1,6 +1,6 @@
 #### Overview
 
-Download [here](https://code.visualstudio.com/Download).
+[Visual Studio Code](https://code.visualstudio.com) is a lightweight but powerful source code editor. Here are the documentations(https://code.visualstudio.com/docs).
 
 #### Extensions
 

@@ -10,7 +10,7 @@ nav:
         - Java:
                   - Get Started: java/index.md
                   - Language References:
-                            - Annotation: java/language/annotation.md
+                            - Annotations: java/language/annotations.md
                             - Collection: java/language/collection.md
                   - Library References:
                             - Fastjson: java/library/fastjson.md
@@ -29,8 +29,10 @@ nav:
                   - MyBatis:
                             - MyBatis: java/mybatis/index.md
                             - Generator: java/mybatis/generator.md
+                  - Tomcat: java/tomcat.md
                   - Maven: java/maven.md
                   - Freemarker: java/freemarker.md
+                  - OGNL: java/ognl.md
         - CS:
                   - Mathematics:
                             - Fourier Transform: cs/mathematics/fourier-transform.md
@@ -91,7 +93,6 @@ nav:
                   - Oracle:
                             - Get Stared: dev/oracle/index.md
                             - SQL: dev/oracle/sql.md
-                  - Tomcat: dev/tomcat.md
                   - Redis: dev/redis.md
                   - Nginx: dev/nginx.md
                   - Git: dev/git.md
@@ -101,9 +102,10 @@ nav:
                   - JavaScript:
                             - JavaScript: dev/js/index.md
                             - jQuery: dev/js/jquery.md
-                            - Select2: dev/js/select2.md
                             - React: dev/js/react.md
                             - Node.js: dev/js/nodejs.md
+                            - Select2: dev/js/select2.md
+                            - Layer: dev/js/layer.md
                   - PHP:
                             - Get Started: dev/php.md
                   - OAuth: dev/oauth.md
@@ -114,7 +116,7 @@ nav:
                   - Markdown: misc/markdown.md
                   - Chrome: misc/chrome.md
                   - Windows: misc/windows.md
-                  - IDEA IntelliJ: misc/idea.md
+                  - IntelliJ IDEA: misc/idea.md
                   - Visual Studio Code: misc/vscode.md
                   - Fiddler: misc/fiddler.md
                   - Charles: misc/charles.md

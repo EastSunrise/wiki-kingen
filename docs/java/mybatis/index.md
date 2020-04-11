@@ -27,6 +27,10 @@ Download [mybatis-x.x.x.jar](https://github.com/mybatis/mybatis-3/releases) or a
 
 **Namespace** isolates statements with longer, full-qualified names and **binds XML files with corresponding interfaces**.
 
+#### Dynamic SQL
+
+MyBatis employs powerful [OGNL](../ognl.md) based expressions
+
 #### SqlSessions
 
 *SqlSession* is the primary interface to work with MyBatis. This interface is used to execute commands, get mappers and manage transactions. Refer to [the latest documents](https://mybatis.org/mybatis-3/zh/java-api.html#sqlSessions).
@@ -108,6 +112,10 @@ int batchInsert(List<User> users) {
 }
 ```
 
+##### Type Cast
+
+
+
 ###### Foreach in Mapper
 
 ```java
@@ -152,6 +160,9 @@ The number of items in the condition `IN ()` shouldn't exceed 1000. Otherwise, s
 	</where>
 </select>
 ```
+
+
+
 
 #### References
 

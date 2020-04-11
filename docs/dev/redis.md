@@ -21,13 +21,19 @@ Start Redis at startup with `systemctl enable redis`.
 
 ##### Windows
 
-The Microsoft Open Tech group instead of the official offer [Redis for Windows](https://github.com/microsoftarchive/redis/releases). Follow the instructions to install Redis and then set Redis as Windows service with `redis-server --service-install [redis.windows-service.conf] --service-name [redis] --port [6380]`. Set different configuration files, service names and ports for different instances of Redis.
+The Microsoft Open Tech group instead of the official offer [Redis for Windows](https://github.com/microsoftarchive/redis/releases). Follow the instructions to install Redis and then set Redis as Windows service.
 
-**Notes**
+```shell
+redis-server --service-install [redis.windows-service.conf] --service-name [redis] --port [6380]
+```
 
-- Modify `bind 127.0.0.1`, otherwise the server can't be accessed to except localhost.
-- Open the port with `firewall-cmd --zone=public --add-port=6379 -permanent` on Linux when remote connection is refused because firewall of the server is enabled.
-- Connecting through *SSH* is an option. In this case, `AllowTcpForwarding yes` is required to set in the */etc/ssh/sshd_config*.
+##### Notes
+
+Set different configuration files, service names and ports for different instances of Redis if needed.
+
+Modify `bind 127.0.0.1` when connecting remotely, otherwise the server can't be accessed to except localhost. Open the port that may be forbidden by firewall when remote connection is refused.
+
+Connecting through *SSH* is also optional.
 
 #### Configuration
 

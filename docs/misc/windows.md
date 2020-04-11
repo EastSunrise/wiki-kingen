@@ -1,4 +1,18 @@
-#### Commands
+#### Windows Commands
+
+To find information about a specific command, search [here](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands).
+
+##### Syntax
+
+- `text` means exact input
+- `<required>` means the arg is required
+- `[option]` means the arg is optional
+- `{option1|option2}` means to choose one from the options
+- `...` means repeating the former one
+
+##### List of Commands
+
+- `ren [<Drive>:][<Path>]<FileName1> <FileName2>` rename files or directories, same as `rename`. 
 
 ##### Program
 

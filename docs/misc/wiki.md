@@ -70,7 +70,7 @@ The command builds documents of Markdown to static web pages under directory *si
 
 ###### Local
 
-Deploy *site* with [Tomcat](../dev/tomcat.md#Publish Static Pages). Access wiki from <localhost:8080/wiki-name>.
+Deploy *site* with [Tomcat](../java/tomcat.md#publish-static-pages). Access wiki from <localhost:8080/wiki-name>.
 
 ###### GitHub
 

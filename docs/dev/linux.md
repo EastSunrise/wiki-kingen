@@ -8,7 +8,14 @@ Download and install [CentOS](https://www.centos.org/download/) ISO. Without a s
 
 ##### Remote Connection
 
-If the system needs to be connected to remotely, [XShell](https://www.netsarang.com/zh/xshell-download/) is a fine tool and *SSH* which is commonly configured on the Linux is required. Check with `service sshd status`. If not, execute following commands in order: `yum install openssh-server` to install *SSH*, `vim /etc/ssh/ssh_config` to edit the configuration file, `/bin/systemctl start sshd.service` to start *SSH* service and `/bin/systemctl enable sshd.service`to start the service at startup.
+If the system needs to be connected to remotely, [XShell](https://www.netsarang.com/zh/xshell-download/) is a fine tool and *SSH* which is commonly configured on the Linux is required. Check with `service sshd status`. If not, execute following commands in order: 
+
+- `yum install openssh-server` installs *SSH*
+- `vim /etc/ssh/ssh_config` edits the configuration file
+- `/bin/systemctl start sshd.service` starts *SSH* service
+- `/bin/systemctl enable sshd.service` starts the service at startup.
+
+Most remote connections like [MySQL](mysql/index.md) and [Redis](redis.md) support connection through *SSH*. In this case, `AllowTcpForwarding yes` is required to set in the */etc/ssh/sshd_config*.
 
 ##### Mirror
 
@@ -36,6 +43,16 @@ Linux is a multi-user system with limits of authority. Use *su* command to acces
 #### System and Partitions
 
 **Each hardware device in Linux is regarded as a file**. They are almost all under */dev* directory.
+
+##### Service
+
+Relative commands are shown as follows:
+
+```shell
+/bin/systemctl start <service>
+service <service> status
+/bin/systemctl enable <service> # start at startup
+```
 
 #### User and Privilege
 
@@ -83,6 +100,18 @@ Install toolkit *rz* and *sz* by `yum install lrzsz`. Then use commands `rz` to 
 
 #### Vim
 
+#### Misc
+
+##### Firewall
+
+The service name is **firewalld** and the command is **firewall-cmd**.
+
+Open the specific port when remote connections are refused.
+
+```shell
+firewall-cmd --zone=public --add-port=<port/tcp> [--permanent]
+```
+
 #### FAQ
 
 ##### Pane is dead
@@ -92,6 +121,19 @@ If it occurs to *Pane is dead* when installing, open settings of hardwares and t
 ##### Connect to Internet
 
 If failed, open settings of current network connection of the host and allow *Internet Connection Sharing*.
+
+##### Static IP
+
+Edit the */etc/sysconfig/network-scripts/ifcfg-ens33* file:
+
+```
+BOOTPROTO="static"
+IPADDR=<ip>
+NETMASK=255.255.255.0
+GATEWAY=<gateway> # same as that of the host
+DNS1=<dns1> # also same as those of the host
+DNS2=<dns2>
+```
 
 #### References
 
