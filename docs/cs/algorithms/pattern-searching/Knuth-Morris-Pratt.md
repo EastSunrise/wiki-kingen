@@ -1,14 +1,14 @@
 #### Question
 
-Given a text **s[0...n-1]** and a pattern **p[0...m-1]**, write a function `search(char[] s, char[] p)` that prints all occurrences of p[] within s[]. You may assume that n > m.
+Given a text $txt[0,n-1]$ and a pattern $pat[0,m-1]$, write a function `search(char[] txt, char[] pat)` that prints all occurrences of *pat[]* within *txt[]*. You may assume that $n > m$.
 
 #### Brute-force
 
 ```java
-public int search(char[] s, char[] p) {
+public int search(char[] txt, char[] pat) {
 	int i = 0, j = 0;
-	while (i < s.length && j < p.length) {
-		if (s[i] == p[j]) {
+	while (i < txt.length && j < pat.length) {
+		if (txt[i] == pat[j]) {
 			i++;
 			j++;
 		} else {
@@ -17,7 +17,7 @@ public int search(char[] s, char[] p) {
 		}
 	}
 
-	if (j == p.length) {
+	if (j == pat.length) {
 		return i - j;
 	}
 
@@ -29,9 +29,9 @@ public int search(char[] s, char[] p) {
 
 ```java
 // JAVA program for implementation of KMP pattern searching algorithm`
-void KMPSearch(String p, String s) {
-	int m = p.length();
-	int n = s.length();
+void KMPSearch(String pat, String txt) {
+	int m = pat.length();
+	int n = txt.length();
 
 	// create lps[] that will hold the longest prefix suffix values for pattern
 	int lps[] = new int[m];

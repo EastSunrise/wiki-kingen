@@ -1,3 +1,7 @@
+#### Get Started
+
+Access to information about [IntelliJ IDEA](https://www.jetbrains.com/idea/) from [online help](https://www.jetbrains.com/help/idea/getting-started.html) or install *IntelliJ IDEA Help* plugin for offline use.
+
 #### Skills
 
 ##### Code Completion
@@ -8,4 +12,5 @@ The function is used to complete code, including loop statement, if statement an
 
 #### References
 
-1. [教你一些 IDEA 中比较骚的奇技淫巧！](http://mp.weixin.qq.com/s?__biz=MzA5NjMwMDg0Ng==&mid=2455284530&idx=2&sn=ee2eede8a0d30883decc648c0ce17d0e&chksm=871e3173b069b86522da18b671cd09c081aca643721a353030aa03410223fe9ecb36fe75c1a9&mpshare=1&scene=1&srcid=&sharer_sharetime=1565717153808&sharer_shareid=b2d365fc470069a182e69b29d71ac9b0#rd)
+1. [Getting started - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/getting-started.html)
+2. [IntelliJ IDEA神器使用技巧 - 慕课网](https://www.imooc.com/learn/924)

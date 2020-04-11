@@ -12,6 +12,4 @@ Besides, various technologies are involved when it occurs to development. All of
 
 As for some not closely related to development, they are attached to miscellaneous items, **Misc** for short.
 
-#### References
-
-1. [GeeksforGeeks | A computer science portal for geeks](https://www.geeksforgeeks.org/)
+References include but are not limited to [GeeksforGeeks](https://www.geeksforgeeks.org/), [Stack Overflow](https://stackoverflow.com/questions).

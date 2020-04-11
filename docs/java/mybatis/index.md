@@ -1,6 +1,6 @@
 #### Overview
 
-Learn [MyBatis](https://mybatis.org/mybatis-3/) and its integration with [Spring](spring/index.md) and [Spring Boot](spring-boot/index.md).
+Learn [MyBatis](https://mybatis.org/mybatis-3/) and its integration with [Spring](../spring/index.md) and [Spring Boot](../spring-boot/index.md).
 
 #### Get Started
 
@@ -69,6 +69,8 @@ SqlSessionFactory buildFactoryWithoutXML() {
 ##### SqlSession
 
 Now, get instances of *SqlSession* by the method `SqlSessionFactory.openSession()`.
+
+
 
 #### FAQ
 

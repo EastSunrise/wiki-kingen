@@ -1,14 +1,28 @@
-#### Pointcut Expressions
+#### Overview
 
-In this article, we'll discuss different types of AOP advice that can be created in Spring. The implementation of all these examples and code snippets can be found in [my GitHub project](https://github.com/eugenp/tutorials/tree/master/spring-aop).
+AOP stands for aspect-orientated programming. Essentially, **it is a way for adding behavior to existing code without modifying that code**.
+
+It has three core concepts defined as follows:
+
+1. **Join Point**: A point during the execution of a script, such as the execution of a method or property access.
+2. **Pointcut**: A regular expression that matches join points.
+3. **Advice**: Action taken by an aspect at a particular join point. 
+
+To implement AOP, **an advice is associated with a pointcut expression and runs at any join point that matches the pointcut**.
+
+#### @AspectJ
+
+`@AspectJ` refers to a style of declaring aspects as regular Java classes annotated with annotations, introduced by the [AspectJ Project](https://www.eclipse.org/aspectj/).
+
+##### Pointcut Expressions
+
+A pointcut expression can appear as a value of `@Pointcut` annotation, telling Spring AOP what to watch.
+
+##### Advice
 
 **Advice is an action taken by an aspect at a particular join point**. Different types of advice include `around`, `before` and `after` advice. The main purpose of aspects is to support cross-cutting concerns, such as logging, profiling, caching, and transaction management.
 
-And if you want to go deeper into pointcut expressions, check out [the previous intro to these](https://www.baeldung.com/spring-aop-pointcut-tutorial)
-
-##### Enabling Advice
-
-With Spring, you can declare advice using AspectJ annotations, but** you must first apply the `@EnableAspectJAutoProxy` annotation to your configuration class**, which will enable support for handling components marked with AspectJ's `@Aspect` annotation
+With Spring, you can declare advice using AspectJ annotations, but **you must first apply the `@EnableAspectJAutoProxy` annotation to your configuration class**, which will enable support for handling components marked with AspectJ's `@Aspect` annotation.
 
 ```java
 @Configuration
@@ -17,11 +31,9 @@ public class AopConfiguration {
 }
 ```
 
-###### Spring Boot
-
 **In Spring Boot projects, we don't have to explicitly use the `@EnableAspectJAutoProxy`.** There's a dedicated `[AopAutoConfiguration`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/aop/AopAutoConfiguration.html) that enables Spring's AOP support if the `Aspect` or `Advice` is on the classpath.
 
-##### Before Advice
+###### Before Advice
 
 **This advice, as the name implies, is executed before the join point.** It doesn't prevent the continued execution of the method it advises unless an exception is thrown.
 
@@ -46,7 +58,7 @@ public class LoggingAspect {
 
 The `logMethodCall` advice will be executed before any repository method defined by the repositoryMethods pointcut.
 
-##### After Advice
+###### After Advice
 
 After advice, declared by using the @After annotation, **is executed after a matched method's execution, whether or not an exception was thrown**.
 
@@ -98,7 +110,7 @@ public class FooCreationEventListener implements ApplicationListener<FooCreation
 }
 ```
 
-##### Around Advice
+###### Around Advice
 
 Around advice surrounds a join point such as a method invocation.
 
@@ -136,4 +148,5 @@ Second, the advice return type is `Object` since the target method can return a 
 
 #### References
 
-1. [Introduction to Pointcut Expressions in Spring | Baeldung](https://www.baeldung.com/spring-aop-pointcut-tutorial)
+1. [The AspectJ Programming Guide](https://www.eclipse.org/aspectj/doc/released/progguide/index.html)
+2. [AOP with Spring - Spring Framework](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop)

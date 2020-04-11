@@ -1,6 +1,6 @@
 #### Overview
 
-Connect to [MySQL](\dev\mysql\index.md) with [Python](../index.md).
+Connect to [MySQL](../../dev/mysql/index.md) with [Python](../index.md).
 
 #### PyMySQL
 

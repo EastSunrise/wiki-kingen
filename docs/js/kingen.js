@@ -1,12 +1,14 @@
 $(function () {
+    // replace footer of mkdocs
+    $("footer").each(function () {
+        $(this).html("<p>Kingen | <a href='https://github.com/eastsunrise/'>EastSunrise - GitHub</a></p>");
+    });
+
+    // open a http/https link with a new label
     $("a").each(function () {
-        if ($(this).attr('href').startsWith('http')) {
+        var href = $(this).attr('href');
+        if (typeof (href) != "undefined" && href.startsWith('http')) {
             $(this).attr('target', '_blank');
         }
-    });
-    MathJax.Hub.Config({
-        config: ["MMLorHTML.js"],
-        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
-        extensions: ["MathMenu.js", "MathZoom.js"]
     });
 });
