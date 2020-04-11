@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Kingen">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Select2 - Kingen</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../css/kingen.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Kingen</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../java/index.html" class="dropdown-item">Get Started</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Language References</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../java/language/annotations.html" class="dropdown-item">Annotations</a>
+</li>
+            
+<li>
+    <a href="../../java/language/collection.html" class="dropdown-item">Collection</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Library References</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../java/library/fastjson.html" class="dropdown-item">Fastjson</a>
+</li>
+            
+<li>
+    <a href="../../java/library/apache-commons.html" class="dropdown-item">Apache Commons</a>
+</li>
+            
+<li>
+    <a href="../../java/library/apache-poi.html" class="dropdown-item">Apache POI</a>
+</li>
+            
+<li>
+    <a href="../../java/library/lombok.html" class="dropdown-item">Lombok</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design Patterns</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../java/design/state.html" class="dropdown-item">State Pattern</a>
+</li>
+            
+<li>
+    <a href="../../java/design/singleton.html" class="dropdown-item">Singleton Pattern</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Spring Framework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../java/spring/index.html" class="dropdown-item">Get Started</a>
+</li>
+            
+<li>
+    <a href="../../java/spring/aop.html" class="dropdown-item">Aspect Oriented Programming</a>
+</li>
+            
+<li>
+    <a href="../../java/spring/transaction.html" class="dropdown-item">Transaction</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Spring Boot</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../java/spring-boot/index.html" class="dropdown-item">Get Started</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">MyBatis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../java/mybatis/index.html" class="dropdown-item">MyBatis</a>
+</li>
+            
+<li>
+    <a href="../../java/mybatis/generator.html" class="dropdown-item">Generator</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../java/tomcat.html" class="dropdown-item">Tomcat</a>
+</li>
+                                    
+<li>
+    <a href="../../java/maven.html" class="dropdown-item">Maven</a>
+</li>
+                                    
+<li>
+    <a href="../../java/freemarker.html" class="dropdown-item">Freemarker</a>
+</li>
+                                    
+<li>
+    <a href="../../java/ognl.html" class="dropdown-item">OGNL</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mathematics</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/mathematics/fourier-transform.html" class="dropdown-item">Fourier Transform</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithms</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Analysis of Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/algorithms/analysis/asymptotic-analysis.html" class="dropdown-item">Asymptotic Analysis</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sorting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/algorithms/sorting/quick-sort.html" class="dropdown-item">Quick Sort</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/sorting/merge-sort.html" class="dropdown-item">Merge Sort</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/sorting/heap-sort.html" class="dropdown-item">Heap Sort</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/sorting/bucket-sort.html" class="dropdown-item">Bucket Sort</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../cs/algorithms/divide-and-conquer.html" class="dropdown-item">Divide and Conquer</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/greedy-algorithms.html" class="dropdown-item">Greedy Algorithms</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pattern Searching</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/algorithms/pattern-searching/Knuth-Morris-Pratt.html" class="dropdown-item">Knuth-Morris-Pratt Algorithm</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/pattern-searching/Boyer%20Moore%20Algorithm.html" class="dropdown-item">Boyer Moore Algorithm</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cryptography</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/algorithms/cryptography/rsa.html" class="dropdown-item">RSA</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/cryptography/sha.html" class="dropdown-item">SHA</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Graph</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/algorithms/graph/Dijkstra%27s%20Algorithm.html" class="dropdown-item">Dijkstra's Algorithm</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Other Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/algorithms/others/Knuth-Shuffle.html" class="dropdown-item">Knuth-Shuffle Algorithm</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/others/Monte%20Carlo%20Tree%20Search.html" class="dropdown-item">Monte Carlo Tree Search</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/data-structure/binary-tree.html" class="dropdown-item">Binary Tree</a>
+</li>
+            
+<li>
+    <a href="../../cs/data-structure/binary-search-tree.html" class="dropdown-item">Binary Search Tree</a>
+</li>
+            
+<li>
+    <a href="../../cs/data-structure/heap.html" class="dropdown-item">Heap</a>
+</li>
+            
+<li>
+    <a href="../../cs/data-structure/disjoint.html" class="dropdown-item">Disjoint Set</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Problems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../cs/problems/inversion-pairs.html" class="dropdown-item">Inversion Pairs</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../python/index.html" class="dropdown-item">Get Started</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Library References</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Operating System Services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/os.html" class="dropdown-item">os</a>
+</li>
+            
+<li>
+    <a href="../../python/library/logging.html" class="dropdown-item">logging</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cryptographic Services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/hashlib.html" class="dropdown-item">hashlib</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">File Formats</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/configparser.html" class="dropdown-item">configParser</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">File and Directory Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/shutil.html" class="dropdown-item">shutil</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Extension References</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/pymysql.html" class="dropdown-item">PyMySQL</a>
+</li>
+            
+<li>
+    <a href="../../python/library/pyyaml.html" class="dropdown-item">PyYAML</a>
+</li>
+            
+<li>
+    <a href="../../python/library/pywin32.html" class="dropdown-item">PyWin32</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Applications</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/app/spider.html" class="dropdown-item">Spider</a>
+</li>
+            
+<li>
+    <a href="../../python/app/task.html" class="dropdown-item">Task</a>
+</li>
+            
+<li>
+    <a href="../../python/app/excel.html" class="dropdown-item">Excel</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../references.html" class="dropdown-item">References</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">MySQL</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../mysql/index.html" class="dropdown-item">Get Started</a>
+</li>
+            
+<li>
+    <a href="../mysql/faq.html" class="dropdown-item">FAQ</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Oracle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../oracle/index.html" class="dropdown-item">Get Stared</a>
+</li>
+            
+<li>
+    <a href="../oracle/sql.html" class="dropdown-item">SQL</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../redis.html" class="dropdown-item">Redis</a>
+</li>
+                                    
+<li>
+    <a href="../nginx.html" class="dropdown-item">Nginx</a>
+</li>
+                                    
+<li>
+    <a href="../git.html" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../web/bootstrap.html" class="dropdown-item">Bootstrap</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">JavaScript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="index.html" class="dropdown-item">JavaScript</a>
+</li>
+            
+<li>
+    <a href="jquery.html" class="dropdown-item">jQuery</a>
+</li>
+            
+<li>
+    <a href="react.html" class="dropdown-item">React</a>
+</li>
+            
+<li>
+    <a href="nodejs.html" class="dropdown-item">Node.js</a>
+</li>
+            
+<li>
+    <a href="select2.html" class="dropdown-item active">Select2</a>
+</li>
+            
+<li>
+    <a href="layer.html" class="dropdown-item">Layer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PHP</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../php.html" class="dropdown-item">Get Started</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../oauth.html" class="dropdown-item">OAuth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Misc <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../misc/activation.html" class="dropdown-item">Activation</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/wiki.html" class="dropdown-item">Wiki</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/latex.html" class="dropdown-item">LaTeX</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/markdown.html" class="dropdown-item">Markdown</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/chrome.html" class="dropdown-item">Chrome</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/windows.html" class="dropdown-item">Windows</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/idea.html" class="dropdown-item">IntelliJ IDEA</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/vscode.html" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/fiddler.html" class="dropdown-item">Fiddler</a>
+</li>
+                                    
+<li>
+    <a href="../../misc/charles.html" class="dropdown-item">Charles</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="nodejs.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="layer.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://gitee.com/eastsunrise/wiki-kingen/edit/master/docs/dev/js/select2.md" class="nav-link">Edit on Gitee</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="4"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h4 id="overview">Overview</h4>
+<p><a href="https://select2.org/">Select2</a> provides a customizable select box.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../js/kingen.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
