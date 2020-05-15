@@ -38,7 +38,7 @@ Directories of **RPM** are commonly set as following by default:
 
 #### Get Started
 
-Linux is a multi-user system with limits of authority. Use *su* command to access system as *root* when logging in as a common user and *exit* to get back.
+Linux is a multi-user system with limits of authority. Use `su` command to access system as *root* when logging in as a common user and `exit` to get back.
 
 #### System and Partitions
 
@@ -49,9 +49,9 @@ Linux is a multi-user system with limits of authority. Use *su* command to acces
 Relative commands are shown as follows:
 
 ```shell
-/bin/systemctl start <service>
-service <service> status
-/bin/systemctl enable <service> # start at startup
+$ /bin/systemctl start <service>
+$ service <service> status
+$ /bin/systemctl enable <service> # start at startup
 ```
 
 #### User and Privilege
@@ -109,7 +109,7 @@ The service name is **firewalld** and the command is **firewall-cmd**.
 Open the specific port when remote connections are refused.
 
 ```shell
-firewall-cmd --zone=public --add-port=<port/tcp> [--permanent]
+$ firewall-cmd --zone=public --add-port=<port/tcp> [--permanent]
 ```
 
 #### FAQ

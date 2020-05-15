@@ -20,18 +20,6 @@ JAVA_HOME11=%dir%\jdk11
 
 **Notes**: delete the path added automatically when installing and *java.exe*, *javaw.exe*, *javaws.exe* under *C:\Windows\System32*.
 
-#### Language References
-
-1. [Annotation](language/annotation.md)
-2. Object-Oriental Program
-3. I/O
-4. Exception
-5. Net
-6. [Collection](language/collection.md)
-7. Concurrence
-8. Java Virtual Machine
-10. Misc
-
 #### References
 
 1. Java 核心技术 10. 卷I & 卷II. \i

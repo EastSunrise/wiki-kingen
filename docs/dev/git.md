@@ -1,3 +1,7 @@
+#### Overview
+
+[Git](https://git-scm.com/) is a free and open source distributed version control system. Here are the [official](https://git-scm.com/doc) documentations and those for [liaoxuefeng's wiki](https://www.liaoxuefeng.com/wiki/896043488029600).
+
 #### .gitignore
 
 **Notes: **
@@ -30,12 +34,6 @@ For example:
 **Files already tracked by Git are not affected.** To stop tracking a file that is currently tracked, use `git rm --cached`.
 
 ```shell
-git rm -r --cached target
-git commit -m '.gitignore'
+$ git rm -r --cached target
+$ git commit -m '.gitignore'
 ```
-
-#### References
-
-1. [Git - gitignore Documentation](https://git-scm.com/docs/gitignore)
-2. [忽略特殊文件 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208)
-3. [Git 忽略提交 .gitignore - 简书](https://www.jianshu.com/p/74bd0ceb6182)

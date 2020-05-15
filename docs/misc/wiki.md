@@ -7,15 +7,15 @@ This page is about how to build a wiki system. The example is [MkDocs](https://w
 ##### Ubuntu
 
 ```shell
-sudo apt-get install mkdocs
+$ sudo apt-get install mkdocs
 ```
 
 ##### Windows
 
 ```shell
-pip install mkdocs
+$ pip install mkdocs
 
-mkdocs --version # verify
+$ mkdocs --version # verify
 ```
 
 MkDocs supports Python versions 2.7.9+, 3.4+, and pypy.
@@ -25,7 +25,7 @@ MkDocs supports Python versions 2.7.9+, 3.4+, and pypy.
 ##### Create
 
 ```shell
-mkdocs new my-wiki
+$ mkdocs new my-wiki
 ```
 
 The *docs* directory is to save custom files of Markdown. There is an *index.md* file by default.
@@ -35,7 +35,7 @@ The *mkdocs.yml* file is to configure the wiki website, including title, content
 ##### Preview
 
 ```shell
-mkdocs serve #start the service of MkDocs
+$ mkdocs serve #start the service of MkDocs
 ```
 
 
@@ -61,7 +61,7 @@ pages:
 ##### Build
 
 ```shell
-mkdocs build
+$ mkdocs build
 ```
 
 The command builds documents of Markdown to static web pages under directory *site*.
@@ -75,13 +75,13 @@ Deploy *site* with [Tomcat](../java/tomcat.md#publish-static-pages). Access wiki
 ###### GitHub
 
 ```shell
-cd my-wiki
-git init
+$ cd my-wiki
+$ git init
 # create a repository on GitHub
-git remote add origin repository_address
+$ git remote add origin repository_address
 
 # Update the deployed pages
-mkdocs gh-deploy
+$ mkdocs gh-deploy
 ```
 
 Now, the wiki is available from <https://user_name.github.io/repository_name>.
@@ -93,15 +93,15 @@ Now, the wiki is available from <https://user_name.github.io/repository_name>.
 That happens because the port is being used. Find and kill the process using the port.
 
 ```shell
-netstat -ano|findstr 8000
-taskkill /pid process_number /F
+$ netstat -ano|findstr 8000
+$ taskkill /pid process_number /F
 ```
 
 
 Or use another free port.
 
 ```shell
-mkdocs serve --dev-addr=127.0.0.1:9999
+$ mkdocs serve --dev-addr=127.0.0.1:9999
 ```
 
 

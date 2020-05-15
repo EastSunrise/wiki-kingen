@@ -19,8 +19,8 @@ Add the directory of Python 2 and Python 3 to the system environment variables, 
 Execute the following commands in the command line.
 
 ```shell
-python2 -m pip install --upgrade pip --force-reinstall
-python3 -m pip install --upgrade pip --force-reinstall
+$ python2 -m pip install --upgrade pip --force-reinstall
+$ python3 -m pip install --upgrade pip --force-reinstall
 ```
 
 ##### Verification
@@ -42,7 +42,7 @@ Input `pip2 -V` and `pip3 -V` to show the information of version.
 ##### Temporary
 
 ```shell
-install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
+$ install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
 ```
 
 ##### Permanent
@@ -87,7 +87,7 @@ setup(console=['test.py'])
 Then run the *setup.py* with *py2exe* from the command line.
 
 ```shell
-python setup.py py2exe
+$ python setup.py py2exe
 ```
 
 It will create two directories named ***dist*** and ***build***, including generated executable file and other files.
@@ -101,7 +101,7 @@ Install it using pip or download it from its [website](http://www.pyinstaller.or
 To package *test.py*, just run the following command from the command line:
 
 ```shell
-pyinstaller.exe --onefile --windowed test.py
+$ pyinstaller.exe --onefile --windowed test.py
 ```
 
 - *--onefile* or *-F* denotes packaging the program into one single executable file. Otherwise, libraries will be distributed as separate file.
@@ -113,11 +113,11 @@ pyinstaller.exe --onefile --windowed test.py
 Use virtual environment to simplify the libraries. First, install *virtualenv* with pip. As follows are commands for example.
 
 ```shell
-virtualenv example_env # create one
+$ virtualenv example_env # create one
 
-virtualenv --system-site-packages example_env # inherit global modules
+$ virtualenv --system-site-packages example_env # inherit global modules
 
-activate # activate the environment
+$ activate # activate the environment
 ```
 Or just use *PyCharm*.
 

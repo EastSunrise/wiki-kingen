@@ -7,8 +7,8 @@ Download and install from [Download | Node.js](https://nodejs.org/en/download/).
 ##### Commands
 
 ```shell
-npm view {module_name} versions # view all version of specified module
-npm install {module_name}@{version} # install specified version of a module
+$ npm view {module_name} versions # view all version of specified module
+$ npm install {module_name}@{version} # install specified version of a module
 ```
 
 ##### Mirrors
@@ -16,16 +16,16 @@ npm install {module_name}@{version} # install specified version of a module
 ###### Temparory
 
 ```shell
-npm --registry https://registry.npm.taobao.org install {module_name}
+$ npm --registry https://registry.npm.taobao.org install {module_name}
 ```
 
 ###### Permanent
 
 ```shell
-npm config set registry https://registry.npm.taobao.org
+$ npm config set registry https://registry.npm.taobao.org
 
 # verify
-npm config get registry
+$ npm config get registry
 ```
 
 #### References

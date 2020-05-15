@@ -24,7 +24,7 @@ Start Redis at startup with `systemctl enable redis`.
 The Microsoft Open Tech group instead of the official offer [Redis for Windows](https://github.com/microsoftarchive/redis/releases). Follow the instructions to install Redis and then set Redis as Windows service.
 
 ```shell
-redis-server --service-install [redis.windows-service.conf] --service-name [redis] --port [6380]
+$ redis-server --service-install [redis.windows-service.conf] --service-name [redis] --port [6380]
 ```
 
 ##### Notes

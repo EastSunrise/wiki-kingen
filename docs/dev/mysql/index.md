@@ -11,18 +11,18 @@ See more details [here](https://dev.mysql.com/doc/refman/5.7/en/installing.html)
 Select and download the repository package from [the Download Yum Repository page](https://dev.mysql.com/downloads/repo/yum/) and then install the repository.
 
 ```shell
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
-yum install mysql80-community-release-el7-3.noarch.rpm
+$ yum install mysql80-community-release-el7-3.noarch.rpm
 ```
 
 List all subrepositories of different series and their status. Enable the specific series instead of default one.
 
 ```shell
-yum repolist all | grep mysql
+$ yum repolist all | grep mysql
 
-yum-config-manager --disable mysql80-community
-yum-config-manager --enable mysql57-community
+$ yum-config-manager --disable mysql80-community
+$ yum-config-manager --enable mysql57-community
 ```
 
 If `yum-config-manager` is not found, install the command from *yum-utils* with `yum install yum-utils`. Or edit manually the */etc/yum.repos.d/mysql-community.repo* file to change the release series. Just find the entry of the subrepository and then modify the value of property *enabled*.
@@ -30,9 +30,9 @@ If `yum-config-manager` is not found, install the command from *yum-utils* with 
 Now, install MySQL and then start the MySQL server.
 
 ```shell
-yum install mysql-community-server
+$ yum install mysql-community-server
 
-/bin/systemctl start mysqld
+$ /bin/systemctl start mysqld
 ```
 
 At the initial start up of the server,
@@ -45,8 +45,8 @@ At the initial start up of the server,
 Change the root password as soon as possible.
 
 ```shell
-mysql -u root -p # login
-alter user 'root'@'localhost' identified by '<new password>'; # change the password
+$ mysql -u root -p # login
+mysql> alter user 'root'@'localhost' identified by '<new password>'; # change the password
 ```
 
 ##### Verification
@@ -54,8 +54,8 @@ alter user 'root'@'localhost' identified by '<new password>'; # change the passw
 Check the version information of installed MySQL server and global variables. Append `-uroot -p` to connect as *root* if necessary.
 
 ```shell
-mysqladmin version
-mysqladmin variables
+$ mysqladmin version
+$ mysqladmin variables
 ```
 
 ##### Remote Connection

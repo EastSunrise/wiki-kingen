@@ -11,7 +11,7 @@ Download and installation [Navicat 12.1.26](http://download.navicat.com.cn/downl
 Replace the public key in the *navicat.exe* and *libcc.dll* with *patcher.exe*. For example, `navicat-patcher.exe "D:\Devs\Navicat Premium 12"`.
 
 ```shell
-navicat-patcher.exe <Navicat installation path> [RSA-2048 PEM file]
+$ navicat-patcher.exe <Navicat installation path> [RSA-2048 PEM file]
 
 # <Navicat installation path> is the full installation path of Navicat.
 # [RSA-2048 PEM file] assigns the path of RSA-2048 PEM file, absolute or relative.
@@ -21,7 +21,7 @@ navicat-patcher.exe <Navicat installation path> [RSA-2048 PEM file]
 Generate serial number with *keygen.exe*. For example, `navicat-keygen.exe -text RegPrivateKey.pem`.
 
 ```shell
-navicat-keygen.exe <-bin|-text> [-adv] <RSA-2048 PrivateKey(PEM file)>
+$ navicat-keygen.exe <-bin|-text> [-adv] <RSA-2048 PrivateKey(PEM file)>
 
 # <-bin|-text> must be one of the values: '-bin' or '-text'.
 # '-bin' for the old way，it will generate a license file.
