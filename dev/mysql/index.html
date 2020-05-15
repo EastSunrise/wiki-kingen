@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="../../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="../../python/library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="../apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="../apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="../sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="../nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="../linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -559,7 +599,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../references.html" class="nav-link">
+                                <a rel="prev" href="../apis/lol.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -626,23 +666,23 @@
 <p>See more details <a href="https://dev.mysql.com/doc/refman/5.7/en/installing.html">here</a>.</p>
 <h5 id="linux">Linux</h5>
 <p>Select and download the repository package from <a href="https://dev.mysql.com/downloads/repo/yum/">the Download Yum Repository page</a> and then install the repository.</p>
-<pre class="codehilite"><code class="language-shell">wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+<pre class="codehilite"><code class="language-shell">$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
-yum install mysql80-community-release-el7-3.noarch.rpm</code></pre>
+$ yum install mysql80-community-release-el7-3.noarch.rpm</code></pre>
 
 
 <p>List all subrepositories of different series and their status. Enable the specific series instead of default one.</p>
-<pre class="codehilite"><code class="language-shell">yum repolist all | grep mysql
+<pre class="codehilite"><code class="language-shell">$ yum repolist all | grep mysql
 
-yum-config-manager --disable mysql80-community
-yum-config-manager --enable mysql57-community</code></pre>
+$ yum-config-manager --disable mysql80-community
+$ yum-config-manager --enable mysql57-community</code></pre>
 
 
 <p>If <code>yum-config-manager</code> is not found, install the command from <em>yum-utils</em> with <code>yum install yum-utils</code>. Or edit manually the <em>/etc/yum.repos.d/mysql-community.repo</em> file to change the release series. Just find the entry of the subrepository and then modify the value of property <em>enabled</em>.</p>
 <p>Now, install MySQL and then start the MySQL server.</p>
-<pre class="codehilite"><code class="language-shell">yum install mysql-community-server
+<pre class="codehilite"><code class="language-shell">$ yum install mysql-community-server
 
-/bin/systemctl start mysqld</code></pre>
+$ /bin/systemctl start mysqld</code></pre>
 
 
 <p>At the initial start up of the server,</p>
@@ -653,14 +693,14 @@ yum-config-manager --enable mysql57-community</code></pre>
 <li>A superuser account &lsquo;root&rsquo;@&rsquo;localhost is created. A password for the superuser is set and stored in the error log file. Reveal it with <code>grep 'temporary password' /var/log/mysqld.log</code>.</li>
 </ul>
 <p>Change the root password as soon as possible.</p>
-<pre class="codehilite"><code class="language-shell">mysql -u root -p # login
-alter user 'root'@'localhost' identified by '&lt;new password&gt;'; # change the password</code></pre>
+<pre class="codehilite"><code class="language-shell">$ mysql -u root -p # login
+mysql&gt; alter user 'root'@'localhost' identified by '&lt;new password&gt;'; # change the password</code></pre>
 
 
 <h5 id="verification">Verification</h5>
 <p>Check the version information of installed MySQL server and global variables. Append <code>-uroot -p</code> to connect as <em>root</em> if necessary.</p>
-<pre class="codehilite"><code class="language-shell">mysqladmin version
-mysqladmin variables</code></pre>
+<pre class="codehilite"><code class="language-shell">$ mysqladmin version
+$ mysqladmin variables</code></pre>
 
 
 <h5 id="remote-connection">Remote Connection</h5>

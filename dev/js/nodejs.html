@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="../../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="../../python/library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="../apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="../apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="../sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="../nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="../linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -602,6 +642,14 @@
             </li>
             <li class="nav-item" data-level="5"><a href="#mirrors" class="nav-link">Mirrors</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="6"><a href="#temparory" class="nav-link">Temparory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="6"><a href="#permanent" class="nav-link">Permanent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -620,20 +668,20 @@
 <p>Download and install from <a href="https://nodejs.org/en/download/">Download | Node.js</a>.</p>
 <h4 id="npm">NPM</h4>
 <h5 id="commands">Commands</h5>
-<pre class="codehilite"><code class="language-shell">npm view {module_name} versions # view all version of specified module
-npm install {module_name}@{version} # install specified version of a module</code></pre>
+<pre class="codehilite"><code class="language-shell">$ npm view {module_name} versions # view all version of specified module
+$ npm install {module_name}@{version} # install specified version of a module</code></pre>
 
 
 <h5 id="mirrors">Mirrors</h5>
 <h6 id="temparory">Temparory</h6>
-<pre class="codehilite"><code class="language-shell">npm --registry https://registry.npm.taobao.org install {module_name}</code></pre>
+<pre class="codehilite"><code class="language-shell">$ npm --registry https://registry.npm.taobao.org install {module_name}</code></pre>
 
 
 <h6 id="permanent">Permanent</h6>
-<pre class="codehilite"><code class="language-shell">npm config set registry https://registry.npm.taobao.org
+<pre class="codehilite"><code class="language-shell">$ npm config set registry https://registry.npm.taobao.org
 
 # verify
-npm config get registry</code></pre>
+$ npm config get registry</code></pre>
 
 
 <h4 id="references">References</h4>

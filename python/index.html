@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dev/apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="../dev/apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="../dev/apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="../dev/sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="../dev/nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="../dev/linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../dev/ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -673,8 +713,8 @@
 <p>Add the directory of Python 2 and Python 3 to the system environment variables, the directory <code>Scripts</code> too.</p>
 <h5 id="key-step">Key Step</h5>
 <p>Execute the following commands in the command line.</p>
-<pre class="codehilite"><code class="language-shell">python2 -m pip install --upgrade pip --force-reinstall
-python3 -m pip install --upgrade pip --force-reinstall</code></pre>
+<pre class="codehilite"><code class="language-shell">$ python2 -m pip install --upgrade pip --force-reinstall
+$ python3 -m pip install --upgrade pip --force-reinstall</code></pre>
 
 
 <h5 id="verification">Verification</h5>
@@ -690,7 +730,7 @@ python3 -m pip install --upgrade pip --force-reinstall</code></pre>
 </ol>
 <p><strong>Notes</strong>: the newest release of Ubuntu requires mirrors from <code>https</code>.</p>
 <h5 id="temporary">Temporary</h5>
-<pre class="codehilite"><code class="language-shell">install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas</code></pre>
+<pre class="codehilite"><code class="language-shell">$ install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas</code></pre>
 
 
 <h5 id="permanent">Permanent</h5>
@@ -725,7 +765,7 @@ setup(console=['test.py'])</code></pre>
 
 
 <p>Then run the <em>setup.py</em> with <em>py2exe</em> from the command line.</p>
-<pre class="codehilite"><code class="language-shell">python setup.py py2exe</code></pre>
+<pre class="codehilite"><code class="language-shell">$ python setup.py py2exe</code></pre>
 
 
 <p>It will create two directories named <strong><em>dist</em></strong> and <strong><em>build</em></strong>, including generated executable file and other files.</p>
@@ -733,7 +773,7 @@ setup(console=['test.py'])</code></pre>
 <p>PyInstaller can package Python programs to executable file under Windows, Linux, Mac OS X, Solaris and AIX.</p>
 <p>Install it using pip or download it from its <a href="http://www.pyinstaller.org/">website</a>. Note that install <a href="http://sourceforge.net/projects/pywin32/files/pywin32/Build%20217/">PyWin32</a> before install PyInstaller on Windows.</p>
 <p>To package <em>test.py</em>, just run the following command from the command line:</p>
-<pre class="codehilite"><code class="language-shell">pyinstaller.exe --onefile --windowed test.py</code></pre>
+<pre class="codehilite"><code class="language-shell">$ pyinstaller.exe --onefile --windowed test.py</code></pre>
 
 
 <ul>
@@ -743,11 +783,11 @@ setup(console=['test.py'])</code></pre>
 </ul>
 <h5 id="notes">Notes</h5>
 <p>Use virtual environment to simplify the libraries. First, install <em>virtualenv</em> with pip. As follows are commands for example.</p>
-<pre class="codehilite"><code class="language-shell">virtualenv example_env # create one
+<pre class="codehilite"><code class="language-shell">$ virtualenv example_env # create one
 
-virtualenv --system-site-packages example_env # inherit global modules
+$ virtualenv --system-site-packages example_env # inherit global modules
 
-activate # activate the environment</code></pre>
+$ activate # activate the environment</code></pre>
 
 
 <p>Or just use <em>PyCharm</em>.</p>

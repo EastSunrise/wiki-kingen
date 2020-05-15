@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../python/library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="../python/library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="../python/library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dev/apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="../dev/apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="../dev/apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="../dev/sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="../dev/nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="../dev/linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../dev/ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -612,7 +652,7 @@
 <p>Download and installation <a href="http://download.navicat.com.cn/download/navicat121_premium_cs_x64.exe">Navicat 12.1.26</a>. Get keygen and patcher from OneDrive.</p>
 <h5 id="steps">Steps</h5>
 <p>Replace the public key in the <em>navicat.exe</em> and <em>libcc.dll</em> with <em>patcher.exe</em>. For example, <code>navicat-patcher.exe "D:\Devs\Navicat Premium 12"</code>.</p>
-<pre class="codehilite"><code class="language-shell">navicat-patcher.exe &lt;Navicat installation path&gt; [RSA-2048 PEM file]
+<pre class="codehilite"><code class="language-shell">$ navicat-patcher.exe &lt;Navicat installation path&gt; [RSA-2048 PEM file]
 
 # &lt;Navicat installation path&gt; is the full installation path of Navicat.
 # [RSA-2048 PEM file] assigns the path of RSA-2048 PEM file, absolute or relative.
@@ -620,7 +660,7 @@
 
 
 <p>Generate serial number with <em>keygen.exe</em>. For example, <code>navicat-keygen.exe -text RegPrivateKey.pem</code>.</p>
-<pre class="codehilite"><code class="language-shell">navicat-keygen.exe &lt;-bin|-text&gt; [-adv] &lt;RSA-2048 PrivateKey(PEM file)&gt;
+<pre class="codehilite"><code class="language-shell">$ navicat-keygen.exe &lt;-bin|-text&gt; [-adv] &lt;RSA-2048 PrivateKey(PEM file)&gt;
 
 # &lt;-bin|-text&gt; must be one of the values: '-bin' or '-text'.
 # '-bin' for the old way，it will generate a license file.

@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="../library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="../library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="../library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dev/apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="../../dev/apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="../../dev/apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="../../dev/sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="../../dev/nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="../../dev/linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../../dev/ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -591,8 +631,12 @@
             
             <li class="nav-item" data-level="4"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="5"><a href="#xlwtxlrd" class="nav-link">xlwt/xlrd</a>
+            <li class="nav-item" data-level="5"><a href="#xlwtxlrd" class="nav-link">xlwt/[xlrd]</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="6"><a href="#xlwtworksheetworksheet" class="nav-link">xlwt.Worksheet.Worksheet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -603,13 +647,12 @@
                     <div class="col-md-9" role="main">
 
 <h4 id="overview">Overview</h4>
-<h5 id="xlwtxlrd">xlwt/xlrd</h5>
-<p><strong>Notes</strong>: xlwt doesn&rsquo;t support <em>.xlsx</em>.</p>
+<h5 id="xlwtxlrd"><a href="https://pypi.org/project/xlwt/">xlwt</a>/[xlrd]</h5>
 <pre class="codehilite"><code class="language-python">import xlrd
 import xlwt
 
 # read with xlrd
-wb = xlrd.open_workbook('example.xlsx')
+wb = xlrd.open_workbook('example.xlsx', encoding='utf-8')
 data = {}
 for i, sheet in enumerate(wb.sheets()):
     nrows = sheet.nrows  # number of rows in the sheet
@@ -623,13 +666,34 @@ for i, sheet in enumerate(wb.sheets()):
     data[sheet.name] = sheet_values
 
 # write with xlwt
-wb = xlwt.Workbook()
+wb = xlwt.Workbook(encoding='utf-8')
 for key, value in data.items():
     sheet = wb.add_sheet(key)
     for r, row in enumerate(value):
         for c, value in enumerate(row):
             sheet.write(r, c, value)
-wb.save('dst.xls')</code></pre></div>
+wb.save('dst.xls')</code></pre>
+
+
+<h6 id="xlwtworksheetworksheet">xlwt.Worksheet.<a href="https://xlwt.readthedocs.io/en/latest/api.html#xlwt.Worksheet.Worksheet">Worksheet</a></h6>
+<pre class="codehilite"><code class="language-python">write(r, c, label='', style=&lt;xlwt.Style.XFStyle object&gt;)
+
+# example
+write(0, 0, 'example')
+write(0,1,xlwt.Formula('HYPERLINK(&quot;%s&quot;, &quot;%s&quot;)' % (url, name)))</code></pre>
+
+
+<p><code>r</code> and <code>c</code> start with 0.</p>
+<p><code>label</code> is the data value to be written. </p>
+<ul>
+<li>An <code>int</code>, <code>long</code>, or <code>Decimal</code> instance is converted to <code>float</code>.</li>
+<li>A <code>unicode</code> instance is written as is. A <code>bytes</code> instance is converted to <code>unicode</code> using the encoding, which defaults to <code>ascii</code>, specified when the Workbook instance was created. </li>
+<li>A <code>datetime</code>, <code>date</code> or <code>time</code> instance is converted into Excel date format (a float representing the number of days since (typically) <code>1899-12-31T00:00:00</code>, under the pretence that 1900 was a leap year).</li>
+<li>A <code>bool</code> instance will show up as <code>TRUE</code> or <code>FALSE</code> in Excel.</li>
+<li><code>None</code> causes the cell to be blank: no data, only formatting.</li>
+<li>An <code>xlwt.Formula</code> instance causes an Excel formula to be written.</li>
+</ul>
+<p><strong>Notes</strong>: xlwt doesn&rsquo;t support <em>.xlsx</em>.</p></div>
             </div>
         </div>
 

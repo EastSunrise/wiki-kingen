@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../python/library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="../python/library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="../python/library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -589,6 +629,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-level="4"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="4"><a href="#roles" class="nav-link">Roles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="4"><a href="#authorization-mode" class="nav-link">Authorization Mode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="4"><a href="#references" class="nav-link">References</a>
               <ul class="nav flex-column">
               </ul>
@@ -598,6 +653,28 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h4 id="overview">Overview</h4>
+<p><a href="https://oauth.net/">OAuth</a> is an open standard for access delegation, commonly used as a way for Internet users to <strong>grant</strong> websites or applications access to their information on other websites but without giving them the passwords. This is based on <a href="https://oauth.net/2/">OAuth 2.0</a>.</p>
+<h4 id="roles">Roles</h4>
+<ul>
+<li><strong>User</strong> the owner of the resources</li>
+<li><strong>Client</strong> the third application</li>
+<li><strong>Authorization Server</strong> server to grant authorization</li>
+<li><strong>Resource Server</strong> server to get resources</li>
+</ul>
+<p><img alt="Roles" src="../img/OAuth_roles.jpg" /></p>
+<h4 id="authorization-mode">Authorization Mode</h4>
+<p><img alt="Steps" src="../img/OAuth_steps.jpg" /></p>
+<ul>
+<li>Client requests authorization from User. </li>
+<li>Authorization Server sends an <strong>authorization code</strong> to Client if User agreed.</li>
+<li>Client requests tokens from Authorization Server with the authorization code.</li>
+<li>Authorization Server returns an <strong>access token</strong> after confirming authorization.</li>
+<li>Client requests resources from Resource Server with the access token.</li>
+<li>Resource Server returns resources after verifying the token.</li>
+</ul>
+<p>Generally, an authorization code will expire in 10min and could be used only once. If an code is applied more than once, hijacked by an hacker for example, the access token verified by the code will turn invalid.</p>
+<p>As for an access token, valid time is 2h. </p>
 <h4 id="references">References</h4>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/OAuth">OAuth - Wikipedia</a></li>

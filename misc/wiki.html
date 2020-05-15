@@ -355,6 +355,16 @@
     </ul>
   </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Internet Protocols and Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../python/library/urllib.html" class="dropdown-item">urllib</a>
+</li>
+    </ul>
+  </li>
+            
 <li>
     <a href="../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
@@ -364,6 +374,10 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Extension References</a>
     <ul class="dropdown-menu">
+            
+<li>
+    <a href="../python/library/bs4.html" class="dropdown-item">BeautifulSoup</a>
+</li>
             
 <li>
     <a href="../python/library/pymysql.html" class="dropdown-item">PyMySQL</a>
@@ -407,6 +421,24 @@
 </li>
                                     
   <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">APIs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dev/apis/douban.html" class="dropdown-item">Douban</a>
+</li>
+            
+<li>
+    <a href="../dev/apis/kugou.html" class="dropdown-item">Kugou</a>
+</li>
+            
+<li>
+    <a href="../dev/apis/lol.html" class="dropdown-item">League of Legends</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">MySQL</a>
     <ul class="dropdown-menu">
             
@@ -439,6 +471,10 @@
 </li>
                                     
 <li>
+    <a href="../dev/sqlite.html" class="dropdown-item">SQLite</a>
+</li>
+                                    
+<li>
     <a href="../dev/nginx.html" class="dropdown-item">Nginx</a>
 </li>
                                     
@@ -448,6 +484,10 @@
                                     
 <li>
     <a href="../dev/linux.html" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../dev/ftp.html" class="dropdown-item">FTP</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -631,6 +671,14 @@
             </li>
             <li class="nav-item" data-level="5"><a href="#hosted" class="nav-link">Hosted</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="6"><a href="#local" class="nav-link">Local</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="6"><a href="#github" class="nav-link">GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -667,25 +715,25 @@
 <p>This page is about how to build a wiki system. The example is <a href="https://www.mkdocs.org/">MkDocs</a> which is easy to deploy and use. It transforms files of Markdown to static web pages which can be accessed locally and also hosted on the server, such as GitHub. This blogs are exactly based in MkDocs.</p>
 <h4 id="installation">Installation</h4>
 <h5 id="ubuntu">Ubuntu</h5>
-<pre class="codehilite"><code class="language-shell">sudo apt-get install mkdocs</code></pre>
+<pre class="codehilite"><code class="language-shell">$ sudo apt-get install mkdocs</code></pre>
 
 
 <h5 id="windows">Windows</h5>
-<pre class="codehilite"><code class="language-shell">pip install mkdocs
+<pre class="codehilite"><code class="language-shell">$ pip install mkdocs
 
-mkdocs --version # verify</code></pre>
+$ mkdocs --version # verify</code></pre>
 
 
 <p>MkDocs supports Python versions 2.7.9+, 3.4+, and pypy.</p>
 <h4 id="usage">Usage</h4>
 <h5 id="create">Create</h5>
-<pre class="codehilite"><code class="language-shell">mkdocs new my-wiki</code></pre>
+<pre class="codehilite"><code class="language-shell">$ mkdocs new my-wiki</code></pre>
 
 
 <p>The <em>docs</em> directory is to save custom files of Markdown. There is an <em>index.md</em> file by default.</p>
 <p>The <em>mkdocs.yml</em> file is to configure the wiki website, including title, content, language and so on.</p>
 <h5 id="preview">Preview</h5>
-<pre class="codehilite"><code class="language-shell">mkdocs serve #start the service of MkDocs</code></pre>
+<pre class="codehilite"><code class="language-shell">$ mkdocs serve #start the service of MkDocs</code></pre>
 
 
 <p>Access the address configured in the <em>mkdocs.yml</em> file, &lt;127.0.0.1:8000&gt; by default.</p>
@@ -701,7 +749,7 @@ mkdocs --version # verify</code></pre>
 
 
 <h5 id="build">Build</h5>
-<pre class="codehilite"><code class="language-shell">mkdocs build</code></pre>
+<pre class="codehilite"><code class="language-shell">$ mkdocs build</code></pre>
 
 
 <p>The command builds documents of Markdown to static web pages under directory <em>site</em>.</p>
@@ -709,25 +757,25 @@ mkdocs --version # verify</code></pre>
 <h6 id="local">Local</h6>
 <p>Deploy <em>site</em> with <a href="../java/tomcat.html#publish-static-pages">Tomcat</a>. Access wiki from <localhost:8080/wiki-name>.</p>
 <h6 id="github">GitHub</h6>
-<pre class="codehilite"><code class="language-shell">cd my-wiki
-git init
+<pre class="codehilite"><code class="language-shell">$ cd my-wiki
+$ git init
 # create a repository on GitHub
-git remote add origin repository_address
+$ git remote add origin repository_address
 
 # Update the deployed pages
-mkdocs gh-deploy</code></pre>
+$ mkdocs gh-deploy</code></pre>
 
 
 <p>Now, the wiki is available from <a href="https://user_name.github.io/repository_name">https://user_name.github.io/repository_name</a>.</p>
 <h4 id="faq">FAQ</h4>
 <h5 id="winerror-10013">WinError 10013</h5>
 <p>That happens because the port is being used. Find and kill the process using the port.</p>
-<pre class="codehilite"><code class="language-shell">netstat -ano|findstr 8000
-taskkill /pid process_number /F</code></pre>
+<pre class="codehilite"><code class="language-shell">$ netstat -ano|findstr 8000
+$ taskkill /pid process_number /F</code></pre>
 
 
 <p>Or use another free port.</p>
-<pre class="codehilite"><code class="language-shell">mkdocs serve --dev-addr=127.0.0.1:9999</code></pre>
+<pre class="codehilite"><code class="language-shell">$ mkdocs serve --dev-addr=127.0.0.1:9999</code></pre>
 
 
 <p>Or modify the configuration file <em>mkdocs.yml</em>.</p>
