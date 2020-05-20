@@ -1,6 +1,6 @@
 #### Overview
 
-[SQLite](sqlite.org/index.html) is a C-language and small SQL database engine.
+[SQLite](https://sqlite.org/index.html) is a C-language and small SQL database engine.
 
 #### Get Started
 
@@ -11,11 +11,16 @@ Almost every distribution of [Linux](linux.md) preinstalls SQLite. Use `sqlite3`
 Commands of SQLite start with a dot `.` which doesn't end with `;`. Refer to details of all commands by `.help`.
 
 ```sqlite
-.help -- instructions
-.show -- values of settings
-.header on -- display of headers of tables
-.mode column -- Left-aligned column for output
-.schema sqlite_master -- schema of table 'sqlite-master'
+-- instructions
+.help
+-- values of settings
+.show
+-- display of headers of tables
+.header on
+-- Left-aligned column for output
+.mode column
+-- schema of table 'sqlite-master'
+.schema sqlite_master
 ```
 
 #### Datatypes

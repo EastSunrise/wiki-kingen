@@ -5,26 +5,48 @@ repo_url: https://gitee.com/eastsunrise/wiki-kingen/
 edit_uri: edit/master/docs
 site_author: Kingen
 use_directory_urls: false
+theme:
+  name: mkdocs
+  navigation_depth: 6
+extra_javascript:
+  - static/js/kingen.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+extra_css:
+  - static/css/kingen.css
+markdown_extensions:
+  - extra
+  - admonition
+  - codehilite
+  - legacy_attrs
+  - legacy_em
+  - meta
+  - nl2br
+  - sane_lists
+  - smarty
+  - toc
+  - wikilinks
+  - mdx_math:
+      enable_dollar_delimiter: True
 nav:
-        - Home: index.md
-        - Java:
-                  - Get Started: java/index.md
-                  - Language References:
-                            - Annotations: java/language/annotations.md
-                            - Collection: java/language/collection.md
-                  - Library References:
-                            - Fastjson: java/library/fastjson.md
-                            - Apache Commons: java/library/apache-commons.md
-                            - Apache POI: java/library/apache-poi.md
-                            - Lombok: java/library/lombok.md
-                  - Design Patterns:
-                            - State Pattern: java/design/state.md
-                            - Singleton Pattern: java/design/singleton.md
-                  - Spring Framework:
-                            - Get Started: java/spring/index.md
-                            - Aspect Oriented Programming: java/spring/aop.md
-                            - Transaction: java/spring/transaction.md
-                  - Spring Boot:
+  - Home: index.md
+  - Java:
+      - Get Started: java/index.md
+      - Language References:
+          - Annotations: java/language/annotations.md
+          - Collection: java/language/collection.md
+      - Library References:
+          - Fastjson: java/library/fastjson.md
+          - Apache Commons: java/library/apache-commons.md
+                              - Apache POI: java/library/apache-poi.md
+                              - Lombok: java/library/lombok.md
+                              - Design Patterns:
+                                  - State Pattern: java/design/state.md
+                                  - Singleton Pattern: java/design/singleton.md
+                              - Spring Framework:
+                                  - Get Started: java/spring/index.md
+                                  - Aspect Oriented Programming: java/spring/aop.md
+                                  - Transaction: java/spring/transaction.md
+                              - Spring Boot:
                             - Get Started: java/spring-boot/index.md
                   - MyBatis:
                             - MyBatis: java/mybatis/index.md
@@ -71,14 +93,16 @@ nav:
                                       - os: python/library/os.md
                                       - logging: python/library/logging.md
                             - Cryptographic Services:
-                                      - hashlib: python/library/hashlib.md
+                                - hashlib: python/library/hashlib.md
                             - File Formats:
-                                      - configParser: python/library/configparser.md
+                                - configParser: python/library/configparser.md
                             - File and Directory Access:
-                                      - shutil: python/library/shutil.md
+                                - shutil: python/library/shutil.md
                             - Internet Protocols and Support:
-                                      - urllib: python/library/urllib.md
+                                - urllib: python/library/urllib.md
                             - Graphical User Interfaces: python/library/tkinter.md
+                            - Data Persistence:
+                                - sqlite3: python/library/sqlite3.md
                   - Extension References:
                             - BeautifulSoup: python/library/bs4.md
                             - PyMySQL: python/library/pymysql.md
@@ -88,6 +112,7 @@ nav:
                             - Spider: python/app/spider.md
                             - Task: python/app/task.md
                             - Excel: python/app/excel.md
+                  - Flask: python/flask.md
         - Development:
                   - References: dev/references.md
                   - APIs:
@@ -129,25 +154,3 @@ nav:
                   - Visual Studio Code: misc/vscode.md
                   - Fiddler: misc/fiddler.md
                   - Charles: misc/charles.md
-theme:
-        name: mkdocs
-        navigation_depth: 6
-extra_javascript:
-        - js/kingen.js
-        - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-extra_css:
-        - css/kingen.css
-markdown_extensions:
-        - extra
-        - admonition
-        - codehilite
-        - legacy_attrs
-        - legacy_em
-        - meta
-        - nl2br
-        - sane_lists
-        - smarty
-        - toc
-        - wikilinks
-        - mdx_math:
-                  enable_dollar_delimiter: True

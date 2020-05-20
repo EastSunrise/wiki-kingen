@@ -40,3 +40,14 @@ To find information about a specific command, search [here](https://docs.microso
 2. 查询占用了8080端口的进程 netstat -ano|findstr "8080"
 3. 查找进程号对应的进程名称 tasklist|findstr 3112
 4. 根据进程名称杀死进程 taskkill /f /t /im /javaw.exe
+
+##### NET
+
+NET commands involve management of network, service, user, and so on.
+
+###### Service
+
+```shell
+$ net start <service name>  # Administrater is required
+$ net stop <service name>
+```

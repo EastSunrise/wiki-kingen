@@ -69,6 +69,10 @@ trusted-host = https://pypi.douban.com/
 
 We can use **py2exe** or PyInstaller to package scripts of Python to a executable file.
 
+##### setuptools
+
+TODO
+
 ##### py2exe
 
 [py2exe](http://www.py2exe.org/) is an [Distutils](https://docs.python.org/dev/library/distutils.html) extension which converts Python scripts into executable Windows programs, able to run without requiring a Python installation.

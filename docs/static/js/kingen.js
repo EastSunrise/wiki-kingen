@@ -1,7 +1,7 @@
 $(function () {
     // replace footer of mkdocs
     $("footer").each(function () {
-        $(this).html("<p>Kingen | <a href='https://github.com/eastsunrise/'>EastSunrise - GitHub</a></p>");
+        $(this).html("<p>Kingen | <a href='https://github.com/eastsunrise/wiki-kingen'>Wiki-Kingen - GitHub</a></p>");
     });
 
     // open a http/https link with a new label
