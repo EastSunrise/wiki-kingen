@@ -1,16 +1,16 @@
 site_name: Kingen
 dev_addr: 127.0.0.1:9999
-repo_name: Gitee
-repo_url: https://gitee.com/eastsunrise/wiki-kingen/
+repo_name: GitHub
+repo_url: https://github.com/eastsunrise/wiki-kingen/
 edit_uri: edit/master/docs
 site_author: Kingen
 use_directory_urls: false
 theme:
-  name: mkdocs
-  navigation_depth: 6
+      name: mkdocs
+      navigation_depth: 6
 extra_javascript:
-  - static/js/kingen.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+      - static/js/kingen.js
+      - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 extra_css:
   - static/css/kingen.css
 markdown_extensions:

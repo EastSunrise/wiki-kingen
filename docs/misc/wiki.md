@@ -80,11 +80,11 @@ $ git init
 # create a repository on GitHub
 $ git remote add origin repository_address
 
-# Update the deployed pages
+# Update the deployed pages, it will be pushed to gh-pages branch of origin.
 $ mkdocs gh-deploy
 ```
 
-Now, the wiki is available from <https://user_name.github.io/repository_name>.
+Set *GitHub Pages* in the *Settings*. Then the wiki is available from <https://user_name.github.io/repository_name>.
 
 #### FAQ
 
@@ -97,13 +97,11 @@ $ netstat -ano|findstr 8000
 $ taskkill /pid process_number /F
 ```
 
-
 Or use another free port.
 
 ```shell
 $ mkdocs serve --dev-addr=127.0.0.1:9999
 ```
-
 
 Or modify the configuration file *mkdocs.yml*.
 
