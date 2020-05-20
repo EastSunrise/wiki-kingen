@@ -1,6 +1,6 @@
 #### Welcome
 
-This is Kingen's documentations for development. Read it from <https://eastsunrise.gitee.io/wiki-kingen>.
+This is my documentations for development. Read it from <https://eastsunrise.github.io/wiki-kingen>.
 
 **Java** which I major in  is the primary part, including language references, extended libraries and numbers of framework based on Java.
 
