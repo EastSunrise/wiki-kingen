@@ -13,7 +13,7 @@
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="../../css/kingen.css" rel="stylesheet">
+        <link href="../../static/css/kingen.css" rel="stylesheet">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
@@ -368,6 +368,16 @@
 <li>
     <a href="../../python/library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Persistence</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../python/library/sqlite3.html" class="dropdown-item">sqlite3</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
                                     
@@ -410,6 +420,10 @@
 </li>
     </ul>
   </li>
+                                    
+<li>
+    <a href="../../python/flask.html" class="dropdown-item">Flask</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
@@ -633,6 +647,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="4"><a href="#forget-password" class="nav-link">Forget Password</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -640,7 +659,10 @@
 
 <h4 id="nontransientconnectionexception">NonTransientConnectionException</h4>
 <p><strong>E</strong>: NonTransientConnectionException: Public Key Retrieval is not allowed</p>
-<p><strong>S</strong>: Add <strong>allowPublicKeyRetrieval=true</strong> after the connection URL. Refer to <a href="https://mysqlconnector.net/connection-options/">MySQL Connection String for C# .NET Core Programs - MySqlConnector</a>.</p></div>
+<p><strong>S</strong>: Add <strong>allowPublicKeyRetrieval=true</strong> after the connection URL. Refer to <a href="https://mysqlconnector.net/connection-options/">MySQL Connection String for C# .NET Core Programs - MySqlConnector</a>.</p>
+<h4 id="forget-password">Forget Password</h4>
+<p>On Linux, append <code>skip-grant-tables</code> to configuration file <em>/etc/my.cnf</em> to enable logging in without verification. Then log in the database and execute an update sql: <code>update user set authentication_string = password('&lt;new password&gt;') where user = 'root'</code>. Recover the file and restart MySQL.</p>
+<p>On Windows, the configuration file is usuallt located to <em>my.ini</em> under ProgramData.</p></div>
             </div>
         </div>
 
@@ -653,7 +675,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
-        <script src="../../js/kingen.js" defer></script>
+        <script src="../../static/js/kingen.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../../search/main.js" defer></script>
 

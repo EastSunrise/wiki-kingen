@@ -13,7 +13,7 @@
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="../css/kingen.css" rel="stylesheet">
+        <link href="../static/css/kingen.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
@@ -368,6 +368,16 @@
 <li>
     <a href="library/tkinter.html" class="dropdown-item">Graphical User Interfaces</a>
 </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Persistence</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="library/sqlite3.html" class="dropdown-item">sqlite3</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
                                     
@@ -410,6 +420,10 @@
 </li>
     </ul>
   </li>
+                                    
+<li>
+    <a href="flask.html" class="dropdown-item">Flask</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -674,6 +688,10 @@
             
             <li class="nav-item" data-level="4"><a href="#packaging" class="nav-link">Packaging</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="5"><a href="#setuptools" class="nav-link">setuptools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="5"><a href="#py2exe" class="nav-link">py2exe</a>
               <ul class="nav flex-column">
               </ul>
@@ -754,6 +772,8 @@ trusted-host = https://pypi.douban.com/</code></pre>
 
 <h4 id="packaging">Packaging</h4>
 <p>We can use <strong>py2exe</strong> or PyInstaller to package scripts of Python to a executable file.</p>
+<h5 id="setuptools">setuptools</h5>
+<p>TODO</p>
 <h5 id="py2exe">py2exe</h5>
 <p><a href="http://www.py2exe.org/">py2exe</a> is an <a href="https://docs.python.org/dev/library/distutils.html">Distutils</a> extension which converts Python scripts into executable Windows programs, able to run without requiring a Python installation.</p>
 <p>Download py2exe for Python 2 from <a href="https://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/">SourceForge</a>. Use pip to install that for Python 3 or download it from <a href="https://pypi.org/project/py2exe/">PyPI</a>.  </p>
@@ -815,7 +835,7 @@ $ activate # activate the environment</code></pre>
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js" defer></script>
-        <script src="../js/kingen.js" defer></script>
+        <script src="../static/js/kingen.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../search/main.js" defer></script>
 
