@@ -6,11 +6,11 @@ edit_uri: edit/master/docs
 site_author: Kingen
 use_directory_urls: false
 theme:
-      name: mkdocs
-      navigation_depth: 6
+    name: mkdocs
+    navigation_depth: 6
 extra_javascript:
-      - static/js/kingen.js
-      - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - static/js/kingen.js
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 extra_css:
   - static/css/kingen.css
 markdown_extensions:
@@ -140,6 +140,8 @@ nav:
               - Node.js: dev/js/nodejs.md
               - Select2: dev/js/select2.md
               - Layer: dev/js/layer.md
+        - C:
+              - Get Started: dev/c/index.md
         - PHP:
               - Get Started: dev/php.md
         - OAuth: dev/oauth.md
