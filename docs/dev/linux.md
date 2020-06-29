@@ -40,6 +40,15 @@ Directories of **RPM** are commonly set as following by default:
 
 Linux is a multi-user system with limits of authority. Use `su` command to access system as *root* when logging in as a common user and `exit` to get back.
 
+##### Development Tools
+
+Install common development tools.
+
+```shell
+$ yum -y groupinstall "Development tools"
+$ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2unix htop iftop iotop unzip telnet sl psmisc nethogs glances bc
+```
+
 #### System and Partitions
 
 **Each hardware device in Linux is regarded as a file**. They are almost all under */dev* directory.

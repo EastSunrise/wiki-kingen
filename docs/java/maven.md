@@ -17,6 +17,10 @@ Create a copy of *conf/settings.xml* to add an internal mirror and modify the pa
 </mirror>
 ```
 
+#### Nexus
+
+Build a private Maven server with Nexus
+
 #### References
 
 1. [Maven – Maven Documentation](http://maven.apache.org/guides/)

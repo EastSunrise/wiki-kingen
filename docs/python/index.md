@@ -4,32 +4,75 @@ Learn [Python](https://www.python.org/), based on [Python 3.7.6](https://www.pyt
 
 #### Installation
 
-Download and install [Python2](https://www.python.org/downloads/release/python-2717/) and [Python3](https://www.python.org/downloads/release/python-376/).
+##### Windows
 
-##### Rename
+Download and install [Python2](https://www.python.org/downloads/release/python-2717/) and [Python3](https://www.python.org/downloads/release/python-376/).
 
 Rename `python.exe` under directory of `Python 2` to `python2.exe`，`pythonw.exe` to `pythonw2.exe`
 
-##### Path
-
 Add the directory of Python 2 and Python 3 to the system environment variables, the directory `Scripts` too.
 
-##### Key Step
-
-Execute the following commands in the command line.
+Key step: Execute the following commands in the command line.
 
 ```shell
 $ python2 -m pip install --upgrade pip --force-reinstall
 $ python3 -m pip install --upgrade pip --force-reinstall
 ```
 
-##### Verification
-
 Input `pip2 -V` and `pip3 -V` to show the information of version.
 
-#### Change the Mirror
+##### Linux
 
-##### Common Internal Mirrors
+Install related compilation tools.
+
+```shell
+$ yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+$ yum install -y libffi-devel zlib1g-dev
+$ yum install zlib* -y
+```
+
+Download installation package of Python. Unzip, make and install Python.
+
+```shell
+$ cd /home
+$ wget wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tar.xz
+$ tar -xvJf  Python-3.7.6.tar.xz
+
+# create installation directory
+$ mkdir /usr/local/python3
+$ cd Python-3.7.6
+$ ./configure --prefix=/usr/local/python3 --enable-optimizations --with-ssl 
+# prefix: specify installation directory
+# enable-optimizations: improve efficiency
+# with-ssl: include ssl to help install pip
+
+$ make && make install
+``` 
+
+Create symbolic link  to the path
+
+```shell
+$ ln -s /usr/local/python3/bin/python3 /usr/local/bin/python3
+$ ln -s /usr/local/python3/bin/pip3 /usr/local/bin/pip3
+```
+
+Verify if installed successfully.
+
+```shell
+$ python -V
+$ pip -V
+```
+
+Because of command `yum` is based on built-in Python2, open the following two files to change "#! /usr/bin/python" to "#! /usr/bin/python2" to redirect to Python2.
+
+```shell
+$ vi /usr/bin/yum
+$ vi /usr/libexec/urlgrabber-ext-down
+```
+
+##### Change the Mirror
+
+###### Common Internal Mirrors
 
   1. 阿里云 <https://mirrors.aliyun.com/pypi/simple/>
   2. 豆瓣 <https://pypi.douban.com/simple/>
@@ -39,30 +82,30 @@ Input `pip2 -V` and `pip3 -V` to show the information of version.
 
 **Notes**: the newest release of Ubuntu requires mirrors from `https`.
 
-##### Temporary
+###### Temporary
 
 ```shell
 $ install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
 ```
 
-##### Permanent
+###### Permanent
 
 1. Under Linux, modify *~/.pip/pip.conf* as follows:
 
 ```shell
 [global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+index-url = https://mirrors.aliyun.com/pypi/simple/
 [install]
-trusted-host = https://pypi.tuna.tsinghua.edu.cn/
+trusted-host = https://mirrors.aliyun.com/
 ```
 
 2. Under Windows, create a new file *%Users%\username\pip\pip.ini* as follows:
 
 ```shell
 [global]
-index-url = https://pypi.douban.com/simple
+index-url = https://mirrors.aliyun.com/pypi/simple/
 [install]
-trusted-host = https://pypi.douban.com/
+trusted-host = https://mirrors.aliyun.com/
 ```
 
 #### Packaging
@@ -124,6 +167,22 @@ $ virtualenv --system-site-packages example_env # inherit global modules
 $ activate # activate the environment
 ```
 Or just use *PyCharm*.
+
+#### Deployment
+
+##### Local
+
+Under local development environment, generate list of packages.
+
+```shell
+$ pip freeze > requirements.txt
+```
+
+Then upload above file and the project to the server.
+
+##### Server
+
+Create virtual environment and install required packages.
 
 #### Style Guide
 

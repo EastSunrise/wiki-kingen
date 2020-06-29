@@ -1,5 +1,5 @@
 site_name: Kingen
-dev_addr: 127.0.0.1:9999
+dev_addr: 127.0.0.1:6800
 repo_name: GitHub
 repo_url: https://github.com/eastsunrise/wiki-kingen/
 edit_uri: edit/master/docs
@@ -39,6 +39,8 @@ nav:
               - Apache Commons: java/library/apache-commons.md
               - Apache POI: java/library/apache-poi.md
               - Lombok: java/library/lombok.md
+              - HttpComponents: java/library/http-components.md
+              - Jsoup: java/library/jsoup.md
         - Design Patterns:
               - State Pattern: java/design/state.md
               - Singleton Pattern: java/design/singleton.md
