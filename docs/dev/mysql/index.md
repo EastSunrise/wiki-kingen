@@ -63,6 +63,9 @@ $ mysqladmin variables
 *SSH* is recommended. To connect not through *SSH*, update the table *mysql.user* to add hosts to a specific user. Open the port of firewall if needed.
 
 ```sql
+grant <priv1，priv2...> on <database>.<table> to <user>@'<host/ip>' identified by '<password>';
+
+eg:
 grant all privileges on *.* to '<user>'@'<host>' identified by '<password>';
 
 flush privileges; -- flush tables related to privileges
