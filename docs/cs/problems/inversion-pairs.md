@@ -1,6 +1,6 @@
 #### Question
 
-Given an array $A[0,n-1]$, count how many inversion pairs there are. $A_i$ and $A_j$ are inversion pairs if $i<j$ and $A_i>A_j$. An example is as follows:
+Given an array $a_1, a_2, ..., a_n$, count how many inversion pairs there are. $a_i$ and $a_j$ are inversion pairs if $i<j$ and $a_i>a_j$. An example is as follows:
 
 ```
 Input: [3, 1, 2]

@@ -1,5 +1,5 @@
 site_name: Kingen
-dev_addr: 127.0.0.1:6800
+dev_addr: 127.0.0.1:6801
 repo_name: GitHub
 repo_url: https://github.com/eastsunrise/wiki-kingen/
 edit_uri: edit/master/docs
@@ -31,19 +31,19 @@ nav:
   - Home: index.md
   - Java:
         - Get Started: java/index.md
-        - Language References:
-              - Annotations: java/language/annotations.md
+        - 基础语法:
+              - Annotation: java/language/annotation.md
               - Collection: java/language/collection.md
-        - Library References:
+        - 扩展库:
               - Fastjson: java/library/fastjson.md
               - Apache Commons: java/library/apache-commons.md
               - Apache POI: java/library/apache-poi.md
               - Lombok: java/library/lombok.md
               - HttpComponents: java/library/http-components.md
               - Jsoup: java/library/jsoup.md
-        - Design Patterns:
-              - State Pattern: java/design/state.md
-              - Singleton Pattern: java/design/singleton.md
+        - 设计模式:
+              - 状态模式: java/design/state.md
+              - 单例模式: java/design/singleton.md
         - Spring Framework:
               - Get Started: java/spring/index.md
               - Aspect Oriented Programming: java/spring/aop.md
@@ -58,36 +58,36 @@ nav:
         - Freemarker: java/freemarker.md
         - OGNL: java/ognl.md
   - CS:
-        - Mathematics:
-              - Fourier Transform: cs/mathematics/fourier-transform.md
-        - Algorithms:
-              - Analysis of Algorithms:
-                    - Asymptotic Analysis: cs/algorithms/analysis/asymptotic-analysis.md
-              - Sorting:
-                    - Quick Sort: cs/algorithms/sorting/quick-sort.md
-                    - Merge Sort: cs/algorithms/sorting/merge-sort.md
-                    - Heap Sort: cs/algorithms/sorting/heap-sort.md
-                    - Bucket Sort: cs/algorithms/sorting/bucket-sort.md
-              - Divide and Conquer: cs/algorithms/divide-and-conquer.md
-              - Greedy Algorithms: cs/algorithms/greedy-algorithms.md
-              - Pattern Searching:
+        - 数学:
+              - 傅里叶变换: cs/mathematics/fourier-transform.md
+        - 算法:
+              - 算法分析:
+                    - 渐进性分析: cs/algorithms/analysis/asymptotic-analysis.md
+              - 排序算法:
+                    - 快速排序: cs/algorithms/sorting/quick-sort.md
+                    - 归并排序: cs/algorithms/sorting/merge-sort.md
+                    - 堆排序: cs/algorithms/sorting/heap-sort.md
+                    - 桶排序: cs/algorithms/sorting/bucket-sort.md
+              - 分治算法: cs/algorithms/divide-and-conquer.md
+              - 贪心算法: cs/algorithms/greedy-algorithms.md
+              - 模式匹配:
                     - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern-searching/Knuth-Morris-Pratt.md
                     - Boyer Moore Algorithm: cs/algorithms/pattern-searching/Boyer Moore Algorithm.md
-              - Cryptography:
+              - 密钥算法:
                     - RSA: cs/algorithms/cryptography/rsa.md
                     - SHA: cs/algorithms/cryptography/sha.md
-              - Graph:
+              - 图论:
                     - Dijkstra's Algorithm: cs/algorithms/graph/Dijkstra's Algorithm.md
-              - Other Algorithms:
+              - 其它算法:
                     - Knuth-Shuffle Algorithm: cs/algorithms/others/Knuth-Shuffle.md
                     - Monte Carlo Tree Search: cs/algorithms/others/Monte Carlo Tree Search.md
-        - Data Structures:
-              - Binary Tree: cs/data-structure/binary-tree.md
-              - Binary Search Tree: cs/data-structure/binary-search-tree.md
-              - Heap: cs/data-structure/heap.md
-              - Disjoint Set: cs/data-structure/disjoint.md
-        - Problems:
-              - Inversion Pairs: cs/problems/inversion-pairs.md
+        - 数据结构:
+              - 二叉树: cs/data-structure/binary-tree.md
+              - 二叉搜索树: cs/data-structure/binary-search-tree.md
+              - 堆: cs/data-structure/heap.md
+              - 并查集: cs/data-structure/disjoint.md
+        - 常见问题:
+              - 逆序对: cs/problems/inversion-pairs.md
   - Python:
         - Get Started: python/index.md
         - Library References:
