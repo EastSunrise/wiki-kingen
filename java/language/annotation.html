@@ -8,7 +8,7 @@
         <meta name="author" content="Kingen">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Lombok - Kingen</title>
+        <title>Annotation - Kingen</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -50,11 +50,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../language/annotation.html" class="dropdown-item">Annotation</a>
+    <a href="annotation.html" class="dropdown-item active">Annotation</a>
 </li>
             
 <li>
-    <a href="../language/collection.html" class="dropdown-item">Collection</a>
+    <a href="collection.html" class="dropdown-item">Collection</a>
 </li>
     </ul>
   </li>
@@ -64,27 +64,27 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="fastjson.html" class="dropdown-item">Fastjson</a>
+    <a href="../library/fastjson.html" class="dropdown-item">Fastjson</a>
 </li>
             
 <li>
-    <a href="apache-commons.html" class="dropdown-item">Apache Commons</a>
+    <a href="../library/apache-commons.html" class="dropdown-item">Apache Commons</a>
 </li>
             
 <li>
-    <a href="apache-poi.html" class="dropdown-item">Apache POI</a>
+    <a href="../library/apache-poi.html" class="dropdown-item">Apache POI</a>
 </li>
             
 <li>
-    <a href="lombok.html" class="dropdown-item active">Lombok</a>
+    <a href="../library/lombok.html" class="dropdown-item">Lombok</a>
 </li>
             
 <li>
-    <a href="http-components.html" class="dropdown-item">HttpComponents</a>
+    <a href="../library/http-components.html" class="dropdown-item">HttpComponents</a>
 </li>
             
 <li>
-    <a href="jsoup.html" class="dropdown-item">Jsoup</a>
+    <a href="../library/jsoup.html" class="dropdown-item">Jsoup</a>
 </li>
     </ul>
   </li>
@@ -639,17 +639,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="apache-poi.html" class="nav-link">
+                                <a rel="prev" href="../index.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="http-components.html" class="nav-link">
+                                <a rel="next" href="collection.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/java/library/lombok.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/java/language/annotation.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -669,18 +669,29 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="4"><a href="#overview" class="nav-link">Overview</a>
+            <li class="nav-item" data-level="4"><a href="#definition" class="nav-link">Definition</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#support-for-ide" class="nav-link">Support for IDE</a>
+            <li class="nav-item" data-level="4"><a href="#meta-annotations" class="nav-link">Meta annotations</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="5"><a href="#target" class="nav-link">@Target</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="4"><a href="#principle" class="nav-link">Principle</a>
+            <li class="nav-item" data-level="5"><a href="#retention" class="nav-link">@Retention</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="5"><a href="#documented" class="nav-link">@Documented</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="5"><a href="#inherited" class="nav-link">@Inherited</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -689,7 +700,7 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#references" class="nav-link">References</a>
+            <li class="nav-item" data-level="4"><a href="#reference" class="nav-link">Reference</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -698,37 +709,48 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h4 id="overview">Overview</h4>
-<p>Project <strong>Lombok</strong> is a java library that automatically plugs into editors and build tools, spicing up Java.</p>
-<p>Download <a href="https://projectlombok.org/download">here</a> or add <strong>Maven: org.projectlombok: lombok: x.x.x</strong> with <em>provided</em> for <em>scope</em>, meaning that <em>Lombok</em> only takes effect when compiling.</p>
-<h4 id="support-for-ide">Support for IDE</h4>
-<p>Install plug-in <em>Lombok</em>.</p>
-<h4 id="principle">Principle</h4>
-<p>Since Java 6, Java supports regulation of <em>JSR 269 Pluggable Annotation Processing API</em> which is called when <em>javac</em> is running. Its procedures are as follows:</p>
-<ol>
-<li><em>javac</em> analyzes the source code and generates an Abstract Syntax Tree (AST).</li>
-<li><em>javac</em> calls <em>Lombok</em> programs implementing <em>JSR 269 API</em> when compiling.</li>
-<li><em>Lombok</em> deals with the AST above modifies its nodes by associate annotations.</li>
-<li><em>javac</em> generates bytecode files based on the modified AST.</li>
-</ol>
+<h4 id="definition">Definition</h4>
+<pre class="codehilite"><code class="language-java">public @interface Test {
+}
+</code></pre>
+
+<h4 id="meta-annotations">Meta annotations</h4>
+<p>Annotations applied to other annotations</p>
+<h5 id="target">@Target</h5>
+<p>Marks another annotation to restrict what kind of Java elements the annotation may be applied to，Values of <code>ElementType</code> includes:</p>
+<ul>
+<li>TYPE: class, interface or enum</li>
+<li>FIELD: fields, including the constants in the enum</li>
+<li>METHOD</li>
+<li>PARAMETER</li>
+<li>CONSTRUCTOR</li>
+<li>LOCAL_VARIABLE</li>
+<li>ANNOTATION_TYPE</li>
+<li>PACKAGE</li>
+</ul>
+<h5 id="retention">@Retention</h5>
+<p>Specifies how the marked annotation is stored. Values of <code>RetentionPolicy</code> includes:</p>
+<ul>
+<li>SOURCE: in code only, abandoned once compiled.</li>
+<li>CLASS(default): compiled into the class, abandoned when running</li>
+<li>RUNTIME: available at runtime through reflection</li>
+</ul>
+<h5 id="documented">@Documented</h5>
+<p>Marks another annotation for inclusion in the documentation.</p>
+<h5 id="inherited">@Inherited</h5>
+<p>Marks another annotation to be inherited to subclasses of annotated class. Annotations are not inherited to subclasses by default.</p>
 <h4 id="usage">Usage</h4>
+<pre class="codehilite"><code class="language-java">@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Test{
+
+}
+</code></pre>
+
+<h4 id="reference">Reference</h4>
 <ol>
-<li><strong>@NonNull</strong></li>
-<li><strong>@Cleanup</strong> calls <em>close()</em> methods, taking effect for objects implementing <em>java.io.Closeable</em> method.</li>
-<li><strong>@Getter/@Setter</strong></li>
-<li><strong>@ToString</strong></li>
-<li><strong>@EqualsAndHashCode</strong> generates <em>equals()</em> and <em>hashCode()</em></li>
-<li><strong>@NoArgsConstructor</strong>, <strong>@RequiredArgsConstructor</strong> and <strong>@AllArgsConstructor</strong> generate constructors that take no fields, <em>final</em>/<em>@NonNull</em> fields or all fields.</li>
-<li><strong>@Data</strong> is a shortcut for <em>@ToString</em>, <em>@EqualsAndHashCode</em>, <em>@Getter</em> on all fields, <em>@Setter</em> on all non-final fields and <em>RequiredArgsConstrutor</em>.</li>
-<li><strong>@Value</strong></li>
-<li><strong>@Builder</strong> builds types by Builder Pattern.</li>
-<li><strong>@SneakyThrows</strong> checks exceptions.</li>
-<li><strong>@Log</strong> generates a logger field.</li>
-</ol>
-<h4 id="references">References</h4>
-<ol>
-<li><a href="https://projectlombok.org/">Project Lombok</a></li>
-<li><a href="https://www.jianshu.com/p/2543c71a8e45">Lombok的基本使用 - 简书</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_annotation">Java annotation - Wikipedia</a></li>
+<li><a href="https://www.cnblogs.com/hyc-ana/p/9325618.html">@Target、@Retention、@Documented注解简介 - 季末花开 - 博客园</a></li>
 </ol></div>
             </div>
         </div>
