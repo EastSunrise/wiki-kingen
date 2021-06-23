@@ -12,4 +12,9 @@
 
 至于和开发关联性不大的则被分配在杂项里 **Misc**.
 
-所有内容参考包括但不限于以下网站：[GeeksforGeeks](https://www.geeksforgeeks.org/), [Stack Overflow](https://stackoverflow.com/questions).
+#### References
+
+1. [GeeksforGeeks](https://www.geeksforgeeks.org/).
+2. [Stack Overflow](https://stackoverflow.com/questions).
+3. 算法导论（原书第3版）.
+4. 其它.
