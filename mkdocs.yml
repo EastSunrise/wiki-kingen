@@ -73,15 +73,17 @@ nav:
           - 贪心算法: cs/algorithms/greedy-algorithms.md
           - 回溯算法: cs/algorithms/backtracking.md
           - 模式匹配:
-              - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern-searching/knuth-morris-pratt.md
-              - Boyer Moore Algorithm: cs/algorithms/pattern-searching/boyer-moore.md
+                - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern-searching/knuth-morris-pratt-algorithm.md
+                - Boyer Moore Algorithm: cs/algorithms/pattern-searching/boyer-moore-algorithm.md
           - 密钥算法:
               - RSA: cs/algorithms/cryptography/rsa.md
               - SHA: cs/algorithms/cryptography/sha.md
           - 图论:
+                - 深度优先搜索: cs/algorithms/graph/depth-first-search.md
               - Dijkstra's Algorithm: cs/algorithms/graph/dijkstra's-algorithm.md
+                    - Tarjan 算法: cs/algorithms/graph/tarjan-algorithm.md
           - 其它算法:
-              - Knuth-Shuffle Algorithm: cs/algorithms/others/knuth-shuffle.md
+                - Knuth-Shuffle Algorithm: cs/algorithms/others/knuth-shuffle-algorithm.md
               - Monte Carlo Tree Search: cs/algorithms/others/monte-carlo-tree-search.md
       - 数据结构:
           - 栈: cs/data-structure/stack.md
