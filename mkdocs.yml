@@ -30,7 +30,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Java:
-      - Get Started: java/index.md
+        - 开始: java/index.md
       - 基础语法:
           - Annotation: java/language/annotation.md
           - Collection: java/language/collection.md
@@ -58,12 +58,13 @@ nav:
       - Freemarker: java/freemarker.md
       - OGNL: java/ognl.md
   - CS:
+        - 开始: cs/index.md
       - 数学:
           - 傅里叶变换: cs/mathematics/fourier-transform.md
       - 算法:
-          - Get Started:
-              - 渐近表示: cs/algorithms/asymptotic-analysis.md
-              - 分治策略: cs/algorithms/divide-and-conquer.md
+            - 开始:
+                  - 渐近表示: cs/algorithms/asymptotic-analysis.md
+                  - 分治策略: cs/algorithms/divide-and-conquer.md
           - 排序:
               - 快速排序: cs/algorithms/sorting/quick-sort.md
               - 归并排序: cs/algorithms/sorting/merge-sort.md
@@ -73,42 +74,44 @@ nav:
           - 贪心算法: cs/algorithms/greedy-algorithms.md
           - 回溯算法: cs/algorithms/backtracking.md
           - 模式匹配:
-                - Knuth-Morris-Pratt Algorithm: cs/algorithms/pattern-searching/knuth-morris-pratt-algorithm.md
-                - Boyer Moore Algorithm: cs/algorithms/pattern-searching/boyer-moore-algorithm.md
+                - KMP算法: cs/algorithms/pattern-searching/knuth-morris-pratt-algorithm.md
+                - Boyer-Moore算法: cs/algorithms/pattern-searching/boyer-moore-algorithm.md
           - 密钥算法:
               - RSA: cs/algorithms/cryptography/rsa.md
               - SHA: cs/algorithms/cryptography/sha.md
           - 图论:
                 - 深度优先搜索: cs/algorithms/graph/depth-first-search.md
-              - Dijkstra's Algorithm: cs/algorithms/graph/dijkstra's-algorithm.md
-                    - Tarjan 算法: cs/algorithms/graph/tarjan-algorithm.md
+                - Dijkstra's 算法: cs/algorithms/graph/dijkstra's-algorithm.md
+                - Tarjan 算法: cs/algorithms/graph/tarjan-algorithm.md
           - 其它算法:
-                - Knuth-Shuffle Algorithm: cs/algorithms/others/knuth-shuffle-algorithm.md
-              - Monte Carlo Tree Search: cs/algorithms/others/monte-carlo-tree-search.md
+                - Knuth 洗牌算法: cs/algorithms/others/knuth-shuffle-algorithm.md
+                - 蒙特卡洛树搜索: cs/algorithms/others/monte-carlo-tree-search.md
+                - 蓄水池抽样算法: cs/algorithms/others/reservoir-sampling.md
       - 数据结构:
-          - 栈: cs/data-structure/stack.md
+            - 栈: cs/data-structure/stack.md
           - 队列: cs/data-structure/queue.md
           - 堆: cs/data-structure/heap.md
           - 二叉树: cs/data-structure/binary-tree.md
           - 二叉搜索树: cs/data-structure/binary-search-tree.md
+            - 线段树: cs/data-structure/segment-tree.md
           - 红黑树: cs/data-structure/red-black-tree.md
           - 并查集: cs/data-structure/disjoint.md
       - 常见问题:
           - 逆序对: cs/problems/inversion-pairs.md
           - 最大子序列和: cs/problems/max-subsequence-sum.md
   - Python:
-      - Get Started: python/index.md
-      - Library References:
-          - Operating System Services:
-              - os: python/library/os.md
-              - logging: python/library/logging.md
-          - Cryptographic Services:
-              - hashlib: python/library/hashlib.md
-          - File Formats:
-              - configParser: python/library/configparser.md
-          - File and Directory Access:
-              - shutil: python/library/shutil.md
-          - Internet Protocols and Support:
+        - 开始: python/index.md
+        - 标准库:
+              - Operating System Services:
+                    - os: python/library/os.md
+                    - logging: python/library/logging.md
+              - Cryptographic Services:
+                    - hashlib: python/library/hashlib.md
+              - File Formats:
+                    - configParser: python/library/configparser.md
+              - File and Directory Access:
+                    - shutil: python/library/shutil.md
+              - Internet Protocols and Support:
               - urllib: python/library/urllib.md
           - Graphical User Interfaces: python/library/tkinter.md
           - Data Persistence:

@@ -1,35 +1,28 @@
-#### Question
+#### 问题
 
-There is a condition that **A&C** are related if **A&B** and **B&C** are both related. Given some relations, infer whether **X&Y** are related.
+规定：如果a和b是亲戚，b和c是亲戚，则a和c也是亲戚，即亲戚关系具有传递性。现在给定一组亲戚关系，求其中任意的两人x和y是否是亲戚？
 
-#### Graph Theory
+#### 并查集
 
-By building an undirected graph, it turns to judge whether the two specified points are in the same connected subgraph.
+考虑建立集合A包括a的亲戚，集合B包括b的亲戚，如果a和b是亲戚，则将集合A和B合并，判断x和y是否是亲戚即判断x和y是否在同一个集合中。为了完成以上的操作，此时就需要使用并查集了。
 
-**Defects**: the structure is too large, with low efficiency.
+并查集的重要思想在于，**选定一个元素代表整个集合**，即集合的根元素。围绕根元素，并查集需要实现两个操作：
 
-#### Union-Find
-
-Build a set for **A** and **A**'s relatives, another for **B** and **B**'s relatives. Merge the set if **A&B** are related. Whether **X&Y** are related is equivalent to whether **X&Y** are in the same set.
-
-There are two key operations as follows:
-
-- **Find**: Determine which subset a particular element is in. This can be used for determining if two elements are in the same subset.
-- **Union**: Join two subsets into a single subset.
+- **查找-Find**: 对于给定的元素x，找出其所在的集合（以集合的根元素表示），然后就可以轻松判断两个元素是否在同一个集合。
+- **合并-Union**: 合并两个相关的集合为同一个集合。
 
 ```java
 /**
- * Build each set with tree structure whose root node is the representative element of the set.
- * Union: If two elements are related, merge trees where they are.
- * Find: Two elements are related if they have the same root.
+ * 使用树结构表示一个集合，树的根节点即集合的根元素。
  */
 public class MergeFindSet {
 
-    // store parents of all the elements
-    private int[] parents;
-    
-    //store the depths of trees
-    private int[] height;
+    // 对于元素i，parents[i]指向其父元素
+    // 如果是根元素，则指向自身
+    private final int[] parents;
+
+    // 记录树的高度，使得在合并时，保持树的高度较低，以提高查询效率
+    private final int[] height;
 
     // initialize every single element as a set
     public MergeFindSet(int capacity) {
@@ -41,7 +34,7 @@ public class MergeFindSet {
         }
     }
 
-	// find root node of the tree where x is in, also known as the representative element of the set.
+    // 查找根元素，即所在树的根节点
     private int find(int x) {
         int p = x;
         while (p != parents[p]) {
@@ -50,7 +43,7 @@ public class MergeFindSet {
         return p;
     }
 
-    // join two elements
+    // 合并两个集合
     public void join(int a, int b) {
         int ap = find(a);
         int bp = find(b);
@@ -66,28 +59,9 @@ public class MergeFindSet {
         }
     }
 
-    // if a and b are related
+    // 判断两个元素是否相关
     public boolean isRelated(int a, int b) {
         return find(a) == find(b);
-    }
-
-    public static void main(String[] args) {
-        MergeFindSet mergeFindSet = new MergeFindSet(23);
-        mergeFindSet.join(1, 2);
-        mergeFindSet.join(2, 3);
-        mergeFindSet.join(3, 4);
-        mergeFindSet.join(2, 5);
-        mergeFindSet.join(6, 7);
-        mergeFindSet.join(7, 8);
-        mergeFindSet.join(8, 9);
-        mergeFindSet.join(10, 11);
-        mergeFindSet.join(12, 13);
-        mergeFindSet.join(14, 15);
-        mergeFindSet.join(15, 16);
-        mergeFindSet.join(17, 18);
-        mergeFindSet.join(21, 22);
-        mergeFindSet.join(2, 14);
-        System.out.println(mergeFindSet.isRelated(3, 16));
     }
 }
 ```
@@ -95,3 +69,4 @@ public class MergeFindSet {
 #### References
 
 1. [Disjoint Set (Or Union-Find) | Set 1 (Detect Cycle in an Undirected Graph) - GeeksforGeeks](https://www.geeksforgeeks.org/union-find/)
+   .
