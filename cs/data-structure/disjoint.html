@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../java/index.html" class="dropdown-item">开始</a>
+    <a href="../../java/index.html" class="dropdown-item">Get Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -185,7 +185,7 @@
     <ul class="dropdown-menu">
             
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">开始</a>
+    <a href="#" class="dropdown-item">Get Started</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -230,6 +230,10 @@
             
 <li>
     <a href="../algorithms/backtracking.html" class="dropdown-item">回溯算法</a>
+</li>
+            
+<li>
+    <a href="../algorithms/branch-and-bound.html" class="dropdown-item">分支界定</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -328,6 +332,10 @@
             
 <li>
     <a href="red-black-tree.html" class="dropdown-item">红黑树</a>
+</li>
+            
+<li>
+    <a href="monotonic-stack.html" class="dropdown-item">单调栈</a>
 </li>
             
 <li>
@@ -679,7 +687,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="red-black-tree.html" class="nav-link">
+                                <a rel="prev" href="monotonic-stack.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -744,10 +752,10 @@ public class MergeFindSet {
 
     // 对于元素i，parents[i]指向其父元素
     // 如果是根元素，则指向自身
-    private int[] parents;
+    private final int[] parents;
 
     // 记录树的高度，使得在合并时，保持树的高度较低，以提高查询效率
-    private int[] height;
+    private final int[] height;
 
     // initialize every single element as a set
     public MergeFindSet(int capacity) {
@@ -793,7 +801,8 @@ public class MergeFindSet {
 
 <h4 id="references">References</h4>
 <ol>
-<li><a href="https://www.geeksforgeeks.org/union-find/">Disjoint Set (Or Union-Find) | Set 1 (Detect Cycle in an Undirected Graph) - GeeksforGeeks</a>.</li>
+<li><a href="https://www.geeksforgeeks.org/union-find/">Disjoint Set (Or Union-Find) | Set 1 (Detect Cycle in an Undirected Graph) - GeeksforGeeks</a><br />
+   .</li>
 </ol></div>
             </div>
         </div>

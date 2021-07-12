@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../java/index.html" class="dropdown-item">开始</a>
+    <a href="../../java/index.html" class="dropdown-item">Get Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -185,7 +185,7 @@
     <ul class="dropdown-menu">
             
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">开始</a>
+    <a href="#" class="dropdown-item">Get Started</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -230,6 +230,10 @@
             
 <li>
     <a href="../../cs/algorithms/backtracking.html" class="dropdown-item">回溯算法</a>
+</li>
+            
+<li>
+    <a href="../../cs/algorithms/branch-and-bound.html" class="dropdown-item">分支界定</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -328,6 +332,10 @@
             
 <li>
     <a href="../../cs/data-structure/red-black-tree.html" class="dropdown-item">红黑树</a>
+</li>
+            
+<li>
+    <a href="../../cs/data-structure/monotonic-stack.html" class="dropdown-item">单调栈</a>
 </li>
             
 <li>
@@ -750,7 +758,9 @@
                     <div class="col-md-9" role="main">
 
 <h4 id="overview">Overview</h4>
-<p>Use standard module <a href="https://docs.python.org/zh-cn/3.7/library/logging.html">logging</a> to print logs. It defines five levels of logs: <em>DEBUG &lt; INFO &lt; WARNING &lt; ERROR &lt; CRITICAL</em> and contains four basic classes: <strong>Logger</strong>, <strong>Handler</strong>, <strong>Filter</strong> and <strong>Formatter</strong>.</p>
+<p>Use standard module <a href="https://docs.python.org/zh-cn/3.7/library/logging.html">logging</a> to print logs. It defines five<br />
+levels of logs: <em>DEBUG &lt; INFO &lt; WARNING &lt; ERROR &lt; CRITICAL</em> and contains four basic classes: <strong>Logger</strong>, <strong>Handler</strong>, <strong><br />
+Filter</strong> and <strong>Formatter</strong>.</p>
 <h4 id="get-started">Get Started</h4>
 <p>Print simple logs by calling <strong>module-level</strong> functions. Following calls will print logs onto the console.</p>
 <pre class="codehilite"><code class="language-python">import logging
@@ -764,12 +774,16 @@ logging.critical('This is a critical log.')
 logging.log(logging.DEBUG, 'This is a debug log.')
 </code></pre>
 
-<p>By default, only <em>WARNING</em> or above logs will be printed onto console. To modify basic configurations, we need to call <a href="https://docs.python.org/3/library/logging.html#logging.basicConfig"><strong>logging.basicConfig()</strong></a> with following optional arguments.</p>
+<p>By default, only <em>WARNING</em> or above logs will be printed onto console. To modify basic configurations, we need to<br />
+call <a href="https://docs.python.org/3/library/logging.html#logging.basicConfig"><strong>logging.basicConfig()</strong></a> with following<br />
+optional arguments.</p>
 <ul>
 <li><strong>filename</strong>: target file that logs are output to.</li>
 <li><strong>filemode</strong>: mode to open target file, &lsquo;a&rsquo; by default.</li>
-<li><strong>format</strong>: format to output logs. Refer to <a href="https://docs.python.org/3/library/logging.html#logrecord-attributes">LogRecord attributes</a>.</li>
-<li><strong>datefmt</strong>: format of date/time, taking effect when <strong>format</strong> contains time field. Refer to <a href="https://docs.python.org/3/library/time.html#time.strftime">time.strftime()</a>.</li>
+<li><strong>format</strong>: format to output logs. Refer<br />
+  to <a href="https://docs.python.org/3/library/logging.html#logrecord-attributes">LogRecord attributes</a>.</li>
+<li><strong>datefmt</strong>: format of date/time, taking effect when <strong>format</strong> contains time field. Refer<br />
+  to <a href="https://docs.python.org/3/library/time.html#time.strftime">time.strftime()</a>.</li>
 <li><strong>level</strong></li>
 <li><strong>stream</strong>: stream logs are output to, such as <em>sys.stdout</em> and <em>sys.stderr</em>.</li>
 <li><strong>style</strong>: style of <strong>format</strong> string. Optional values includes &lsquo;%&rsquo;(default), &lsquo;{&lsquo; and &lsquo;$&rsquo;. It&rsquo;s since Python 3.2.</li>
@@ -787,18 +801,25 @@ logging.info('Hi, %s', 'Jack')
 </code></pre>
 
 <h4 id="advanced">Advanced</h4>
-<p>Create an instance of <strong>Logger</strong> to record logs by calling <em>logging.getLogger(<strong>name</strong>)</em>. Its procedure shows as follows.</p>
-<p><img alt="Logging Flow" src="\img\logging_flow.png" /></p>
+<p>Create an instance of <strong>Logger</strong> to record logs by calling <em>logging.getLogger(<strong>name</strong>)</em>. Its procedure shows as<br />
+follows.</p>
+<p><img alt="Logging Flow" src="../img/logging-flow.png" /></p>
 <h5 id="loggers">Loggers</h5>
-<p>The most common used methods of <em>Logger</em> fall into two categories:<br />
-- <strong>configuration</strong><br />
-    - <code>Logger.setLevel()</code><br />
-    - <code>Logger.addHandler()</code> and <code>Logger.removeHandler()</code><br />
-    - <code>Logger.addFilter()</code> and <code>Logger.removeFilter()</code><br />
-- <strong>message sending</strong><br />
-    - <code>Logger.debug()</code>, <code>Logger.info()</code>, <code>Logger.warning()</code>, <code>Logger.error()</code> and <code>Logger.critical()</code><br />
-    - <code>Logger.exception()</code><br />
-    - <code>Logger.log()</code></p>
+<p>The most common used methods of <em>Logger</em> fall into two categories:</p>
+<ul>
+<li><strong>configuration</strong><ul>
+<li><code>Logger.setLevel()</code></li>
+<li><code>Logger.addHandler()</code> and <code>Logger.removeHandler()</code></li>
+<li><code>Logger.addFilter()</code> and <code>Logger.removeFilter()</code></li>
+</ul>
+</li>
+<li><strong>message sending</strong><ul>
+<li><code>Logger.debug()</code>, <code>Logger.info()</code>, <code>Logger.warning()</code>, <code>Logger.error()</code> and <code>Logger.critical()</code></li>
+<li><code>Logger.exception()</code></li>
+<li><code>Logger.log()</code></li>
+</ul>
+</li>
+</ul>
 <h5 id="handlers">Handlers</h5>
 <h5 id="formatters">Formatters</h5>
 <h5 id="configuration">Configuration</h5>
@@ -806,7 +827,7 @@ logging.info('Hi, %s', 'Jack')
 <ul>
 <li>Creating loggers, handlers, and formatters explicitly using Python code.</li>
 <li>Creating a logging configuration file and reading it using the <strong>fileConfig()</strong> function.</li>
-<li>Creating a dictionary of configuration information and passing it to the <strong>dictConfig()</strong> function. </li>
+<li>Creating a dictionary of configuration information and passing it to the <strong>dictConfig()</strong> function.</li>
 </ul>
 <h4 id="references">References</h4>
 <ol>

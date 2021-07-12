@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../java/index.html" class="dropdown-item">开始</a>
+    <a href="../../java/index.html" class="dropdown-item">Get Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -185,7 +185,7 @@
     <ul class="dropdown-menu">
             
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">开始</a>
+    <a href="#" class="dropdown-item">Get Started</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -230,6 +230,10 @@
             
 <li>
     <a href="../algorithms/backtracking.html" class="dropdown-item">回溯算法</a>
+</li>
+            
+<li>
+    <a href="../algorithms/branch-and-bound.html" class="dropdown-item">分支界定</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -328,6 +332,10 @@
             
 <li>
     <a href="red-black-tree.html" class="dropdown-item">红黑树</a>
+</li>
+            
+<li>
+    <a href="monotonic-stack.html" class="dropdown-item">单调栈</a>
 </li>
             
 <li>
@@ -724,26 +732,26 @@
             
             <li class="nav-item" data-level="4"><a href="#_4" class="nav-link">遍历</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="5"><a href="#_5" class="nav-link">前序遍历</a>
+            <li class="nav-item" data-level="5"><a href="#-vlr" class="nav-link">前序遍历-VLR</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="5"><a href="#_6" class="nav-link">中序遍历</a>
+            <li class="nav-item" data-level="5"><a href="#-lvr" class="nav-link">中序遍历-LVR</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="5"><a href="#_7" class="nav-link">后序遍历</a>
+            <li class="nav-item" data-level="5"><a href="#-lrv" class="nav-link">后序遍历-LRV</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="5"><a href="#_8" class="nav-link">层序遍历</a>
+            <li class="nav-item" data-level="5"><a href="#_5" class="nav-link">层序遍历</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#_9" class="nav-link">参考</a>
+            <li class="nav-item" data-level="4"><a href="#_6" class="nav-link">参考</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -771,167 +779,191 @@ nums[0,1,...,n-1]
 
 <h4 id="_4">遍历</h4>
 <p>给定如图所示二叉树：</p>
-<p><img alt="二叉树" src="\img\二叉树.png" /></p>
-<h5 id="_5">前序遍历</h5>
+<p><img alt="二叉树" src="../img/%E4%BA%8C%E5%8F%89%E6%A0%91.png" /></p>
+<h5 id="-vlr">前序遍历-VLR</h5>
 <p>先访问当前结点，再访问其左子树，最后访问其右子树。图示二叉树的前序遍历结果为[1,2,3,4,5,6,7,8,9].</p>
 <pre class="codehilite"><code class="language-java">// 递归实现
-List&lt;Integer&gt; preorderTraversal(TreeNode root) {
-    List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-    preorderTraversal(res, root);
-    return res;
-}
+List&lt;Integer&gt; preorderTraversal(TreeNode root){
+        List&lt;Integer&gt; res=new ArrayList&lt;&gt;();
+        preorderTraversal(res,root);
+        return res;
+        }
 
-void preorderTraversal(List&lt;Integer&gt; res, TreeNode node) {
-    if (node != null) {
-        // 记录/输出当前节点
+        void preorderTraversal(List&lt;Integer&gt; res,TreeNode node){
+        if(node!=null){
+        // 访问当前节点
         res.add(node.val);
-        preorderTraversal(res, node.left);
-        preorderTraversal(res, node.right);
-    }
-}
+        preorderTraversal(res,node.left);
+        preorderTraversal(res,node.right);
+        }
+        }
 </code></pre>
 
 <pre class="codehilite"><code class="language-java">// 栈实现
-List&lt;Integer&gt; preorderTraversal(TreeNode root) {
-    List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-    Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();
-    TreeNode current = root;
-    while (current != null || !stack.isEmpty()) {
-        while (current != null) {
-            // 先记录/输出当前节点
-            res.add(current.val);
-            // 并将当前节点入栈以便之后访问其右子树
-            stack.push(current);
-            // 再访问其左子树
-            current = current.left;
+public List&lt;Integer&gt; preorderTraversal2(TreeNode root){
+        List&lt;Integer&gt; res=new ArrayList&lt;&gt;();
+        Stack&lt;TreeNode&gt; stack=new Stack&lt;&gt;();
+        stack.push(root);
+        while(!stack.isEmpty()){
+        // 退栈并访问当前节点
+        TreeNode current=stack.pop();
+        res.add(current.val);
+        // 先将右子节点入栈
+        if(current.right!=null){
+        stack.push(current.right);
         }
-        // 转向右子树
-        current = stack.pop().right;
-    }
-    return res;
-}
+        // 再将左子节点入栈
+        if(current.left!=null){
+        stack.push(current.left);
+        }
+        }
+        return res;
+        }
 </code></pre>
 
-<h5 id="_6">中序遍历</h5>
+<h5 id="-lvr">中序遍历-LVR</h5>
 <p>先访问当前结点的左子树，再访问当前结点，最后访问其右子树。图示二叉树的中序遍历结果为[3,2,,5,4,1,7,8,6,9].</p>
 <pre class="codehilite"><code class="language-java">// 递归实现
-List&lt;Integer&gt; inorderTraversal(TreeNode root) {
-    List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
-    inorderTraversal(root, result);
-    return result;
-}
+List&lt;Integer&gt; inorderTraversal(TreeNode root){
+        List&lt;Integer&gt; result=new ArrayList&lt;&gt;();
+        inorderTraversal(root,result);
+        return result;
+        }
 
-void inorderTraversal(TreeNode node, List&lt;Integer&gt; result) {
-    if (node == null) {
+        void inorderTraversal(TreeNode node,List&lt;Integer&gt; result){
+        if(node==null){
         return;
-    }
-    inorderTraversal(node.left, result);
-    // 记录/输出当前节点
-    result.add(node.val);
-    inorderTraversal(node.right, result);
-}
+        }
+        inorderTraversal(node.left,result);
+        // 访问当前节点
+        result.add(node.val);
+        inorderTraversal(node.right,result);
+        }
 </code></pre>
 
 <pre class="codehilite"><code class="language-java">// 栈实现
-List&lt;Integer&gt; inorderTraversal2(TreeNode root) {
-    List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-    Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();
-    TreeNode current = root;
-    while (current != null || !stack.isEmpty()) {
-        // 先将当前节点的最左路径上所有结点（包括自身）入栈，即先访问左子树
-        while (current != null) {
-            stack.push(current);
-            current = current.left;
+public List&lt;Integer&gt; inorderTraversal2(TreeNode root){
+        List&lt;Integer&gt; res=new ArrayList&lt;&gt;();
+        Stack&lt;TreeNode&gt; stack=new Stack&lt;&gt;();
+        TreeNode current=root;
+        do{
+        // 将当前结点的最左路径（包括自身）入栈，即先进入左子树
+        while(current!=null){
+        stack.push(current);
+        current=current.left;
         }
-        current = stack.pop();
-        // 记录/输出当前结点
+        if(!stack.isEmpty()){
+        // 退栈并访问结点
+        current=stack.pop();
         res.add(current.val);
         // 转向右子树
-        current = current.right;
-    }
-    return res;
-}
+        current=current.right;
+        }
+        }while(current!=null||!stack.isEmpty());
+        return res;
+        }
 </code></pre>
 
-<h5 id="_7">后序遍历</h5>
+<h5 id="-lrv">后序遍历-LRV</h5>
 <p>先访问当前结点的左子树，再访问其右子树，最后访问当前结点。图示二叉树的后序遍历结果为[3,5,4,2,8,7,9,6,1].</p>
 <pre class="codehilite"><code class="language-java">// 递归实现
-List&lt;Integer&gt; postorderTraversal(TreeNode root) {
-    List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-    postorderTraversal(res, root);
-    return res;
-}
+List&lt;Integer&gt; postorderTraversal(TreeNode root){
+        List&lt;Integer&gt; res=new ArrayList&lt;&gt;();
+        postorderTraversal(res,root);
+        return res;
+        }
 
-void postorderTraversal(List&lt;Integer&gt; res, TreeNode node) {
-    if (node != null) {
-        postorderTraversal(res, node.left);
-        postorderTraversal(res, node.right);
-        // 记录/输出当前结点
+        void postorderTraversal(List&lt;Integer&gt; res,TreeNode node){
+        if(node!=null){
+        postorderTraversal(res,node.left);
+        postorderTraversal(res,node.right);
+        // 访问当前结点
         res.add(node.val);
-    }
-}
+        }
+        }
 </code></pre>
 
 <pre class="codehilite"><code class="language-java">// 栈实现
-List&lt;Integer&gt; postorderTraversal2(TreeNode root) {
-    List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-    TreeNode current = root;
-    // 记录最后一次记录/输出的结点
-    TreeNode last = null;
-    Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();
-    while (!stack.isEmpty() || current != null) {
+List&lt;Integer&gt; postorderTraversal2(TreeNode root){
+        List&lt;Integer&gt; res=new ArrayList&lt;&gt;();
+        TreeNode current=root;
+        // 标记最后一次访问的结点
+        TreeNode last=null;
+        Stack&lt;TreeNode&gt; stack=new Stack&lt;&gt;();
+        while(!stack.isEmpty()||current!=null){
         // 先将当前节点的最左路径上所有结点（包括自身）入栈，即先访问左子树
-        while (current != null) {
-            stack.push(current);
-            current = current.left;
+        while(current!=null){
+        stack.push(current);
+        current=current.left;
         }
-        current = stack.peek();
+        current=stack.peek();
         // 判断当前结点是否有右子树，或者右子树是否已经访问结束
-        if (current.right == null || current.right == last) {
-            // 如果是，记录/输出当前结点
-            res.add(current.val);
-            // 将当前结点出栈，
-            stack.pop();
-            // 记下该结点
-            last = current;
-            current = null;
-        } else {
-            // 右子树存在且访问，则转向访问右子树
-            current = current.right;
+        if(current.right==null||current.right==last){
+        // 如果是，访问当前结点
+        res.add(current.val);
+        // 将当前结点出栈，
+        stack.pop();
+        // 记下该结点
+        last=current;
+        current=null;
+        }else{
+        // 右子树存在且访问，则转向访问右子树
+        current=current.right;
         }
-    }
-    return res;
-}
+        }
+        return res;
+        }
 </code></pre>
 
-<h5 id="_8">层序遍历</h5>
+<h5 id="_5">层序遍历</h5>
 <p>按层从左至右访问结点。图示二叉树的层序遍历结果为[1,2,6,3,4,7,9,5,6].</p>
-<pre class="codehilite"><code class="language-java">// 队列实现
-List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) {
-    List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
-    Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();
-    queue.add(root);
-    while (!queue.isEmpty()) {
-        // 记录/输出一层，并将左右子节点入队
-        int size = queue.size();
-        List&lt;Integer&gt; level = new ArrayList&lt;&gt;(size);
-        for (int i = 0; i &lt; size; i++) {
-            TreeNode node = queue.remove();
-            level.add(node.val);
-            if (node.left != null) {
-                queue.add(node.left);
-            }
-            if (node.right != null) {
-                queue.add(node.right);
-            }
+<pre class="codehilite"><code class="language-java">// 队列实现（不分层）
+List&lt;Integer&gt; levelOrder(TreeNode root){
+        List&lt;Integer&gt; res=new ArrayList&lt;&gt;();
+        Queue&lt;TreeNode&gt; queue=new LinkedList&lt;&gt;();
+        queue.add(root);
+        while(!queue.isEmpty()){
+        TreeNode current=queue.remove();
+        // 访问队列前端的结点
+        res.add(current.val);
+        // 将该结点左右子节点进队
+        if(current.left!=null){
+        queue.add(current.left);
+        }
+        if(current.right!=null){
+        queue.add(current.right);
+        }
+        }
+        return res;
+        }
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">// 队列实现（分层）
+List&lt;List&lt;Integer&gt;&gt;levelOrder(TreeNode root){
+        List&lt;List&lt;Integer&gt;&gt;res=new ArrayList&lt;&gt;();
+        Queue&lt;TreeNode&gt; queue=new LinkedList&lt;&gt;();
+        queue.add(root);
+        while(!queue.isEmpty()){
+        // 访问当前层，并将左右子节点进队
+        int size=queue.size();
+        List&lt;Integer&gt; level=new ArrayList&lt;&gt;(size);
+        for(int i=0;i&lt;size; i++){
+        TreeNode node=queue.remove();
+        level.add(node.val);
+        if(node.left!=null){
+        queue.add(node.left);
+        }
+        if(node.right!=null){
+        queue.add(node.right);
+        }
         }
         res.add(level);
-    }
-    return res;
-}
+        }
+        return res;
+        }
 </code></pre>
 
-<h4 id="_9">参考</h4>
+<h4 id="_6">参考</h4>
 <ol>
 <li><a href="https://www.cnblogs.com/du001011/p/11229170.html">二叉树的四种遍历方式 - 林海杜 - 博客园</a>.</li>
 </ol></div>

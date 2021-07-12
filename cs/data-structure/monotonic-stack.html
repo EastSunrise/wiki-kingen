@@ -8,7 +8,7 @@
         <meta name="author" content="Kingen">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>逆序对 - Kingen</title>
+        <title>单调栈 - Kingen</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -307,39 +307,39 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../data-structure/stack.html" class="dropdown-item">栈</a>
+    <a href="stack.html" class="dropdown-item">栈</a>
 </li>
             
 <li>
-    <a href="../data-structure/queue.html" class="dropdown-item">队列</a>
+    <a href="queue.html" class="dropdown-item">队列</a>
 </li>
             
 <li>
-    <a href="../data-structure/heap.html" class="dropdown-item">堆</a>
+    <a href="heap.html" class="dropdown-item">堆</a>
 </li>
             
 <li>
-    <a href="../data-structure/binary-tree.html" class="dropdown-item">二叉树</a>
+    <a href="binary-tree.html" class="dropdown-item">二叉树</a>
 </li>
             
 <li>
-    <a href="../data-structure/binary-search-tree.html" class="dropdown-item">二叉搜索树</a>
+    <a href="binary-search-tree.html" class="dropdown-item">二叉搜索树</a>
 </li>
             
 <li>
-    <a href="../data-structure/segment-tree.html" class="dropdown-item">线段树</a>
+    <a href="segment-tree.html" class="dropdown-item">线段树</a>
 </li>
             
 <li>
-    <a href="../data-structure/red-black-tree.html" class="dropdown-item">红黑树</a>
+    <a href="red-black-tree.html" class="dropdown-item">红黑树</a>
 </li>
             
 <li>
-    <a href="../data-structure/monotonic-stack.html" class="dropdown-item">单调栈</a>
+    <a href="monotonic-stack.html" class="dropdown-item active">单调栈</a>
 </li>
             
 <li>
-    <a href="../data-structure/disjoint.html" class="dropdown-item">并查集</a>
+    <a href="disjoint.html" class="dropdown-item">并查集</a>
 </li>
     </ul>
   </li>
@@ -349,11 +349,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="inversion-pairs.html" class="dropdown-item active">逆序对</a>
+    <a href="../problems/inversion-pairs.html" class="dropdown-item">逆序对</a>
 </li>
             
 <li>
-    <a href="max-subsequence-sum.html" class="dropdown-item">最大子序列和</a>
+    <a href="../problems/max-subsequence-sum.html" class="dropdown-item">最大子序列和</a>
 </li>
     </ul>
   </li>
@@ -687,17 +687,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../data-structure/disjoint.html" class="nav-link">
+                                <a rel="prev" href="red-black-tree.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="max-subsequence-sum.html" class="nav-link">
+                                <a rel="next" href="disjoint.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/cs/problems/inversion-pairs.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/cs/data-structure/monotonic-stack.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -717,17 +717,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="4"><a href="#question" class="nav-link">Question</a>
+            <li class="nav-item" data-level="4"><a href="#_1" class="nav-link">概述</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="4"><a href="#simple" class="nav-link">Simple</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="4"><a href="#enhanced-merge-sort" class="nav-link">Enhanced Merge Sort</a>
+            <li class="nav-item" data-level="4"><a href="#_2" class="nav-link">参考</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -736,63 +731,12 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h4 id="question">Question</h4>
-<p>Given an array <script type="math/tex">a_1, a_2, ..., a_n</script>, count how many inversion pairs there are. <script type="math/tex">a_i</script> and <script type="math/tex">a_j</script> are inversion pairs if <script type="math/tex">i<j</script> and <script type="math/tex">a_i>a_j</script>. An example is as follows:</p>
-<pre class="codehilite"><code>Input: [3, 1, 2]
-Output: 2
-</code></pre>
-
-<h4 id="simple">Simple</h4>
-<p>Use a nested loop. Its time complexity is <script type="math/tex">O(n^2)</script>.</p>
-<pre class="codehilite"><code class="language-python">def inversion_pairs(arr):
-    if not isinstance(arr, list) or len(arr) &lt;= 1:
-        return 0
-
-    result = 0
-    for j in range(1, len(arr)):
-        for i in range(j):
-            if arr[i] &gt; arr[j]:
-                result += 1
-    return result
-</code></pre>
-
-<h4 id="enhanced-merge-sort">Enhanced Merge Sort</h4>
-<p>Like <a href="../algorithms/sorting/merge-sort.html">Merge Sort</a>, the algorithm divides the array into two halves, counts and sorts the halves, then merges the two halves. Its time complexity is <script type="math/tex">O(n\log{}n)</script>.</p>
-<pre class="codehilite"><code class="language-python">def inversion_pairs(arr):
-    temp = arr[:]
-    return _inversion_pairs(temp)
-
-
-def _inversion_pairs(arr):
-    if len(arr) &lt;= 1:
-        return 0
-
-    m = len(arr) // 2
-    left = arr[:m]
-    right = arr[m:]
-    count = _inversion_pairs(left) + _inversion_pairs(right)
-
-    # merge the two sorted halves
-    i = j = k = 0
-    while i &lt; len(left) and j &lt; len(right):
-        if left[i] &lt;= right[j]:
-            arr[k] = left[i]
-            i += 1
-        else:
-            arr[k] = right[j]
-            count += (m - i)
-            j += 1
-        k += 1
-    while i &lt; len(left):
-        arr[k] = left[i]
-        i += 1
-        k += 1
-    while j &lt; len(right):
-        arr[k] = right[j]
-        j += 1
-        k += 1
-    return count
-</code></pre></div>
+<h4 id="_1">概述</h4>
+<p>顾名思义，单调栈即满足单调性的栈。相较于其他结构，单调栈既维护了元素间的大小关系，也通过入栈顺序维护了元素间的相对位置关系，但是会丢失一部分元素。</p>
+<h4 id="_2">参考</h4>
+<ol>
+<li><a href="https://oi-wiki.org/ds/monotonous-stack/">单调栈 - OI Wiki</a>.</li>
+</ol></div>
             </div>
         </div>
 

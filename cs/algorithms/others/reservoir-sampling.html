@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../java/index.html" class="dropdown-item">开始</a>
+    <a href="../../../java/index.html" class="dropdown-item">Get Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -185,7 +185,7 @@
     <ul class="dropdown-menu">
             
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">开始</a>
+    <a href="#" class="dropdown-item">Get Started</a>
     <ul class="dropdown-menu">
             
 <li>
@@ -230,6 +230,10 @@
             
 <li>
     <a href="../backtracking.html" class="dropdown-item">回溯算法</a>
+</li>
+            
+<li>
+    <a href="../branch-and-bound.html" class="dropdown-item">分支界定</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -328,6 +332,10 @@
             
 <li>
     <a href="../../data-structure/red-black-tree.html" class="dropdown-item">红黑树</a>
+</li>
+            
+<li>
+    <a href="../../data-structure/monotonic-stack.html" class="dropdown-item">单调栈</a>
 </li>
             
 <li>
@@ -747,7 +755,9 @@
 <li>设 <script type="math/tex">I(i)</script> 为该数据进入池中的概率，<script type="math/tex">O(i)</script> 为该数据未被替换的概率，易知，<script type="math/tex">P(i)=I(i)*O(i)</script>；</li>
 <li>当 <script type="math/tex">i\le k</script>，数据直接放入池中，<script type="math/tex">I(i)=1</script>；</li>
 <li>当 <script type="math/tex">i>k</script>，选取的随机数需在 <script type="math/tex">[1,k]</script> 范围内，<script type="math/tex">I(i)=\frac{k}{i}</script>；</li>
-<li>当 <script type="math/tex">i\le k</script>，此时有 <script type="math/tex">R_i=a_i</script>，考虑 <script type="math/tex">a_j\ (j>k)</script>，其进入池中概率 <script type="math/tex">I(j)=\frac{k}{j}</script>，恰好替换 <script type="math/tex">R_i/a_i</script> 的概率为 <script type="math/tex">\frac{1}{k}</script>，<script type="math/tex">a_i</script> 不被 <script type="math/tex">a_j</script> 替换的概率为 <script type="math/tex">1-\frac{k}{j}*\frac{1}{k}=\frac{j-1}{j}</script>. 因此 <script type="math/tex">a_i</script> 未被替换的概率 <script type="math/tex">O(i)=\prod_{k<j\le N} \frac{j-1}{j}=\frac{k}{N}</script>;</li>
+<li>当 <script type="math/tex">i\le k</script>，此时有 <script type="math/tex">R_i=a_i</script>，考虑 <script type="math/tex">a_j\ (j>k)</script>，其进入池中概率 <script type="math/tex">I(j)=\frac{k}{j}</script>，恰好替换 <script type="math/tex">R_i/a_i</script> 的概率为 <script type="math/tex">\frac{1}{k}</script>，<script type="math/tex">a_i</script> 不被 <script type="math/tex">a_j</script>
+<br />
+   替换的概率为 <script type="math/tex">1-\frac{k}{j}*\frac{1}{k}=\frac{j-1}{j}</script>. 因此 <script type="math/tex">a_i</script> 未被替换的概率 <script type="math/tex">O(i)=\prod_{k<j\le N} \frac{j-1}{j}=\frac{k}{N}</script>;</li>
 <li>当 <script type="math/tex">i>k</script>，<script type="math/tex">O(i)=\prod_{i<j\le N} \frac{j-1}{j}=\frac{i}{N}</script>；</li>
 <li>综上可知，<script type="math/tex">P(i)=\frac{k}{N}</script>.</li>
 </ol>
