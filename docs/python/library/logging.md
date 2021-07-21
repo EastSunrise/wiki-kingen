@@ -1,6 +1,8 @@
 #### Overview
 
-Use standard module [logging](https://docs.python.org/zh-cn/3.7/library/logging.html) to print logs. It defines five levels of logs: *DEBUG < INFO < WARNING < ERROR < CRITICAL* and contains four basic classes: **Logger**, **Handler**, **Filter** and **Formatter**.
+Use standard module [logging](https://docs.python.org/zh-cn/3.7/library/logging.html) to print logs. It defines five
+levels of logs: *DEBUG < INFO < WARNING < ERROR < CRITICAL* and contains four basic classes: **Logger**, **Handler**, **
+Filter** and **Formatter**.
 
 #### Get Started
 
@@ -18,12 +20,16 @@ logging.critical('This is a critical log.')
 logging.log(logging.DEBUG, 'This is a debug log.')
 ```
 
-By default, only *WARNING* or above logs will be printed onto console. To modify basic configurations, we need to call [**logging.basicConfig()**](https://docs.python.org/3/library/logging.html#logging.basicConfig) with following optional arguments.
+By default, only *WARNING* or above logs will be printed onto console. To modify basic configurations, we need to
+call [**logging.basicConfig()**](https://docs.python.org/3/library/logging.html#logging.basicConfig) with following
+optional arguments.
 
 - **filename**: target file that logs are output to.
 - **filemode**: mode to open target file, 'a' by default.
-- **format**: format to output logs. Refer to [LogRecord attributes](https://docs.python.org/3/library/logging.html#logrecord-attributes).
-- **datefmt**: format of date/time, taking effect when **format** contains time field. Refer to [time.strftime()](https://docs.python.org/3/library/time.html#time.strftime).
+- **format**: format to output logs. Refer
+  to [LogRecord attributes](https://docs.python.org/3/library/logging.html#logrecord-attributes).
+- **datefmt**: format of date/time, taking effect when **format** contains time field. Refer
+  to [time.strftime()](https://docs.python.org/3/library/time.html#time.strftime).
 - **level**
 - **stream**: stream logs are output to, such as *sys.stdout* and *sys.stderr*.
 - **style**: style of **format** string. Optional values includes '%'(default), '{' and '$'. It's since Python 3.2.
@@ -46,21 +52,23 @@ It will print the following log.
 
 #### Advanced
 
-Create an instance of **Logger** to record logs by calling *logging.getLogger(__name__)*. Its procedure shows as follows.
+Create an instance of **Logger** to record logs by calling *logging.getLogger(__name__)*. Its procedure shows as
+follows.
 
-![Logging Flow](\img\logging_flow.png)
+![Logging Flow](../img/logging-flow.png)
 
 ##### Loggers
 
 The most common used methods of *Logger* fall into two categories:
+
 - **configuration**
-	- `Logger.setLevel()`
-	- `Logger.addHandler()` and `Logger.removeHandler()`
-	- `Logger.addFilter()` and `Logger.removeFilter()`
+    - `Logger.setLevel()`
+    - `Logger.addHandler()` and `Logger.removeHandler()`
+    - `Logger.addFilter()` and `Logger.removeFilter()`
 - **message sending**
-	- `Logger.debug()`, `Logger.info()`, `Logger.warning()`, `Logger.error()` and `Logger.critical()`
-	- `Logger.exception()`
-	- `Logger.log()`
+    - `Logger.debug()`, `Logger.info()`, `Logger.warning()`, `Logger.error()` and `Logger.critical()`
+    - `Logger.exception()`
+    - `Logger.log()`
 
 ##### Handlers
 
@@ -72,7 +80,7 @@ There are three ways to configure logging:
 
 - Creating loggers, handlers, and formatters explicitly using Python code.
 - Creating a logging configuration file and reading it using the **fileConfig()** function.
-- Creating a dictionary of configuration information and passing it to the **dictConfig()** function. 
+- Creating a dictionary of configuration information and passing it to the **dictConfig()** function.
 
 #### References
 

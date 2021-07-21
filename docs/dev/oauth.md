@@ -9,11 +9,11 @@
 - **Authorization Server** server to grant authorization
 - **Resource Server** server to get resources
 
-![Roles](\img\OAuth_roles.jpg)
+![Roles](img/oauth-roles.jpg)
 
 #### Authorization Mode
 
-![Steps](\img\OAuth_steps.jpg)
+![Steps](img/oauth-steps.jpg)
 
 - Client requests authorization from User. 
 - Authorization Server sends an **authorization code** to Client if User agreed.

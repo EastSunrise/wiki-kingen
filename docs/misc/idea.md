@@ -8,4 +8,4 @@ Access to information about [IntelliJ IDEA](https://www.jetbrains.com/idea/) fro
 
 The function is used to complete code, including loop statement, if statement and so on. **Use templates just starting with a dot `.`.** Available templates includes `.var`, `.null`, `.not null`, `.nn`, `.for`, `.fori`, `.not`, `.if`, `.cast`, `.return`. An example is shown as the following GIF.
 
-![.var](\img\idea-var.png)
+![.var](img/idea-var.png)
