@@ -1,54 +1,50 @@
-#### Definition
-
-```java
-public @interface Test {
-}
-```
-
-#### Meta annotations
-
-Annotations applied to other annotations
+#### 元注解
 
 ##### @Target
 
-Marks another annotation to restrict what kind of Java elements the annotation may be applied to，Values of `ElementType` includes:
+标记注解所应用的上下文——`ElementType`，包括：
 
-  * TYPE: class, interface or enum
-  * FIELD: fields, including the constants in the enum
-  * METHOD
-  * PARAMETER
-  * CONSTRUCTOR
-  * LOCAL_VARIABLE
-  * ANNOTATION_TYPE
-  * PACKAGE
+* `TYPE`：类，接口（包括注解类型），或者枚举
+* `FIELD`：成员变量（包括枚举常量）
+* `METHOD`：方法
+* `PARAMETER`：参数
+* `CONSTRUCTOR`：构造方法
+* `LOCAL_VARIABLE`：本地变量
+* `ANNOTATION_TYPE`：注解类型
+* `PACKAGE`：包
 
 ##### @Retention
 
-Specifies how the marked annotation is stored. Values of `RetentionPolicy` includes:
+标记注解所应用的时间——`RetentionPolicy`，包括：
 
-  * SOURCE: in code only, abandoned once compiled.
-  * CLASS(default): compiled into the class, abandoned when running
-  * RUNTIME: available at runtime through reflection
+- `SOURCE`：编译前
+- `CLASS`：运行前的 *.class* 文件，默认值
+- `RUNTIME`：一直保持到运行时，可以通过反射获取
 
 ##### @Documented
 
-Marks another annotation for inclusion in the documentation.
+如果 `@A` 被 `@Documented` 标记，则 `@A` 标记的元素生成文档时会显示 `@A`.
 
 ##### @Inherited
 
-Marks another annotation to be inherited to subclasses of annotated class. Annotations are not inherited to subclasses by default.
+标记的注解会被自动继承.
 
-#### Usage
+#### 示例
 
-```java
+```java title="Test.java"
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Test{
-
 }
 ```
 
-#### Reference
+#### 参考
 
-1. [Java annotation - Wikipedia](https://en.wikipedia.org/wiki/Java_annotation)
-2. [@Target、@Retention、@Documented注解简介 - 季末花开 - 博客园](https://www.cnblogs.com/hyc-ana/p/9325618.html)
+- [java.lang.annotation (Java SE 11 & JDK 11 )](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/package-summary.html)
+    - [Annotation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Annotation.html)
+    - [Target](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Target.html)
+    - [ElementType](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/ElementType.html)
+    - [Retention](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Retention.html)
+    - [RetentionPolicy](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/RetentionPolicy.html)
+    - [Documented](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Documented.html)
+    - [Inherited](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Inherited.html)
