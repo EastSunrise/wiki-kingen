@@ -43,9 +43,7 @@
 
 创建一个 Singleton 类。
 
-**SingleObject.java**
-
-```java
+```java title="SingleObject.java"
 public class SingleObject { 
     //创建 SingleObject 的一个对象
     private static SingleObject instance = new SingleObject();
@@ -65,9 +63,7 @@ public class SingleObject {
 ```
 ##### 步骤 2
 
-**SingletonPatternDemo.java**
-
-```java
+```java title="SingletonPatternDemo.java"
 public class SingletonPatternDemo {
     public static void main(String[] args) {
         //不合法的构造函数
@@ -90,8 +86,6 @@ public class SingletonPatternDemo {
 
 #### 单例模式的几种实现方式
 
-单例模式的实现有多种方式，如下所示：
-
 ##### 懒汉式，线程不安全
 
   * **是否 Lazy 初始化**：是
@@ -102,7 +96,7 @@ public class SingletonPatternDemo {
 
 这种方式 lazy loading 很明显，不要求线程安全，在多线程不能正常工作。
 
-```java
+```java title="Singleton.java"
 public class Singleton {
     private static Singleton instance;
 
@@ -132,7 +126,7 @@ public class Singleton {
 
 `getInstance()`的性能对应用程序不是很关键（该方法使用不太频繁）。
 
-```java
+```java title="Singleton.java"
 public class Singleton {
     private static Singleton instance; 
     private Singleton (){} 
@@ -157,7 +151,7 @@ public class Singleton {
 
 它基于 classloader 机制避免了多线程的同步问题，不过，instance 在类装载时就实例化，虽然导致类装载的原因有很多种，在单例模式中大多数都是调用 getInstance 方法， 但是也不能确定有其他的方式（或者其他的静态方法）导致类装载，这时候初始化 instance 显然没有达到 lazy loading 的效果。
 
-```java
+```java title="Singleton.java"
 public class Singleton { 
     private static Singleton instance = new Singleton(); 
 
@@ -180,7 +174,7 @@ public class Singleton {
 
 `getInstance()` 的性能对应用程序很关键。
 
-```java
+```java title="Singleton.java"
 public class Singleton { 
     private volatile static Singleton singleton; 
 
@@ -210,7 +204,7 @@ public class Singleton {
 
 这种方式同样利用了 classloader 机制来保证初始化 instance 时只有一个线程，它跟第 3 种方式不同的是：第 3 种方式只要 Singleton 类被装载了，那么 instance 就会被实例化（没有达到 lazy loading 效果），而这种方式是 Singleton 类被装载了，instance 不一定被初始化。因为 SingletonHolder 类没有被主动使用，只有通过显式调用 getInstance 方法时，才会显式装载 SingletonHolder 类，从而实例化 instance。想象一下，如果实例化 instance 很消耗资源，所以想让它延迟加载，另外一方面，又不希望在 Singleton 类加载时就实例化，因为不能确保 Singleton 类还可能在其他的地方被主动使用从而被加载，那么这个时候实例化 instance 显然是不合适的。这个时候，这种方式相比第 3 种方式就显得很合理。
 
-```java
+```java title="Singleton.java"
 public class Singleton {
     private static class SingletonHolder { 
         private static final Singleton INSTANCE = new Singleton(); 
@@ -237,7 +231,7 @@ public class Singleton {
 
 不能通过 reflection attack 来调用私有构造方法。
 
-```java
+```java title="Singleton.java"
 public enum Singleton { 
     INSTANCE; 
     public void whateverMethod() {} 
@@ -245,7 +239,3 @@ public enum Singleton {
 ```
 
 > **经验之谈**：一般情况下，不建议使用第 1 种和第 2 种懒汉方式，建议使用第 3 种饿汉方式。只有在要明确实现 lazy loading 效果时，才会使用第 5 种登记方式。如果涉及到反序列化创建对象时，可以尝试使用第 6 种枚举方式。如果有其他特殊的需求，可以考虑使用第 4 种双检锁方式。
-
-#### References
-
-1. [单例模式 | 菜鸟教程](https://www.runoob.com/design-pattern/singleton-pattern.html)
