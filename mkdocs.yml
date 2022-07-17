@@ -1,174 +1,207 @@
-site_name: Kingen
-dev_addr: 127.0.0.1:6801
-repo_name: GitHub
-repo_url: https://github.com/eastsunrise/wiki-kingen/
-edit_uri: edit/master/docs
+site_name: Kingen-WiKi
 site_author: Kingen
-use_directory_urls: false
+site_dir: site
+docs_dir: docs
+repo_name: GitHub
+repo_url: https://github.com/eastsunrise/wiki-kingen
+edit_uri: edit/master/docs
+remote_branch: gh-deploy
+dev_addr: 127.0.0.1:14000
 theme:
-    name: mkdocs
-    navigation_depth: 6
+  name: material
+  language: zh
+  logo: assets/images/Ceil.png
+  favicon: assets/images/favicon.ico
+  palette:
+    scheme: slate # 深色模式
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/github
 extra_javascript:
-    - static/js/kingen.js
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - static/js/material.js
+  - static/js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
-    - static/css/kingen.css
+  - static/css/material.css
+plugins:
+  - git-revision-date-localized:
+      type: iso_datetime
+use_directory_urls: false
 markdown_extensions:
-    - extra
-    - admonition
-    - codehilite
-    - legacy_attrs
-    - legacy_em
-    - meta
-    - nl2br
-    - sane_lists
-    - smarty
-    - toc
-    - wikilinks
-    -   mdx_math:
-            enable_dollar_delimiter: True
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 nav:
-    -   Home: index.md
-    -   Java:
-            -   Get Started: java/index.md
-            -   基础语法:
-                    -   Annotation: java/language/annotation.md
-                    -   Collection: java/language/collection.md
-            -   扩展库:
-                    -   Fastjson: java/library/fastjson.md
-                    -   Apache Commons: java/library/apache-commons.md
-                    -   Apache POI: java/library/apache-poi.md
-                    -   Lombok: java/library/lombok.md
-                    -   HttpComponents: java/library/http-components.md
-                    -   Jsoup: java/library/jsoup.md
-            -   设计模式:
-                    -   状态模式: java/design/state.md
-                    -   单例模式: java/design/singleton.md
-            -   Spring Framework:
-                    -   Get Started: java/spring/index.md
-                    -   Aspect Oriented Programming: java/spring/aop.md
-                    -   Transaction: java/spring/transaction.md
-            -   Spring Boot:
-                    -   Get Started: java/spring-boot/index.md
-            -   MyBatis:
-                    -   MyBatis: java/mybatis/index.md
-                    -   Generator: java/mybatis/generator.md
-            -   Tomcat: java/tomcat.md
-            -   Maven: java/maven.md
-            -   Freemarker: java/freemarker.md
-            -   OGNL: java/ognl.md
-    -   CS:
-            -   开始: cs/index.md
-            -   数学:
-                    -   傅里叶变换: cs/mathematics/fourier-transform.md
-            -   算法:
-                    -   Get Started:
-                            -   渐近表示: cs/algorithms/asymptotic-analysis.md
-                            -   分治策略: cs/algorithms/divide-and-conquer.md
-                    -   排序:
-                            -   快速排序: cs/algorithms/sorting/quick-sort.md
-                            -   归并排序: cs/algorithms/sorting/merge-sort.md
-                            -   堆排序: cs/algorithms/sorting/heap-sort.md
-                            -   桶排序: cs/algorithms/sorting/bucket-sort.md
-                    -   动态规划: cs/algorithms/dynamic-programming.md
-                    -   贪心算法: cs/algorithms/greedy-algorithms.md
-                    -   回溯算法: cs/algorithms/backtracking.md
-                    -   分支界定: cs/algorithms/branch-and-bound.md
-                    -   模式匹配:
-                            -   KMP算法: cs/algorithms/pattern-searching/knuth-morris-pratt-algorithm.md
-                            -   Boyer-Moore算法: cs/algorithms/pattern-searching/boyer-moore-algorithm.md
-                    -   密钥算法:
-                            -   RSA: cs/algorithms/cryptography/rsa.md
-                            -   SHA: cs/algorithms/cryptography/sha.md
-                    -   图论:
-                            -   深度优先搜索: cs/algorithms/graph/depth-first-search.md
-                            -   Dijkstra's 算法: cs/algorithms/graph/dijkstra's-algorithm.md
-                            -   Tarjan 算法: cs/algorithms/graph/tarjan-algorithm.md
-                    -   其它算法:
-                            -   Knuth 洗牌算法: cs/algorithms/others/knuth-shuffle-algorithm.md
-                            -   蒙特卡洛树搜索: cs/algorithms/others/monte-carlo-tree-search.md
-                            -   蓄水池抽样算法: cs/algorithms/others/reservoir-sampling.md
-            -   数据结构:
-                    -   栈: cs/data-structure/stack.md
-                    -   队列: cs/data-structure/queue.md
-                    -   堆: cs/data-structure/heap.md
-                    -   二叉树: cs/data-structure/binary-tree.md
-                    -   二叉搜索树: cs/data-structure/binary-search-tree.md
-                    -   线段树: cs/data-structure/segment-tree.md
-                    -   红黑树: cs/data-structure/red-black-tree.md
-                    -   单调栈: cs/data-structure/monotonic-stack.md
-                    -   并查集: cs/data-structure/disjoint.md
-            -   常见问题:
-                    -   逆序对: cs/problems/inversion-pairs.md
-                    -   最大子序列和: cs/problems/max-subsequence-sum.md
-    -   Python:
-            -   开始: python/index.md
-            -   标准库:
-                    -   Operating System Services:
-                            -   os: python/library/os.md
-                            -   logging: python/library/logging.md
-                    -   Cryptographic Services:
-                            -   hashlib: python/library/hashlib.md
-                    -   File Formats:
-                            -   configParser: python/library/configparser.md
-                    -   File and Directory Access:
-                            -   shutil: python/library/shutil.md
-                    -   Internet Protocols and Support:
-                            -   urllib: python/library/urllib.md
-                    -   Graphical User Interfaces: python/library/tkinter.md
-                    -   Data Persistence:
-                            -   sqlite3: python/library/sqlite3.md
-            -   Extension References:
-                    -   BeautifulSoup: python/library/bs4.md
-                    -   PyMySQL: python/library/pymysql.md
-                    -   PyYAML: python/library/pyyaml.md
-                    -   PyWin32: python/library/pywin32.md
-            -   Applications:
-                    -   Spider: python/app/spider.md
-                    -   Task: python/app/task.md
-                    -   Excel: python/app/excel.md
-            -   Flask: python/flask.md
-    -   Development:
-            -   References: dev/references.md
-            -   APIs:
-                    -   Douban: dev/apis/douban.md
-                    -   Kugou: dev/apis/kugou.md
-                    -   League of Legends: dev/apis/lol.md
-            -   MySQL:
-                    -   Get Started: dev/mysql/index.md
-                    -   FAQ: dev/mysql/faq.md
-            -   Oracle:
-                    -   Get Stared: dev/oracle/index.md
-                    -   SQL: dev/oracle/sql.md
-            -   Redis: dev/redis.md
-            -   SQLite: dev/sqlite.md
-            -   Nginx: dev/nginx.md
-            -   Git: dev/git.md
-            -   Linux: dev/linux.md
-            -   FTP: dev/ftp.md
-            -   Web:
-                    -   Bootstrap: dev/web/bootstrap.md
-            -   JavaScript:
-                    -   JavaScript: dev/js/index.md
-                    -   jQuery: dev/js/jquery.md
-                    -   React: dev/js/react.md
-                    -   Node.js: dev/js/nodejs.md
-                    -   Select2: dev/js/select2.md
-                    -   Layer: dev/js/layer.md
-            -   C:
-                    -   Get Started: dev/c/index.md
-            -   PHP:
-                    -   Get Started: dev/php.md
-            -   OAuth: dev/oauth.md
-            -   FasfDFS: dev/fastdfs.md
-    -   Misc:
-            -   Activation: misc/activation.md
-            -   Wiki: misc/wiki.md
-            -   LaTeX: misc/latex.md
-            -   Markdown: misc/markdown.md
-            -   Chrome: misc/chrome.md
-            -   Windows: misc/windows.md
-            -   IntelliJ IDEA: misc/idea.md
-            -   Visual Studio Code: misc/vscode.md
-            -   Fiddler: misc/fiddler.md
-            -   Charles: misc/charles.md
+  - Java:
+      - 开始: java/index.md
+      - 基础语法:
+          - Annotation: java/language/annotation.md
+      - 扩展库:
+          - Lombok: java/library/lombok.md
+      - 设计模式:
+          - 状态模式: java/design-pattern/state-pattern.md
+          - 单例模式: java/design-pattern/singleton-pattern.md
+      - Spring Framework:
+          - Get Started: java/spring/index.md
+          - Aspect Oriented Programming: java/spring/aop.md
+          - Transaction: java/spring/transaction.md
+      - Spring Boot:
+          - Get Started: java/spring-boot/index.md
+      - MyBatis:
+          - MyBatis: java/mybatis/index.md
+          - Generator: java/mybatis/generator.md
+      - Tomcat: java/tomcat.md
+      - Maven: java/maven.md
+      - Freemarker: java/freemarker.md
+      - OGNL: java/ognl.md
+  - CS:
+      - 开始: cs/index.md
+      - 数学:
+          - 傅里叶变换: cs/mathematics/fourier-transform.md
+      - 算法:
+          - Get Started:
+              - 渐近表示: cs/algorithms/asymptotic-analysis.md
+              - 分治策略: cs/algorithms/divide-and-conquer.md
+          - 排序:
+              - 快速排序: cs/algorithms/sorting/quick-sort.md
+              - 归并排序: cs/algorithms/sorting/merge-sort.md
+              - 堆排序: cs/algorithms/sorting/heap-sort.md
+              - 桶排序: cs/algorithms/sorting/bucket-sort.md
+          - 动态规划: cs/algorithms/dynamic-programming.md
+          - 贪心算法: cs/algorithms/greedy-algorithms.md
+          - 回溯算法: cs/algorithms/backtracking.md
+          - 分支界定: cs/algorithms/branch-and-bound.md
+          - 模式匹配:
+              - KMP算法: cs/algorithms/pattern-searching/knuth-morris-pratt-algorithm.md
+              - Boyer-Moore算法: cs/algorithms/pattern-searching/boyer-moore-algorithm.md
+              - Sunday算法: cs/algorithms/pattern-searching/sunday-algorithm.md
+          - 密钥算法:
+              - RSA: cs/algorithms/cryptography/rsa.md
+              - SHA: cs/algorithms/cryptography/sha.md
+          - 图论:
+              - 深度优先搜索: cs/algorithms/graph/depth-first-search.md
+              - Dijkstra's 算法: cs/algorithms/graph/dijkstra's-algorithm.md
+              - Tarjan 算法: cs/algorithms/graph/tarjan-algorithm.md
+          - 其它算法:
+              - Knuth 洗牌算法: cs/algorithms/others/knuth-shuffle-algorithm.md
+              - 蒙特卡洛树搜索: cs/algorithms/others/monte-carlo-tree-search.md
+              - 蓄水池抽样算法: cs/algorithms/others/reservoir-sampling.md
+      - 数据结构:
+          - 栈: cs/data-structure/stack.md
+          - 队列: cs/data-structure/queue.md
+          - 堆: cs/data-structure/heap.md
+          - 二叉树: cs/data-structure/binary-tree.md
+          - 二叉搜索树: cs/data-structure/binary-search-tree.md
+          - 线段树: cs/data-structure/segment-tree.md
+          - 红黑树: cs/data-structure/red-black-tree.md
+          - 单调栈: cs/data-structure/monotonic-stack.md
+          - 并查集: cs/data-structure/disjoint.md
+          - Skiplist: cs/data-structure/skiplist.md
+      - 常见问题:
+          - 逆序对: cs/problems/inversion-pairs.md
+          - 最大子序列和: cs/problems/max-subsequence-sum.md
+  - Python:
+      - 开始: python/index.md
+      - 标准库:
+          - Operating System Services:
+              - os: python/library/os.md
+              - logging: python/library/logging.md
+          - Cryptographic Services:
+              - hashlib: python/library/hashlib.md
+          - File Formats:
+              - configParser: python/library/configparser.md
+          - File and Directory Access:
+              - shutil: python/library/shutil.md
+          - Internet Protocols and Support:
+              - urllib: python/library/urllib.md
+          - Graphical User Interfaces: python/library/tkinter.md
+          - Data Persistence:
+              - sqlite3: python/library/sqlite3.md
+      - 扩展库:
+          - MkDocs: python/library/mkdocs.md
+          - PyMySQL: python/library/pymysql.md
+          - PyYAML: python/library/pyyaml.md
+          - PyWin32: python/library/pywin32.md
+      - Applications:
+          - Spider: python/app/spider.md
+          - Task: python/app/task.md
+          - Excel: python/app/excel.md
+      - Flask: python/flask.md
+  - Development:
+      - References: dev/references.md
+      - APIs:
+          - Douban: dev/apis/douban.md
+          - Kugou: dev/apis/kugou.md
+          - League of Legends: dev/apis/lol.md
+      - MySQL:
+          - Get Started: dev/mysql/index.md
+          - FAQ: dev/mysql/faq.md
+      - Oracle:
+          - Get Stared: dev/oracle/index.md
+          - SQL: dev/oracle/sql.md
+      - Redis: dev/redis.md
+      - SQLite: dev/sqlite.md
+      - Nginx: dev/nginx.md
+      - Git: dev/git.md
+      - Linux: dev/linux.md
+      - FTP: dev/ftp.md
+      - Web:
+          - Bootstrap: dev/web/bootstrap.md
+      - JavaScript:
+          - JavaScript: dev/js/index.md
+          - jQuery: dev/js/jquery.md
+          - React: dev/js/react.md
+          - Node.js: dev/js/nodejs.md
+          - Select2: dev/js/select2.md
+          - Layer: dev/js/layer.md
+      - C:
+          - Get Started: dev/c/index.md
+      - PHP:
+          - Get Started: dev/php.md
+      - OAuth: dev/oauth.md
+      - FasfDFS: dev/fastdfs.md
+  - Misc:
+      - Activation: misc/activation.md
+      - LaTeX: misc/latex.md
+      - Markdown: misc/markdown.md
+      - Chrome: misc/chrome.md
+      - Windows: misc/windows.md
+      - IntelliJ IDEA: misc/idea.md
+      - Visual Studio Code: misc/vscode.md
+      - Fiddler: misc/fiddler.md
+      - Charles: misc/charles.md
