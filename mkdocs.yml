@@ -67,6 +67,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 nav:
+  - Home: index.md
   - Java:
       - Java: java/index.md
       - 基础语法:
@@ -93,6 +94,7 @@ nav:
               - 归并排序: cs/algorithms/sorting/merge-sort.md
               - 堆排序: cs/algorithms/sorting/heap-sort.md
               - 桶排序: cs/algorithms/sorting/bucket-sort.md
+              - 拓扑排序: cs/algorithms/sorting/topological-sorting.md
           - 分治算法: cs/algorithms/divide-and-conquer.md
           - 动态规划: cs/algorithms/dynamic-programming.md
           - 贪心算法: cs/algorithms/greedy-algorithms.md

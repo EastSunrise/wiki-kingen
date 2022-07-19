@@ -1,19 +1,19 @@
-#### 安装
+## 安装
 
-##### Ubuntu
+### Ubuntu
 
 ```shell
 sudo apt-get install mkdocs
 ```
 
-##### Windows
+### Windows
 
 ```shell
 pip install mkdocs
 mkdocs --version # 验证版本
 ```
 
-#### 创建
+## 创建
 
 执行命令
 
@@ -27,7 +27,7 @@ mkdocs new my-wiki
   - *index.md*：默认首页文件
 - *mkdocs.yml*：配置文件，详见[配置](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/user-guide/configuration/)
 
-#### 预览
+## 预览
 
 在根目录下执行命令
 
@@ -38,7 +38,7 @@ mkdocs serve
 
 进入 *mkdocs.yml* 配置的地址，默认为 [127.0.0.1:8000](http://127.0.0.1:8000).
 
-#### 添加页面
+## 添加页面
 
 添加 *example.md* 到 *docs* 目录下，然后在 *mkdocs.yml* 中添加一个导航栏指向该文件：
 
@@ -47,7 +47,7 @@ nav:
   - Example: example.md
 ```
 
-#### 生成站点
+## 生成站点
 
 ```shell
 mkdocs build
@@ -64,9 +64,9 @@ mkdocs build
   - *example*
     - *index.html*：*example.md*
 
-#### 发布
+## 发布
 
-##### GitHub
+### GitHub
 
 在 GitHub 上创建一个远程仓库 *my-wiki*，并关联本地 *my-wiki*：
 
@@ -84,15 +84,15 @@ mkdocs gh-deploy
 
 打开 *Settings->Pages* 设置 *GitHub Pages*，文档即会被发布到 https://%username%.github.io/my-wiki/.
 
-#### 主题
+## 主题
 
-##### mkdocs-material
+### mkdocs-material
 
 ```shell
 pip install mkdocs-material
 ```
 
-#### 其他 WiKi
+## 其他 WiKi
 
 - [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
 - [DokuWiki](https://www.dokuwiki.org/dokuwiki)
@@ -101,7 +101,7 @@ pip install mkdocs-material
 - [Docsify](https://docsify.js.org/)
 - [Hexo](https://hexo.io/)
 
-#### 参考
+## 参考
 
 - [MkDocs](https://www.mkdocs.org/)
 - [MkDocs 中文文档](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/)
