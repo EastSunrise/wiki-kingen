@@ -1,10 +1,12 @@
+- [x] TODO
+
 #### Navicat
 
-**Notes**: It doesn't apply to Navicat 15 or higher versions.
+**注意**：不适用于 Navicat 15 或更高的版本.
 
-##### Preparation
+##### 准备
 
-Download and installation [Navicat 12.1.26](http://download.navicat.com.cn/download/navicat121_premium_cs_x64.exe). Get keygen and patcher from OneDrive.
+下载并安装 [Navicat 12.1.26](http://download.navicat.com.cn/download/navicat121_premium_cs_x64.exe).
 
 ##### Steps
 

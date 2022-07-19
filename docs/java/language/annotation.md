@@ -1,6 +1,6 @@
-#### 元注解
+## 元注解
 
-##### @Target
+### @Target
 
 标记注解所应用的上下文——`ElementType`，包括：
 
@@ -13,7 +13,7 @@
 * `ANNOTATION_TYPE`：注解类型
 * `PACKAGE`：包
 
-##### @Retention
+### @Retention
 
 标记注解所应用的时间——`RetentionPolicy`，包括：
 
@@ -21,15 +21,15 @@
 - `CLASS`：运行前的 *.class* 文件，默认值
 - `RUNTIME`：一直保持到运行时，可以通过反射获取
 
-##### @Documented
+### @Documented
 
 如果 `@A` 被 `@Documented` 标记，则 `@A` 标记的元素生成文档时会显示 `@A`.
 
-##### @Inherited
+### @Inherited
 
 标记的注解会被自动继承.
 
-#### 示例
+## 示例
 
 ```java title="Test.java"
 @Target(ElementType.FIELD)
@@ -38,7 +38,7 @@ public @interface Test{
 }
 ```
 
-#### 参考
+## 参考
 
 - [java.lang.annotation (Java SE 11 & JDK 11 )](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/package-summary.html)
     - [Annotation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Annotation.html)

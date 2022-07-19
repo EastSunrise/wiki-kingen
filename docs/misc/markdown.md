@@ -1,3 +1,5 @@
+- [x] TODO
+
 #### Overview
 
 Markdown in Evernote supports *CommonMark* and *GFM (GitHub Flavored Markdown)* and that for *mkdocs* is [Python-Markdown](https://python-markdown.github.io/) which inherited from [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/).
@@ -9,7 +11,7 @@ Markdown in Evernote supports *CommonMark* and *GFM (GitHub Flavored Markdown)* 
 Evernote only supports ".png", ".jpg" and ".gif".
 
 ```markdown
-![alt](../img/favicon.ico "optional title")
+![alt](../../static/img/favicon.ico "optional title")
 <!--
 alt: show if the image can't display and be used for Search Engine.
 optional title: show when mouse is over the image.

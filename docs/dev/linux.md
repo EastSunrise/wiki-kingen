@@ -1,52 +1,58 @@
-#### Overview
+- [x] TODO
 
-With the same [Linux Kernel](https://www.kernel.org/), there are different distributions of Linux based on different modes of software management, such as [CentOS](https://www.centos.org/) based on *RPM* and [Ubuntu](https://ubuntu.com/) on *DPKG*.
+#### 概述
 
-#### Installation
+Linux 是一种开源的类 Unix 操作系统，包括许多不同的版本，诸如 [CentOS](https://www.centos.org/)、[Ubuntu](https://ubuntu.com/) 等。
 
-Download and install [CentOS](https://www.centos.org/download/) ISO. Without a server, [VMware](https://www.vmware.com/cn) is an option where to install the system.
+#### 安装
 
-##### Remote Connection
+下载 CentOS 的 [ISO](https://www.centos.org/download/)。除了服务器，也可以安装在虚拟机上，比如 [VMware](https://www.vmware.com/cn)。
 
-If the system needs to be connected to remotely, [XShell](https://www.netsarang.com/zh/xshell-download/) is a fine tool and *SSH* which is commonly configured on the Linux is required. Check with `service sshd status`. If not, execute following commands in order: 
+##### 远程连接
 
-- `yum install openssh-server` installs *SSH*
-- `vim /etc/ssh/ssh_config` edits the configuration file
-- `/bin/systemctl start sshd.service` starts *SSH* service
-- `/bin/systemctl enable sshd.service` starts the service at startup.
+使用 [XShell](https://www.netsarang.com/zh/xshell-download/) 可以通过 **SSH**（Linux 通常自带 SSH）远程连接 Linux 服务器。查看 SSH 状态：`service sshd status`，如果没有，可以按照如下命令安装：
 
-Most remote connections like [MySQL](mysql/index.md) and [Redis](redis.md) support connection through *SSH*. In this case, `AllowTcpForwarding yes` is required to set in the */etc/ssh/sshd_config*.
+```bash
+yum install openssh-server	# 安装 SSH
+vim /etc/ssh/ssh_config	 # 编辑配置文件
+/bin/systemctl start sshd.service  # 启动 SSH 服务
+/bin/systemctl enable sshd.service  # 开机自启动
+```
 
-##### Mirror
+大部分的远程连接（比如 [MySQL](mysql/index.md) 和 [Redis](redis.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
 
-Change mirror to aliyun:
+##### 镜像
 
-- base: `wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo`
-- epel: `wget -O /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo`
+国内可以修改软件服务镜像为 aliyun：
 
-Execute `yum clean all` to update mirrors and `yum makecache` to create caches.
+```bash
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo # base
+wget -O /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo  # epel
+yum clean all  # 更新镜像
+yum makecache  # 创建缓存
+```
 
-##### Directory
+##### 目录结构
 
-Directories of **RPM** are commonly set as following by default:
+**RPM** 结构的目录结构通常设置如下：
 
-- */etc*: configuration files
-- */usr/bin*: executable files
-- */usr/lib*: dynamic libraries
-- */usr/share/doc*: use documentations
-- */usr/share/man*: man page files
+- */etc*: 配置文件
+- */usr/bin*: 可执行文件
+- */usr/lib*: 动态库
+- */usr/share/doc*: 用户文档
+- */usr/share/man*: 帮助文档
 
 #### Get Started
 
-Linux is a multi-user system with limits of authority. Use `su` command to access system as *root* when logging in as a common user and `exit` to get back.
+Linux 是一个权限管理的多用户系统. 使用命令 `su` 从普通用户切换为 *root* 身份，使用命令 `exit` 以退出。
 
-##### Development Tools
+##### 开发工具
 
-Install common development tools.
+安装常见的开发工具
 
-```shell
-$ yum -y groupinstall "Development tools"
-$ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2unix htop iftop iotop unzip telnet sl psmisc nethogs glances bc
+```bash
+yum -y groupinstall "Development tools"
+yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2unix htop iftop iotop unzip telnet sl psmisc nethogs glances bc
 ```
 
 #### System and Partitions

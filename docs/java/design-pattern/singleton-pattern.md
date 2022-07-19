@@ -1,4 +1,4 @@
-#### 单例模式
+## 单例模式
 
 单例模式（Singleton Pattern）是 Java 中最简单的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
 
@@ -10,7 +10,7 @@
 >   2. 单例类必须自己创建自己的唯一实例。
 >   3. 单例类必须给所有其他对象提供这一实例。
 
-#### 介绍
+## 介绍
 
   * **意图**：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
   * **主要解决**：一个全局使用的类频繁地创建与销毁。
@@ -31,7 +31,7 @@
     * 创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。
   * **注意事项**：`getInstance()` 方法中需要使用同步锁 `synchronized (Singleton.class)` 防止多线程同时进入造成 `instance` 被多次实例化。
 
-#### 实现
+## 实现
 
 我们将创建一个 `SingleObject` 类。`SingleObject` 类有它的私有构造函数和本身的一个静态实例。
 
@@ -39,7 +39,7 @@
 
 ![Singleton Pattern](../img/单例模式设计.png)
 
-##### 步骤 1
+### 步骤 1
 
 创建一个 Singleton 类。
 
@@ -61,7 +61,7 @@ public class SingleObject {
     } 
 }
 ```
-##### 步骤 2
+### 步骤 2
 
 ```java title="SingletonPatternDemo.java"
 public class SingletonPatternDemo {
@@ -78,15 +78,15 @@ public class SingletonPatternDemo {
     } 
 }
 ```
-##### 步骤 3
+### 步骤 3
 
 执行程序，输出结果：
 
     Hello World!
 
-#### 单例模式的几种实现方式
+## 单例模式的几种实现方式
 
-##### 懒汉式，线程不安全
+### 懒汉式，线程不安全
 
   * **是否 Lazy 初始化**：是
   * **是否多线程安全**：否
@@ -113,7 +113,7 @@ public class Singleton {
 
 > **接下来介绍的几种实现方式都支持多线程，但是在性能上有所差异。**
 
-##### 懒汉式，线程安全
+### 懒汉式，线程安全
 
   * **是否 Lazy 初始化**：是
   * **是否多线程安全**：是
@@ -140,7 +140,7 @@ public class Singleton {
 }
 ```
 
-##### 饿汉式
+### 饿汉式
 
   * **是否 Lazy 初始化**：否
   * **是否多线程安全**：是
@@ -163,7 +163,7 @@ public class Singleton {
 }
 ```
 
-##### 双检锁/双重校验锁（DCL，即 double-checked locking）
+### 双检锁/双重校验锁（DCL，即 double-checked locking）
 
   * **JDK 版本**：JDK1.5 起
   * **是否 Lazy 初始化**：是
@@ -194,7 +194,7 @@ public class Singleton {
 }
 ```
 
-##### 登记式/静态内部类
+### 登记式/静态内部类
 
   * **是否 Lazy 初始化**：是
   * **是否多线程安全**：是
@@ -218,7 +218,7 @@ public class Singleton {
 }
 ```
 
-##### 枚举
+### 枚举
 
   * **JDK 版本**：JDK1.5 起
   * **是否 Lazy 初始化**：否

@@ -1,24 +1,25 @@
-#### Overview
+- [x] TODO
 
-AOP stands for aspect-orientated programming. Essentially, **it is a way for adding behavior to existing code without modifying that code**.
+## 概念
 
-It has three core concepts defined as follows:
+AOP 能够在不改变源码的情况下改变程序的行为，它有几个核心概念：
 
-1. **Join Point**: A point during the execution of a script, such as the execution of a method or property access.
-2. **Pointcut**: A regular expression that matches join points.
-3. **Advice**: Action taken by an aspect at a particular join point. 
+- **Aspect**：
+- **Join Point**: A point during the execution of a script, such as the execution of a method or property access.
+- **Pointcut**: A regular expression that matches join points.
+- **Advice**: Action taken by an aspect at a particular join point. 
 
 To implement AOP, **an advice is associated with a pointcut expression and runs at any join point that matches the pointcut**.
 
-#### @AspectJ
+## @AspectJ
 
 `@AspectJ` refers to a style of declaring aspects as regular Java classes annotated with annotations, introduced by the [AspectJ Project](https://www.eclipse.org/aspectj/).
 
-##### Pointcut Expressions
+### Pointcut Expressions
 
 A pointcut expression can appear as a value of `@Pointcut` annotation, telling Spring AOP what to watch.
 
-##### Advice
+### Advice
 
 **Advice is an action taken by an aspect at a particular join point**. Different types of advice include `around`, `before` and `after` advice. The main purpose of aspects is to support cross-cutting concerns, such as logging, profiling, caching, and transaction management.
 
@@ -33,7 +34,7 @@ public class AopConfiguration {
 
 **In Spring Boot projects, we don't have to explicitly use the `@EnableAspectJAutoProxy`.** There's a dedicated `[AopAutoConfiguration`](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/aop/AopAutoConfiguration.html) that enables Spring's AOP support if the `Aspect` or `Advice` is on the classpath.
 
-###### Before Advice
+#### Before Advice
 
 **This advice, as the name implies, is executed before the join point.** It doesn't prevent the continued execution of the method it advises unless an exception is thrown.
 
@@ -58,7 +59,7 @@ public class LoggingAspect {
 
 The `logMethodCall` advice will be executed before any repository method defined by the repositoryMethods pointcut.
 
-###### After Advice
+#### After Advice
 
 After advice, declared by using the @After annotation, **is executed after a matched method's execution, whether or not an exception was thrown**.
 
@@ -110,7 +111,7 @@ public class FooCreationEventListener implements ApplicationListener<FooCreation
 }
 ```
 
-###### Around Advice
+#### Around Advice
 
 Around advice surrounds a join point such as a method invocation.
 
@@ -146,7 +147,8 @@ This advice is triggered when any of the join points matched by the `repositoryC
 
 Second, the advice return type is `Object` since the target method can return a result of any type. If target method is `void`, `null` will be returned. After the target method call, we can measure the timing, log it, and return the method's result value to the caller.
 
-#### References
+## 参考
 
-1. [The AspectJ Programming Guide](https://www.eclipse.org/aspectj/doc/released/progguide/index.html)
-2. [AOP with Spring - Spring Framework](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop)
+- [The AspectJ Programming Guide](https://www.eclipse.org/aspectj/doc/released/progguide/index.html)
+- [AOP with Spring](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop)
+- [Spring AOP APIs](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop-api)

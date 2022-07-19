@@ -1,6 +1,6 @@
-#### 安装
+## 安装
 
-##### Maven
+### Maven
 
 ```xml
 <dependency>
@@ -11,11 +11,11 @@
 </dependency>
 ```
 
-##### IDEA
+### IDEA
 
 安装插件 *Lombok*.
 
-#### 原理
+## 原理
 
 从 **Java 6** 开始，Java 支持插入式注解处理 API（*JSR 269 Pluggable Annotation Processing API*），只要程序实现了该 API，*javac* 编译源码时就会调用定义的注解。*Lombok* 编译流程如下：
 
@@ -24,49 +24,49 @@
 3. *Lombok* 根据定义的注解修改上述 *AST* ；
 4. *javac* 基于修改后的 *AST* 生成字节码文件。
 
-#### 应用
+## 应用
 
-##### @NonNull
+### @NonNull
 
-##### @Cleanup
+### @Cleanup
 
 调用 `close()` 方法
 
-##### @Getter/@Setter
+### @Getter/@Setter
 
-##### @ToString
+### @ToString
 
-##### @EqualsAndHashCode
+### @EqualsAndHashCode
 
 生成 `equals()` 和 `hashCode()` 方法
 
-##### @NoArgsConstructor/@RequiredArgsConstructor/@AllArgsConstructor
+### @NoArgsConstructor/@RequiredArgsConstructor/@AllArgsConstructor
 
-##### @Data
+### @Data
 
 `@ToString`，`@EqualsAndHashCode`，`@Getter`，`@Setter` 和 `@RequiredArgsConstrutor` 的组合
 
-##### @Value
+### @Value
 
 标记不可变类
 
-##### @Builder
+### @Builder
 
-##### @SneakyThrows
+### @SneakyThrows
 
 代替 `try{}catch{}`
 
-##### @Synchronized
+### @Synchronized
 
-##### @With
+### @With
 
 不可变对象的 `setter` 方法，可以克隆对象仅改变一个属性
 
-##### @Log
+### @Log
 
 生成命名为 `log` 的 `Logger` 静态常量，
 
-#### 参考
+## 参考
 
 - [Overview (Lombok)](https://projectlombok.org/api/)
 - [Lombok Features](https://projectlombok.org/features/all)

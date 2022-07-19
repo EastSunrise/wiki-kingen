@@ -1,4 +1,4 @@
-#### 导言
+## 导言
 
 ​		假设我们现在有一个糖果机项目，那么我们知道正常一般糖果机提供给用户的行为有这么几种：投入硬币、转动曲柄、退出硬币几种行为；那么糖果机呢一般有这几中状态，待机状态、持有硬币的准备状态、运行状态即正在售出状态和初始状态 这么几种正常状态。
 我们发现处于不同状态的时候，持有的行为是不一样的，图如下：
@@ -121,7 +121,7 @@ public class CandyMachine {
 
 ​		比如，这个时候，新增加了一种状态，赢家状态，即可以获取到两粒糖果；那么如果用上面的方式，肯定是不符合开闭原则的，同时扩展性也是不好的；那么我们有什么其它的方式来解决呢？
 
-#### 状态模式
+## 状态模式
 
 ​		为了解决上面的问题，我们首先分析项目中变化的部分和不变的部分，抽化出变化的部分，我们发现糖果机提供的行为一般是不变的，就是投入硬币、转动曲柄给、退回硬币、机器发放糖果；而糖果机的状态是可以变化的，可以新增出一种状态来，比如我们说的赢家状态。那么我们这个抽出变化的部分，即我们说的状态，于是出现了下面的结构设计方案：
 
@@ -133,7 +133,7 @@ public class CandyMachine {
 
 那么现在采用状态模式来解决问题：
 
-##### 接口
+### 接口
 
 ```java title="State.java"
 public interface State {
@@ -150,7 +150,7 @@ public interface State {
 }
 ```
 
-##### 准备状态
+### 准备状态
 
 ```java title="HasCoin.java" linenums="1"
 import java.util.Random;
@@ -199,7 +199,7 @@ public class HasCoin implements State {
 
 > **说明**：我们会发现里面存在一个糖果机的属性，而之所以存在这个属性，就是因为糖果机中持有所有的状态，而在准备状态下，肯定会由于某种行为发生状态改变，而要改变的状态都在糖果机中，所以持有一个糖果机属性，下面也一样，不在重复说明。
 
-##### 待机状态
+### 待机状态
 
 ```java title="OnReadyState.java" linenums="1"
 public class OnReadyState implements State {
@@ -235,7 +235,7 @@ public class OnReadyState implements State {
 }
 ```
 
-##### 初始状态
+### 初始状态
 
 ```java title="SoldOutState.java" linenums="1"
 public class SoldOutState implements State {
@@ -272,7 +272,7 @@ public class SoldOutState implements State {
 }
 ```
 
-##### 售出状态
+### 售出状态
 
 ```java title="SoldState.java" linenums="1"
 public class SoldState implements State {
@@ -315,7 +315,7 @@ public class SoldState implements State {
 }
 ```
 
-##### 赢家状态
+### 赢家状态
 
 ```java title="WinnerState.java" linenums="1"
 public class WinnerState implements State {
@@ -365,9 +365,9 @@ public class WinnerState implements State {
 }
 ```
 
-##### 集成
+### 集成
 
-​		糖果机要持有所有的状态，并在初始化的时候，要设置其开始的状态，然后糖果的各个行为，就委托到了各个状态中自己维护
+​糖果机要持有所有的状态，并在初始化的时候，要设置其开始的状态，然后糖果的各个行为，就委托到了各个状态中自己维护
 
 ```java title="CandyMachine.java" linenums="1"
 public class CandyMachine {
@@ -434,7 +434,7 @@ public class CandyMachine {
 }
 ```
 
-##### 测试
+### 测试
 
 ```java title="MainTest.java"
 public class MainTest {
@@ -463,20 +463,20 @@ public class MainTest {
 
 和开始的传统方案对比，结果是一样的，但是具备了可扩展性。
 
-#### 总结
+## 总结
 
 状态模式允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。
 
 > 这个模式将状态封装成独立的类，并将动作委托到代表当前状态的对象，这就是说行为会随着内部状态而改变。“看起来好像修改了它的类”是什么意思呢？从客户的视角来看：如果说你使用的对象能够完全改变它的行为，那么你会觉得，这个对象实际上是从别的类实例化而来的。然而，实际上，你知道我们是在使用组合通过简单引用不同的状态对象来造成类改变的假象
 
-##### 状态模式要点
+### 状态模式要点
 
 * 客户不会和状态进行交互,全盘了解状态是 context的工作
 * 在状态模式中，每个状态通过持有Context的引用，来实现状态转移
 * 使用状态模式总是会增加设计中类的数目，这是为了要获得程序可扩展性，弹性的代价，如果你的代码不是一次性的，后期可能会不断加入不同的状态，那么状态模式的设计是绝对值得的。【同时也是一个缺点】
 * 状态类可以被多个context实例共享
 
-##### 状态模式和策略模式对比
+### 状态模式和策略模式对比
 
 - 相似之处
 	- 添加新的状态或策略都很容易，而且不需要修改使用它们的Context对象；

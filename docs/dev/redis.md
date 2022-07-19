@@ -1,21 +1,24 @@
-#### Overview
+- [x] TODO
 
-[Redis](https://redis.io/) is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
+#### 概述
 
-#### Installation
+[Redis](https://redis.io/) 是一个开源的基于内存的数据库，可用作缓存，消息代理等。
+
+#### 安装
 
 ##### Linux
 
-Install Redis with `yum install redis` or from source code as follows:
+执行命令 `yum install redis`，或者：
 
-1. Download Redis [here](https://redis.io/download). 
-2. [Upload](linux.md#upload-and-download) to the VM.
-3. Unzip the file: `tar –zxvf redis-x.x.x.tar.gz`
-4. Open the unzipped directory and compile Redis with `make`, *.c* files compiled to *.o* files. Install *gcc* with `yum install gcc-c++` if *gcc* is unavailable.
-5. Install Redis to target directory with `make install PREFIX=/usr/local/redis`. Several executable files are available now under the target directory, such as *redis-cli*, *redis-server*.
-6. Copy *redis.conf* to the installation directory. Modify relative configurations if necessary.
-7. Execute *redis-server* directly to start Redis server in the front. Then execute *redis-cli* to connect to the server.
-8. Configure `daemonize yes` in the *redis.conf* and start the server with the specified configuration file, so the server can run in the background.
+1. [下载](https://redis.io/download) Redis；
+2. [上传](linux.md#upload-and-download)至 Linux 服务器；
+3. 解压文件：`tar –zxvf redis-x.x.x.tar.gz`；
+4. 打开已解压的目录编译：`make` 
+5. Open the unzipped directory and compile Redis with `make`, *.c* files compiled to *.o* files. Install *gcc* with `yum install gcc-c++` if *gcc* is unavailable.
+6. Install Redis to target directory with `make install PREFIX=/usr/local/redis`. Several executable files are available now under the target directory, such as *redis-cli*, *redis-server*.
+7. Copy *redis.conf* to the installation directory. Modify relative configurations if necessary.
+8. Execute *redis-server* directly to start Redis server in the front. Then execute *redis-cli* to connect to the server.
+9. Configure `daemonize yes` in the *redis.conf* and start the server with the specified configuration file, so the server can run in the background.
 
 Start Redis at startup with `systemctl enable redis`.
 

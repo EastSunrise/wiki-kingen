@@ -1,3 +1,5 @@
+- [x] TODO
+
 #### Overview
 
 [urllib](https://docs.python.org/zh-cn/3/library/urllib.html) is a package to deal with URLs, including 4 modules: urllib.request, urllib.error, [urllib.parse](#parse), and [urllib.robotparser](#robotparser). The main part is about module request.
@@ -20,7 +22,7 @@ with request.urlopen(req, timeout=30) as response:
     print(response.read().decode('utf-8'))
 ```
 
-To handle the result further, commonly a html page, use [BeautifulSoup](bs4.md).
+To handle the result further, commonly a html page, use [BeautifulSoup](https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/#).
 
 ##### HTTP Header
 

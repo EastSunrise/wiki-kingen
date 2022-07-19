@@ -29,9 +29,9 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   - static/css/material.css
-plugins:
-  - git-revision-date-localized:
-      type: iso_datetime
+# plugins:
+#   - git-revision-date-localized:
+#       type: iso_datetime
 use_directory_urls: false
 markdown_extensions:
   - abbr
@@ -68,7 +68,7 @@ markdown_extensions:
   - pymdownx.tilde
 nav:
   - Java:
-      - 开始: java/index.md
+      - Java: java/index.md
       - 基础语法:
           - Annotation: java/language/annotation.md
       - 扩展库:
@@ -76,32 +76,24 @@ nav:
       - 设计模式:
           - 状态模式: java/design-pattern/state-pattern.md
           - 单例模式: java/design-pattern/singleton-pattern.md
-      - Spring Framework:
-          - Get Started: java/spring/index.md
-          - Aspect Oriented Programming: java/spring/aop.md
+      - Spring:
+          - Spring: java/spring/index.md
+          - AOP: java/spring/aop.md
           - Transaction: java/spring/transaction.md
-      - Spring Boot:
-          - Get Started: java/spring-boot/index.md
-      - MyBatis:
-          - MyBatis: java/mybatis/index.md
-          - Generator: java/mybatis/generator.md
+      - MyBatis: java/mybatis.md
       - Tomcat: java/tomcat.md
-      - Maven: java/maven.md
-      - Freemarker: java/freemarker.md
-      - OGNL: java/ognl.md
   - CS:
       - 开始: cs/index.md
       - 数学:
           - 傅里叶变换: cs/mathematics/fourier-transform.md
       - 算法:
-          - Get Started:
-              - 渐近表示: cs/algorithms/asymptotic-analysis.md
-              - 分治策略: cs/algorithms/divide-and-conquer.md
+          - 算法: cs/algorithms/index.md
           - 排序:
               - 快速排序: cs/algorithms/sorting/quick-sort.md
               - 归并排序: cs/algorithms/sorting/merge-sort.md
               - 堆排序: cs/algorithms/sorting/heap-sort.md
               - 桶排序: cs/algorithms/sorting/bucket-sort.md
+          - 分治算法: cs/algorithms/divide-and-conquer.md
           - 动态规划: cs/algorithms/dynamic-programming.md
           - 贪心算法: cs/algorithms/greedy-algorithms.md
           - 回溯算法: cs/algorithms/backtracking.md

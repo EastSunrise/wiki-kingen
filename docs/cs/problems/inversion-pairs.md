@@ -1,3 +1,5 @@
+- [x] TODO
+
 #### Question
 
 Given an array $a_1, a_2, ..., a_n$, count how many inversion pairs there are. $a_i$ and $a_j$ are inversion pairs if $i<j$ and $a_i>a_j$. An example is as follows:

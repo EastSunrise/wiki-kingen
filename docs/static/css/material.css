@@ -1,32 +1,36 @@
-/*一级标题*/
+/*一级标题，大小无效*/
+h1 {
+  font-family: "Times New Roman", 黑体, serif;
+  font-size: 2em;
+}
+
+/*二级标题，大小无效*/
+h2 {
+  font-family: "Times New Roman", 黑体, serif;
+  font-size: 1.5625em;
+}
+
+/*三级标题，大小无效*/
 h3 {
-  font-family: 黑体, serif;
-  font-size: 16pt;
-  font-weight: bold;
+  font-family: "Times New Roman", 黑体, serif;
+  font-size: 1.25em;
 }
 
-/*二级标题*/
+/*四级标题*/
 h4 {
-  font-family: 黑体, serif;
-  font-size: 14pt;
-}
-
-/*三级标题*/
-h5 {
-  font-family: 宋体, serif;
-  font-size: 12pt;
+  font-family: "Times New Roman", 宋体, serif;
+  font-size: 1em;
   font-weight: bold;
 }
 
 /*正文*/
 article p {
   font-family: "Times New Roman", 宋体, serif;
-  font-size: 12pt;
+  font-size: 1em;
 }
 
 /*列表*/
 article li {
   font-family: "Times New Roman", 宋体, serif;
-  font-size: 10.5pt;
+  font-size: 0.875em;
 }
-
