@@ -1,0 +1,36 @@
+/*一级标题*/
+h1, #toc-collapse li[data-level='1'] > a {
+  font-family: "Times New Roman", 黑体, serif;
+  font-size: 2em;
+}
+
+/*二级标题*/
+h2, #toc-collapse li[data-level='2'] > a {
+  font-family: "Times New Roman", 黑体, serif;
+  font-size: 1.5625em;
+}
+
+/*三级标题*/
+h3, #toc-collapse li[data-level='5'] > a {
+  font-family: "Times New Roman", 黑体, serif;
+  font-size: 1.25em;
+}
+
+/*四级标题*/
+h4, #toc-collapse li[data-level='5'] > a {
+  font-family: "Times New Roman", 宋体, serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/*正文*/
+div[role='main'] p {
+  font-family: "Times New Roman", 宋体, serif;
+  font-size: 1em;
+}
+
+/*列表*/
+div[role='main'] li {
+  font-family: "Times New Roman", 宋体, serif;
+  font-size: 0.875em;
+}
