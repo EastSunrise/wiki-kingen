@@ -44,6 +44,8 @@
     
       <link rel="stylesheet" href="../static/css/material.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
+    
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windows-commands" class="md-skip">
+        <a href="#windows" class="md-skip">
           跳转至
         </a>
       
@@ -569,10 +571,6 @@
       
         
           
-            
-          
-        
-          
         
           
         
@@ -582,16 +580,10 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../cs/index.html">CS</a>
-          
-            <label for="__nav_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_3">
+          CS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <nav class="md-nav" aria-label="CS" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -599,8 +591,6 @@
           CS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -611,22 +601,24 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
       
       
       
         
           
         
+          
+        
       
       
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_1">
           数学
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="数学" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
+        <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           数学
         </label>
@@ -638,7 +630,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../cs/mathematics/fourier-transform.html" class="md-nav__link">
+      <a href="../cs/math/summation.html" class="md-nav__link">
+        求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/math/fourier-transform.html" class="md-nav__link">
         傅里叶变换
       </a>
     </li>
@@ -662,7 +668,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
       
       
@@ -698,14 +704,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../cs/algorithms/index.html">算法</a>
           
-            <label for="__nav_3_3">
+            <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="算法" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_3">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           算法
         </label>
@@ -722,11 +728,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
       
       
       
         
+          
+            
           
         
           
@@ -735,34 +743,26 @@
         
           
         
-          
+      
+      
         
-      
-      
-        <label class="md-nav__link" for="__nav_3_3_2">
-          排序
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cs/algorithms/sorting/index.html">排序</a>
+          
+            <label for="__nav_3_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="排序" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_2">
+        <label class="md-nav__title" for="__nav_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           排序
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cs/algorithms/sorting/quick-sort.html" class="md-nav__link">
-        快速排序
-      </a>
-    </li>
-  
-
             
           
             
@@ -773,20 +773,6 @@
     <li class="md-nav__item">
       <a href="../cs/algorithms/sorting/merge-sort.html" class="md-nav__link">
         归并排序
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cs/algorithms/sorting/heap-sort.html" class="md-nav__link">
-        堆排序
       </a>
     </li>
   
@@ -907,7 +893,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_8" type="checkbox" id="__nav_3_3_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" type="checkbox" id="__nav_3_2_8" >
       
       
       
@@ -920,13 +906,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_8">
+        <label class="md-nav__link" for="__nav_3_2_8">
           模式匹配
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="模式匹配" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_8">
+        <label class="md-nav__title" for="__nav_3_2_8">
           <span class="md-nav__icon md-icon"></span>
           模式匹配
         </label>
@@ -990,7 +976,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_9" type="checkbox" id="__nav_3_3_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" type="checkbox" id="__nav_3_2_9" >
       
       
       
@@ -1001,13 +987,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_9">
+        <label class="md-nav__link" for="__nav_3_2_9">
           密钥算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="密钥算法" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_9">
+        <label class="md-nav__title" for="__nav_3_2_9">
           <span class="md-nav__icon md-icon"></span>
           密钥算法
         </label>
@@ -1057,7 +1043,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_10" type="checkbox" id="__nav_3_3_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" type="checkbox" id="__nav_3_2_10" >
       
       
       
@@ -1070,13 +1056,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_10">
+        <label class="md-nav__link" for="__nav_3_2_10">
           图论
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="图论" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_10">
+        <label class="md-nav__title" for="__nav_3_2_10">
           <span class="md-nav__icon md-icon"></span>
           图论
         </label>
@@ -1140,7 +1126,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_11" type="checkbox" id="__nav_3_3_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" type="checkbox" id="__nav_3_2_11" >
       
       
       
@@ -1153,13 +1139,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_11">
+        <label class="md-nav__link" for="__nav_3_2_11">
           其它算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="其它算法" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_11">
+        <label class="md-nav__title" for="__nav_3_2_11">
           <span class="md-nav__icon md-icon"></span>
           其它算法
         </label>
@@ -1230,15 +1216,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
       
         
           
-        
-          
-        
+            
           
         
           
@@ -1257,58 +1241,24 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_4">
-          数据结构
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cs/data-structure/index.html">数据结构</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="数据结构" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           数据结构
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cs/data-structure/stack.html" class="md-nav__link">
-        栈
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cs/data-structure/queue.html" class="md-nav__link">
-        队列
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cs/data-structure/heap.html" class="md-nav__link">
-        堆
-      </a>
-    </li>
-  
-
             
           
             
@@ -1331,8 +1281,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../cs/data-structure/binary-search-tree.html" class="md-nav__link">
-        二叉搜索树
+      <a href="../cs/data-structure/heap.html" class="md-nav__link">
+        堆
       </a>
     </li>
   
@@ -1425,7 +1375,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
       
       
       
@@ -1436,13 +1386,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_5">
+        <label class="md-nav__link" for="__nav_3_4">
           常见问题
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="常见问题" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
+        <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           常见问题
         </label>
@@ -2837,6 +2787,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -2943,52 +2895,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#windows-commands" class="md-nav__link">
-    Windows Commands
+  <a href="#windows" class="md-nav__link">
+    Windows 命令
   </a>
   
-    <nav class="md-nav" aria-label="Windows Commands">
+    <nav class="md-nav" aria-label="Windows 命令">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    Syntax
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-of-commands" class="md-nav__link">
-    List of Commands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program" class="md-nav__link">
-    Program
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    语法规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     命令
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#net" class="md-nav__link">
-    NET
+  <a href="#_3" class="md-nav__link">
+    其他命令
   </a>
   
-    <nav class="md-nav" aria-label="NET">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    Windows 程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
-    Service
+  <a href="#_4" class="md-nav__link">
+    彻底格式化（不可恢复）
   </a>
   
 </li>
@@ -2997,9 +2954,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
+  </a>
   
 </li>
       
@@ -3068,6 +3027,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ffmpeg.html" class="md-nav__link">
+        FFmpeg
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3099,52 +3072,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#windows-commands" class="md-nav__link">
-    Windows Commands
+  <a href="#windows" class="md-nav__link">
+    Windows 命令
   </a>
   
-    <nav class="md-nav" aria-label="Windows Commands">
+    <nav class="md-nav" aria-label="Windows 命令">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    Syntax
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-of-commands" class="md-nav__link">
-    List of Commands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program" class="md-nav__link">
-    Program
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    语法规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     命令
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#net" class="md-nav__link">
-    NET
+  <a href="#_3" class="md-nav__link">
+    其他命令
   </a>
   
-    <nav class="md-nav" aria-label="NET">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    Windows 程序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
-    Service
+  <a href="#_4" class="md-nav__link">
+    彻底格式化（不可恢复）
   </a>
   
 </li>
@@ -3153,9 +3131,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
+  </a>
   
 </li>
       
@@ -3179,56 +3159,59 @@
 
   <h1>Windows</h1>
 
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> TODO</li>
-</ul>
-<h4 id="windows-commands">Windows Commands<a class="headerlink" href="#windows-commands" title="Permanent link">&para;</a></h4>
-<p>To find information about a specific command, search <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands">here</a>.</p>
-<h5 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h5>
+<h2 id="windows">Windows 命令<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<h3 id="_1">语法规范<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>text</code> means exact input</li>
-<li><code>&lt;required&gt;</code> means the arg is required</li>
-<li><code>[option]</code> means the arg is optional</li>
-<li><code>{option1|option2}</code> means to choose one from the options</li>
-<li><code>...</code> means repeating the former one</li>
+<li><code>&lt;required&gt;</code>：必选的参数</li>
+<li><code>[option]</code>：可选的参数</li>
+<li><code>{option1|option2}</code>：必选的枚举类型参数，<code>|</code>为分隔符</li>
+<li><code>...</code>：可重复使用多次的项</li>
+<li><code>/?</code>：获取帮助</li>
+<li><code>|</code>：分隔命令时表示前者的输出是后者的输入</li>
 </ul>
-<h5 id="list-of-commands">List of Commands<a class="headerlink" href="#list-of-commands" title="Permanent link">&para;</a></h5>
+<h3 id="_2">命令<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>ren [&lt;Drive&gt;:][&lt;Path&gt;]&lt;FileName1&gt; &lt;FileName2&gt;</code> rename files or directories, same as <code>rename</code>. </li>
+<li>重命名：<code>ren [&lt;Drive&gt;:][&lt;Path&gt;]&lt;FileName1&gt; &lt;FileName2&gt;</code>，等价于<code>rename</code></li>
+<li>网络状态：<code>netstat</code></li>
+<li>字符串查找：<code>findstr</code></li>
+<li>进程列表：<code>tasklist</code></li>
+<li>结束进程：<code>taskkill</code></li>
 </ul>
-<h5 id="program">Program<a class="headerlink" href="#program" title="Permanent link">&para;</a></h5>
+<h3 id="_3">其他命令<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>net</code>：管理网络，用户，帐户等</li>
+</ul>
+<h2 id="windows_1">Windows 程序<a class="headerlink" href="#windows_1" title="Permanent link">&para;</a></h2>
 <ol>
-<li>用户账户 netplwiz</li>
-<li>启动菜单 shell:startup：添加exe快捷方式，exe添加到自启动</li>
-<li>计算器 calc</li>
-<li>任务计划程序 taskschd.msc</li>
-<li>系统配置 msconfig</li>
-<li>文件资源管理器 explorer</li>
-<li>注册表 regedt32</li>
-<li>任务管理器 taskmgr</li>
-<li>资源监视器 resmon</li>
-<li>性能监视器 perfmon</li>
-<li>Internet选项 inetcpl.cpl</li>
-<li>控制面板 control</li>
-<li>程序与功能 appwiz.cpl</li>
-<li>事件查看器 eventvwr</li>
-<li>系统信息 msinfo32</li>
-<li>计算机管理 compmgmt.msc</li>
-<li>Windows版本 winver</li>
+<li>用户账户：<code>netplwiz</code></li>
+<li>启动菜单：<code>shell:startup</code>，添加exe快捷方式，exe添加到自启动</li>
+<li>计算器：<code>calc</code></li>
+<li>任务计划程序：<code>taskschd.msc</code></li>
+<li>系统配置：<code>msconfig</code></li>
+<li>文件资源管理器：<code>explorer</code></li>
+<li>注册表：<code>regedt32</code></li>
+<li>任务管理器：<code>taskmgr</code></li>
+<li>资源监视器：<code>resmon</code></li>
+<li>性能监视器：<code>perfmon</code></li>
+<li>Internet选项：<code>inetcpl.cpl</code></li>
+<li>控制面板：<code>control</code></li>
+<li>程序与功能：<code>appwiz.cpl</code></li>
+<li>事件查看器：<code>eventvwr</code></li>
+<li>系统信息：<code>msinfo32</code></li>
+<li>计算机管理：<code>compmgmt.msc</code></li>
+<li>Windows版本：<code>winver</code></li>
 </ol>
-<h5 id="_1">命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<h3 id="_4">彻底格式化（不可恢复）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ol>
-<li>查看所有进程 netstat –ano</li>
-<li>查询占用了8080端口的进程 netstat -ano|findstr "8080"</li>
-<li>查找进程号对应的进程名称 tasklist|findstr 3112</li>
-<li>根据进程名称杀死进程 taskkill /f /t /im /javaw.exe</li>
+<li>执行格式化，取消勾选*快速格式化*；</li>
+<li>将简单文件写满磁盘，即写入数据覆盖；</li>
+<li>重复上述两个步骤三次以上（格式化时选择不同的**分配单元大小**）。</li>
 </ol>
-<h5 id="net">NET<a class="headerlink" href="#net" title="Permanent link">&para;</a></h5>
-<p>NET commands involve management of network, service, user, and so on.</p>
-<h6 id="service">Service<a class="headerlink" href="#service" title="Permanent link">&para;</a></h6>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ net start &lt;service name&gt;  <span class="c1"># Administrater is required</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ net stop &lt;service name&gt;
-</code></pre></div>
+<h2 id="_5">参考<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands">Windows 命令</a></li>
+</ul>
 
               
             </article>
@@ -3308,11 +3291,9 @@
       
         <script src="../static/js/material.js"></script>
       
-        <script src="../static/js/mathjax.js"></script>
+        <script src="../static/js/katex.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script>
       
     
   </body>

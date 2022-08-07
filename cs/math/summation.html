@@ -15,7 +15,7 @@
     
     
       
-        <title>傅里叶变换 - Kingen-WiKi</title>
+        <title>求和公式 - Kingen-WiKi</title>
       
     
     
@@ -44,6 +44,8 @@
     
       <link rel="stylesheet" href="../../static/css/material.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -66,6 +68,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -95,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              傅里叶变换
+              求和公式
             
           </span>
         </div>
@@ -566,10 +573,6 @@
       
         
           
-            
-          
-        
-          
         
           
         
@@ -579,16 +582,10 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../index.html">CS</a>
-          
-            <label for="__nav_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_3">
+          CS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <nav class="md-nav" aria-label="CS" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -596,8 +593,6 @@
           CS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -610,22 +605,24 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
         
           
         
+          
+        
       
       
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_1">
           数学
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="数学" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
+        <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           数学
         </label>
@@ -644,10 +641,94 @@
       
       
       
-      <a href="fourier-transform.html" class="md-nav__link md-nav__link--active">
-        傅里叶变换
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          求和公式
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="summation.html" class="md-nav__link md-nav__link--active">
+        求和公式
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    求和公式及其性质
+  </a>
+  
+    <nav class="md-nav" aria-label="求和公式及其性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    等差级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    平方和与立方和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    几何级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    级数积分与微分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fourier-transform.html" class="md-nav__link">
+        傅里叶变换
+      </a>
     </li>
   
 
@@ -669,7 +750,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
       
       
@@ -705,14 +786,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../algorithms/index.html">算法</a>
           
-            <label for="__nav_3_3">
+            <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="算法" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_3">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           算法
         </label>
@@ -729,11 +810,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
       
       
       
         
+          
+            
           
         
           
@@ -742,34 +825,26 @@
         
           
         
-          
+      
+      
         
-      
-      
-        <label class="md-nav__link" for="__nav_3_3_2">
-          排序
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../algorithms/sorting/index.html">排序</a>
+          
+            <label for="__nav_3_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="排序" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_2">
+        <label class="md-nav__title" for="__nav_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           排序
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithms/sorting/quick-sort.html" class="md-nav__link">
-        快速排序
-      </a>
-    </li>
-  
-
             
           
             
@@ -780,20 +855,6 @@
     <li class="md-nav__item">
       <a href="../algorithms/sorting/merge-sort.html" class="md-nav__link">
         归并排序
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithms/sorting/heap-sort.html" class="md-nav__link">
-        堆排序
       </a>
     </li>
   
@@ -914,7 +975,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_8" type="checkbox" id="__nav_3_3_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" type="checkbox" id="__nav_3_2_8" >
       
       
       
@@ -927,13 +988,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_8">
+        <label class="md-nav__link" for="__nav_3_2_8">
           模式匹配
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="模式匹配" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_8">
+        <label class="md-nav__title" for="__nav_3_2_8">
           <span class="md-nav__icon md-icon"></span>
           模式匹配
         </label>
@@ -997,7 +1058,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_9" type="checkbox" id="__nav_3_3_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" type="checkbox" id="__nav_3_2_9" >
       
       
       
@@ -1008,13 +1069,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_9">
+        <label class="md-nav__link" for="__nav_3_2_9">
           密钥算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="密钥算法" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_9">
+        <label class="md-nav__title" for="__nav_3_2_9">
           <span class="md-nav__icon md-icon"></span>
           密钥算法
         </label>
@@ -1064,7 +1125,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_10" type="checkbox" id="__nav_3_3_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" type="checkbox" id="__nav_3_2_10" >
       
       
       
@@ -1077,13 +1138,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_10">
+        <label class="md-nav__link" for="__nav_3_2_10">
           图论
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="图论" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_10">
+        <label class="md-nav__title" for="__nav_3_2_10">
           <span class="md-nav__icon md-icon"></span>
           图论
         </label>
@@ -1147,7 +1208,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_11" type="checkbox" id="__nav_3_3_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" type="checkbox" id="__nav_3_2_11" >
       
       
       
@@ -1160,13 +1221,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3_11">
+        <label class="md-nav__link" for="__nav_3_2_11">
           其它算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="其它算法" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_11">
+        <label class="md-nav__title" for="__nav_3_2_11">
           <span class="md-nav__icon md-icon"></span>
           其它算法
         </label>
@@ -1237,15 +1298,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
       
         
           
-        
-          
-        
+            
           
         
           
@@ -1264,58 +1323,24 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_4">
-          数据结构
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../data-structure/index.html">数据结构</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="数据结构" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           数据结构
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-structure/stack.html" class="md-nav__link">
-        栈
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-structure/queue.html" class="md-nav__link">
-        队列
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-structure/heap.html" class="md-nav__link">
-        堆
-      </a>
-    </li>
-  
-
             
           
             
@@ -1338,8 +1363,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-structure/binary-search-tree.html" class="md-nav__link">
-        二叉搜索树
+      <a href="../data-structure/heap.html" class="md-nav__link">
+        堆
       </a>
     </li>
   
@@ -1432,7 +1457,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
       
       
       
@@ -1443,13 +1468,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_5">
+        <label class="md-nav__link" for="__nav_3_4">
           常见问题
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="常见问题" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
+        <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           常见问题
         </label>
@@ -2842,6 +2867,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -2982,6 +3009,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/ffmpeg.html" class="md-nav__link">
+        FFmpeg
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3006,6 +3047,62 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    求和公式及其性质
+  </a>
+  
+    <nav class="md-nav" aria-label="求和公式及其性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    等差级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    平方和与立方和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    几何级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    级数积分与微分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3016,16 +3113,59 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/cs/mathematics/fourier-transform.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/cs/math/summation.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>傅里叶变换</h1>
+  <h1>求和公式</h1>
 
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> TODO</li>
+<h3 id="_1">求和公式及其性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>给定有限数列 <span class="arithmatex">\(a_1,a_2,...,a_n\)</span>，其中 <span class="arithmatex">\(n\ge 0\)</span>，记有限和</p>
+<div class="arithmatex">\[
+\sum_{k=1}^{n}a_k=a_1+a_2+···+a_n
+\]</div>
+<p>若 <span class="arithmatex">\(n=0\)</span>，定义该和式值为 <span class="arithmatex">\(0\)</span>。</p>
+<p>给定无限数列 <span class="arithmatex">\(a_1,a_2,...\)</span>，将其无限和 <span class="arithmatex">\(a_1+a_2+···\)</span> 记作</p>
+<div class="arithmatex">\[
+\sum_{k=1}^{\infty}a_k=\lim_{n\to \infty}\sum_{k=1}^{n}a_k
+\]</div>
+<h4 id="_2">等差级数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\begin{array}{rl}
+    \displaystyle\sum_{k=1}^{n}k&amp;=\frac{1}{2}n(n+1) \\
+    &amp;=\Theta(n^2)
+\end{array}
+\]</div>
+<h4 id="_3">平方和与立方和<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\sum_{k=1}^{n}k^2=\frac{n(n+1)(2n+1)}{6}
+\]</div>
+<div class="arithmatex">\[
+\sum_{k=1}^{n}k^3=\frac{n^2(n+1)^2}{4}
+\]</div>
+<h4 id="_4">几何级数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>对实数 <span class="arithmatex">\(x\ne 1\)</span>，和式</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{n}x^k=1+x+x^2+···+x^n
+\]</div>
+<p>称作几何级数（或指数级数），其值为</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{n}x^k=\frac{x^{n+1}-1}{x-1}
+\]</div>
+<p>当 <span class="arithmatex">\(n\)</span> 趋于无穷且 <span class="arithmatex">\(|x|\lt 1\)</span> 时，有</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty}x^k=\frac{1}{1-x}
+\]</div>
+<h4 id="_5">级数积分与微分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>对上述公式积分可得</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty}kx^k=\frac{x}{(1-x)^2}
+\]</div>
+<h3 id="_6">参考<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>算法导论. 原书第3版. 附录A.</li>
 </ul>
 
               
@@ -3047,7 +3187,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 开始" rel="prev">
+        <a href="../../java/tomcat.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Tomcat" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3056,20 +3196,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              开始
+              Tomcat
             </div>
           </div>
         </a>
       
       
         
-        <a href="../algorithms/index.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 算法" rel="next">
+        <a href="fourier-transform.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 傅里叶变换" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              算法
+              傅里叶变换
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3106,11 +3246,9 @@
       
         <script src="../../static/js/material.js"></script>
       
-        <script src="../../static/js/mathjax.js"></script>
+        <script src="../../static/js/katex.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js"></script>
       
     
   </body>
