@@ -24,11 +24,11 @@ theme:
     repo: fontawesome/brands/github
 extra_javascript:
   - static/js/material.js
-  - static/js/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - static/js/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js
 extra_css:
   - static/css/material.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css
 # plugins:
 #   - git-revision-date-localized:
 #       type: iso_datetime
@@ -84,15 +84,14 @@ nav:
       - MyBatis: java/mybatis.md
       - Tomcat: java/tomcat.md
   - CS:
-      - 开始: cs/index.md
       - 数学:
-          - 傅里叶变换: cs/mathematics/fourier-transform.md
+          - 求和公式: cs/math/summation.md
+          - 傅里叶变换: cs/math/fourier-transform.md
       - 算法:
           - 算法: cs/algorithms/index.md
           - 排序:
-              - 快速排序: cs/algorithms/sorting/quick-sort.md
+              - 排序: cs/algorithms/sorting/index.md
               - 归并排序: cs/algorithms/sorting/merge-sort.md
-              - 堆排序: cs/algorithms/sorting/heap-sort.md
               - 桶排序: cs/algorithms/sorting/bucket-sort.md
               - 拓扑排序: cs/algorithms/sorting/topological-sorting.md
           - 分治算法: cs/algorithms/divide-and-conquer.md
@@ -116,11 +115,9 @@ nav:
               - 蒙特卡洛树搜索: cs/algorithms/others/monte-carlo-tree-search.md
               - 蓄水池抽样算法: cs/algorithms/others/reservoir-sampling.md
       - 数据结构:
-          - 栈: cs/data-structure/stack.md
-          - 队列: cs/data-structure/queue.md
-          - 堆: cs/data-structure/heap.md
+          - 数据结构: cs/data-structure/index.md
           - 二叉树: cs/data-structure/binary-tree.md
-          - 二叉搜索树: cs/data-structure/binary-search-tree.md
+          - 堆: cs/data-structure/heap.md
           - 线段树: cs/data-structure/segment-tree.md
           - 红黑树: cs/data-structure/red-black-tree.md
           - 单调栈: cs/data-structure/monotonic-stack.md
@@ -199,3 +196,4 @@ nav:
       - Visual Studio Code: misc/vscode.md
       - Fiddler: misc/fiddler.md
       - Charles: misc/charles.md
+      - FFmpeg: misc/ffmpeg.md

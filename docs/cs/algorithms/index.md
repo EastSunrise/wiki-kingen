@@ -1,34 +1,21 @@
-- [x] TODO
+### 空间复杂度
 
-#### 复杂度Complexity
+    注：递归空间开销较大，尽可能少用。
 
-##### Space complexity $S(n)$
+### 时间复杂度
 
-**Notes**: Make less use of recursion as possible for it occupies much space.
+#### 渐近上界
 
-##### Time complexity  $T(n)$
+如果存在常量 $c>0$ 和 $n_0>0$，使得对 $\forall n\ge n_0$，都有 $T(n)\le c·f(n)$，则称 $f(n)$ 是运行时间 $T(n)$ 的渐近上界，记作 $T(n)=O(f(n))$.
 
-- $T_{worst}(n)$
-- $T_{avg}(n)$
+#### 渐近下界
 
-**Notes**: When it occurred $O(n^2)$, consider weather $O(n\log{}n)$ is possible.
+如果存在常量 $c>0$ 和 $n_0>0$，使得对 $\forall n\ge n_0$，都有 $T(n)\ge c·g(n)$，则称 $g(n)$ 是运行时间 $T(n)$ 的渐近下界，记作 $T(n)=\Omega(g(n))$.
 
-#### Asymptotic Notation
+#### 渐近紧确界
 
-##### Upper bound
+如果存在常量 $c_1\gt 0,\ c_2\gt 0$ 和 $n_0\gt 0$，使得对 $\forall n\ge n_0$，都有 $c_1·h(n)\le T(n)\le c_2·h(n)$，则称 $h(n)$ 是运行时间 $T(n)$ 的渐近紧确界，记作 $T(n)=\Theta(h(n))$.
 
-$T(n)=O(f(n))$
+对任意 $T(n)$ 和 $f(n)$，我们有 $T(n)=\Theta(f(n))$，当且仅当 $T(n)=O(f(n))$ 且 $T(n)=\Omega(f(n))$.
 
-There exist constants $C>0$ and $n_0>0$ to make that when $n\ge n_0$, then $T(n)\le C·f(n)$.
-
-##### Lower bound
-
-$T(n)=\Omega(g(n))$
-
-There exist constants $C>0$ and $n_0>0$ to make that when $n\ge n_0$, then $T(n)\ge C·g(n)$.
-
-##### Equivalence
-
-$T(n)=\Theta(g(n))$
-
-Meet the conditions $T(n)=O(f(n))$ and $T(n)=\Omega(g(n))$ together.
+**注**：当时间复杂度为 $O(n^2)$，考虑是否可以优化到 $O(n\log{}n)$.

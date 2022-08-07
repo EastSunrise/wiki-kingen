@@ -15,7 +15,7 @@
 
 ```java
 /**
- * 使用树结构表示一个集合，树的根节点即集合的根元素。
+ * 使用树结构表示一个集合，树的根结点即集合的根元素。
  */
 public class MergeFindSet {
 
@@ -36,7 +36,7 @@ public class MergeFindSet {
         }
     }
 
-    // 查找根元素，即所在树的根节点
+    // 查找根元素，即所在树的根结点
     private int find(int x) {
         int p = x;
         while (p != parents[p]) {

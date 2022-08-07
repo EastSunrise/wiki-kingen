@@ -1,47 +1,19 @@
-- [x] TODO
+### 参考
 
-#### 参考
-
+- [LaTeX - WikiBooks](https://zh.wikibooks.org/wiki/LaTeX)
+- [The TeX/LaTeX Extension List - MathJax](http://docs.mathjax.org/en/latest/input/tex/extensions/index.html)
 - [Supported Functions · KaTeX](https://katex.org/docs/supported.html)
 
-#### Overview
+### 内联公式
 
-##### Inline
+`$f(x)=x$` 渲染为 $f(x)=x$，或者 `\(f(x)=x\)` 渲染为 \(f(x)=x\)
 
-For example, $f(n)=(n-1)!\quad\forall n\in\mathbb N$
+### 块级公式
 
-##### Block
+`$$f(x)=x$$` （前后各空一行）
 
-$$
-x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
+$$f(x)=x$$
 
+`\[f(x)=x\]` （前后各空一行）
 
-
-#### Details
-
-##### Accents
-
-$a'$ `a'`	$\tilde{a}$ `\tilde{a}`
-
-##### Letters and Unicode
-
-###### Greek Letters
-
-$\varphi$ `\varphi`
-
-##### Layout
-
-###### Vertical Layout
-
-$a_n$ `a_n`	$a^n$ `a^n`
-
-##### Operators
-
-###### Fractions
-
-$\frac{a}{b}$ `\frac{a}{b}`
-
-##### Relations
-
-$\ge$ `\ge`
+\[f(x)=x\]

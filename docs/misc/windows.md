@@ -1,55 +1,54 @@
-- [x] TODO
+## Windows 命令
 
-#### Windows Commands
+### 语法规范
 
-To find information about a specific command, search [here](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands).
+- `<required>`：必选的参数
+- `[option]`：可选的参数
+- `{option1|option2}`：必选的枚举类型参数，`|`为分隔符
+- `...`：可重复使用多次的项
+- `/?`：获取帮助
+- `|`：分隔命令时表示前者的输出是后者的输入
 
-##### Syntax
+### 命令
 
-- `text` means exact input
-- `<required>` means the arg is required
-- `[option]` means the arg is optional
-- `{option1|option2}` means to choose one from the options
-- `...` means repeating the former one
+- 重命名：`ren [<Drive>:][<Path>]<FileName1> <FileName2>`，等价于`rename`
+- 网络状态：`netstat`
+- 字符串查找：`findstr`
+- 进程列表：`tasklist`
+- 结束进程：`taskkill`
 
-##### List of Commands
+### 其他命令
 
-- `ren [<Drive>:][<Path>]<FileName1> <FileName2>` rename files or directories, same as `rename`. 
+- `net`：管理网络，用户，帐户等
 
-##### Program
+## Windows 程序
 
-1. 用户账户 netplwiz
-2. 启动菜单 shell:startup：添加exe快捷方式，exe添加到自启动
-3. 计算器 calc
-4. 任务计划程序 taskschd.msc
-5. 系统配置 msconfig
-6. 文件资源管理器 explorer
-7. 注册表 regedt32
-8. 任务管理器 taskmgr
-9. 资源监视器 resmon
-10. 性能监视器 perfmon
-11. Internet选项 inetcpl.cpl
-12. 控制面板 control
-13. 程序与功能 appwiz.cpl
-14. 事件查看器 eventvwr
-15. 系统信息 msinfo32
-16. 计算机管理 compmgmt.msc
-17. Windows版本 winver
+1. 用户账户：`netplwiz`
+2. 启动菜单：`shell:startup`，添加exe快捷方式，exe添加到自启动
+3. 计算器：`calc`
+4. 任务计划程序：`taskschd.msc`
+5. 系统配置：`msconfig`
+6. 文件资源管理器：`explorer`
+7. 注册表：`regedt32`
+8. 任务管理器：`taskmgr`
+9. 资源监视器：`resmon`
+10. 性能监视器：`perfmon`
+11. Internet选项：`inetcpl.cpl`
+12. 控制面板：`control`
+13. 程序与功能：`appwiz.cpl`
+14. 事件查看器：`eventvwr`
+15. 系统信息：`msinfo32`
+16. 计算机管理：`compmgmt.msc`
+17. Windows版本：`winver`
 
-##### 命令
+## FAQ
 
-1. 查看所有进程 netstat –ano
-2. 查询占用了8080端口的进程 netstat -ano|findstr "8080"
-3. 查找进程号对应的进程名称 tasklist|findstr 3112
-4. 根据进程名称杀死进程 taskkill /f /t /im /javaw.exe
+### 彻底格式化（不可恢复）
 
-##### NET
+1. 执行格式化，取消勾选*快速格式化*；
+2. 将简单文件写满磁盘，即写入数据覆盖；
+3. 重复上述两个步骤三次以上（格式化时选择不同的**分配单元大小**）。
 
-NET commands involve management of network, service, user, and so on.
+## 参考
 
-###### Service
-
-```shell
-$ net start <service name>  # Administrater is required
-$ net stop <service name>
-```
+- [Windows 命令](https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands)

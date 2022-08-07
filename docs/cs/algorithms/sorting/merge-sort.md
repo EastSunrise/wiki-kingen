@@ -1,31 +1,25 @@
-- [x] TODO
+### 算法
 
-#### Overview
+归并排序是一个[分治算法](../divide-and-conquer.md).
 
-Merge Sort is a [Divide and Conquer](../divide-and-conquer.md) algorithm.
+1. 将数组分为两个子数组；
+2. 递归调用 *归并排序* 排序两个子数组；
+3. 合并两个排好序的子数组（这是算法的核心）。
 
-#### Algorithm
-
-1. Divide the array in two halves.
-2. Sort each part with Merge Sort recursively.
-3. Merge the two halves. It's the core of the algorithm. 
-
-#### Implementation
+### 实现
 
 ```python
-def merge_sort(arr):
-    """
-    sort the arr
-    """
+def merge_sort(arr: list):
     if len(arr) <= 1:
         return
-    m = len(arr) // 2
-    left = arr[:m]
-    right = arr[m:]
+
+    mid_idx = len(arr) // 2
+    left = arr[:mid_idx]
+    right = arr[mid_idx:]
     merge_sort(left)
     merge_sort(right)
 
-    # merge the two sorted halves
+    # 合并两个子数组
     i = j = k = 0
     while i < len(left) and j < len(right):
         if left[i] <= right[j]:
@@ -44,3 +38,7 @@ def merge_sort(arr):
         j += 1
         k += 1
 ```
+
+### 参考
+
+- [Merge Sort - GeeksforGeeks](https://www.geeksforgeeks.org/merge-sort/)
