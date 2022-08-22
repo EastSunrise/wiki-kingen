@@ -4,6 +4,12 @@
 
 下载并安装 [Python3](https://www.python.org/downloads/release/python-376/).
 
+更新 *pip*，
+
+```shell
+python -m pip install --upgrade pip
+```
+
 ### 更换国内镜像
 
 常用镜像：

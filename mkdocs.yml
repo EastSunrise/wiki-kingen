@@ -91,6 +91,7 @@ nav:
           - 算法: cs/algorithms/index.md
           - 排序:
               - 排序: cs/algorithms/sorting/index.md
+              - 插入排序: cs/algorithms/sorting/insertion-sort.md
               - 归并排序: cs/algorithms/sorting/merge-sort.md
               - 桶排序: cs/algorithms/sorting/bucket-sort.md
               - 拓扑排序: cs/algorithms/sorting/topological-sorting.md

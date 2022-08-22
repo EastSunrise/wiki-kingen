@@ -39,6 +39,18 @@ def merge_sort(arr: list):
         k += 1
 ```
 
+### 复杂度
+
+$$
+\begin{array}{rl}
+T(n)&=2·T(\frac{n}{2})+O(n) \\
+&=2^2·T(\frac{n}{2^2})+2·O(n)+O(n) \\
+&······ \\
+&=2^{\lg{n}}·T(\frac{n}{2^{\lg{n}}})+O(n)·\lg{n} \\
+&=O(n\lg n)
+\end{array}
+$$
+
 ### 参考
 
 - [Merge Sort - GeeksforGeeks](https://www.geeksforgeeks.org/merge-sort/)
