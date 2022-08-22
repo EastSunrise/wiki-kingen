@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -743,6 +743,8 @@
         
           
         
+          
+        
       
       
         
@@ -763,6 +765,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/algorithms/sorting/insertion-sort.html" class="md-nav__link">
+        插入排序
+      </a>
+    </li>
+  
+
             
           
             
@@ -3057,6 +3073,9 @@
 <h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p>下载并安装 <a href="https://www.python.org/downloads/release/python-376/">Python3</a>.</p>
+<p>更新 <em>pip</em>，</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -m pip install --upgrade pip
+</code></pre></div>
 <h3 id="_2">更换国内镜像<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>常用镜像：</p>
 <ol>
@@ -3067,44 +3086,44 @@
 <li>华中科技大学 <a href="https://pypi.hustunique.com/">https://pypi.hustunique.com/</a></li>
 </ol>
 <p>Linux 下，修改 <em>~/.pip/pip.conf</em></p>
-<div class="highlight"><span class="filename">pip.conf</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[global]
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>index-url = https://mirrors.aliyun.com/pypi/simple/
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[install]
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>trusted-host = https://mirrors.aliyun.com/
+<div class="highlight"><span class="filename">pip.conf</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[global]
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>index-url = https://mirrors.aliyun.com/pypi/simple/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[install]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>trusted-host = https://mirrors.aliyun.com/
 </code></pre></div>
 <p>Windows 下，创建文件 <em>C:/Users/%username%/pip/pip.ini</em></p>
-<div class="highlight"><span class="filename">pip.ini</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[global]</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">index-url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://mirrors.aliyun.com/pypi/simple/</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">[install]</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">trusted-host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://mirrors.aliyun.com/</span><span class="w"></span>
+<div class="highlight"><span class="filename">pip.ini</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[global]</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">index-url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://mirrors.aliyun.com/pypi/simple/</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">[install]</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">trusted-host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://mirrors.aliyun.com/</span><span class="w"></span>
 </code></pre></div>
 <h2 id="_3">打包<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="py2exe">py2exe<a class="headerlink" href="#py2exe" title="Permanent link">&para;</a></h3>
 <p>导入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install py2exe
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip install py2exe
 </code></pre></div>
 <p>创建一个程序 <em>hello.py</em></p>
-<div class="highlight"><span class="filename">hello.py</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">hello.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>在同级目录下创建 <em>setup.py</em></p>
-<div class="highlight"><span class="filename">setup.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span> <span class="nn">py2exe</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">setup</span><span class="p">(</span><span class="n">console</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hello.py&#39;</span><span class="p">])</span>
+<div class="highlight"><span class="filename">setup.py</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span> <span class="nn">py2exe</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">setup</span><span class="p">(</span><span class="n">console</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hello.py&#39;</span><span class="p">])</span>
 </code></pre></div>
 <p>执行 <em>setup.py</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python setup.py py2exe
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python setup.py py2exe
 </code></pre></div>
 <p><em>hello.exe</em> 和执行上下文即被打包进 <em>dist</em> 目录下.</p>
 <h3 id="pyinstaller">PyInstaller<a class="headerlink" href="#pyinstaller" title="Permanent link">&para;</a></h3>
 <p>导入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip install pyinstaller
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip install pyinstaller
 </code></pre></div>
 <p>创建一个程序 <em>hello.py</em></p>
-<div class="highlight"><span class="filename">hello.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">hello.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>执行命令</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pyinstaller hello.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pyinstaller hello.py
 </code></pre></div>
 <p><em>hello.exe</em> 和执行上下文即被打包进 <em>dist/hello</em> 目录下.</p>
 <p>可选项：</p>
