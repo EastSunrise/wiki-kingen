@@ -163,17 +163,20 @@ nav:
           - Douban: dev/apis/douban.md
           - Kugou: dev/apis/kugou.md
           - League of Legends: dev/apis/lol.md
+      - 数据库:
+          - Redis: dev/database/redis.md
       - MySQL:
           - Get Started: dev/mysql/index.md
           - FAQ: dev/mysql/faq.md
       - Oracle:
           - Get Stared: dev/oracle/index.md
           - SQL: dev/oracle/sql.md
-      - Redis: dev/redis.md
+      - Linux: dev/linux.md
+      - Docker: dev/docker.md
+      - Kafka: dev/kafka.md
       - SQLite: dev/sqlite.md
       - Nginx: dev/nginx.md
       - Git: dev/git.md
-      - Linux: dev/linux.md
       - FTP: dev/ftp.md
       - Web:
           - Bootstrap: dev/web/bootstrap.md
