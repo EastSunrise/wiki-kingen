@@ -28,6 +28,7 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js
 extra_css:
   - static/css/material.css
+  - static/css/katex.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css
 # plugins:
 #   - git-revision-date-localized:
