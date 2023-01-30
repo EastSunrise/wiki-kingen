@@ -125,12 +125,12 @@ nav:
           - 单调栈: cs/data-structure/monotonic-stack.md
           - 并查集: cs/data-structure/disjoint.md
           - Skiplist: cs/data-structure/skiplist.md
-      - 常见问题:
-          - 逆序对: cs/problems/inversion-pairs.md
-          - 最大子序列和: cs/problems/max-subsequence-sum.md
       - 深度学习:
           - 神经网络: cs/deep-learning/neural-networks.md
           - 卷积神经网络: cs/deep-learning/convolutional-neural-networks.md
+      - 常见问题:
+          - 逆序对: cs/problems/inversion-pairs.md
+          - 最大子序列和: cs/problems/max-subsequence-sum.md
   - Python:
       - 开始: python/index.md
       - 标准库:
