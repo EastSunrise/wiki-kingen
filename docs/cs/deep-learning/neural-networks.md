@@ -1,4 +1,4 @@
-### 参数和变量
+## 参数和变量
 
 - $x_i$：输入层（第一层）第$i$个神经单元的输入值，与输出值相同；
 - $w^l_{ji}$：从第$l-1$层第$i$个神经单元指向第$l$层的第$j$个神经单元的权重；
@@ -40,7 +40,7 @@ $$
 \end{equation}
 $$
 
-### 激活函数
+## 激活函数
 
 每一个神经单元输出值和输入值之间的关系称为激活函数，设$f$为激活函数，则有，
 
@@ -52,7 +52,7 @@ $$
 
 以下是几种常用的激活函数。
 
-#### Sigmoid 函数
+### Sigmoid 函数
 
 $$
 \begin{equation}
@@ -60,7 +60,7 @@ $$
 \end{equation}
 $$
 
-#### ReLU 函数
+### ReLU 函数
 
 $$
 \begin{equation}
@@ -71,9 +71,9 @@ $$
 \end{equation}
 $$
 
-#### softmax 函数
+### softmax 函数
 
-神经网络在处理分类问题时，常使用softmax函数作为输出层的激活函数。设输出层有$n$个神经单元，则softmax函数如下，
+神经网络在处理分类问题时，常使用 softmax 函数作为输出层的激活函数。设输出层有$n$个神经单元，则 softmax 函数如下，
 
 $$
 \begin{equation}
@@ -81,9 +81,9 @@ $$
 \end{equation}
 $$
 
-由上式易知，softmax函数的输出总和为$1$，因此可以将其输出解释为每种输出类别的概率。
+由上式易知，softmax 函数的输出总和为$1$，因此可以将其输出解释为每种输出类别的概率。
 
-在实际计算时，为了防止溢出，通常在指数运算前，减去一个常数$C$（一般取输入值的最大值），即等价于，
+在实际计算时，为了防止溢出，通常在指数运算前，加上一个常数$C$（一般取输入值的最大值的负值），即等价于，
 
 $$
 \begin{equation}
@@ -91,11 +91,11 @@ $$
 \end{equation}
 $$
 
-### 损失函数
+## 损失函数
 
 损失函数表示神经网络对给定输入的预测值和正解之间的误差程度。
 
-#### 均方误差
+### 均方误差
 
 损失函数的一个例子是均方误差（mean squared error），设输出层有$N$个神经单元，训练实例总数为$K$，则均方误差的计算方式如下，
 
@@ -105,7 +105,7 @@ $$
 \end{equation}
 $$
 
-#### 交叉熵误差
+### 交叉熵误差
 
 损失函数的另一个常用的例子是交叉熵误差（cross entropy error），其计算方式如下，
 
@@ -115,7 +115,7 @@ $$
 \end{equation}
 $$
 
-### 梯度
+## 梯度
 
 由多元函数的全部自变量的偏导数汇总而成的向量称为梯度（gradient），设有函数$f(x_1,x_2,\mathellipsis,x_n)$，则其梯度表示如下，
 
@@ -125,7 +125,7 @@ $$
 \end{equation}
 $$
 
-#### 数值微分
+### 数值微分
 
 利用微小的差分求偏导数的过程称为数值微分，计算方式如下，
 
@@ -135,7 +135,7 @@ $$
 \end{equation}
 $$
 
-#### 误差反向传播法
+### 误差反向传播法
 
 误差反向传播法的特点是将繁杂的导数计算替换为数列的递推关系式，从而简化梯度求解。设第$l$层第$j$个神经单元误差为$\delta^{l}_{j}$，定义如下，
 
@@ -149,7 +149,7 @@ $$
 
 $$
 \begin{equation}
-    \frac{\partial E}{\partial w^l_{ji}}=\delta^l_j a^{l-1}_i \quad
+    \frac{\partial E}{\partial w^l_{ji}}=\delta^l_j a^{l-1}_i \qquad
     \frac{\partial E}{\partial b^l_j}=\delta^l_j
 \end{equation}
 $$
@@ -176,7 +176,7 @@ $$
 \end{equation}
 $$
 
-设第$l-1$层有$m$个神经单元，则上述递推关系的矩阵表示如下（其中$\odot$表示Hadamard乘积），
+设第$l-1$层有$m$个神经单元，则上述递推关系的矩阵表示如下（其中$\odot$表示 Hadamard 乘积），
 
 $$
 \begin{equation}
@@ -204,59 +204,130 @@ $$
 
 从输出层开始，根据以上递推关系（反向传播）即可依次求得隐藏层的神经单元误差，再代入式$(14)$，从而求得损失函数在当前参数处的梯度。
 
-### 参数优化
+## 参数优化
 
-神经网络的学习的目的是找到使损失函数的值尽可能小的参数。这是寻找最优参数的问题，解决这个问题的过程称为最优化（optimization），以下是几种常见的最优化方法（参数集合记作$W$）。
+神经网络学习的目的是找到使损失函数的值尽可能小的参数。这是寻找最优参数的问题，解决这个问题的过程称为最优化（optimization），以下是几种常见的最优化方法（参数集合记作$W$，梯度记作$g$）。
 
-#### 随机梯度下降法
+### 随机梯度下降法
 
 当参数沿着梯度反方向（反向共线）移动时，误差减小得最快，表示如下，
 
 $$
 \begin{equation}
-    W\larr W-\eta\frac{\partial E}{\partial W}
+    W\larr W-\eta \cdot g
 \end{equation}
 $$
 
-其中$\eta$是一个微小的正数，称作学习率。$\eta$是一个超参数。
+其中，$\eta$是一个微小的正数，称作学习率。$\eta$是一个超参数。
 
-以上参数优化方法称为随机梯度下降法，（stochastic gradient descent），简称SGD。但是在SGD中，梯度向量的方向并没有指向最小值的方向，如果函数是各向异性的，则其搜索路径是比较低效的。
+以上参数优化方法称为随机梯度下降法（stochastic gradient descent），简称 SGD。但是在 SGD 中，梯度向量的方向并没有指向最小值的方向，如果函数是各向异性的，则其搜索路径是比较低效的。
 
-#### 动量法
+### 动量法（Momentum）
 
 $$
 \begin{gather}
-    v\larr \alpha v-\eta\frac{\partial E}{\partial W} \\
+    v\larr \alpha v-\eta \cdot g \\
     W\larr W+v
 \end{gather}
 $$
 
-#### AdaGrad
+其中，$v$对应物理上的速度，随着参数沿着梯度反方向移动，$v$会逐渐增加。
+
+### AdaGrad
+
+学习率衰减，指的是随着学习的进行，使学习率逐渐减小的方法，这里的学习率减小是针对所有的参数。AdaGrad 进一步发展了这个方法，不同的参数使用不同的学习率，并随着学习而减小。
 
 $$
 \begin{gather}
-    h\larr h+\frac{\partial E}{\partial W}\odot\frac{\partial E}{\partial W} \\
-    W\larr W-\eta\frac{1}{\sqrt h}\frac{\partial E}{\partial W}
+    h\larr h + g\odot g \\
+    W\larr W-\frac{\eta}{\epsilon + \sqrt h} \cdot g
 \end{gather}
 $$
 
-#### Adam
+其中，$h$保存了之前所有梯度值的平方和，然后通过系数$\frac{1}{\epsilon + \sqrt{h}}$调整每个参数学习的尺度，如果参数变化较大，其学习率也会衰减地较快。$\epsilon$常取$10^{-7}$，防止分母为零。
+
+### RMSProp
+
+在 AdaGrad 算法中，随着学习的进行，$h$会越来越大，导致学习率太低，即$\frac{1}{\sqrt{h}}\rarr0$。一个解决方案是使用 RMSProp 方法，加权计算梯度值的平方和，以更多地反映新的梯度变化，即“指数移动平均”。
+
+$$
+\begin{gather}
+    h\larr \rho h+(1-\rho)g\odot g \\
+    W\larr W - \frac{\eta}{\sqrt {\epsilon + h}} \cdot g
+\end{gather}
+$$
+
+其中，$\rho$是指数衰减率，通常取$0.9$.
+
+### Adam
+
+Adam 算法结合了 AdaGrad 和 RMSProp 两个算法的优点，同时考虑了梯度的一阶矩估计（梯度的均值）和二阶矩估计（梯度的方差），
+
+$$
+\begin{gather}
+    m_t\larr \beta_1 m_{t-1} + (1-\beta_1) g_t \\
+    v_t\larr \beta_2 v_{t-1} + (1-\beta_2) g \odot g \\
+    \hat{m}_t \larr \frac{m_t}{1-\beta_1^t} \\
+    \hat{v}_t \larr \frac{v_t}{1-\beta_2^t} \\
+    W_t \larr W_{t-1} - \frac{\alpha \cdot \hat{m}_t}{\sqrt{\hat{v}_t}+\epsilon}
+\end{gather}
+$$
+
+其中，$\beta_1$是一阶矩的指数衰减率，默认为$0.9$，$\beta_2$是二阶矩的指数衰减率，默认为$0.999$。训练初期时，$m_t$和$v_t$偏向零，因此计算$\hat{m}_t$和$\hat{v}_t$进行修正。最后根据学习率$\alpha$（默认为$0.001$）更新参数。
+
+后三行公式可以修改如下，提高算法效率。
+
+$$
+\begin{gather}
+    \alpha_t = \alpha \cdot \frac{\sqrt{1-\beta_2^t}}{1-\beta_1^t} \\
+    W_t \larr W_{t-1} -\frac{\alpha_t \cdot m_t}{\sqrt{v_t}+\epsilon}
+\end{gather}
+$$
 
 ## 算法
 
 1. 准备训练数据；
 2. 初始设置权重$w$、偏置$b$和学习率$\eta$：
-    - 通常使用随机数作为权重和偏置的初始值；
-    - 选择适当小的正数作为学习率；
-    - 学习率的设置大多需要反复试错。同样地，对于权重和偏置的初始值，为了取得好的结果，也可能需要多次变更设置；
+   - 通常使用随机数作为权重和偏置的初始值；
+   - 选择适当小的正数作为学习率；
+   - 学习率的设置大多需要反复试错。同样地，对于权重和偏置的初始值，为了取得好的结果，也可能需要多次变更设置；
 3. 选择小批量的训练实例，计算出所有神经单元的输出值$a$以及误差$E$：
-    - 利用式$(2)$和激活函数，正向计算各层神经单元的加权输入$z$、输出值$a$；
-    - 根据选择的损失函数，计算出预测值和正解之间的误差；
+   - 利用式$(2)$和激活函数，正向计算各层神经单元的加权输入$z$、输出值$a$；
+   - 根据选择的损失函数，计算出预测值和正解之间的误差；
 4. 利用误差反向传播法，反向计算出所有的神经单元误差$\delta$，代入式$(14)$，从而计算出此时的梯度；
 5. 根据选择的参数优化算法，更新权重和偏置；
-6. 重复执行第3~5步，直至判定误差$E$的值充分小为止。
+6. 重复执行第 3~5 步，直至判定误差$E$的值充分小为止。
 
-### 技巧
+## 权重初始值
 
-#### 权重初始值
+### Xavier 初始值
 
+如果前一层的节点数为$n$，则当前层的权重初始值使用标准差为$\frac{1}{\sqrt{n}}$的[正态分布](../math/normal-distribution.md)，此时，各层的输出值$a^l_j$具有相同广度的分布。
+
+### ReLU 初始值
+
+当选择 ReLU 作为激活函数时，因为其负值区域的值为零，为了使其更有广度，需要 2 倍的系数，即如果前一层的节点数为$n$，则当前层的权重初始值使用标准差为$\sqrt{\frac{2}{n}}$的正态分布。
+
+## BatchNorm
+
+在神经网络中，数据分布对学习的影响很大。假设某个神经单元的输入$z_j=20$，并选择像 Sigmoid 函数这样的非线性的激活函数，则其输出值$a_j\approx 1$，处于激活函数的饱和阶段，即无论$z_j$再怎么扩大，其输出值变化也很小（只能趋近$1$），或者说神经网络对这个范围的加权输入不敏感了。
+
+为了解决这个问题，Batch Normalization 的思路是对各层的加权输入进行正规化处理，从而使输出值拥有适当的广度。
+
+$$
+\begin{gather}
+    \mu_B \larr \frac{1}{m}\sum_{i=1}^{m}x_i \\
+    \sigma_B^2 \larr \frac{1}{m}\sum_{i=1}^{m}(x_i-\mu_B)^2 \\
+    \hat{x}_i \larr \frac{x_i-\mu_B}{\sqrt{\sigma_B^2+\epsilon}} \\
+    y_i \larr \gamma\hat{x}_i+\beta \equiv BN_{\gamma,\beta}(x_i)
+\end{gather}
+$$
+
+首先对 mini-batch 的输入的集合$B=\{z_1,z_2,...,z_n\}$求均值$\mu_B$和方差$\sigma_B^2$，然后对输入进行均值为$0$、方差为$1$的正规化，最后对正规化后的数据进行缩放和平移变换。初始时，$\gamma=1,\beta=0$，然后通过学习调整到合适的值。
+
+## 参考
+
+- 涌井良幸, 涌井贞美. 深度学习的数学.
+- 斋藤康毅. 深度学习入门：基于 Python 的理论与实现.
+- [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980).
+- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167).

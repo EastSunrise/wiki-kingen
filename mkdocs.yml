@@ -83,10 +83,12 @@ nav:
           - AOP: java/spring/aop.md
           - Transaction: java/spring/transaction.md
       - MyBatis: java/mybatis.md
+      - Quarkus: java/quarkus.md
       - Tomcat: java/tomcat.md
   - CS:
       - 数学:
           - 求和公式: cs/math/summation.md
+          - 正态分布: cs/math/normal-distribution.md
           - 傅里叶变换: cs/math/fourier-transform.md
       - 算法:
           - 算法: cs/algorithms/index.md
