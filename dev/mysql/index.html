@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -238,6 +238,8 @@
         
           
             
+          
+        
           
         
           
@@ -542,6 +544,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../java/quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../java/tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -614,6 +630,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -636,6 +654,20 @@
     <li class="md-nav__item">
       <a href="../../cs/math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -3208,21 +3240,21 @@
 <p>See more details <a href="https://dev.mysql.com/doc/refman/5.7/en/installing.html">here</a>.</p>
 <h5 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h5>
 <p>Select and download the repository package from <a href="https://dev.mysql.com/downloads/repo/yum/">the Download Yum Repository page</a> and then install the repository.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>wget<span class="w"> </span>https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ yum install mysql80-community-release-el7-3.noarch.rpm
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>mysql80-community-release-el7-3.noarch.rpm
 </code></pre></div>
 <p>List all subrepositories of different series and their status. Enable the specific series instead of default one.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ yum repolist all <span class="p">|</span> grep mysql
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>yum<span class="w"> </span>repolist<span class="w"> </span>all<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mysql
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ yum-config-manager --disable mysql80-community
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$ yum-config-manager --enable mysql57-community
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$<span class="w"> </span>yum-config-manager<span class="w"> </span>--disable<span class="w"> </span>mysql80-community
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$<span class="w"> </span>yum-config-manager<span class="w"> </span>--enable<span class="w"> </span>mysql57-community
 </code></pre></div>
 <p>If <code>yum-config-manager</code> is not found, install the command from <em>yum-utils</em> with <code>yum install yum-utils</code>. Or edit manually the <em>/etc/yum.repos.d/mysql-community.repo</em> file to change the release series. Just find the entry of the subrepository and then modify the value of property <em>enabled</em>.</p>
 <p>Now, install MySQL and then start the MySQL server.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ yum install mysql-community-server
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>mysql-community-server
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$ /bin/systemctl start mysqld
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>/bin/systemctl<span class="w"> </span>start<span class="w"> </span>mysqld
 </code></pre></div>
 <p>At the initial start up of the server,</p>
 <ul>
@@ -3232,20 +3264,20 @@
 <li>A superuser account 'root'@'localhost is created. A password for the superuser is set and stored in the error log file. Reveal it with <code>grep 'temporary password' /var/log/mysqld.log</code>.</li>
 </ul>
 <p>Change the root password as soon as possible.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ mysql -u root -p <span class="c1"># login</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mysql&gt; alter user <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> identified by <span class="s1">&#39;&lt;new password&gt;&#39;</span><span class="p">;</span> <span class="c1"># change the password</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span><span class="c1"># login</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mysql&gt;<span class="w"> </span>alter<span class="w"> </span>user<span class="w"> </span><span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>identified<span class="w"> </span>by<span class="w"> </span><span class="s1">&#39;&lt;new password&gt;&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1"># change the password</span>
 </code></pre></div>
 <h5 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h5>
 <p>Check the version information of installed MySQL server and global variables. Append <code>-uroot -p</code> to connect as <em>root</em> if necessary.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ mysqladmin version
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$ mysqladmin variables
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>mysqladmin<span class="w"> </span>version
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$<span class="w"> </span>mysqladmin<span class="w"> </span>variables
 </code></pre></div>
 <h5 id="remote-connection">Remote Connection<a class="headerlink" href="#remote-connection" title="Permanent link">&para;</a></h5>
 <p><em>SSH</em> is recommended. To connect not through <em>SSH</em>, update the table <em>mysql.user</em> to add hosts to a specific user. Open the port of firewall if needed.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">grant</span><span class="w"> </span><span class="o">&lt;</span><span class="n">priv1</span><span class="err">，</span><span class="n">priv2</span><span class="p">...</span><span class="o">&gt;</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="o">&lt;</span><span class="k">database</span><span class="o">&gt;</span><span class="p">.</span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">&lt;</span><span class="k">user</span><span class="o">&gt;@</span><span class="s1">&#39;&lt;host/ip&gt;&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">grant</span><span class="w"> </span><span class="o">&lt;</span><span class="n">priv1</span><span class="err">，</span><span class="n">priv2</span><span class="p">...</span><span class="o">&gt;</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="o">&lt;</span><span class="k">database</span><span class="o">&gt;</span><span class="p">.</span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">&lt;</span><span class="k">user</span><span class="o">&gt;@</span><span class="s1">&#39;&lt;host/ip&gt;&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">eg</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;&lt;user&gt;&#39;</span><span class="o">@</span><span class="s1">&#39;&lt;host&gt;&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">eg</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;&lt;user&gt;&#39;</span><span class="o">@</span><span class="s1">&#39;&lt;host&gt;&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;&lt;password&gt;&#39;</span><span class="p">;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w"> </span><span class="c1">-- flush tables related to privileges</span>
 </code></pre></div>

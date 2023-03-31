@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -238,6 +238,8 @@
         
           
             
+          
+        
           
         
           
@@ -542,6 +544,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../java/quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../java/tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -614,6 +630,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -636,6 +654,20 @@
     <li class="md-nav__item">
       <a href="../cs/math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -3214,13 +3246,13 @@
 <p>FTP</p>
 <h4 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h4>
 <p>Install a FTP server on Linux and start service:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ yum -y install vsftpd
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ systemctl start vsftpd
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span><span class="m">21</span>/tcp <span class="o">[</span>--permanent<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>vsftpd
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>vsftpd
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--add-port<span class="o">=</span><span class="m">21</span>/tcp<span class="w"> </span><span class="o">[</span>--permanent<span class="o">]</span>
 </code></pre></div>
 <p>Add a user for FTP:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ useradd &lt;username&gt; -s /sbin/nologin <span class="c1"># can&#39;t log in system</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$ password &lt;username&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>useradd<span class="w"> </span>&lt;username&gt;<span class="w"> </span>-s<span class="w"> </span>/sbin/nologin<span class="w"> </span><span class="c1"># can&#39;t log in system</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>password<span class="w"> </span>&lt;username&gt;
 </code></pre></div>
 <p>Customize relative configurations in <em>/etc/vsftpd/vsftpd.conf</em> like:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>anonymous_enable=NO
@@ -3232,11 +3264,11 @@
 <p>Then edit <em>/etc/vsftpd/user_list</em>, commenting other users and adding <ftpuser> created above to specify the only user whose can access to FTP. Remember restarting the server.</p>
 <p><strong>Notes</strong>: Users in the file <em>ftpusers</em> are always forbidden for security. If <code>userlist_enable=NO</code>, all users except those in <em>ftpusers</em> are allowed to access to the server. If <code>userlist_enable=YES</code>, who can access to the server depends on the file specified by <code>userlist_file</code>. It's a blacklist when <code>userlist_deny=YES</code>, otherwise, it's a whitelist.</p>
 <p>Access to the server (here is from Command Line):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ ftp &lt;ip&gt;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$ User<span class="o">(</span>ip:<span class="o">(</span>none<span class="o">))</span>: anonymous <span class="c1"># it will fail if anonymous_enable is set NO.</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$ password: <span class="c1"># no password</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Login successful.
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ftp&gt; 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>ftp<span class="w"> </span>&lt;ip&gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>User<span class="o">(</span>ip:<span class="o">(</span>none<span class="o">))</span>:<span class="w"> </span>anonymous<span class="w"> </span><span class="c1"># it will fail if anonymous_enable is set NO.</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$<span class="w"> </span>password:<span class="w"> </span><span class="c1"># no password</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Login<span class="w"> </span>successful.
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ftp&gt;<span class="w"> </span>
 </code></pre></div>
 
               

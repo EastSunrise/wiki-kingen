@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -240,6 +240,8 @@
         
           
             
+          
+        
           
         
           
@@ -750,6 +752,20 @@
   
   
     <li class="md-nav__item">
+      <a href="quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -822,6 +838,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -844,6 +862,20 @@
     <li class="md-nav__item">
       <a href="../cs/math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -3549,7 +3581,7 @@
 <h2 id="mapper-xml-files">Mapper XML Files<a class="headerlink" href="#mapper-xml-files" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&quot;${namespace}&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">&lt;mapper</span><span class="w"> </span><span class="na">namespace=</span><span class="s">&quot;${namespace}&quot;</span><span class="nt">&gt;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">&lt;/mapper&gt;</span>
 </code></pre></div>
 <p><strong>Namespace</strong> isolates statements with longer, full-qualified names and <strong>binds XML files with corresponding interfaces</strong>.</p>
@@ -3561,16 +3593,16 @@
 <p><em>SqlSession</em> instances are created by <em>SqlSessionFactory</em> whose instances can be built by <em>SqlSessionFactoryBuilder</em> based on an XML configuration file or a custom prepared instance of <em>Configuration</em>.</p>
 <h4 id="from-xml">From XML<a class="headerlink" href="#from-xml" title="Permanent link">&para;</a></h4>
 <p>Use a utility class called <em>Resources</em> in MyBatis to load the configuration file from resources directory under classpath. See <a href="#configuration">Configuration</a> to configure an XML configuration file. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SqlSessionFactory</span><span class="w"> </span><span class="nf">buildFactoryFromXML</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">resource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mybatis-config.xml&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Resources</span><span class="p">.</span><span class="na">getResourceAsStream</span><span class="p">(</span><span class="n">resource</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlSessionFactoryBuilder</span><span class="p">().</span><span class="na">build</span><span class="p">(</span><span class="n">inputStream</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SqlSessionFactory</span><span class="w"> </span><span class="nf">buildFactoryFromXML</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">resource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mybatis-config.xml&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Resources</span><span class="p">.</span><span class="na">getResourceAsStream</span><span class="p">(</span><span class="n">resource</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlSessionFactoryBuilder</span><span class="p">().</span><span class="na">build</span><span class="p">(</span><span class="n">inputStream</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
 </code></pre></div>
 <h4 id="without-xml">Without XML<a class="headerlink" href="#without-xml" title="Permanent link">&para;</a></h4>
 <p>Use utility classes from <code>org.apache.ibatis.session</code>.</p>
@@ -3587,65 +3619,65 @@
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <h3 id="_4">批量处理<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="loop">Loop<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">batchInsert</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyConfiguration</span><span class="p">.</span><span class="na">getSqlSessionFactory</span><span class="p">().</span><span class="na">openSession</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">UserMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">insertUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">batchInsert</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyConfiguration</span><span class="p">.</span><span class="na">getSqlSessionFactory</span><span class="p">().</span><span class="na">openSession</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">UserMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">insertUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
 </code></pre></div>
 <h4 id="batch-mode">Batch Mode<a class="headerlink" href="#batch-mode" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">batchInsert</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyConfiguration</span><span class="p">.</span><span class="na">getSqlSessionFactory</span><span class="p">().</span><span class="na">openSession</span><span class="p">(</span><span class="n">ExecutorType</span><span class="p">.</span><span class="na">BATCH</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// only difference to above way</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">UserMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">insertUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">batchInsert</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyConfiguration</span><span class="p">.</span><span class="na">getSqlSessionFactory</span><span class="p">().</span><span class="na">openSession</span><span class="p">(</span><span class="n">ExecutorType</span><span class="p">.</span><span class="na">BATCH</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// only difference to above way</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">UserMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">insertUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="type-cast">Type Cast<a class="headerlink" href="#type-cast" title="Permanent link">&para;</a></h3>
 <h4 id="foreach-in-mapper">Foreach in Mapper<a class="headerlink" href="#foreach-in-mapper" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">batchInsert</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">users</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyConfiguration</span><span class="p">.</span><span class="na">getSqlSessionFactory</span><span class="p">().</span><span class="na">openSession</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">UserMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">batchInsert</span><span class="p">(</span><span class="n">users</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">batchInsert</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">users</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyConfiguration</span><span class="p">.</span><span class="na">getSqlSessionFactory</span><span class="p">().</span><span class="na">openSession</span><span class="p">();</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">UserMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">batchInsert</span><span class="p">(</span><span class="n">users</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&quot;batchInsert&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    INSERT INTO example.user (username, age)
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    VALUES
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="nt">&lt;foreach</span> <span class="na">collection=</span><span class="s">&quot;list&quot;</span> <span class="na">item=</span><span class="s">&quot;item&quot;</span> <span class="na">separator=</span><span class="s">&quot;,&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        (#{item.username}, #{item.age})
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="nt">&lt;/foreach&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;insert</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;batchInsert&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>INSERT<span class="w"> </span>INTO<span class="w"> </span>example.user<span class="w"> </span>(username,<span class="w"> </span>age)
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span>VALUES
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&lt;foreach</span><span class="w"> </span><span class="na">collection=</span><span class="s">&quot;list&quot;</span><span class="w"> </span><span class="na">item=</span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="na">separator=</span><span class="s">&quot;,&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span>(#{item.username},<span class="w"> </span>#{item.age})
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">&lt;/foreach&gt;</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nt">&lt;/insert&gt;</span>
 </code></pre></div>
 <p><strong>Notes</strong>: Maximum SQL size that MySQL can accept is configured in <em>my.ini</em> as <em>max_allowed_packet</em>, defaults to 1M.</p>
 <h4 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h4>
 <p>The number of items in the condition <code>IN ()</code> shouldn't exceed 1000. Otherwise, split them with <code>OR</code> as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;select&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    SELECT * FROM example.user
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="nt">&lt;where&gt;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        username IN 
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        <span class="nt">&lt;foreach</span> <span class="na">collection=</span><span class="s">&quot;list&quot;</span> <span class="na">item=</span><span class="s">&quot;item&quot;</span> <span class="na">open=</span><span class="s">&quot;(&quot;</span> <span class="na">close=</span><span class="s">&quot;)&quot;</span> <span class="na">separator=</span><span class="s">&quot;,&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;(index % 999) == 998&quot;</span><span class="nt">&gt;</span> NULL ) OR username IN (<span class="nt">&lt;/if&gt;</span>#{item}
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="nt">&lt;/foreach&gt;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="nt">&lt;/where&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;select</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;select&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>SELECT<span class="w"> </span>*<span class="w"> </span>FROM<span class="w"> </span>example.user
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&lt;where&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span>username<span class="w"> </span>IN<span class="w"> </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="nt">&lt;foreach</span><span class="w"> </span><span class="na">collection=</span><span class="s">&quot;list&quot;</span><span class="w"> </span><span class="na">item=</span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="na">open=</span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="na">close=</span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="na">separator=</span><span class="s">&quot;,&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">            </span><span class="nt">&lt;if</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;(index % 999) == 998&quot;</span><span class="nt">&gt;</span><span class="w"> </span>NULL<span class="w"> </span>)<span class="w"> </span>OR<span class="w"> </span>username<span class="w"> </span>IN<span class="w"> </span>(<span class="nt">&lt;/if&gt;</span>#{item}
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="nt">&lt;/foreach&gt;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">&lt;/where&gt;</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="nt">&lt;/select&gt;</span>
 </code></pre></div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -3696,13 +3728,13 @@
       
       
         
-        <a href="tomcat.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Tomcat" rel="next">
+        <a href="quarkus.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Quarkus" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Tomcat
+              Quarkus
             </div>
           </div>
           <div class="md-footer__button md-icon">

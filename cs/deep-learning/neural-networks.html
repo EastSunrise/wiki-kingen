@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -238,6 +238,8 @@
         
           
             
+          
+        
           
         
           
@@ -542,6 +544,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../java/quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../java/tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -616,6 +632,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -638,6 +656,20 @@
     <li class="md-nav__item">
       <a href="../math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -1568,8 +1600,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    动量法
+  <a href="#momentum" class="md-nav__link">
+    动量法（Momentum）
   </a>
   
 </li>
@@ -1577,6 +1609,13 @@
           <li class="md-nav__item">
   <a href="#adagrad" class="md-nav__link">
     AdaGrad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmsprop" class="md-nav__link">
+    RMSProp
   </a>
   
 </li>
@@ -1594,35 +1633,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     算法
   </a>
   
-    <nav class="md-nav" aria-label="算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    技巧
-  </a>
-  
-    <nav class="md-nav" aria-label="技巧">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     权重初始值
   </a>
   
+    <nav class="md-nav" aria-label="权重初始值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xavier" class="md-nav__link">
+    Xavier 初始值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relu_1" class="md-nav__link">
+    ReLU 初始值
+  </a>
+  
 </li>
         
       </ul>
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#batchnorm" class="md-nav__link">
+    BatchNorm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    参考
+  </a>
   
 </li>
       
@@ -3441,8 +3495,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    动量法
+  <a href="#momentum" class="md-nav__link">
+    动量法（Momentum）
   </a>
   
 </li>
@@ -3450,6 +3504,13 @@
           <li class="md-nav__item">
   <a href="#adagrad" class="md-nav__link">
     AdaGrad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmsprop" class="md-nav__link">
+    RMSProp
   </a>
   
 </li>
@@ -3467,35 +3528,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     算法
   </a>
   
-    <nav class="md-nav" aria-label="算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    技巧
-  </a>
-  
-    <nav class="md-nav" aria-label="技巧">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     权重初始值
   </a>
   
+    <nav class="md-nav" aria-label="权重初始值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xavier" class="md-nav__link">
+    Xavier 初始值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relu_1" class="md-nav__link">
+    ReLU 初始值
+  </a>
+  
 </li>
         
       </ul>
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#batchnorm" class="md-nav__link">
+    BatchNorm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    参考
+  </a>
   
 </li>
       
@@ -3519,7 +3595,7 @@
 
   <h1>神经网络</h1>
 
-<h3 id="_1">参数和变量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="_1">参数和变量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li><span class="arithmatex">\(x_i\)</span>：输入层（第一层）第<span class="arithmatex">\(i\)</span>个神经单元的输入值，与输出值相同；</li>
 <li><span class="arithmatex">\(w^l_{ji}\)</span>：从第<span class="arithmatex">\(l-1\)</span>层第<span class="arithmatex">\(i\)</span>个神经单元指向第<span class="arithmatex">\(l\)</span>层的第<span class="arithmatex">\(j\)</span>个神经单元的权重；</li>
@@ -3557,7 +3633,7 @@
     \end{pmatrix}
 \end{equation}
 \]</div>
-<h3 id="_2">激活函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">激活函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>每一个神经单元输出值和输入值之间的关系称为激活函数，设<span class="arithmatex">\(f\)</span>为激活函数，则有，</p>
 <div class="arithmatex">\[
 \begin{equation}
@@ -3565,13 +3641,13 @@
 \end{equation}
 \]</div>
 <p>以下是几种常用的激活函数。</p>
-<h4 id="sigmoid">Sigmoid 函数<a class="headerlink" href="#sigmoid" title="Permanent link">&para;</a></h4>
+<h3 id="sigmoid">Sigmoid 函数<a class="headerlink" href="#sigmoid" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
 \begin{equation}
     \sigma(z)=\frac{1}{1+e^{-z}}
 \end{equation}
 \]</div>
-<h4 id="relu">ReLU 函数<a class="headerlink" href="#relu" title="Permanent link">&para;</a></h4>
+<h3 id="relu">ReLU 函数<a class="headerlink" href="#relu" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
 \begin{equation}
     f(z)=\begin{cases}
@@ -3580,51 +3656,51 @@
     \end{cases}
 \end{equation}
 \]</div>
-<h4 id="softmax">softmax 函数<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h4>
-<p>神经网络在处理分类问题时，常使用softmax函数作为输出层的激活函数。设输出层有<span class="arithmatex">\(n\)</span>个神经单元，则softmax函数如下，</p>
+<h3 id="softmax">softmax 函数<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h3>
+<p>神经网络在处理分类问题时，常使用 softmax 函数作为输出层的激活函数。设输出层有<span class="arithmatex">\(n\)</span>个神经单元，则 softmax 函数如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
     y_j=\frac{\exp(z^L_j)}{\sum_{i=1}^{n}\exp(z^L_j)}
 \end{equation}
 \]</div>
-<p>由上式易知，softmax函数的输出总和为<span class="arithmatex">\(1\)</span>，因此可以将其输出解释为每种输出类别的概率。</p>
-<p>在实际计算时，为了防止溢出，通常在指数运算前，减去一个常数<span class="arithmatex">\(C\)</span>（一般取输入值的最大值），即等价于，</p>
+<p>由上式易知，softmax 函数的输出总和为<span class="arithmatex">\(1\)</span>，因此可以将其输出解释为每种输出类别的概率。</p>
+<p>在实际计算时，为了防止溢出，通常在指数运算前，加上一个常数<span class="arithmatex">\(C\)</span>（一般取输入值的最大值的负值），即等价于，</p>
 <div class="arithmatex">\[
 \begin{equation}
     y_j=\frac{\exp(z^L_j+C)}{\sum_{i=1}^{n}\exp(z^L_j+C)}
 \end{equation}
 \]</div>
-<h3 id="_3">损失函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h2 id="_3">损失函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>损失函数表示神经网络对给定输入的预测值和正解之间的误差程度。</p>
-<h4 id="_4">均方误差<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">均方误差<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>损失函数的一个例子是均方误差（mean squared error），设输出层有<span class="arithmatex">\(N\)</span>个神经单元，训练实例总数为<span class="arithmatex">\(K\)</span>，则均方误差的计算方式如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
     E=\frac{1}{2}\sum_{k=1}^K\sum_{i=1}^N(t_i-y_i)^2
 \end{equation}
 \]</div>
-<h4 id="_5">交叉熵误差<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">交叉熵误差<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>损失函数的另一个常用的例子是交叉熵误差（cross entropy error），其计算方式如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
     E=-\frac{1}{n}\sum_{k=1}^K\sum_{i=1}^N t_i\log y_i
 \end{equation}
 \]</div>
-<h3 id="_6">梯度<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h2 id="_6">梯度<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>由多元函数的全部自变量的偏导数汇总而成的向量称为梯度（gradient），设有函数<span class="arithmatex">\(f(x_1,x_2,\mathellipsis,x_n)\)</span>，则其梯度表示如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
     \nabla f=(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\mathellipsis,\frac{\partial f}{x_n})
 \end{equation}
 \]</div>
-<h4 id="_7">数值微分<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h3 id="_7">数值微分<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>利用微小的差分求偏导数的过程称为数值微分，计算方式如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
     \frac{\partial f}{\partial x}\approx\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}
 \end{equation}
 \]</div>
-<h4 id="_8">误差反向传播法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h3 id="_8">误差反向传播法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>误差反向传播法的特点是将繁杂的导数计算替换为数列的递推关系式，从而简化梯度求解。设第<span class="arithmatex">\(l\)</span>层第<span class="arithmatex">\(j\)</span>个神经单元误差为<span class="arithmatex">\(\delta^{l}_{j}\)</span>，定义如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
@@ -3634,7 +3710,7 @@
 <p>根据式<span class="arithmatex">\((1)\)</span>和链式法则，易知误差对权重和偏置的偏导数如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
-    \frac{\partial E}{\partial w^l_{ji}}=\delta^l_j a^{l-1}_i \quad
+    \frac{\partial E}{\partial w^l_{ji}}=\delta^l_j a^{l-1}_i \qquad
     \frac{\partial E}{\partial b^l_j}=\delta^l_j
 \end{equation}
 \]</div>
@@ -3654,7 +3730,7 @@
     =f'(z^{l-1}_i)\sum_{j=1}^n \delta^l_j w^l_{ji}
 \end{equation}
 \]</div>
-<p>设第<span class="arithmatex">\(l-1\)</span>层有<span class="arithmatex">\(m\)</span>个神经单元，则上述递推关系的矩阵表示如下（其中<span class="arithmatex">\(\odot\)</span>表示Hadamard乘积），</p>
+<p>设第<span class="arithmatex">\(l-1\)</span>层有<span class="arithmatex">\(m\)</span>个神经单元，则上述递推关系的矩阵表示如下（其中<span class="arithmatex">\(\odot\)</span>表示 Hadamard 乘积），</p>
 <div class="arithmatex">\[
 \begin{equation}
     \begin{pmatrix}
@@ -3679,52 +3755,100 @@
 \end{equation}
 \]</div>
 <p>从输出层开始，根据以上递推关系（反向传播）即可依次求得隐藏层的神经单元误差，再代入式<span class="arithmatex">\((14)\)</span>，从而求得损失函数在当前参数处的梯度。</p>
-<h3 id="_9">参数优化<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>神经网络的学习的目的是找到使损失函数的值尽可能小的参数。这是寻找最优参数的问题，解决这个问题的过程称为最优化（optimization），以下是几种常见的最优化方法（参数集合记作<span class="arithmatex">\(W\)</span>）。</p>
-<h4 id="_10">随机梯度下降法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<h2 id="_9">参数优化<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>神经网络学习的目的是找到使损失函数的值尽可能小的参数。这是寻找最优参数的问题，解决这个问题的过程称为最优化（optimization），以下是几种常见的最优化方法（参数集合记作<span class="arithmatex">\(W\)</span>，梯度记作<span class="arithmatex">\(g\)</span>）。</p>
+<h3 id="_10">随机梯度下降法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>当参数沿着梯度反方向（反向共线）移动时，误差减小得最快，表示如下，</p>
 <div class="arithmatex">\[
 \begin{equation}
-    W\larr W-\eta\frac{\partial E}{\partial W}
+    W\larr W-\eta \cdot g
 \end{equation}
 \]</div>
-<p>其中<span class="arithmatex">\(\eta\)</span>是一个微小的正数，称作学习率。<span class="arithmatex">\(\eta\)</span>是一个超参数。</p>
-<p>以上参数优化方法称为随机梯度下降法，（stochastic gradient descent），简称SGD。但是在SGD中，梯度向量的方向并没有指向最小值的方向，如果函数是各向异性的，则其搜索路径是比较低效的。</p>
-<h4 id="_11">动量法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>其中，<span class="arithmatex">\(\eta\)</span>是一个微小的正数，称作学习率。<span class="arithmatex">\(\eta\)</span>是一个超参数。</p>
+<p>以上参数优化方法称为随机梯度下降法（stochastic gradient descent），简称 SGD。但是在 SGD 中，梯度向量的方向并没有指向最小值的方向，如果函数是各向异性的，则其搜索路径是比较低效的。</p>
+<h3 id="momentum">动量法（Momentum）<a class="headerlink" href="#momentum" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
 \begin{gather}
-    v\larr \alpha v-\eta\frac{\partial E}{\partial W} \\
+    v\larr \alpha v-\eta \cdot g \\
     W\larr W+v
 \end{gather}
 \]</div>
-<h4 id="adagrad">AdaGrad<a class="headerlink" href="#adagrad" title="Permanent link">&para;</a></h4>
+<p>其中，<span class="arithmatex">\(v\)</span>对应物理上的速度，随着参数沿着梯度反方向移动，<span class="arithmatex">\(v\)</span>会逐渐增加。</p>
+<h3 id="adagrad">AdaGrad<a class="headerlink" href="#adagrad" title="Permanent link">&para;</a></h3>
+<p>学习率衰减，指的是随着学习的进行，使学习率逐渐减小的方法，这里的学习率减小是针对所有的参数。AdaGrad 进一步发展了这个方法，不同的参数使用不同的学习率，并随着学习而减小。</p>
 <div class="arithmatex">\[
 \begin{gather}
-    h\larr h+\frac{\partial E}{\partial W}\odot\frac{\partial E}{\partial W} \\
-    W\larr W-\eta\frac{1}{\sqrt h}\frac{\partial E}{\partial W}
+    h\larr h + g\odot g \\
+    W\larr W-\frac{\eta}{\epsilon + \sqrt h} \cdot g
 \end{gather}
 \]</div>
-<h4 id="adam">Adam<a class="headerlink" href="#adam" title="Permanent link">&para;</a></h4>
-<h2 id="_12">算法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>其中，<span class="arithmatex">\(h\)</span>保存了之前所有梯度值的平方和，然后通过系数<span class="arithmatex">\(\frac{1}{\epsilon + \sqrt{h}}\)</span>调整每个参数学习的尺度，如果参数变化较大，其学习率也会衰减地较快。<span class="arithmatex">\(\epsilon\)</span>常取<span class="arithmatex">\(10^{-7}\)</span>，防止分母为零。</p>
+<h3 id="rmsprop">RMSProp<a class="headerlink" href="#rmsprop" title="Permanent link">&para;</a></h3>
+<p>在 AdaGrad 算法中，随着学习的进行，<span class="arithmatex">\(h\)</span>会越来越大，导致学习率太低，即<span class="arithmatex">\(\frac{1}{\sqrt{h}}\rarr0\)</span>。一个解决方案是使用 RMSProp 方法，加权计算梯度值的平方和，以更多地反映新的梯度变化，即“指数移动平均”。</p>
+<div class="arithmatex">\[
+\begin{gather}
+    h\larr \rho h+(1-\rho)g\odot g \\
+    W\larr W - \frac{\eta}{\sqrt {\epsilon + h}} \cdot g
+\end{gather}
+\]</div>
+<p>其中，<span class="arithmatex">\(\rho\)</span>是指数衰减率，通常取<span class="arithmatex">\(0.9\)</span>.</p>
+<h3 id="adam">Adam<a class="headerlink" href="#adam" title="Permanent link">&para;</a></h3>
+<p>Adam 算法结合了 AdaGrad 和 RMSProp 两个算法的优点，同时考虑了梯度的一阶矩估计（梯度的均值）和二阶矩估计（梯度的方差），</p>
+<div class="arithmatex">\[
+\begin{gather}
+    m_t\larr \beta_1 m_{t-1} + (1-\beta_1) g_t \\
+    v_t\larr \beta_2 v_{t-1} + (1-\beta_2) g \odot g \\
+    \hat{m}_t \larr \frac{m_t}{1-\beta_1^t} \\
+    \hat{v}_t \larr \frac{v_t}{1-\beta_2^t} \\
+    W_t \larr W_{t-1} - \frac{\alpha \cdot \hat{m}_t}{\sqrt{\hat{v}_t}+\epsilon}
+\end{gather}
+\]</div>
+<p>其中，<span class="arithmatex">\(\beta_1\)</span>是一阶矩的指数衰减率，默认为<span class="arithmatex">\(0.9\)</span>，<span class="arithmatex">\(\beta_2\)</span>是二阶矩的指数衰减率，默认为<span class="arithmatex">\(0.999\)</span>。训练初期时，<span class="arithmatex">\(m_t\)</span>和<span class="arithmatex">\(v_t\)</span>偏向零，因此计算<span class="arithmatex">\(\hat{m}_t\)</span>和<span class="arithmatex">\(\hat{v}_t\)</span>进行修正。最后根据学习率<span class="arithmatex">\(\alpha\)</span>（默认为<span class="arithmatex">\(0.001\)</span>）更新参数。</p>
+<p>后三行公式可以修改如下，提高算法效率。</p>
+<div class="arithmatex">\[
+\begin{gather}
+    \alpha_t = \alpha \cdot \frac{\sqrt{1-\beta_2^t}}{1-\beta_1^t} \\
+    W_t \larr W_{t-1} -\frac{\alpha_t \cdot m_t}{\sqrt{v_t}+\epsilon}
+\end{gather}
+\]</div>
+<h2 id="_11">算法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <ol>
 <li>准备训练数据；</li>
-<li>初始设置权重<span class="arithmatex">\(w\)</span>、偏置<span class="arithmatex">\(b\)</span>和学习率<span class="arithmatex">\(\eta\)</span>：<ul>
+<li>初始设置权重<span class="arithmatex">\(w\)</span>、偏置<span class="arithmatex">\(b\)</span>和学习率<span class="arithmatex">\(\eta\)</span>：</li>
 <li>通常使用随机数作为权重和偏置的初始值；</li>
 <li>选择适当小的正数作为学习率；</li>
 <li>学习率的设置大多需要反复试错。同样地，对于权重和偏置的初始值，为了取得好的结果，也可能需要多次变更设置；</li>
-</ul>
-</li>
-<li>选择小批量的训练实例，计算出所有神经单元的输出值<span class="arithmatex">\(a\)</span>以及误差<span class="arithmatex">\(E\)</span>：<ul>
+<li>选择小批量的训练实例，计算出所有神经单元的输出值<span class="arithmatex">\(a\)</span>以及误差<span class="arithmatex">\(E\)</span>：</li>
 <li>利用式<span class="arithmatex">\((2)\)</span>和激活函数，正向计算各层神经单元的加权输入<span class="arithmatex">\(z\)</span>、输出值<span class="arithmatex">\(a\)</span>；</li>
 <li>根据选择的损失函数，计算出预测值和正解之间的误差；</li>
-</ul>
-</li>
 <li>利用误差反向传播法，反向计算出所有的神经单元误差<span class="arithmatex">\(\delta\)</span>，代入式<span class="arithmatex">\((14)\)</span>，从而计算出此时的梯度；</li>
 <li>根据选择的参数优化算法，更新权重和偏置；</li>
-<li>重复执行第3~5步，直至判定误差<span class="arithmatex">\(E\)</span>的值充分小为止。</li>
+<li>重复执行第 3~5 步，直至判定误差<span class="arithmatex">\(E\)</span>的值充分小为止。</li>
 </ol>
-<h3 id="_13">技巧<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<h4 id="_14">权重初始值<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<h2 id="_12">权重初始值<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="xavier">Xavier 初始值<a class="headerlink" href="#xavier" title="Permanent link">&para;</a></h3>
+<p>如果前一层的节点数为<span class="arithmatex">\(n\)</span>，则当前层的权重初始值使用标准差为<span class="arithmatex">\(\frac{1}{\sqrt{n}}\)</span>的<a href="../math/normal-distribution.html">正态分布</a>，此时，各层的输出值<span class="arithmatex">\(a^l_j\)</span>具有相同广度的分布。</p>
+<h3 id="relu_1">ReLU 初始值<a class="headerlink" href="#relu_1" title="Permanent link">&para;</a></h3>
+<p>当选择 ReLU 作为激活函数时，因为其负值区域的值为零，为了使其更有广度，需要 2 倍的系数，即如果前一层的节点数为<span class="arithmatex">\(n\)</span>，则当前层的权重初始值使用标准差为<span class="arithmatex">\(\sqrt{\frac{2}{n}}\)</span>的正态分布。</p>
+<h2 id="batchnorm">BatchNorm<a class="headerlink" href="#batchnorm" title="Permanent link">&para;</a></h2>
+<p>在神经网络中，数据分布对学习的影响很大。假设某个神经单元的输入<span class="arithmatex">\(z_j=20\)</span>，并选择像 Sigmoid 函数这样的非线性的激活函数，则其输出值<span class="arithmatex">\(a_j\approx 1\)</span>，处于激活函数的饱和阶段，即无论<span class="arithmatex">\(z_j\)</span>再怎么扩大，其输出值变化也很小（只能趋近<span class="arithmatex">\(1\)</span>），或者说神经网络对这个范围的加权输入不敏感了。</p>
+<p>为了解决这个问题，Batch Normalization 的思路是对各层的加权输入进行正规化处理，从而使输出值拥有适当的广度。</p>
+<div class="arithmatex">\[
+\begin{gather}
+    \mu_B \larr \frac{1}{m}\sum_{i=1}^{m}x_i \\
+    \sigma_B^2 \larr \frac{1}{m}\sum_{i=1}^{m}(x_i-\mu_B)^2 \\
+    \hat{x}_i \larr \frac{x_i-\mu_B}{\sqrt{\sigma_B^2+\epsilon}} \\
+    y_i \larr \gamma\hat{x}_i+\beta \equiv BN_{\gamma,\beta}(x_i)
+\end{gather}
+\]</div>
+<p>首先对 mini-batch 的输入的集合<span class="arithmatex">\(B=\{z_1,z_2,...,z_n\}\)</span>求均值<span class="arithmatex">\(\mu_B\)</span>和方差<span class="arithmatex">\(\sigma_B^2\)</span>，然后对输入进行均值为<span class="arithmatex">\(0\)</span>、方差为<span class="arithmatex">\(1\)</span>的正规化，最后对正规化后的数据进行缩放和平移变换。初始时，<span class="arithmatex">\(\gamma=1,\beta=0\)</span>，然后通过学习调整到合适的值。</p>
+<h2 id="_13">参考<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li>涌井良幸, 涌井贞美. 深度学习的数学.</li>
+<li>斋藤康毅. 深度学习入门：基于 Python 的理论与实现.</li>
+<li><a href="https://arxiv.org/abs/1412.6980">Adam: A Method for Stochastic Optimization</a>.</li>
+<li><a href="https://arxiv.org/abs/1502.03167">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a>.</li>
+</ul>
 
               
             </article>

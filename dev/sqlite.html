@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -238,6 +238,8 @@
         
           
             
+          
+        
           
         
           
@@ -542,6 +544,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../java/quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../java/tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -614,6 +630,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -636,6 +654,20 @@
     <li class="md-nav__item">
       <a href="../cs/math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -3373,9 +3405,9 @@
 <h4 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h4>
 <p>A SQLite statement ends with <code>;</code>.</p>
 <h5 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ sqlite3 test.db <span class="c1"># create a new db or connect to a database which points to a file named test.db</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$ sqlite3 test.db .dump &gt; test.sql <span class="c1"># backup</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ sqlite3 test.db &lt; test.sql <span class="c1"># recover</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>sqlite3<span class="w"> </span>test.db<span class="w"> </span><span class="c1"># create a new db or connect to a database which points to a file named test.db</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>sqlite3<span class="w"> </span>test.db<span class="w"> </span>.dump<span class="w"> </span>&gt;<span class="w"> </span>test.sql<span class="w"> </span><span class="c1"># backup</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$<span class="w"> </span>sqlite3<span class="w"> </span>test.db<span class="w"> </span>&lt;<span class="w"> </span>test.sql<span class="w"> </span><span class="c1"># recover</span>
 </code></pre></div>
 <p>When connecting to a database which is generally named after <strong>main</strong>, use ATTACH command to get connection of annother database. Names <strong>main</strong> and <strong>temp</strong>, reserved for main database and that for temporary tables and other data, are not recommended to attached as.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.databases 

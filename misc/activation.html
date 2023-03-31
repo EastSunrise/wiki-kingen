@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -238,6 +238,8 @@
         
           
             
+          
+        
           
         
           
@@ -542,6 +544,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../java/quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../java/tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -614,6 +630,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -636,6 +654,20 @@
     <li class="md-nav__item">
       <a href="../cs/math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -3242,14 +3274,14 @@
 <p>下载并安装 <a href="http://download.navicat.com.cn/download/navicat121_premium_cs_x64.exe">Navicat 12.1.26</a>.</p>
 <h5 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h5>
 <p>Replace the public key in the <em>navicat.exe</em> and <em>libcc.dll</em> with <em>patcher.exe</em>. For example, <code>navicat-patcher.exe "D:\Devs\Navicat Premium 12"</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ navicat-patcher.exe &lt;Navicat installation path&gt; <span class="o">[</span>RSA-2048 PEM file<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>navicat-patcher.exe<span class="w"> </span>&lt;Navicat<span class="w"> </span>installation<span class="w"> </span>path&gt;<span class="w"> </span><span class="o">[</span>RSA-2048<span class="w"> </span>PEM<span class="w"> </span>file<span class="o">]</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># &lt;Navicat installation path&gt; is the full installation path of Navicat.</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># [RSA-2048 PEM file] assigns the path of RSA-2048 PEM file, absolute or relative.</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># It&#39;s optional. Current directory will be chosen by default.</span>
 </code></pre></div>
 <p>Generate serial number with <em>keygen.exe</em>. For example, <code>navicat-keygen.exe -text RegPrivateKey.pem</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ navicat-keygen.exe &lt;-bin<span class="p">|</span>-text&gt; <span class="o">[</span>-adv<span class="o">]</span> &lt;RSA-2048 PrivateKey<span class="o">(</span>PEM file<span class="o">)</span>&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>navicat-keygen.exe<span class="w"> </span>&lt;-bin<span class="p">|</span>-text&gt;<span class="w"> </span><span class="o">[</span>-adv<span class="o">]</span><span class="w"> </span>&lt;RSA-2048<span class="w"> </span>PrivateKey<span class="o">(</span>PEM<span class="w"> </span>file<span class="o">)</span>&gt;
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># &lt;-bin|-text&gt; must be one of the values: &#39;-bin&#39; or &#39;-text&#39;.</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># &#39;-bin&#39; for the old way，it will generate a license file.</span>

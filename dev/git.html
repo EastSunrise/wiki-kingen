@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
     
     
       
@@ -238,6 +238,8 @@
         
           
             
+          
+        
           
         
           
@@ -542,6 +544,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../java/quarkus.html" class="md-nav__link">
+        Quarkus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../java/tomcat.html" class="md-nav__link">
         Tomcat
       </a>
@@ -614,6 +630,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_1">
@@ -636,6 +654,20 @@
     <li class="md-nav__item">
       <a href="../cs/math/summation.html" class="md-nav__link">
         求和公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/math/normal-distribution.html" class="md-nav__link">
+        正态分布
       </a>
     </li>
   
@@ -2653,7 +2685,7 @@
       
         <li class="md-nav__item">
   <a href="#ssh" class="md-nav__link">
-    配置SSH公钥
+    配置 SSH
   </a>
   
 </li>
@@ -3257,7 +3289,7 @@
       
         <li class="md-nav__item">
   <a href="#ssh" class="md-nav__link">
-    配置SSH公钥
+    配置 SSH
   </a>
   
 </li>
@@ -3320,15 +3352,22 @@
 </ol>
 <h5 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h5>
 <p><strong>Files already tracked by Git are not affected.</strong> To stop tracking a file that is currently tracked, use <code>git rm --cached</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ git rm -r --cached target
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ git commit -m <span class="s1">&#39;.gitignore&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>--cached<span class="w"> </span>target
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;.gitignore&#39;</span>
 </code></pre></div>
-<h4 id="ssh">配置SSH公钥<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h4>
-<p>打开目录 <code>~/.ssh</code>, 执行 <code>ssh-keygen -o</code> 生成私钥文件 <code>id_dsa</code> 和对应的公钥文件 <code>id_dsa.pub</code>, 然后将公钥提交到 Git 服务器（例如 GitHub）。</p>
+<h4 id="ssh">配置 SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;example@email.com&quot;</span><span class="w"> </span><span class="c1"># 生成公钥id_rsa.pub和私钥id_rsa</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ssh-add<span class="w"> </span>id_rsa<span class="w"> </span><span class="c1"># 将私钥加入到ssh代理中</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># 将公钥添加到 Git 服务器（例如 GitHub）</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com<span class="w"> </span><span class="c1"># 测试是否成功</span>
+</code></pre></div>
+<p>如果<code>git clone</code>失败，尝试执行以下命令，配置 Git 使用系统 SSH 而非自带的 SSH.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.sshCommand<span class="w"> </span><span class="s2">&quot;&#39;C:\Windows\System32\OpenSSH\ssh.exe&#39;&quot;</span>
+</code></pre></div>
 <h4 id="_3">参考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
 <li><a href="https://git-scm.com/doc">官方文档</a>.</li>
-<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程 - 廖雪峰的官方网站</a>.</li>
+<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git 教程 - 廖雪峰的官方网站</a>.</li>
 </ol>
 
               
