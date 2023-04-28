@@ -1433,22 +1433,34 @@
       
         
           
+            
+          
+        
+          
         
           
         
       
       
-        <label class="md-nav__link" for="__nav_3_4">
-          深度学习
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cs/machine-learning/index.html">机器学习</a>
+          
+            <label for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
-      <nav class="md-nav" aria-label="深度学习" data-md-level="2">
+      <nav class="md-nav" aria-label="机器学习" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
-          深度学习
+          机器学习
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
           
             
               
@@ -1456,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cs/deep-learning/neural-networks.html" class="md-nav__link">
+      <a href="../cs/machine-learning/neural-networks.html" class="md-nav__link">
         神经网络
       </a>
     </li>
@@ -1470,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cs/deep-learning/convolutional-neural-networks.html" class="md-nav__link">
+      <a href="../cs/machine-learning/convolutional-neural-networks.html" class="md-nav__link">
         卷积神经网络
       </a>
     </li>
@@ -1576,6 +1588,12 @@
         
           
             
+          
+        
+          
+        
+          
+        
           
         
           
@@ -2181,6 +2199,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../python/numpy.html" class="md-nav__link">
+        Numpy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/pandas.html" class="md-nav__link">
+        Pandas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/matplotlib.html" class="md-nav__link">
+        Matplotlib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../python/flask.html" class="md-nav__link">
         Flask
       </a>
@@ -2665,15 +2725,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
-    Rules
+  <a href="#_3" class="md-nav__link">
+    语法
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#_4" class="md-nav__link">
+    注意事项
   </a>
   
 </li>
@@ -2691,7 +2751,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     参考
   </a>
   
@@ -3269,15 +3329,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
-    Rules
+  <a href="#_3" class="md-nav__link">
+    语法
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#_4" class="md-nav__link">
+    注意事项
   </a>
   
 </li>
@@ -3295,7 +3355,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     参考
   </a>
   
@@ -3321,20 +3381,16 @@
 
   <h1>Git</h1>
 
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> TODO</li>
-</ul>
-<h4 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://git-scm.com/">Git</a> 是一个开源的分布式版本控制系统。</p>
-<h4 id="gitignore">.gitignore<a class="headerlink" href="#gitignore" title="Permanent link">&para;</a></h4>
-<p>**Notes: **</p>
-<h5 id="_2">原则<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<h2 id="gitignore">.gitignore<a class="headerlink" href="#gitignore" title="Permanent link">&para;</a></h2>
+<h3 id="_2">原则<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ol>
 <li>忽略系统自动生成的文件，例如 <code>.idea</code> 目录；</li>
 <li>忽略编译生成的文件，例如 <code>.class</code> 文件；</li>
 <li>忽略包含私有信息的文件，例如包含密码或 <code>token</code> 的配置文件。</li>
 </ol>
-<h5 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h5>
+<h3 id="_3">语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ol>
 <li><code>#</code> 开头为注释行;</li>
 <li>An optional prefix <code>!</code> which negates the pattern. <strong>It is not possible to re-include a file if a parent directory of that file is excluded.</strong></li>
@@ -3350,21 +3406,23 @@
 <li><code>/dir/main.txt</code> to ignore the specified file</li>
 <li><code>!/dir/main.txt</code> not to ignore the file</li>
 </ol>
-<h5 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h5>
+<h3 id="_4">注意事项<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><strong>Files already tracked by Git are not affected.</strong> To stop tracking a file that is currently tracked, use <code>git rm --cached</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>--cached<span class="w"> </span>target
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;.gitignore&#39;</span>
 </code></pre></div>
-<h4 id="ssh">配置 SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h4>
+<h2 id="ssh">配置 SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;example@email.com&quot;</span><span class="w"> </span><span class="c1"># 生成公钥id_rsa.pub和私钥id_rsa</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ssh-add<span class="w"> </span>id_rsa<span class="w"> </span><span class="c1"># 将私钥加入到ssh代理中</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># 将公钥添加到 Git 服务器（例如 GitHub）</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com<span class="w"> </span><span class="c1"># 测试是否成功</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ssh-add<span class="w"> </span>id_rsa<span class="w"> </span><span class="c1"># 将私钥加入到ssh代理中，如果失败需先启动ssh-agent（建议设为自动启动）</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 将公钥添加到 Git 服务器（例如 GitHub）</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com<span class="w"> </span><span class="c1"># 测试是否成功</span>
 </code></pre></div>
 <p>如果<code>git clone</code>失败，尝试执行以下命令，配置 Git 使用系统 SSH 而非自带的 SSH.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.sshCommand<span class="w"> </span><span class="s2">&quot;&#39;C:\Windows\System32\OpenSSH\ssh.exe&#39;&quot;</span>
 </code></pre></div>
-<h4 id="_3">参考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h2 id="_5">参考<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="https://git-scm.com/doc">官方文档</a>.</li>
 <li><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git 教程 - 廖雪峰的官方网站</a>.</li>
