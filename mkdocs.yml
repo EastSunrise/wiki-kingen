@@ -159,6 +159,9 @@ nav:
           - Spider: python/app/spider.md
           - Task: python/app/task.md
           - Excel: python/app/excel.md
+      - Numpy: python/numpy.md
+      - Pandas: python/pandas.md
+      - Matplotlib: python/matplotlib.md
       - Flask: python/flask.md
   - Development:
       - References: dev/references.md
