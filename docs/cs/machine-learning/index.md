@@ -157,7 +157,7 @@ $$
 
 ### 多类别分类
 
-对于多类别分类（multiclass classification），针对多个分类值 $i=1,2,3,\dots$，分别进行二元逻辑回归计算概率，然后取其中概率最大的值作为预测值，
+对于多类别分类（multiclass classification），针对多个分类值 $y\in \R^{K}$，分别进行二元逻辑回归计算概率，然后取其中概率最大的值作为预测值，
 
 $$
 \begin{gather}

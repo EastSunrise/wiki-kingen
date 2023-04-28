@@ -1,15 +1,15 @@
 ## 参数和变量
 
-- $x_i$：输入层（第一层）第$i$个神经单元的输入值，与输出值相同；
-- $w^l_{ji}$：从第$l-1$层第$i$个神经单元指向第$l$层的第$j$个神经单元的权重；
-- $b^l_j$：第$l$层第$j$个神经单元的偏置；
+- $x_i$：输入层（input layer）第$i$个神经单元的输入值，与输出值相同；
+- $w^l_{ji}$：从第$l-1$层第$i$个神经单元指向第$l$层的第$j$个神经单元的权重（weight）；
+- $b^l_j$：第$l$层第$j$个神经单元的偏置（bias）；
 - $z^l_j$：第$l$层第$j$个神经单元的加权输入；
 - $a^l_j$：第$l$层第$j$个神经单元的输出值，当$l=1$时，有$a^1_j=x_j$；
-- $y_j$：输出层第$j$个神经单元的输出值（最终的预测值），有$y_j=a^L_j$；
+- $y_j$：输出层（output layer）第$j$个神经单元的输出值（最终的预测值），有$y_j=a^L_j$；
 - $t_j$：输出层第$j$个神经单元对应的正解；
 - $x_i[k],z^l_j[k],a^l_j[k]$：第$k$个训练实例的变量值。
 
-每层（除输入层外）神经单元的加权输入，与上一层的神经单元的输出以及之间的权重和偏置有关，设第$l-1$层有$m$个神经单元，则其关系（正向传播）如下，
+每层（除输入层外）神经单元的加权输入，与上一层的神经单元的输出以及之间的权重和偏置有关，设第$l-1$层有$m$个神经单元，则其正向传播（forward propagation）如下，
 
 $$
 \begin{equation}
@@ -21,28 +21,30 @@ $$
 
 $$
 \begin{equation}
-    \begin{pmatrix}
+    \begin{bmatrix}
         z^l_1 \\ \mathellipsis \\ z^l_n
-    \end{pmatrix}
+    \end{bmatrix}
     =
-    \begin{pmatrix}
+    \begin{bmatrix}
         w^l_{11} & w^l_{12} & \mathellipsis & w^l_{1m} \\
         &&\mathellipsis \\
         w^l_{n1} & w^l_{n2} & \mathellipsis & w^l_{nm} \\
-    \end{pmatrix}
-    \begin{pmatrix}
+    \end{bmatrix}
+    \begin{bmatrix}
         a^{l-1}_1 \\ a^{l-1}_2 \\ \mathellipsis \\ a^{l-1}_m
-    \end{pmatrix}
+    \end{bmatrix}
     +
-    \begin{pmatrix}
+    \begin{bmatrix}
         b^l_1 \\ \mathellipsis \\ b^l_n
-    \end{pmatrix}
+    \end{bmatrix}
 \end{equation}
 $$
 
+> 可以把偏置设为 $w_0$，其对应输入为 $x_0=1$.
+
 ## 激活函数
 
-每一个神经单元输出值和输入值之间的关系称为激活函数，设$f$为激活函数，则有，
+每一个神经单元输出值和输入值之间的关系称为激活函数（activation function），设$f$为激活函数，则有，
 
 $$
 \begin{equation}
@@ -93,7 +95,7 @@ $$
 
 ## 损失函数
 
-损失函数表示神经网络对给定输入的预测值和正解之间的误差程度。
+损失函数（cost function）表示神经网络对给定输入的预测值和正解之间的误差程度。
 
 ### 均方误差
 
@@ -127,17 +129,19 @@ $$
 
 ### 数值微分
 
-利用微小的差分求偏导数的过程称为数值微分，计算方式如下，
+利用微小的差分求偏导数的过程称为数值微分（numerical calculus），计算方式如下，
 
 $$
 \begin{equation}
-    \frac{\partial f}{\partial x}\approx\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}
+    \frac{\partial f}{\partial x}\approx\frac{f(x+\epsilon)-f(x-\epsilon)}{2\epsilon}
 \end{equation}
 $$
 
+其中 $\epsilon$ 是个小数，例如 $10^{-4}$.
+
 ### 误差反向传播法
 
-误差反向传播法的特点是将繁杂的导数计算替换为数列的递推关系式，从而简化梯度求解。设第$l$层第$j$个神经单元误差为$\delta^{l}_{j}$，定义如下，
+误差反向传播法（back propagation）的特点是将繁杂的导数计算替换为数列的递推关系式，从而简化梯度求解。设第$l$层第$j$个神经单元误差为$\delta^{l}_{j}$，定义如下，
 
 $$
 \begin{equation}
@@ -180,25 +184,23 @@ $$
 
 $$
 \begin{equation}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \delta^{l-1}_1 \\ \delta^{l-1}_2 \\ \mathellipsis \\ \delta^{l-1}_m
-    \end{pmatrix}
+    \end{bmatrix}
     =
     \begin{bmatrix}
-        \begin{pmatrix}
-            w^l_{11} & \mathellipsis & w^l_{n1} \\
-            w^l_{12} & \mathellipsis & w^l_{n2} \\
-            & \mathellipsis \\
-            w^l_{1m} & \mathellipsis & w^l_{nm} \\
-        \end{pmatrix}
-        \begin{pmatrix}
-            \delta^l_1 \\ \mathellipsis \\ \delta^l_n
-        \end{pmatrix}
+        w^l_{11} & \mathellipsis & w^l_{n1} \\
+        w^l_{12} & \mathellipsis & w^l_{n2} \\
+        & \mathellipsis \\
+        w^l_{1m} & \mathellipsis & w^l_{nm} \\
+    \end{bmatrix}
+    \begin{bmatrix}
+        \delta^l_1 \\ \mathellipsis \\ \delta^l_n
     \end{bmatrix}
     \odot
-    \begin{pmatrix}
+    \begin{bmatrix}
         f'(z^{l-1}_1) \\ f'(z^{l-1}_2) \\ \mathellipsis \\ f'(z^{l-1}_m)
-    \end{pmatrix}
+    \end{bmatrix}
 \end{equation}
 $$
 
@@ -218,7 +220,7 @@ $$
 \end{equation}
 $$
 
-其中，$\eta$是一个微小的正数，称作学习率。$\eta$是一个超参数。
+其中，$\eta$是一个微小的正数，称作学习率。$\eta$是一个超参数（hyper parameter）。
 
 以上参数优化方法称为随机梯度下降法（stochastic gradient descent），简称 SGD。但是在 SGD 中，梯度向量的方向并没有指向最小值的方向，如果函数是各向异性的，则其搜索路径是比较低效的。
 
@@ -345,7 +347,7 @@ $$
 
 > Dropout 其实等效于集成学习，即让多个模型单独进行学习，推理时再取各个模型输出的平均值。
 
-## 超参数 Hyper-parameter
+## 超参数
 
 - 设定超参数的范围（对数尺度），例如 0.01~100；
 - 从该范围中随机采样，并进行学习，通过验证数据评估识别精度（epoch 需要设置得很小）；
@@ -356,5 +358,6 @@ $$
 
 - 涌井良幸, 涌井贞美. 深度学习的数学.
 - 斋藤康毅. 深度学习入门：基于 Python 的理论与实现.
+- [吴恩达机器学习系列课程](https://www.bilibili.com/video/BV164411b7dx/)
 - [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980).
 - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167).
