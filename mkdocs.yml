@@ -89,6 +89,7 @@ nav:
       - 数学:
           - 求和公式: cs/math/summation.md
           - 正态分布: cs/math/normal-distribution.md
+          - 线性代数: cs/math/linear-algebra.md
           - 傅里叶变换: cs/math/fourier-transform.md
       - 算法:
           - 算法: cs/algorithms/index.md
@@ -129,8 +130,8 @@ nav:
           - Skiplist: cs/data-structure/skiplist.md
       - 机器学习:
           - 机器学习: cs/machine-learning/index.md
-          - 神经网络: cs/deep-learning/neural-networks.md
-          - 卷积神经网络: cs/deep-learning/convolutional-neural-networks.md
+          - 神经网络: cs/machine-learning/neural-networks.md
+          - 卷积神经网络: cs/machine-learning/convolutional-neural-networks.md
       - 常见问题:
           - 逆序对: cs/problems/inversion-pairs.md
           - 最大子序列和: cs/problems/max-subsequence-sum.md
@@ -172,6 +173,7 @@ nav:
           - League of Legends: dev/apis/lol.md
       - 数据库:
           - Redis: dev/database/redis.md
+          - IoTDB: dev/database/iotdb.md
       - MySQL:
           - Get Started: dev/mysql/index.md
           - FAQ: dev/mysql/faq.md
