@@ -127,7 +127,8 @@ nav:
           - 单调栈: cs/data-structure/monotonic-stack.md
           - 并查集: cs/data-structure/disjoint.md
           - Skiplist: cs/data-structure/skiplist.md
-      - 深度学习:
+      - 机器学习:
+          - 机器学习: cs/machine-learning/index.md
           - 神经网络: cs/deep-learning/neural-networks.md
           - 卷积神经网络: cs/deep-learning/convolutional-neural-networks.md
       - 常见问题:
