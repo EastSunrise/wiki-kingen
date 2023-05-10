@@ -203,6 +203,17 @@ $$
 
 #### 逻辑回归
 
+## 模型选择
+
+### 数据划分
+
+将数据样本按一定比例（常为 6:2:2）随机划分为训练集（training set）、交叉验证集（cross-validation set）和测试集（testing set），先使用训练集进行多个模型的参数学习，再通过验证集验证选择最小误差 $J_{cv}(\theta)$ 的模型，最后通过测试集的误差 $J_{test}(\theta)$，评估训练结果是否有较好的泛化能力。
+
+### 欠拟合和过拟合
+
+- 欠拟合（underfit）：$J_{train}$ 和 $J_{cv}$ 都很大，属于高偏差（bias）问题；
+- 过拟合（overfit）：$J_{train}$ 较小，但 $J_{cv}$ 较大，属于高方差（variance）问题。
+
 ## 参考
 
 - [吴恩达机器学习系列课程](https://www.bilibili.com/video/BV164411b7dx/)
