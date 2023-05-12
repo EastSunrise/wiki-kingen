@@ -202,6 +202,7 @@ nav:
           - Get Started: dev/php.md
       - OAuth: dev/oauth.md
       - FasfDFS: dev/fastdfs.md
+      - MQTT: dev/mqtt.md
   - Misc:
       - Activation: misc/activation.md
       - LaTeX: misc/latex.md
