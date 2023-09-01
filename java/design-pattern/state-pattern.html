@@ -7,29 +7,31 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Kingen">
+        <meta name="author" content="kingen">
       
+      
+      
+        <link rel="prev" href="../lib/lombok.html">
+      
+      
+        <link rel="next" href="singleton-pattern.html">
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>状态模式 - Kingen-WiKi</title>
+        <title>状态模式 - wiki-kingen</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
+
     
     
     
@@ -48,10 +50,11 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -84,9 +87,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="Kingen-WiKi" class="md-header__button md-logo" aria-label="Kingen-WiKi" data-md-component="logo">
+    <a href="../../index.html" title="wiki-kingen" class="md-header__button md-logo" aria-label="wiki-kingen" data-md-component="logo">
       
   <img src="../../assets/images/Ceil.png" alt="logo">
 
@@ -98,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Kingen-WiKi
+            wiki-kingen
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -110,6 +115,8 @@
         </div>
       </div>
     </div>
+    
+      
     
     
     
@@ -127,7 +134,7 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -139,7 +146,7 @@
           <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -148,10 +155,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/eastsunrise/wiki-kingen" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/eastsunrise/wiki-kingen/" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -183,19 +190,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Kingen-WiKi" class="md-nav__button md-logo" aria-label="Kingen-WiKi" data-md-component="logo">
+    <a href="../../index.html" title="wiki-kingen" class="md-nav__button md-logo" aria-label="wiki-kingen" data-md-component="logo">
       
   <img src="../../assets/images/Ceil.png" alt="logo">
 
     </a>
-    Kingen-WiKi
+    wiki-kingen
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/eastsunrise/wiki-kingen" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/eastsunrise/wiki-kingen/" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -233,15 +240,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
           
             
-          
-        
           
         
           
@@ -269,7 +275,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Java" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Java
@@ -287,21 +293,24 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
         
           
         
+          
+        
       
       
-        <label class="md-nav__link" for="__nav_2_2">
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
           基础语法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="基础语法" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           基础语法
@@ -314,8 +323,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../language/annotation.html" class="md-nav__link">
+      <a href="../basic/annotation.html" class="md-nav__link">
         Annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/collection.html" class="md-nav__link">
+        Collection
       </a>
     </li>
   
@@ -338,21 +361,24 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
         
           
         
+          
+        
       
       
-        <label class="md-nav__link" for="__nav_2_3">
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
           扩展库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="扩展库" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           扩展库
@@ -365,7 +391,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../library/lombok.html" class="md-nav__link">
+      <a href="../lib/apache-commons.html" class="md-nav__link">
+        Apache Commons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lib/lombok.html" class="md-nav__link">
         Lombok
       </a>
     </li>
@@ -391,8 +431,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
       
       
         
@@ -402,12 +443,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_4">
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
           设计模式
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="设计模式" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           设计模式
@@ -423,7 +464,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
@@ -591,8 +632,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
       
       
         
@@ -617,7 +659,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Spring" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           Spring
@@ -689,20 +731,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tomcat.html" class="md-nav__link">
-        Tomcat
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -720,8 +748,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
         
@@ -737,12 +766,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           CS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CS" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           CS
@@ -758,8 +787,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
       
       
         
@@ -769,14 +799,16 @@
         
           
         
+          
+        
       
       
-        <label class="md-nav__link" for="__nav_3_1">
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
           数学
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="数学" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           数学
@@ -817,6 +849,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../cs/math/linear-algebra.html" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../cs/math/fourier-transform.html" class="md-nav__link">
         傅里叶变换
       </a>
@@ -841,8 +887,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
         
@@ -875,7 +922,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cs/algorithms/index.html">算法</a>
+          <a href="../../cs/algorithm/index.html">算法</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -883,7 +930,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="算法" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           算法
@@ -901,8 +948,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
       
       
         
@@ -914,16 +962,12 @@
         
           
         
-          
-        
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cs/algorithms/sorting/index.html">排序</a>
+          <a href="../../cs/algorithm/sort/index.html">排序</a>
           
             <label for="__nav_3_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -931,7 +975,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="排序" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           排序
@@ -946,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/sorting/insertion-sort.html" class="md-nav__link">
+      <a href="../../cs/algorithm/sort/insertion-sort.html" class="md-nav__link">
         插入排序
       </a>
     </li>
@@ -960,36 +1004,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/sorting/merge-sort.html" class="md-nav__link">
+      <a href="../../cs/algorithm/sort/merge-sort.html" class="md-nav__link">
         归并排序
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/algorithms/sorting/bucket-sort.html" class="md-nav__link">
-        桶排序
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/algorithms/sorting/topological-sorting.html" class="md-nav__link">
-        拓扑排序
       </a>
     </li>
   
@@ -1009,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/divide-and-conquer.html" class="md-nav__link">
+      <a href="../../cs/algorithm/divide-and-conquer.html" class="md-nav__link">
         分治算法
       </a>
     </li>
@@ -1023,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/dynamic-programming.html" class="md-nav__link">
+      <a href="../../cs/algorithm/dynamic-programming.html" class="md-nav__link">
         动态规划
       </a>
     </li>
@@ -1037,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/greedy-algorithms.html" class="md-nav__link">
+      <a href="../../cs/algorithm/greedy-algorithm.html" class="md-nav__link">
         贪心算法
       </a>
     </li>
@@ -1051,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/backtracking.html" class="md-nav__link">
+      <a href="../../cs/algorithm/backtracking.html" class="md-nav__link">
         回溯算法
       </a>
     </li>
@@ -1065,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/branch-and-bound.html" class="md-nav__link">
+      <a href="../../cs/algorithm/branch-and-bound.html" class="md-nav__link">
         分支界定
       </a>
     </li>
@@ -1082,8 +1098,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" type="checkbox" id="__nav_3_2_8" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" >
       
       
         
@@ -1095,12 +1112,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_8">
+        <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
           模式匹配
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="模式匹配" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2_8">
           <span class="md-nav__icon md-icon"></span>
           模式匹配
@@ -1113,8 +1130,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/pattern-searching/knuth-morris-pratt-algorithm.html" class="md-nav__link">
-        KMP算法
+      <a href="../../cs/algorithm/pattern-searching/kmp-algorithm.html" class="md-nav__link">
+        KMP 算法
       </a>
     </li>
   
@@ -1127,8 +1144,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/pattern-searching/boyer-moore-algorithm.html" class="md-nav__link">
-        Boyer-Moore算法
+      <a href="../../cs/algorithm/pattern-searching/bm-algorithm.html" class="md-nav__link">
+        BM 算法
       </a>
     </li>
   
@@ -1141,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/pattern-searching/sunday-algorithm.html" class="md-nav__link">
+      <a href="../../cs/algorithm/pattern-searching/sunday-algorithm.html" class="md-nav__link">
         Sunday算法
       </a>
     </li>
@@ -1165,8 +1182,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" type="checkbox" id="__nav_3_2_9" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_9" >
       
       
         
@@ -1176,12 +1194,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_9">
+        <label class="md-nav__link" for="__nav_3_2_9" id="__nav_3_2_9_label" tabindex="0">
           密钥算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="密钥算法" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2_9">
           <span class="md-nav__icon md-icon"></span>
           密钥算法
@@ -1194,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/cryptography/rsa.html" class="md-nav__link">
+      <a href="../../cs/algorithm/cryptography/rsa.html" class="md-nav__link">
         RSA
       </a>
     </li>
@@ -1208,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/cryptography/sha.html" class="md-nav__link">
+      <a href="../../cs/algorithm/cryptography/sha.html" class="md-nav__link">
         SHA
       </a>
     </li>
@@ -1232,8 +1250,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" type="checkbox" id="__nav_3_2_10" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_10" >
       
       
         
@@ -1245,12 +1264,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_10">
+        <label class="md-nav__link" for="__nav_3_2_10" id="__nav_3_2_10_label" tabindex="0">
           图论
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="图论" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2_10">
           <span class="md-nav__icon md-icon"></span>
           图论
@@ -1263,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/graph/depth-first-search.html" class="md-nav__link">
+      <a href="../../cs/algorithm/graph/dfs.html" class="md-nav__link">
         深度优先搜索
       </a>
     </li>
@@ -1277,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/graph/dijkstra%27s-algorithm.html" class="md-nav__link">
+      <a href="../../cs/algorithm/graph/dijkstra%27s-algorithm.html" class="md-nav__link">
         Dijkstra's 算法
       </a>
     </li>
@@ -1291,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/graph/tarjan-algorithm.html" class="md-nav__link">
+      <a href="../../cs/algorithm/graph/tarjan-algorithm.html" class="md-nav__link">
         Tarjan 算法
       </a>
     </li>
@@ -1315,8 +1334,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" type="checkbox" id="__nav_3_2_11" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_11" >
       
       
         
@@ -1328,12 +1348,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_11">
+        <label class="md-nav__link" for="__nav_3_2_11" id="__nav_3_2_11_label" tabindex="0">
           其它算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="其它算法" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2_11">
           <span class="md-nav__icon md-icon"></span>
           其它算法
@@ -1346,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/others/knuth-shuffle-algorithm.html" class="md-nav__link">
+      <a href="../../cs/algorithm/others/knuth-shuffle-algorithm.html" class="md-nav__link">
         Knuth 洗牌算法
       </a>
     </li>
@@ -1360,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/others/monte-carlo-tree-search.html" class="md-nav__link">
+      <a href="../../cs/algorithm/others/monte-carlo-tree-search.html" class="md-nav__link">
         蒙特卡洛树搜索
       </a>
     </li>
@@ -1374,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithms/others/reservoir-sampling.html" class="md-nav__link">
+      <a href="../../cs/algorithm/others/reservoir-sampling.html" class="md-nav__link">
         蓄水池抽样算法
       </a>
     </li>
@@ -1405,8 +1425,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
         
@@ -1441,7 +1462,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="数据结构" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           数据结构
@@ -1526,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/data-structure/disjoint.html" class="md-nav__link">
+      <a href="../../cs/data-structure/disjoint-set.html" class="md-nav__link">
         并查集
       </a>
     </li>
@@ -1540,8 +1561,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/data-structure/skiplist.html" class="md-nav__link">
-        Skiplist
+      <a href="../../cs/data-structure/skip-list.html" class="md-nav__link">
+        跳表
       </a>
     </li>
   
@@ -1564,8 +1585,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
         
@@ -1590,7 +1612,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="机器学习" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           机器学习
@@ -1643,23 +1665,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
       
       
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_3_5">
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
           常见问题
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="常见问题" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           常见问题
@@ -1672,21 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/problems/inversion-pairs.html" class="md-nav__link">
-        逆序对
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/problems/max-subsequence-sum.html" class="md-nav__link">
+      <a href="../../cs/problem/max-subsequence-sum.html" class="md-nav__link">
         最大子序列和
       </a>
     </li>
@@ -1718,8 +1725,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
         
@@ -1754,7 +1762,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Python" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Python
@@ -1772,33 +1780,34 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
       
       
-        <label class="md-nav__link" for="__nav_4_2">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           标准库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="标准库" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           标准库
@@ -1814,8 +1823,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
       
       
         
@@ -1825,12 +1835,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_1">
+        <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
           Operating System Services
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Operating System Services" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2_1">
           <span class="md-nav__icon md-icon"></span>
           Operating System Services
@@ -1881,8 +1891,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
       
       
         
@@ -1890,12 +1901,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_2">
+        <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
           Cryptographic Services
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Cryptographic Services" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2_2">
           <span class="md-nav__icon md-icon"></span>
           Cryptographic Services
@@ -1932,8 +1943,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
       
       
         
@@ -1941,12 +1953,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_3">
+        <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
           File Formats
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="File Formats" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2_3">
           <span class="md-nav__icon md-icon"></span>
           File Formats
@@ -1983,8 +1995,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" type="checkbox" id="__nav_4_2_4" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
       
       
         
@@ -1992,12 +2005,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_4">
+        <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
           File and Directory Access
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="File and Directory Access" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2_4">
           <span class="md-nav__icon md-icon"></span>
           File and Directory Access
@@ -2034,8 +2047,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" type="checkbox" id="__nav_4_2_5" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
       
       
         
@@ -2043,12 +2057,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_5">
+        <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
           Internet Protocols and Support
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Internet Protocols and Support" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2_5">
           <span class="md-nav__icon md-icon"></span>
           Internet Protocols and Support
@@ -2099,8 +2113,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" type="checkbox" id="__nav_4_2_7" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_7" >
       
       
         
@@ -2108,12 +2123,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_7">
+        <label class="md-nav__link" for="__nav_4_2_7" id="__nav_4_2_7_label" tabindex="0">
           Data Persistence
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Data Persistence" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2_7">
           <span class="md-nav__icon md-icon"></span>
           Data Persistence
@@ -2157,8 +2172,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
         
@@ -2172,12 +2188,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           扩展库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="扩展库" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           扩展库
@@ -2256,8 +2272,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
       
       
         
@@ -2269,12 +2286,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
           Applications
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Applications" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Applications
@@ -2403,55 +2420,58 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
-        <label class="md-nav__link" for="__nav_5">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Development" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -2481,8 +2501,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
         
@@ -2494,12 +2515,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="APIs" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           APIs
@@ -2564,21 +2585,24 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
         
           
         
+          
+        
       
       
-        <label class="md-nav__link" for="__nav_5_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           数据库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="数据库" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           数据库
@@ -2593,6 +2617,20 @@
     <li class="md-nav__item">
       <a href="../../dev/database/redis.html" class="md-nav__link">
         Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/database/iotdb.html" class="md-nav__link">
+        IoTDB
       </a>
     </li>
   
@@ -2615,8 +2653,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
         
@@ -2639,7 +2678,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="MySQL" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           MySQL
@@ -2678,8 +2717,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
         
@@ -2702,7 +2742,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Oracle" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           Oracle
@@ -2839,8 +2879,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_13" type="checkbox" id="__nav_5_13" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
       
       
         
@@ -2848,12 +2889,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_13">
+        <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
           Web
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Web" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_13">
           <span class="md-nav__icon md-icon"></span>
           Web
@@ -2890,8 +2931,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_14" type="checkbox" id="__nav_5_14" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_14" >
       
       
         
@@ -2922,7 +2964,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="JavaScript" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_14_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_14">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -3017,8 +3059,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_15" type="checkbox" id="__nav_5_15" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_15" >
       
       
         
@@ -3035,7 +3078,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="C" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_15_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_15">
           <span class="md-nav__icon md-icon"></span>
           C
@@ -3060,8 +3103,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_16" type="checkbox" id="__nav_5_16" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_16" >
       
       
         
@@ -3069,12 +3113,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_16">
+        <label class="md-nav__link" for="__nav_5_16" id="__nav_5_16_label" tabindex="0">
           PHP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="PHP" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_16_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_16">
           <span class="md-nav__icon md-icon"></span>
           PHP
@@ -3130,6 +3174,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/mqtt.html" class="md-nav__link">
+        MQTT
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3147,44 +3205,61 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
-        <label class="md-nav__link" for="__nav_6">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Misc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Misc" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Misc
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/chatgpt.html" class="md-nav__link">
+        ChatGPT
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -3467,23 +3542,23 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/java/design-pattern/state-pattern.md" title="编辑此页" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
 
+  
+  
 
 
   <h1>状态模式</h1>
 
 <h2 id="_1">导言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>​       假设我们现在有一个糖果机项目，那么我们知道正常一般糖果机提供给用户的行为有这么几种：投入硬币、转动曲柄、退出硬币几种行为；那么糖果机呢一般有这几中状态，待机状态、持有硬币的准备状态、运行状态即正在售出状态和初始状态 这么几种正常状态。
+<p>假设我们现在有一个糖果机项目，那么我们知道正常一般糖果机提供给用户的行为有这么几种：投入硬币、转动曲柄、退出硬币几种行为；那么糖果机呢一般有这几中状态，待机状态、持有硬币的准备状态、运行状态即正在售出状态和初始状态 这么几种正常状态。
 我们发现处于不同状态的时候，持有的行为是不一样的，图如下：</p>
 <p><img alt="Candy Machine" src="../img/%E7%B3%96%E6%9E%9C%E6%9C%BA.png" title="糖果机" /></p>
-<p>​       如果我们采用传统的方法来写代码，那么在投入硬币这个行为操作的时候，我们会进行状态的判断，只有在处于待机状态情况下这种行为是正常的，而其他则非正常，那么其他行为也一样，都需要去先判断下当前的状态来进行操作。得到的代码则为：</p>
+<p>如果我们采用传统的方法来写代码，那么在投入硬币这个行为操作的时候，我们会进行状态的判断，只有在处于待机状态情况下这种行为是正常的，而其他则非正常，那么其他行为也一样，都需要去先判断下当前的状态来进行操作。得到的代码则为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CandyMachine.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">  3</a></span>
@@ -3690,17 +3765,17 @@
 <a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>​       那么上面这种方式存在什么问题呢？首先很直观的感受就是：</p>
+<p>那么上面这种方式存在什么问题呢？首先很直观的感受就是：</p>
 <ul>
 <li>存在大量的 <code>switch case</code> 语句 当然可以用 <code>if else</code> 也是一样的；</li>
 <li>可扩展性差，并且一旦要加入一种新的状态，那么就会要修改所有的 <code>switch case</code> 不符合开闭原则；</li>
 <li>没有采用面向对象的方式去封装。</li>
 </ul>
-<p>​       比如，这个时候，新增加了一种状态，赢家状态，即可以获取到两粒糖果；那么如果用上面的方式，肯定是不符合开闭原则的，同时扩展性也是不好的；那么我们有什么其它的方式来解决呢？</p>
+<p>比如，这个时候，新增加了一种状态，赢家状态，即可以获取到两粒糖果；那么如果用上面的方式，肯定是不符合开闭原则的，同时扩展性也是不好的；那么我们有什么其它的方式来解决呢？</p>
 <h2 id="_2">状态模式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>​       为了解决上面的问题，我们首先分析项目中变化的部分和不变的部分，抽化出变化的部分，我们发现糖果机提供的行为一般是不变的，就是投入硬币、转动曲柄给、退回硬币、机器发放糖果；而糖果机的状态是可以变化的，可以新增出一种状态来，比如我们说的赢家状态。那么我们这个抽出变化的部分，即我们说的状态，于是出现了下面的结构设计方案：</p>
+<p>为了解决上面的问题，我们首先分析项目中变化的部分和不变的部分，抽化出变化的部分，我们发现糖果机提供的行为一般是不变的，就是投入硬币、转动曲柄给、退回硬币、机器发放糖果；而糖果机的状态是可以变化的，可以新增出一种状态来，比如我们说的赢家状态。那么我们这个抽出变化的部分，即我们说的状态，于是出现了下面的结构设计方案：</p>
 <p><img alt="State Pattern" src="../img/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1.png" /></p>
-<p>​       这个结构图告诉我们，提炼出状态接口出来，然后将各个状态抽出，并去实现接口，每个状态都持有投入硬币，退回硬币，转动曲柄、售出糖果这几种行为对应的方法做出相应；而糖果机持有所有的状态，并通过引用状态接口来操作各个状态；这种设计架构就是我们说的状态模式。</p>
+<p>这个结构图告诉我们，提炼出状态接口出来，然后将各个状态抽出，并去实现接口，每个状态都持有投入硬币，退回硬币，转动曲柄、售出糖果这几种行为对应的方法做出相应；而糖果机持有所有的状态，并通过引用状态接口来操作各个状态；这种设计架构就是我们说的状态模式。</p>
 <blockquote>
 <p><strong>状态模式定义</strong>：对象行为的变化是由于状态的变化引入，那么即当内部状态发生变化的时候，就会改变对象的行为，而这种改变视乎就改变了整个类。</p>
 </blockquote>
@@ -3852,7 +3927,7 @@
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="nd">@Override</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">returnCoin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;you haven&#39;t inserted a coin yet!&quot;</span><span class="p">);</span><span class="w">   </span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;you haven&#39;t inserted a coin yet!&quot;</span><span class="p">);</span>
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a>
 <a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="nd">@Override</span>
@@ -4104,7 +4179,7 @@
 <a id="__codelineno-6-45" name="__codelineno-6-45"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="_9">集成<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>​糖果机要持有所有的状态，并在初始化的时候，要设置其开始的状态，然后糖果的各个行为，就委托到了各个状态中自己维护</p>
+<p>​ 糖果机要持有所有的状态，并在初始化的时候，要设置其开始的状态，然后糖果的各个行为，就委托到了各个状态中自己维护</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CandyMachine.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -4259,79 +4334,48 @@
 </blockquote>
 <h3 id="_12">状态模式要点<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <ul>
-<li>客户不会和状态进行交互,全盘了解状态是 context的工作</li>
-<li>在状态模式中，每个状态通过持有Context的引用，来实现状态转移</li>
+<li>客户不会和状态进行交互,全盘了解状态是 context 的工作</li>
+<li>在状态模式中，每个状态通过持有 Context 的引用，来实现状态转移</li>
 <li>使用状态模式总是会增加设计中类的数目，这是为了要获得程序可扩展性，弹性的代价，如果你的代码不是一次性的，后期可能会不断加入不同的状态，那么状态模式的设计是绝对值得的。【同时也是一个缺点】</li>
-<li>状态类可以被多个context实例共享</li>
+<li>状态类可以被多个 context 实例共享</li>
 </ul>
 <h3 id="_13">状态模式和策略模式对比<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <ul>
 <li>相似之处<ul>
-<li>添加新的状态或策略都很容易，而且不需要修改使用它们的Context对象；</li>
-<li>它们都让你的代码符合OCP原则（软件对扩展应该是开发的，对修改应该是关闭的）。在状态模式和策略模式中，Context对象对修改是关闭的，添加新的状态或策略，都不需要修改 Context；</li>
-<li>正如状态模式中的Context会有初始状态一样，策略模式同样有默认策略；</li>
+<li>添加新的状态或策略都很容易，而且不需要修改使用它们的 Context 对象；</li>
+<li>它们都让你的代码符合 OCP 原则（软件对扩展应该是开发的，对修改应该是关闭的）。在状态模式和策略模式中，Context 对象对修改是关闭的，添加新的状态或策略，都不需要修改 Context；</li>
+<li>正如状态模式中的 Context 会有初始状态一样，策略模式同样有默认策略；</li>
 <li>状态模式以不同的状态封装不同的行为，而策略模式以不同的策略封装不同的行为；</li>
 <li>它们都依赖子类去实现相关行为；</li>
 </ul>
 </li>
 <li>不同<ul>
-<li>状态模式帮助对象管理状态，我们将一群行为封装早状态对象中,context的行为随时可委托到那些状态中的一个.随着时间的流逝，当前状态在状态对象集合中游走改变，以反映context内部状态，因此，context的行为也会跟着改变。当要添加新的状态时，不需要修改原来代码添加新的状态类即可；</li>
-<li>而策略模式允许Client选择不同的行为。通过封装一组相关算法，为Client提供运行时的灵活性。Client可以在运行时，选择任一算法，而不改变使用算法的Context。一些流行的策略模式的例子是写那些使用算法的代码，例如加密算法、压缩算法、排序算法。客户通常主动指定context所要组合的策略对象是哪一个；</li>
+<li>状态模式帮助对象管理状态，我们将一群行为封装早状态对象中,context 的行为随时可委托到那些状态中的一个.随着时间的流逝，当前状态在状态对象集合中游走改变，以反映 context 内部状态，因此，context 的行为也会跟着改变。当要添加新的状态时，不需要修改原来代码添加新的状态类即可；</li>
+<li>而策略模式允许 Client 选择不同的行为。通过封装一组相关算法，为 Client 提供运行时的灵活性。Client 可以在运行时，选择任一算法，而不改变使用算法的 Context。一些流行的策略模式的例子是写那些使用算法的代码，例如加密算法、压缩算法、排序算法。客户通常主动指定 context 所要组合的策略对象是哪一个；</li>
 <li>**最根本的差异**在于策略模式是在求解同一个问题的多种解法，这些不同解法之间毫无关联；状态模式则不同，状态模式要求各个状态之间有所关联，以便实现状态转移。</li>
 </ul>
 </li>
 </ul>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             回到页面顶部
-          </a>
+          </button>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="页脚" >
-      
-        
-        <a href="../library/lombok.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lombok" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              Lombok
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="singleton-pattern.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 单例模式" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              单例模式
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -4353,12 +4397,13 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "toc.follow", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "toc.follow", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
-        <script src="../../static/js/material.js"></script>
+        <script src="../../static/js/kingen.js"></script>
       
         <script src="../../static/js/katex.js"></script>
       
