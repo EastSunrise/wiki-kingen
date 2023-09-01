@@ -1,39 +1,33 @@
-/*一级标题*/
 h1 {
     font-family: "Times New Roman", 黑体, serif;
     font-size: 22pt !important;
     font-weight: normal !important;
 }
 
-/*二级标题*/
 h2 {
     font-family: "Times New Roman", 黑体, serif;
     font-size: 16pt !important;
     font-weight: bold !important;
 }
 
-/*三级标题*/
 h3 {
     font-family: "Times New Roman", 黑体, serif;
     font-size: 14pt !important;
     font-weight: normal !important;
 }
 
-/*四级标题*/
 h4 {
     font-family: "Times New Roman", 宋体, serif;
     font-size: 12pt !important;
     font-weight: bold !important;
 }
 
-/*正文*/
 article p {
     font-family: "Times New Roman", 宋体, serif;
     font-size: 12pt;
     font-weight: normal;
 }
 
-/*列表*/
 article li {
     font-family: "Times New Roman", 宋体, serif;
     font-size: 10.5pt;

@@ -12,6 +12,12 @@ MQTT 采取发布/订阅（publish/subscribe）机制，客户端（client）之
 
 ![MQTT Connect](img/mqtt-connect.png)
 
+- clientId：客户端 ID，Broker 用来区分不同的客户端，应当唯一
+- cleanSession：如果为`false`，Broker 保存客户端的所有订阅和所有错过的消息（QoS=0 的除外）；如果为`true`，Broker 清除该客户端以前所有会话信息
+- username/password：认证信息
+- lastWill\_\_\_：客户端意外断开连接时通知其他客户端
+- keepAlive
+
 Broker 接收到上述内容后，需要发送一个连接应答（connack）消息，包括会话状态和响应码。
 
 ![MQTT Connack](img/mqtt-connack.png)
@@ -22,11 +28,21 @@ Broker 接收到上述内容后，需要发送一个连接应答（connack）消
 
 ![MQTT Publish Packet](img/mqtt-publish.png)
 
+- packetId：消息 ID，仅在`QoS>0`时有效
+- topicName：参考[Topic](#topic)
+- qos：参考[QoS](#qos)
+- retainFlag：Broker 是否缓存主题的消息，每个主题只保留最后一条`retainFlag==true`的消息
+- payload：消息内容
+- dupFlag：本次消息是否是因原消息未确认而重发的消息
+
 ### 订阅/退订
 
 为了获取特定的消息，客户端需要向 broker 发送订阅消息。
 
 ![MQTT Subscribe Packet](img/mqtt-subscribe.png)
+
+- packetId
+- qos/topic：订阅列表
 
 接收到订阅消息后，broker 会发送订阅应答（suback）消息，以确认每一个订阅。
 

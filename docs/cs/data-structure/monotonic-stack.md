@@ -1,10 +1,7 @@
-- [x] TODO
-
-#### 概述
+## 概述
 
 顾名思义，单调栈即满足单调性的栈。相较于其他结构，单调栈既维护了元素间的大小关系，也通过入栈顺序维护了元素间的相对位置关系，但是会丢失一部分元素。
 
-#### 参考
+## 参考
 
-1. [单调栈 - OI Wiki](https://oi-wiki.org/ds/monotonous-stack/).
-
+-   [单调栈 - OI Wiki](https://oi-wiki.org/ds/monotonous-stack/).

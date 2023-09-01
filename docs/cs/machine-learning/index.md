@@ -2,8 +2,8 @@
 
 从任务 T 学习经验 E，提高性能度量 P，可以分为
 
-- 监督学习（supervised learning）：给定数据集和正解，预测其他样本正确答案
-- 无监督学习（unsupervised learning）：分析给定数据集的结构
+-   监督学习（supervised learning）：给定数据集和正解，预测其他样本正确答案
+-   无监督学习（unsupervised learning）：分析给定数据集的结构
 
 给定训练集（training set）$(x,y)$，设共有$n$个特征，则输入值和参数可表示为如下向量
 
@@ -30,8 +30,8 @@ $$
 
 回归问题（regression problem）拥有连续的输出值，包括
 
-- 线性回归（linear regression）
-- 多项式回归（polynomial regression）
+-   线性回归（linear regression）
+-   多项式回归（polynomial regression）
 
 ### 假设函数
 
@@ -113,7 +113,7 @@ $$
 
 分类问题（classification problem）拥有离散的输出值，例如 $y\in \{0,1\}$，包括
 
-- 逻辑回归（logistic regression）
+-   逻辑回归（logistic regression）
 
 ### 假设函数
 
@@ -151,9 +151,9 @@ $$
 
 ### 优化算法
 
-- 共轭梯度法（conjugate gradient）
-- BFGS
-- L-BFGS
+-   共轭梯度法（conjugate gradient）
+-   BFGS
+-   L-BFGS
 
 ### 多类别分类
 
@@ -162,7 +162,7 @@ $$
 $$
 \begin{gather}
     h_{\theta}^{(i)}(x)=P(y=i|x;\theta) \\
-    \underset{i}{\max}h_{\theta}^{(i)}(x)
+    \underset{i}{\max}\ h_{\theta}^{(i)}(x)
 \end{gather}
 $$
 
@@ -211,10 +211,10 @@ $$
 
 ### 欠拟合和过拟合
 
-- 欠拟合（underfit）：$J_{train}$ 和 $J_{cv}$ 都很大，属于高偏差（bias）问题；
-- 过拟合（overfit）：$J_{train}$ 较小，但 $J_{cv}$ 较大，属于高方差（variance）问题。
+-   欠拟合（underfit）：$J_{train}$ 和 $J_{cv}$ 都很大，属于高偏差（bias）问题；
+-   过拟合（overfit）：$J_{train}$ 较小，但 $J_{cv}$ 较大，属于高方差（variance）问题。
 
 ## 参考
 
-- [吴恩达机器学习系列课程](https://www.bilibili.com/video/BV164411b7dx/)
-- [吴恩达深度学习 deeplearning.ai](https://www.bilibili.com/video/BV1FT4y1E74V/)
+-   [吴恩达机器学习系列课程](https://www.bilibili.com/video/BV164411b7dx/)
+-   [吴恩达深度学习 deeplearning.ai](https://www.bilibili.com/video/BV1FT4y1E74V/)

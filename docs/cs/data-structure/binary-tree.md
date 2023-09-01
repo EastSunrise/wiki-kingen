@@ -20,15 +20,9 @@ class TreeNode {
 
 ## 遍历
 
-给定如图所示二叉树：
-
-- [x] 更改图片
-
-![二叉树](../img/二叉树.png)
-
 ### 前序遍历 VLR
 
-先访问当前结点，再访问其左子树，最后访问其右子树。图示二叉树的前序遍历结果为[1,2,3,4,5,6,7,8,9].
+先访问当前结点，再访问其左子树，最后访问其右子树。
 
 ```java
 class BinaryTree {
@@ -68,7 +62,7 @@ class BinaryTree {
 
 ### 中序遍历 LVR
 
-先访问当前结点的左子树，再访问当前结点，最后访问其右子树。图示二叉树的中序遍历结果为[3,2,,5,4,1,7,8,6,9].
+先访问当前结点的左子树，再访问当前结点，最后访问其右子树。
 
 ```java
 class BinaryTree {
@@ -110,7 +104,7 @@ class BinaryTree {
 
 ### 后序遍历 LRV
 
-先访问当前结点的左子树，再访问其右子树，最后访问当前结点。图示二叉树的后序遍历结果为[3,5,4,2,8,7,9,6,1].
+先访问当前结点的左子树，再访问其右子树，最后访问当前结点。
 
 ```java
 class BinaryTree {
@@ -161,7 +155,7 @@ class BinaryTree {
 
 ### 层序遍历
 
-按层从左至右访问结点。图示二叉树的层序遍历结果为[1,2,6,3,4,7,9,5,6].
+按层从左至右访问结点。
 
 ```java
 class BinaryTree {
@@ -215,4 +209,4 @@ class BinaryTree {
 
 ## 参考
 
-- [Binary Tree Data Structure](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+-   [Binary Tree Data Structure](https://www.geeksforgeeks.org/binary-tree-data-structure/)

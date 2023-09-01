@@ -1,14 +1,14 @@
-- [x] TODO
+-   [x] TODO
 
 #### 概述
 
-[FastFDS](https://github.com/happyfish100/fastdfs) 是一个由C语言实现的开源的轻量级分布式文件系统。
+[FastDFS](https://github.com/happyfish100/fastdfs) 是一个由 C 语言实现的开源的轻量级分布式文件系统。
 
-FastDFS有两个角色：Tracker，Storage：
+FastDFS 有两个角色：Tracker，Storage：
 
-1. Tracker 主要做调度作用，起到负载均衡的作用；负责管理所有的Storage和Group，每一个Storage再启动后会连接Tracker，告知自己所属的Group，并保持周期心跳；
+1. Tracker 主要做调度作用，起到负载均衡的作用；负责管理所有的 Storage 和 Group，每一个 Storage 再启动后会连接 Tracker，告知自己所属的 Group，并保持周期心跳；
 
-2. Storage 存储节点，主要提供容量和备份服务；以Group为单位，每个Group内可以有多台Storage，数据互相备份。
+2. Storage 存储节点，主要提供容量和备份服务；以 Group 为单位，每个 Group 内可以有多台 Storage，数据互相备份。
 
 #### 安装
 
@@ -95,7 +95,7 @@ $ vim /etc/fdfs/client.conf
 关键配置：
 
 1. **base_path** 设置日志存储目录，例如：`/data/fastdfs/client`
-3. **tracker_server** 对应 Tracker 的地址，即 <tracker-ip>:<tracker-port>
+2. **tracker_server** 对应 Tracker 的地址，即 <tracker-ip>:<tracker-port>
 
 上传任意文件：
 
