@@ -8,7 +8,7 @@
 
 ```ini
 JAVA_HOME=%dir%\jdk_version
-path=.;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+path=.;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;	# Linux使用":"分割
 
 # 如果同时安装多个版本
 JAVA_HOME=%JAVA_HOME17% # 指定当前版本
@@ -17,7 +17,7 @@ JAVA_HOME11=/path/to/jdk11
 JAVA_HOME17=/path/to/jdk17
 ```
 
-**注意**: 删除安装时自动添加到系统目录 _C:\Windows\System32_ 下的 _java.exe_, _javaw.exe_, _javaws.exe_.
+> 删除安装时自动添加到系统目录 _C:\Windows\System32_ 下的 _java.exe_, _javaw.exe_, _javaws.exe_.
 
 ## Java 8 新特性
 

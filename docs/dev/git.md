@@ -54,5 +54,5 @@ git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
 
 ## 参考
 
-1. [官方文档](https://git-scm.com/doc).
-2. [Git 教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600).
+-   [官方文档](https://git-scm.com/doc)
+-   [Git 教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600)

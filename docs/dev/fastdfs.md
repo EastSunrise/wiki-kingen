@@ -1,6 +1,4 @@
--   [x] TODO
-
-#### 概述
+## 概述
 
 [FastDFS](https://github.com/happyfish100/fastdfs) 是一个由 C 语言实现的开源的轻量级分布式文件系统。
 
@@ -10,11 +8,11 @@ FastDFS 有两个角色：Tracker，Storage：
 
 2. Storage 存储节点，主要提供容量和备份服务；以 Group 为单位，每个 Group 内可以有多台 Storage，数据互相备份。
 
-#### 安装
+## 安装
 
 如果 Tracker 和 Storage 在不同的机器上，则每台服务器都需要安装。
 
-###### libfastcommon
+### libfastcommon
 
 ```shell
 $ wget https://github.com/happyfish100/libfastcommon/archive/V1.0.7.tar.gz
@@ -25,7 +23,7 @@ $ ./make.sh
 $ ./make.sh install
 ```
 
-###### FastDFS
+### FastDFS
 
 ```shell
 $ wget https://github.com/happyfish100/fastdfs/archive/V5.05.tar.gz
@@ -38,7 +36,7 @@ $ ./make.sh install
 
 安装成功后，会生成 `/etc/fdfs` 目录，包含三个配置的示例文件。
 
-###### 配置 Tracker 和 Storage
+### 配置 Tracker 和 Storage
 
 在 `/etc/fdfs` 目录下，复制并修改配置：
 
@@ -83,7 +81,7 @@ $ fdfs_storaged /etc/fdfs/storage.conf stop
 
 启动完成后，**base_path** 对应目录下也会生成 `data` 和 `log` 两个目录，其中 `data` 即是上传文件的存储目录。
 
-###### 测试
+### 测试
 
 任意机器，在 `etc/fdfs` 目录下，复制修改 client 配置：
 
@@ -105,7 +103,7 @@ $ fdfs_test /etc/fdfs/client.conf upload <文件路径>
 
 返回 'example file url' 即成功，同时 Storage 存储目录下可以发现上传的文件。
 
-###### HTTP 访问
+### HTTP 访问
 
 在 Nginx 的配置中添加 `location`
 
@@ -115,7 +113,7 @@ location /group1/M00 {
 }
 ```
 
-###### 开机启动
+### 开机启动
 
 编辑 `vim /etc/rc.d/rc.local` 添加启动命令：
 

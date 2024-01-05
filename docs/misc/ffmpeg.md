@@ -1,4 +1,6 @@
-### 基本
+# FFmpeg
+
+## 基本
 
 ```shell
 ffmpeg [global_options] {[input_file_options] -i input_url} ... {[output_file_options] output_url} ...
@@ -6,16 +8,16 @@ ffmpeg [global_options] {[input_file_options] -i input_url} ... {[output_file_op
 ffmpeg -i input.avi -c copy output.mp4
 ```
 
-`-i` 选项前后分别是 *input* 和 *ouput* 选项.
+`-i` 选项前后分别是 _input_ 和 _ouput_ 选项.
 
-### 流类型 stream_specifier
+## 流类型 stream_specifier
 
 - `v`：视频流
 - `a`：音频流
 - `s`：字幕流
 - `d`：数据流
 
-### 流选择
+## 流选择
 
 默认为**自动选择**，对每一种需要的流类型，**只会选择一个**输出，
 
@@ -51,9 +53,9 @@ ffmpeg -i INPUT -map 0:2 OUTPUT # 选择INPUT的第三个流
 ffmpeg -i a.mkv -i b.mkv -map 0:v -map -1:a:1 OUTPUT # 选择a.mkv的所有视频流和b.mkv中除了第二个音频流外的所有流
 ```
 
-### 编码
+## 编码
 
-```
+```txt
 -c[:<stream_specifier>] <codec_fmt>
 -codec[:<stream_specifier>] <codec_fmt>
 -[stream_specifier]codec <codec_fmt>
@@ -70,7 +72,7 @@ ffmpeg -i a.mkv -i b.mkv -map 0:v -map -1:a:1 OUTPUT # 选择a.mkv的所有视�
 ffmpeg -i INPUT -c:v copy OUTPUT # 提取视频流
 ```
 
-### 片段
+## 片段
 
 ```shell
 -ss <position> # 开始时间
@@ -89,6 +91,6 @@ ffmpeg -i INPUT -c:v copy OUTPUT # 提取视频流
 ffmpeg -ss 02:30 -to 10:20 -i INPUT.mp4 -c copy OUTPUT.mp4
 ```
 
-### 参考
+## 参考
 
 - [ffmpeg Documentation](https://ffmpeg.org/ffmpeg.html)

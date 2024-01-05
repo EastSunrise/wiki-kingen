@@ -1,1 +1,1 @@
-见 [Transaction](/wiki-kingen-en/java/spring/index.html).
+见 [Transaction](/wiki-kingen-en/java/spring/transaction.html).

@@ -1,3 +1,5 @@
+# Microsoft Windows
+
 ## Windows 命令
 
 ### 语法规范
@@ -24,21 +26,21 @@
 ## Windows 程序
 
 1. 用户账户：`netplwiz`
-2. 启动菜单：`shell:startup`，添加exe快捷方式，exe添加到自启动
+2. 启动菜单：`shell:startup`，添加 exe 快捷方式，exe 添加到自启动
 3. 计算器：`calc`
 4. 系统配置：`msconfig`
 5. 文件资源管理器：`explorer`
 6. 注册表：`regedt32`
 7. 任务管理器：`taskmgr`
 8. 资源监视器：`resmon`
-9.  性能监视器：`perfmon`
-10. Internet选项：`inetcpl.cpl`
+9. 性能监视器：`perfmon`
+10. Internet 选项：`inetcpl.cpl`
 11. 控制面板：`control`
 12. 程序与功能：`appwiz.cpl`
 13. 事件查看器：`eventvwr`
 14. 系统信息：`msinfo32`
 15. 计算机管理：`compmgmt.msc`
-16. Windows版本：`winver`
+16. Windows 版本：`winver`
 
 ### 任务计划程序
 

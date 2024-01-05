@@ -1,6 +1,6 @@
 ## 概述
 
-本文档是基于本人学习工作经验归纳而成，包括中英两个版本，英文版请参考：[wiki-kingen-en](https://github.com/eastsunrise/wiki-kingen-en).
+本文档是基于本人学习工作经验归纳而成，包括中英两个版本，英文版请参考：[wiki-kingen-en](/wiki-kingen-en).
 
 本文档主要分为以下几个部分：
 

@@ -1,21 +1,20 @@
-- [x] TODO
+# Google Chrome
 
-#### Overview
+## Overview
 
 Refer to [Google Chrome Help](https://support.google.com/chrome/). Get old versions [here](https://www.slimjet.com/chrome/google-chrome-old-version.php).
 
-#### Keyboard Shortcuts
+## Keyboard Shortcuts
 
 [Here](https://support.google.com/chrome/answer/157179) is the full list. Following shortcuts are based on Windows and Linux.
 
-##### Tab and Window
+### Tab and Window
 
 - `Ctrl + N` open a new window
 - `Ctrl + T` open a new tab
 - `Ctrl + Shift + T` reopen previously closed tabs in the order they were closed
 
-
-#### Search Syntax
+## Search Syntax
 
 - Exclude words with `-` before: `Chinese -food`
 - Exact match with a word inside quotes: `"tallest building"`
@@ -25,6 +24,6 @@ Refer to [Google Chrome Help](https://support.google.com/chrome/). Get old versi
 
 Refer to [Refine web searches](https://support.google.com/websearch/answer/2466433) for a full list.
 
-#### References
+## References
 
-1. [【干货】Chrome插件(扩展)开发全攻略 - 我是小茗同学 - 博客园](https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html)
+1. [【干货】Chrome 插件(扩展)开发全攻略 - 我是小茗同学 - 博客园](https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html)

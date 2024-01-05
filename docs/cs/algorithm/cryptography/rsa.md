@@ -1,4 +1,4 @@
-见 [RSA](/wiki-kingen-en/cs/algorithms/cryptography/rsa.html).
+见 [RSA](/wiki-kingen-en/cs/algorithm/cryptography/rsa.html).
 
 ## 参考
 

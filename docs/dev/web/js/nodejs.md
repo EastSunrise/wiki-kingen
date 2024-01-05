@@ -1,4 +1,4 @@
-- [x] TODO
+-   [x] TODO
 
 #### Installation
 
@@ -32,7 +32,7 @@ $ npm config get registry
 
 #### References
 
-1. [Node.js v12.16.1 Documentation](https://nodejs.org/dist/latest-v12.x/docs/api/)
+1. [Node.js Documentation](https://nodejs.org/dist/latest/docs/api/)
 2. [API 文档 | Node.js 中文网](http://nodejs.cn/api/)
 3. [Node.js 教程 | 菜鸟教程](https://www.runoob.com/nodejs/nodejs-tutorial.html)
-4. [npm镜像及配置方法 - 放逐、青春 - 博客园](https://www.cnblogs.com/zixuan00/p/11197532.html)
+4. [npm 镜像及配置方法 - 放逐、青春 - 博客园](https://www.cnblogs.com/zixuan00/p/11197532.html)

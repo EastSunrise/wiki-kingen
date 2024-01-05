@@ -11,11 +11,11 @@
 1. [下载](https://redis.io/download) Redis；
 2. [上传](../linux.md#upload-and-download)至 Linux 服务器；
 3. 解压文件：`tar –zxvf redis-x.x.x.tar.gz`；
-4. 打开已解压的目录编译：`make`（如果非 *gcc* 环境，执行 `yum install gcc-c++` 安装 *gcc*）；
+4. 打开已解压的目录编译：`make`（如果非 _gcc_ 环境，执行 `yum install gcc-c++` 安装 _gcc_）；
 5. 安装 Redis 到指定目录：`make install PREFIX=/usr/local/redis`；
-6. 复制 *redis.conf* 到安装目录，并修改相关参数；
-7. 执行 *redis-server* 启动 Redis 服务器，执行 *redis-cli* 连接服务器；
-8. 修改 *redis.conf* 配置 `daemonize yes` 可以让服务器在后台运行；
+6. 复制 _redis.conf_ 到安装目录，并修改相关参数；
+7. 执行 _redis-server_ 启动 Redis 服务器，执行 _redis-cli_ 连接服务器；
+8. 修改 _redis.conf_ 配置 `daemonize yes` 可以让服务器在后台运行；
 9. 开机启动：`systemctl enable redis`.
 
 ### Windows
@@ -28,24 +28,14 @@ redis-server --service-install [redis.windows-service.conf] --service-name [redi
 
 ## 配置
 
-*redis.conf* 配置项：
+_redis.conf_ 配置项：
 
 - bind [host1] [host2]
 - requirepass [password]
 
 ## 命令
 
-### 通用
-
-### List
-
-#### LLEN
-
-
-
-```shell
-LLEN key
-```
+参考 [Commands | Redis](https://redis.io/commands/).
 
 ## FAQ
 

@@ -1,6 +1,4 @@
--   [x] TODO
-
-### 概念
+## 概念
 
 -   Broker：Kafka 集群包含一个或者多个服务器，这种服务器成为 _Broker_；
 -   Topic：每条发送到 Kafka 的消息都有一个类别，称作 _Topic_；

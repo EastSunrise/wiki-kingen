@@ -1,4 +1,4 @@
-### 安装
+## 安装
 
 预先安装，
 
@@ -6,7 +6,7 @@
 yum install yum-utils
 ```
 
-创建文件 */etc/yum.repos.d/nginx.repo*，内容如下，
+创建文件 _/etc/yum.repos.d/nginx.repo_，内容如下，
 
 ```ini
 [nginx-stable]
@@ -32,7 +32,7 @@ module_hotfixes=true
 yum install nginx
 ```
 
-nginx包含一个主进程和若干工作进程，可以执行以下命令，
+nginx 包含一个主进程和若干工作进程，可以执行以下命令，
 
 ```shell
 nginx [-c nginx.conf] # 启动nginx，配置文件可选
@@ -42,15 +42,14 @@ nginx -s reload # 重新加载配置文件，启动新的工作进程，旧的�
 nginx -s reopen # 重新打开日志文件
 ```
 
-访问[Welcome to nginx](http://127.0.0.1/index.html)查看nginx是否启动成功。
+访问[Welcome to nginx](http://127.0.0.1/index.html)查看 nginx 是否启动成功。
 
-### 配置
+## 配置
 
-nginx的默认主配置文件为 *nginx.conf*，目录为 */usr/local/nginx/conf*，*/etc/nginx* 或 */usr/local/etc/nginx*.
+nginx 的默认主配置文件为 _nginx.conf_，目录为 _/usr/local/nginx/conf_，_/etc/nginx_ 或 _/usr/local/etc/nginx_.
 
 修改配置文件后，可以执行`nginx -t [-c nginx.conf]`验证配置文件是否正确。
 
+## 参考
 
-### 参考
-
-- [nginx documentation](http://nginx.org/en/docs/)
+-   [nginx documentation](http://nginx.org/en/docs/)
