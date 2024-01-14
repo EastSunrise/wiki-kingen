@@ -6,7 +6,7 @@ Linux 是一种开源的类 Unix 操作系统，包括许多不同的版本，�
 
 ## 安装
 
-下载 CentOS 的 [ISO](https://www.centos.org/download/)。除了服务器，也可以安装在虚拟机上，比如 [VMware](https://www.vmware.com/cn)。
+下载 [CentOS](https://www.centos.org/download/) 或 [Ubuntu](https://ubuntu.com/download) 的 ISO 镜像。除了服务器，也可以安装在虚拟机上，比如 [VMware](https://www.vmware.com/cn)。
 
 ### 远程连接
 
@@ -141,7 +141,7 @@ If failed, open settings of current network connection of the host and allow _In
 
 Edit the _/etc/sysconfig/network-scripts/ifcfg-ens33_ file:
 
-```
+```txt
 BOOTPROTO="static"
 IPADDR=<ip>
 NETMASK=255.255.255.0

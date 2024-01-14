@@ -4,77 +4,66 @@
 
 ## 安装
 
-See more details [here](https://dev.mysql.com/doc/refman/5.7/en/installing.html).
+### APT
 
-##### Linux
+使用 APT 工具安装：
 
-Select and download the repository package from [the Download Yum Repository page](https://dev.mysql.com/downloads/repo/yum/) and then install the repository.
-
-```shell
-$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-
-$ yum install mysql80-community-release-el7-3.noarch.rpm
+```sh
+# 更新 apt 包
+sudo apt update
+# apt安装
+sudo apt install mysql-server
+# 使用systemd管理
+systemctl status mysql
 ```
 
-List all subrepositories of different series and their status. Enable the specific series instead of default one.
+### Yum
 
-```shell
-$ yum repolist all | grep mysql
+从 Yum 包[下载页面](https://dev.mysql.com/downloads/repo/yum/)选择版本下载，然后执行安装：
 
-$ yum-config-manager --disable mysql80-community
-$ yum-config-manager --enable mysql57-community
+```sh
+# 下载包文件
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+# yum 安装包
+yum install mysql80-community-release-el7-3.noarch.rpm
+
+# 安装 mysql
+yum install mysql-community-server
 ```
 
-If `yum-config-manager` is not found, install the command from _yum-utils_ with `yum install yum-utils`. Or edit manually the _/etc/yum.repos.d/mysql-community.repo_ file to change the release series. Just find the entry of the subrepository and then modify the value of property _enabled_.
+查看所有可用的版本，并选择目标版本
 
-Now, install MySQL and then start the MySQL server.
+```sh
+yum repolist all | grep mysql
 
-```shell
-$ yum install mysql-community-server
-
-$ /bin/systemctl start mysqld
+yum-config-manager --disable mysql80-community
+yum-config-manager --enable mysql57-community
 ```
 
-At the initial start up of the server,
+> 如果找不到 `yum-config-manager` 命令，执行 `yum install yum-utils` 来安装 *yum-utils* 工具。
 
-- The server is initialized.
-- SSL certificate and key files are generated in the data directory.
-- Plugin [validate_password](https://dev.mysql.com/doc/refman/5.7/en/validate-password.html) is installed and enabled by default which requires that passwords contain at least one uppercase letter, one lowercase letter, one digit, and one special character, and that the total password length is at least 8 characters.
-- A superuser account 'root'@'localhost is created. A password for the superuser is set and stored in the error log file. Reveal it with `grep 'temporary password' /var/log/mysqld.log`.
+最后执行安装即可，
 
-Change the root password as soon as possible.
-
-```shell
-$ mysql -u root -p # login
-mysql> alter user 'root'@'localhost' identified by '<new password>'; # change the password
+```sh
+yum install mysql-community-server
+systemctl start mysqld
 ```
 
-##### Verification
+> 安装完成后，默认账号为 `'root'@'localhost'`，其密码打印在日志中，可以通过命令 `grep 'temporary password' /var/log/mysqld.log` 获取。
 
-Check the version information of installed MySQL server and global variables. Append `-uroot -p` to connect as _root_ if necessary.
+## FAQ
 
-```shell
-$ mysqladmin version
-$ mysqladmin variables
+### 远程连接
+
+修改配置文件 */etc/my.cnf* 或 */etc/mysql/my.cnf*，
+
+```txt
+bind-address = 0.0.0.0
 ```
 
-##### Remote Connection
-
-_SSH_ is recommended. To connect not through _SSH_, update the table _mysql.user_ to add hosts to a specific user. Open the port of firewall if needed.
-
-```sql
-grant <priv1，priv2...> on <database>.<table> to <user>@'<host/ip>' identified by '<password>';
-
-eg:
-grant all privileges on *.* to '<user>'@'<host>' identified by '<password>';
-
-flush privileges; -- flush tables related to privileges
-```
-
-#### Configuration
-
-Edit the configuration file _/etc/my.cnf_ or _/etc/mysql/my.cnf_.
+执行命令 `systemctl restart mysql` 重启 MySQL，并[添加远程连接账号](sql.md#账号管理)。
 
 ## 参考
 
 - [MySQL Documentation](https://dev.mysql.com/doc/)
+  - [Installing and Upgrading MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
