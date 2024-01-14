@@ -7,31 +7,31 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="kingen">
+        <meta name="author" content="Kingen">
       
       
-      
-        <link rel="prev" href="kmp-algorithm.html">
-      
-      
-        <link rel="next" href="sunday-algorithm.html">
+        <link rel="canonical" href="https://eastsunrise.github.io/wiki-kingen/cs/algorithm/pattern-searching/bm-algorithm.html">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>BM 算法 - wiki-kingen</title>
+        <title>BM 算法 - Wiki-Kingen</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
       
       
-
     
     
     
@@ -50,11 +50,10 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -75,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#%E9%97%AE%E9%A2%98" class="md-skip">
           跳转至
         </a>
       
@@ -87,11 +86,9 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../index.html" title="wiki-kingen" class="md-header__button md-logo" aria-label="wiki-kingen" data-md-component="logo">
+    <a href="../../../index.html" title="Wiki-Kingen" class="md-header__button md-logo" aria-label="Wiki-Kingen" data-md-component="logo">
       
   <img src="../../../assets/images/Ceil.png" alt="logo">
 
@@ -103,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            wiki-kingen
+            Wiki-Kingen
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -115,8 +112,6 @@
         </div>
       </div>
     </div>
-    
-      
     
     
     
@@ -134,7 +129,7 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -146,7 +141,7 @@
           <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -158,7 +153,7 @@
         <a href="https://github.com/eastsunrise/wiki-kingen/" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -190,19 +185,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../index.html" title="wiki-kingen" class="md-nav__button md-logo" aria-label="wiki-kingen" data-md-component="logo">
+    <a href="../../../index.html" title="Wiki-Kingen" class="md-nav__button md-logo" aria-label="Wiki-Kingen" data-md-component="logo">
       
   <img src="../../../assets/images/Ceil.png" alt="logo">
 
     </a>
-    wiki-kingen
+    Wiki-Kingen
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/eastsunrise/wiki-kingen/" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -238,9 +233,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
@@ -275,7 +269,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Java" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Java
@@ -293,9 +287,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
         
@@ -303,12 +296,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_2">
           基础语法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="基础语法" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           基础语法
@@ -345,9 +338,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
         
@@ -357,12 +349,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_3">
           扩展库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="扩展库" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           扩展库
@@ -413,9 +405,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
       
       
         
@@ -425,12 +416,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_4">
           设计模式
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="设计模式" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           设计模式
@@ -481,9 +472,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
       
       
         
@@ -508,7 +498,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Spring" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           Spring
@@ -561,9 +551,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
       
       
         
@@ -571,12 +560,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_6">
           Spring Boot
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Spring Boot" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_6">
           <span class="md-nav__icon md-icon"></span>
           Spring Boot
@@ -651,9 +640,8 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
         
@@ -669,12 +657,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3">
           CS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" aria-label="CS" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           CS
@@ -690,9 +678,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
       
       
         
@@ -706,12 +693,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_1">
           数学
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="数学" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           数学
@@ -792,9 +779,8 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
       
       
         
@@ -835,7 +821,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+      <nav class="md-nav" aria-label="算法" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           算法
@@ -853,9 +839,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
       
       
         
@@ -880,7 +865,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="排序" data-md-level="3">
         <label class="md-nav__title" for="__nav_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           排序
@@ -1005,9 +990,8 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" type="checkbox" id="__nav_3_2_8" checked>
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" checked>
       
       
         
@@ -1019,12 +1003,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_8">
           模式匹配
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="true">
+      <nav class="md-nav" aria-label="模式匹配" data-md-level="3">
         <label class="md-nav__title" for="__nav_3_2_8">
           <span class="md-nav__icon md-icon"></span>
           模式匹配
@@ -1054,7 +1038,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
       
@@ -1081,14 +1065,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#%E9%97%AE%E9%A2%98" class="md-nav__link">
     问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#boyer-moore" class="md-nav__link">
+  <a href="#Boyer-Moore-%E7%AE%97%E6%B3%95" class="md-nav__link">
     Boyer-Moore 算法
   </a>
   
@@ -1096,14 +1080,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#%E5%9D%8F%E5%AD%97%E7%AC%A6%E8%A7%84%E5%88%99" class="md-nav__link">
     坏字符规则
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#%E5%A5%BD%E5%90%8E%E7%BC%80%E8%A7%84%E5%88%99" class="md-nav__link">
     好后缀规则
   </a>
   
@@ -1111,14 +1095,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#%E4%BC%98%E5%8C%96" class="md-nav__link">
     优化
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#%E8%AE%A1%E7%AE%97" class="md-nav__link">
     计算
   </a>
   
@@ -1135,7 +1119,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#%E5%8F%82%E8%80%83" class="md-nav__link">
     参考
   </a>
   
@@ -1180,9 +1164,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" type="checkbox" id="__nav_3_2_9" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_9" >
       
       
         
@@ -1192,12 +1175,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_9" id="__nav_3_2_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_9">
           密钥算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_9_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="密钥算法" data-md-level="3">
         <label class="md-nav__title" for="__nav_3_2_9">
           <span class="md-nav__icon md-icon"></span>
           密钥算法
@@ -1248,9 +1231,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" type="checkbox" id="__nav_3_2_10" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_10" >
       
       
         
@@ -1262,12 +1244,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_10" id="__nav_3_2_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_10">
           图论
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_10_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="图论" data-md-level="3">
         <label class="md-nav__title" for="__nav_3_2_10">
           <span class="md-nav__icon md-icon"></span>
           图论
@@ -1332,9 +1314,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" type="checkbox" id="__nav_3_2_11" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_11" >
       
       
         
@@ -1346,12 +1327,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2_11" id="__nav_3_2_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_11">
           其它算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_11_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="其它算法" data-md-level="3">
         <label class="md-nav__title" for="__nav_3_2_11">
           <span class="md-nav__icon md-icon"></span>
           其它算法
@@ -1423,9 +1404,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
         
@@ -1460,7 +1440,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="数据结构" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           数据结构
@@ -1583,9 +1563,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
         
@@ -1610,7 +1589,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="机器学习" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           机器学习
@@ -1663,9 +1642,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
       
       
         
@@ -1673,12 +1651,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_5">
           常见问题
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="常见问题" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           常见问题
@@ -1723,9 +1701,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
         
@@ -1756,7 +1733,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Python
@@ -1774,9 +1751,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
       
       
         
@@ -1784,12 +1760,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2">
           标准库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="标准库" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           标准库
@@ -1805,9 +1781,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
       
       
         
@@ -1815,12 +1790,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2_1">
           加密服务
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="加密服务" data-md-level="3">
         <label class="md-nav__title" for="__nav_4_2_1">
           <span class="md-nav__icon md-icon"></span>
           加密服务
@@ -1864,9 +1839,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
         
@@ -1874,12 +1848,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3">
           扩展库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="扩展库" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           扩展库
@@ -1966,10 +1940,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-      
       
         
           
@@ -2004,12 +1977,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -2039,9 +2012,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
         
@@ -2059,12 +2031,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5_2">
           数据库
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="数据库" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           数据库
@@ -2080,38 +2052,57 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
       
       
         
           
-            
+        
           
         
           
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../dev/db/mysql/index.html">MySQL</a>
-          
-            <label for="__nav_5_2_1">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_5_2_1">
+          MySQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="MySQL" data-md-level="3">
         <label class="md-nav__title" for="__nav_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           MySQL
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/db/mysql/mysql.html" class="md-nav__link">
+        开始
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/db/mysql/sql.html" class="md-nav__link">
+        SQL
+      </a>
+    </li>
+  
+
             
           
             
@@ -2144,9 +2135,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_2" type="checkbox" id="__nav_5_2_2" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
       
       
         
@@ -2169,7 +2159,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Oracle" data-md-level="3">
         <label class="md-nav__title" for="__nav_5_2_2">
           <span class="md-nav__icon md-icon"></span>
           Oracle
@@ -2271,9 +2261,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
         
@@ -2283,12 +2272,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5_3">
           Web
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Web" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Web
@@ -2304,9 +2293,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1" type="checkbox" id="__nav_5_3_1" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
       
       
         
@@ -2335,7 +2323,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="JavaScript" data-md-level="3">
         <label class="md-nav__title" for="__nav_5_3_1">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -2437,9 +2425,8 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
         
@@ -2451,12 +2438,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5_4">
           Languages
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Languages" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Languages
@@ -2683,10 +2670,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-      
       
         
           
@@ -2713,12 +2699,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_6">
           Misc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+      <nav class="md-nav" aria-label="Misc" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Misc
@@ -2910,14 +2896,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#%E9%97%AE%E9%A2%98" class="md-nav__link">
     问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#boyer-moore" class="md-nav__link">
+  <a href="#Boyer-Moore-%E7%AE%97%E6%B3%95" class="md-nav__link">
     Boyer-Moore 算法
   </a>
   
@@ -2925,14 +2911,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#%E5%9D%8F%E5%AD%97%E7%AC%A6%E8%A7%84%E5%88%99" class="md-nav__link">
     坏字符规则
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#%E5%A5%BD%E5%90%8E%E7%BC%80%E8%A7%84%E5%88%99" class="md-nav__link">
     好后缀规则
   </a>
   
@@ -2940,14 +2926,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#%E4%BC%98%E5%8C%96" class="md-nav__link">
     优化
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#%E8%AE%A1%E7%AE%97" class="md-nav__link">
     计算
   </a>
   
@@ -2964,7 +2950,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#%E5%8F%82%E8%80%83" class="md-nav__link">
     参考
   </a>
   
@@ -2978,24 +2964,24 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
+  <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/cs/algorithm/pattern-searching/bm-algorithm.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
-  
-  
 
 
   <h1>BM 算法</h1>
 
-<h2 id="_1">问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="%E9%97%AE%E9%A2%98">问题<a class="headerlink" href="#%E9%97%AE%E9%A2%98" title="Permanent link">&para;</a></h2>
 <p>给定文本字符串 <span class="arithmatex">\(txt[0,n-1]\)</span>（以下称为 <span class="arithmatex">\(T\)</span>） 和模式字符串 <span class="arithmatex">\(pat[0,m-1]\)</span>（以下称为 <span class="arithmatex">\(P\)</span>），在 <span class="arithmatex">\(T\)</span> 中查找 <span class="arithmatex">\(P\)</span>（假定 <span class="arithmatex">\(n\ge m\ge 1\)</span>）。</p>
-<h2 id="boyer-moore">Boyer-Moore 算法<a class="headerlink" href="#boyer-moore" title="Permanent link">&para;</a></h2>
+<h2 id="Boyer-Moore-%E7%AE%97%E6%B3%95">Boyer-Moore 算法<a class="headerlink" href="#Boyer-Moore-%E7%AE%97%E6%B3%95" title="Permanent link">&para;</a></h2>
 <p>BM 算法从右往左进行比较匹配，与 KMP 算法相似，BM 算法通过预处理模式串，使得匹配失败时，模式串可以向后移动多位，即利用模式串的一些特征，排除无法匹配的的位置，加快了匹配的速度。</p>
 <p>BM 算法包含两个启发策略来移动模式串：<strong>坏字符规则</strong> 和 <strong>好后缀规则</strong>。</p>
-<h3 id="_2">坏字符规则<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="%E5%9D%8F%E5%AD%97%E7%AC%A6%E8%A7%84%E5%88%99">坏字符规则<a class="headerlink" href="#%E5%9D%8F%E5%AD%97%E7%AC%A6%E8%A7%84%E5%88%99" title="Permanent link">&para;</a></h3>
 <p>当从右往左，出现匹配失败时，</p>
 <p><img alt="mismatch.png" src="../../img/bm-mismatch.png" /></p>
 <p>我们称 <strong>b</strong> 为 <strong>坏字符</strong>，即不匹配的字符，此时分两种情况讨论：</p>
@@ -3013,18 +2999,18 @@
     shift(\text{'b'})=j+1
 \end{equation}
 \]</div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">BM</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// 如果字符集较小，可以用数组代替</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">badChar</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">pat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lastIndices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pat</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="n">lastIndices</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">pat</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">lastIndices</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">BM</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// 如果字符集较小，可以用数组代替</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">badChar</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">pat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lastIndices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pat</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="n">lastIndices</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">pat</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">lastIndices</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h3 id="_3">好后缀规则<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="%E5%A5%BD%E5%90%8E%E7%BC%80%E8%A7%84%E5%88%99">好后缀规则<a class="headerlink" href="#%E5%A5%BD%E5%90%8E%E7%BC%80%E8%A7%84%E5%88%99" title="Permanent link">&para;</a></h3>
 <p>当从右往左，出现匹配失败时，</p>
 <p><img alt="mismatch.png" src="../../img/bm-mismatch.png" /></p>
 <p>我们称已经匹配的部分 <strong>u</strong> 为 <strong>好后缀</strong>，此时分三种情况讨论：</p>
@@ -3055,10 +3041,10 @@
     shift(j)=m
 \end{equation}
 \]</div>
-<h4 id="_4">优化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="%E4%BC%98%E5%8C%96">优化<a class="headerlink" href="#%E4%BC%98%E5%8C%96" title="Permanent link">&para;</a></h4>
 <p>在情况一中，当我们寻找出现在 <span class="arithmatex">\(P\)</span> 中的其他 <strong>u</strong> 时，利用已经失配的字符 <strong>a</strong> 可以排除一些错误结果，即，如果找到的 <strong>u</strong> 的前一个字符是 <strong>a</strong>，则可以忽略。</p>
 <p><img alt="exclude.png" src="../../img/bm-suffix-exclude.png" /></p>
-<h4 id="_5">计算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h4 id="%E8%AE%A1%E7%AE%97">计算<a class="headerlink" href="#%E8%AE%A1%E7%AE%97" title="Permanent link">&para;</a></h4>
 <p>首先计算模式串 <span class="arithmatex">\(P\)</span> 每个后缀子串 <strong>u</strong>（<span class="arithmatex">\(P[i,m-1]\)</span>）的最长公共前缀后缀（不包括 <strong>u</strong> 本身）对应的后缀起始位置 <span class="arithmatex">\(j\)</span>，令 <span class="arithmatex">\(j=f(i)\)</span>，</p>
 <p><img alt="preprocess.png" src="../../img/preprocess-1.png" /></p>
 <p>我们从右往左进行归纳，当 <span class="arithmatex">\(i=m-1\)</span> 时，<span class="arithmatex">\(f(m-1)=m\)</span>，</p>
@@ -3071,32 +3057,63 @@
 <p><img alt="preprocess.png" src="../../img/preprocess-4.png" /></p>
 <p>如果 <strong>x=z</strong>，则 <span class="arithmatex">\(f(s-1)=f(t)-1=f(f(s))-1\)</span>；否则，考虑 <span class="arithmatex">\(f(f(t))\)</span>，以此类推。</p>
 <p>在整个 BM 算法中，每次匹配失败后，模式串向右移动的距离取两个规则中的较大值。</p>
-<h2 id="_6">参考<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="%E5%8F%82%E8%80%83">参考<a class="headerlink" href="#%E5%8F%82%E8%80%83" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/">Boyer Moore Algorithm for Pattern Searching - GeeksforGeeks</a>.</li>
 <li><a href="http://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html">字符串匹配的 Boyer-Moore 算法 - 阮一峰的网络日志</a>.</li>
 <li><a href="https://www.cnblogs.com/lanxuezaipiao/p/3452579.html">grep 之字符串搜索算法 Boyer-Moore 由浅入深（比 KMP 快 3-5 倍） - Alexia(minmin) - 博客园</a>.</li>
 </ul>
 
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+              
+            </article>
+            
+          </div>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             回到页面顶部
-          </button>
+          </a>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="kmp-algorithm.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: KMP 算法" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              KMP 算法
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="sunday-algorithm.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Sunday算法" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Sunday算法
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3118,11 +3135,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "toc.follow", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "toc.follow", "navigation.top"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
-    
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="../../../static/js/kingen.js"></script>
       
