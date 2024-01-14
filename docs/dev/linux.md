@@ -1,3 +1,5 @@
+# Linux
+
 ## 概述
 
 Linux 是一种开源的类 Unix 操作系统，包括许多不同的版本，诸如 [CentOS](https://www.centos.org/)、[Ubuntu](https://ubuntu.com/) 等。
@@ -17,7 +19,7 @@ vim /etc/ssh/ssh_config	 # 编辑配置文件
 /bin/systemctl enable sshd.service  # 开机自启动
 ```
 
-大部分的远程连接（比如 [MySQL](db/mysql/index.md) 和 [Redis](db/redis.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
+大部分的远程连接（比如 [MySQL](db/mysql/mysql.md) 和 [Redis](db/redis.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
 
 ### 镜像
 
@@ -34,11 +36,11 @@ yum makecache  # 创建缓存
 
 **RPM** 结构的目录结构通常设置如下：
 
--   _/etc_: 配置文件
--   _/usr/bin_: 可执行文件
--   _/usr/lib_: 动态库
--   _/usr/share/doc_: 用户文档
--   _/usr/share/man_: 帮助文档
+- _/etc_: 配置文件
+- _/usr/bin_: 可执行文件
+- _/usr/lib_: 动态库
+- _/usr/share/doc_: 用户文档
+- _/usr/share/man_: 帮助文档
 
 ## Get Started
 
@@ -62,16 +64,16 @@ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2
 Relative commands are shown as follows:
 
 ```shell
-$ /bin/systemctl start <service>
-$ service <service> status
-$ /bin/systemctl enable <service> # start at startup
+/bin/systemctl start <service>
+service <service> status
+/bin/systemctl enable <service> # start at startup
 ```
 
 ## User and Privilege
 
--   `id` show ids
--   `useradd` add a new user
--   `passwd [username]` change password for users
+- `id` show ids
+- `useradd` add a new user
+- `passwd [username]` change password for users
 
 ## Files and Directories Management
 
@@ -85,27 +87,27 @@ Use _-help_ to list some options of the command or use _man_/_info_ commands to 
 
 #### Directory
 
--   `cd` change directory
--   `pwd` print working directory
--   `mkdir` make a directory by a level. Append _-p_ after the command if recursion is required.
--   `rmdir` remove an empty directory by a level. Append _-p_ if recursion is required.
+- `cd` change directory
+- `pwd` print working directory
+- `mkdir` make a directory by a level. Append _-p_ after the command if recursion is required.
+- `rmdir` remove an empty directory by a level. Append _-p_ if recursion is required.
 
 #### Operator
 
--   `ls` list
--   `cp` copy
--   `rm` remove
--   `mv` move
+- `ls` list
+- `cp` copy
+- `rm` remove
+- `mv` move
 
 #### Text Document
 
--   `cat` concatenate content of file
--   `tac` concatenate content in reverse direction
--   `nl` print with line numbers
--   `more` print one page. Click _Space_ to next page or _Enter_ to next line.
--   `less` familiar to `more`
--   `head` defaults to the first 10 lines
--   `tail` familiar to `head`
+- `cat` concatenate content of file
+- `tac` concatenate content in reverse direction
+- `nl` print with line numbers
+- `more` print one page. Click _Space_ to next page or _Enter_ to next line.
+- `less` familiar to `more`
+- `head` defaults to the first 10 lines
+- `tail` familiar to `head`
 
 ### Upload and Download
 
@@ -150,5 +152,5 @@ DNS2=<dns2>
 
 ## 参考
 
--   [Linux 教程 | 菜鸟教程](https://www.runoob.com/linux/linux-tutorial.html)
--   鸟哥的 Linux 私房菜.
+- [Linux 教程 | 菜鸟教程](https://www.runoob.com/linux/linux-tutorial.html)
+- 鸟哥的 Linux 私房菜.

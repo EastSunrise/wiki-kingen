@@ -1,39 +1,6 @@
-## 概述
+# Git
 
 [Git](https://git-scm.com/) 是一个开源的分布式版本控制系统。
-
-## .gitignore
-
-### 原则
-
-1. 忽略系统自动生成的文件，例如 `.idea` 目录；
-2. 忽略编译生成的文件，例如 `.class` 文件；
-3. 忽略包含私有信息的文件，例如包含密码或 `token` 的配置文件。
-
-### 语法
-
-1. `#` 开头为注释行;
-2. An optional prefix `!` which negates the pattern. **It is not possible to re-include a file if a parent directory of that file is excluded.**
-3. The slash `/` is used as the directory separator.
-4. If there is a separator `/` at the end of the pattern then the pattern will only match directories.
-5. `**` matches multi-directories.
-6. `?` and `[]` are the same as those in regular expression.
-
-For example:
-
-1. `/dir` to ignore the whole directory
-2. `*.zip` to ignore all the files ending with '.zip'
-3. `/dir/main.txt` to ignore the specified file
-4. `!/dir/main.txt` not to ignore the file
-
-### 注意事项
-
-**Files already tracked by Git are not affected.** To stop tracking a file that is currently tracked, use `git rm --cached`.
-
-```shell
-$ git rm -r --cached target
-$ git commit -m '.gitignore'
-```
 
 ## 配置 SSH
 
@@ -52,7 +19,87 @@ ssh -T git@github.com # 测试是否成功
 git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
 ```
 
+## 分支和合并
+
+### branch
+
+```sh
+# 创建分支
+git branch dev
+
+# 查看分支
+git branch
+
+# 合并 dev 分支至 master 分支
+git checkout master
+git merge dev
+
+# 删除分支
+git branch -d dev
+```
+
+### checkout
+
+```sh
+# 切换分支
+git checkout dev
+# 不存在时创建
+git checkout -b dev
+```
+
+### stash
+
+```sh
+# 暂存修改至当前分支
+git stash
+# 或
+git stash save "description"
+
+# 查看所有暂存
+git stash list
+# 查看指定暂存详情
+git stash show stash@{1}
+
+# 恢复最新的暂存
+git stash [pop|apply]
+# 恢复指定的暂存
+git stash [pop|apply] stash@{1}
+
+# 清理所有暂存
+git stash clear
+# 清理指定暂存
+git stash drop stash@{1}
+```
+
+## .gitignore
+
+### 原则
+
+1. 忽略系统自动生成的文件，例如 `.idea` 目录；
+2. 忽略编译生成的文件，例如 `.class` 文件；
+3. 忽略包含私有信息的文件，例如包含密码或 `token` 的配置文件。
+
+### 语法
+
+1. `#` 开头为注释行;
+2. `!` 把指定文件排除 `.gitignore` 规则之外；
+3. `/` 为目录分隔符；
+4. 以 `/` 结尾将仅匹配目录；
+5. `**` 匹配多级目录；
+6. `?` 和 `[]` 用法和正则表达式相同。
+
+> 目录被排除后，无法包含其中单个文件。
+>
+> 已被 Git 控制的文件不受 `.gitignore` 影响，可以使用命令 `git rm -r --cached target` 移除控制。
+
+例如:
+
+- `/dir` 忽略整个目录
+- `*.zip` 忽略所有 `.zip` 文件
+- `/dir/main.txt` 忽略指定文件
+- `!/dir/main.txt` 不会忽略该文件
+
 ## 参考
 
--   [官方文档](https://git-scm.com/doc)
--   [Git 教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600)
+- [Git - Documentation](https://git-scm.com/doc)
+- [Git 教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600)

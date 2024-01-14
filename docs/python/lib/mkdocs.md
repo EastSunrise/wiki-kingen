@@ -1,3 +1,5 @@
+# Mkdocs
+
 ## 安装
 
 ### Ubuntu
@@ -23,9 +25,35 @@ mkdocs new my-wiki
 
 目录结构如下：
 
--   _docs_：保存 Markdown 文件
-    -   _index.md_：默认首页文件
--   _mkdocs.yml_：配置文件，详见[配置](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/user-guide/configuration/)
+- _docs_：保存 Markdown 文件
+  - _index.md_：默认首页文件
+- _mkdocs.yml_：配置文件
+
+## 配置
+
+详见[配置](https://www.mkdocs.org/user-guide/configuration/)
+
+```yaml title="mkdocs.yml"
+site_name: Site Name
+site_author: author
+site_dir: site
+docs_dir: docs
+remote_branch: gh-deploy
+dev_addr: 127.0.0.1:4000 # 调试地址及端口
+theme:
+  name: material # 主题
+  language: zh
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+markdown_extensions:
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          percent_encode: true # 支持Unicode字符%编码
+use_directory_urls: false
+nav:
+  - Home: index.md
+```
 
 ## 预览
 
@@ -43,7 +71,7 @@ mkdocs serve
 
 ```yaml
 nav:
-    - Example: example.md
+  - Example: example.md
 ```
 
 ## 生成站点
@@ -54,14 +82,14 @@ mkdocs build
 
 根目录下即会创建 _site_ 目录，包含输出的文件：
 
--   _site_
-    -   _css_
-    -   _fonts_
-    -   _img_
-    -   _js_
-    -   _index.html_：_index.md_
-    -   _example_
-        -   _index.html_：_example.md_
+- _site_
+  - _css_
+  - _fonts_
+  - _img_
+  - _js_
+  - _index.html_：_index.md_
+  - _example_
+    - _index.html_：_example.md_
 
 ## 发布
 
@@ -85,7 +113,7 @@ mkdocs gh-deploy
 
 ## 主题
 
-### mkdocs-material
+### Material for MkDocs
 
 ```shell
 pip install mkdocs-material
@@ -93,14 +121,15 @@ pip install mkdocs-material
 
 ## 其他 WiKi
 
--   [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
--   [DokuWiki](https://www.dokuwiki.org/dokuwiki)
--   [minDoc](https://github.com/lifei6671/mindoc)
--   [Gitbook](https://www.gitbook.com/)
--   [Docsify](https://docsify.js.org/)
--   [Hexo](https://hexo.io/)
+- [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
+- [DokuWiki](https://www.dokuwiki.org/dokuwiki)
+- [minDoc](https://github.com/lifei6671/mindoc)
+- [Gitbook](https://www.gitbook.com/)
+- [Docsify](https://docsify.js.org/)
+- [Hexo](https://hexo.io/)
 
 ## 参考
 
--   [MkDocs](https://www.mkdocs.org/)
--   [MkDocs 中文文档](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/)
+- [MkDocs](https://www.mkdocs.org/)
+- [MkDocs 中文文档](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/)
+- [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)

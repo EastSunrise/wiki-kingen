@@ -1,12 +1,11 @@
-site_name: wiki-kingen
-site_author: kingen
-site_dir: site
-docs_dir: docs
-repo_name: GitHub
+site_name: Wiki-Kingen
+site_author: Kingen
+site_url: https://eastsunrise.github.io/wiki-kingen/
 repo_url: https://github.com/eastsunrise/wiki-kingen/
+repo_name: GitHub
 edit_uri: edit/master/docs
-remote_branch: gh-deploy
-dev_addr: 127.0.0.1:14000
+use_directory_urls: false
+dev_addr: 127.0.0.1:4000
 theme:
   name: material
   language: zh
@@ -30,10 +29,6 @@ extra_css:
   - static/css/material.css
   - static/css/katex.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css
-# plugins:
-#   - git-revision-date-localized:
-#       type: iso_datetime
-use_directory_urls: false
 markdown_extensions:
   - abbr
   - admonition
@@ -44,6 +39,9 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          percent_encode: true
   - tables
   - pymdownx.arithmatex:
       generic: true
@@ -148,7 +146,8 @@ nav:
       - References: dev/references.md
       - 数据库:
           - MySQL:
-              - MySQL: dev/db/mysql/index.md
+              - 开始: dev/db/mysql/mysql.md
+              - SQL: dev/db/mysql/sql.md
               - FAQ: dev/db/mysql/faq.md
           - Oracle:
               - Oracle: dev/db/oracle/index.md

@@ -1,10 +1,8 @@
-- [x] TODO
+# MySQL
 
-#### Overview
+[MySQL](https://www.mysql.com/) 是最流行的关系型数据库管理系统之一。
 
-Learn [MySQL](https://www.mysql.com/). Here are the [documentations](https://dev.mysql.com/doc/) and [Chinese version](https://www.mysqlzh.com/) .
-
-#### Installation
+## 安装
 
 See more details [here](https://dev.mysql.com/doc/refman/5.7/en/installing.html).
 
@@ -27,7 +25,7 @@ $ yum-config-manager --disable mysql80-community
 $ yum-config-manager --enable mysql57-community
 ```
 
-If `yum-config-manager` is not found, install the command from *yum-utils* with `yum install yum-utils`. Or edit manually the */etc/yum.repos.d/mysql-community.repo* file to change the release series. Just find the entry of the subrepository and then modify the value of property *enabled*.
+If `yum-config-manager` is not found, install the command from _yum-utils_ with `yum install yum-utils`. Or edit manually the _/etc/yum.repos.d/mysql-community.repo_ file to change the release series. Just find the entry of the subrepository and then modify the value of property _enabled_.
 
 Now, install MySQL and then start the MySQL server.
 
@@ -53,7 +51,7 @@ mysql> alter user 'root'@'localhost' identified by '<new password>'; # change th
 
 ##### Verification
 
-Check the version information of installed MySQL server and global variables. Append `-uroot -p` to connect as *root* if necessary.
+Check the version information of installed MySQL server and global variables. Append `-uroot -p` to connect as _root_ if necessary.
 
 ```shell
 $ mysqladmin version
@@ -62,7 +60,7 @@ $ mysqladmin variables
 
 ##### Remote Connection
 
-*SSH* is recommended. To connect not through *SSH*, update the table *mysql.user* to add hosts to a specific user. Open the port of firewall if needed.
+_SSH_ is recommended. To connect not through _SSH_, update the table _mysql.user_ to add hosts to a specific user. Open the port of firewall if needed.
 
 ```sql
 grant <priv1，priv2...> on <database>.<table> to <user>@'<host/ip>' identified by '<password>';
@@ -75,4 +73,8 @@ flush privileges; -- flush tables related to privileges
 
 #### Configuration
 
-Edit the configuration file */etc/my.cnf* or */etc/mysql/my.cnf*.
+Edit the configuration file _/etc/my.cnf_ or _/etc/mysql/my.cnf_.
+
+## 参考
+
+- [MySQL Documentation](https://dev.mysql.com/doc/)
