@@ -1,17 +1,17 @@
-## 问题
+# 排序
 
 给定一个数组 $A[0..n-1]$，其中 $n$ 为数组的长度，将其从小到大排序。
 
 ## 排序算法
 
--   [Selection Sort](https://www.geeksforgeeks.org/selection-sort/)
--   [Bubble Sort](https://www.geeksforgeeks.org/bubble-sort/)
--   [插入排序](insertion-sort.md)
--   [归并排序](merge-sort.md)
--   [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
--   [堆排序](../../data-structure/heap.md#_4)
--   [Counting Sort](https://www.geeksforgeeks.org/counting-sort/)
--   [Radix Sort](https://www.geeksforgeeks.org/radix-sort/)
--   [Bucket Sort](/wiki-kingen-en/cs/algorithms/sort/bucket-sort.html)
--   [Topological Sort](https://www.geeksforgeeks.org/topological-sorting/)
--   [Shell Sort](https://www.geeksforgeeks.org/shellsort/)
+- [选择排序](selection-sort.md)
+- [冒泡排序](bubble-sort.md)
+- [插入排序](insertion-sort.md)
+- [归并排序](merge-sort.md)
+- [快速排序](quick-sort.md)
+- [堆排序](../../data-structure/heap.md#堆排序)
+- [计数排序](counting-sort.md)
+- [Radix Sort](https://www.geeksforgeeks.org/radix-sort/)
+- [桶排序](bucket-sort.md)
+- [Topological Sort](https://www.geeksforgeeks.org/topological-sorting/)
+- [Shell Sort](https://www.geeksforgeeks.org/shellsort/)

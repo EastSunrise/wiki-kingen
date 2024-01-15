@@ -95,8 +95,12 @@ nav:
           - 算法: cs/algorithm/index.md
           - 排序:
               - 排序: cs/algorithm/sort/index.md
+              - 选择排序: cs/algorithm/sort/selection-sort.md
+              - 冒泡排序: cs/algorithm/sort/bubble-sort.md
               - 插入排序: cs/algorithm/sort/insertion-sort.md
               - 归并排序: cs/algorithm/sort/merge-sort.md
+              - 快速排序: cs/algorithm/sort/quick-sort.md
+              - 计数排序: cs/algorithm/sort/counting-sort.md
           - 分治算法: cs/algorithm/divide-and-conquer.md
           - 动态规划: cs/algorithm/dynamic-programming.md
           - 贪心算法: cs/algorithm/greedy-algorithm.md
@@ -146,7 +150,7 @@ nav:
       - References: dev/references.md
       - 数据库:
           - MySQL:
-              - 开始: dev/db/mysql/mysql.md
+              - MySQL: dev/db/mysql/index.md
               - SQL: dev/db/mysql/sql.md
               - FAQ: dev/db/mysql/faq.md
           - Oracle:

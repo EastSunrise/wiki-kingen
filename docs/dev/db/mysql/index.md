@@ -40,7 +40,7 @@ yum-config-manager --disable mysql80-community
 yum-config-manager --enable mysql57-community
 ```
 
-> 如果找不到 `yum-config-manager` 命令，执行 `yum install yum-utils` 来安装 *yum-utils* 工具。
+> 如果找不到 `yum-config-manager` 命令，执行 `yum install yum-utils` 来安装 _yum-utils_ 工具。
 
 最后执行安装即可，
 
@@ -55,7 +55,7 @@ systemctl start mysqld
 
 ### 远程连接
 
-修改配置文件 */etc/my.cnf* 或 */etc/mysql/my.cnf*，
+修改配置文件 _/etc/my.cnf_ 或 _/etc/mysql/my.cnf_，
 
 ```txt
 bind-address = 0.0.0.0
