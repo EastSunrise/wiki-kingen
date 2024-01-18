@@ -28,5 +28,5 @@
 
 ## 参考
 
-- 算法导论. 原书第 3 版. 第 7 章.
+- Cormeo T H, et al. 算法导论. 原书第 3 版. 第 7 章.
 - [Quick Sort - GeeksforGeeks](https://www.geeksforgeeks.org/quick-sort/)

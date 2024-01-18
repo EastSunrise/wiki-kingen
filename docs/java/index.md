@@ -1,4 +1,4 @@
-## 概述
+# Java
 
 学习世界上最好的编程语言—— [Java](https://www.oracle.com/java/)！本文档基于 ~~[Java 8](https://docs.oracle.com/javase/8/)~~ ~~[Java 11](https://docs.oracle.com/en/java/javase/11/)~~ [Java 17](https://docs.oracle.com/en/java/javase/17/).
 
@@ -8,7 +8,8 @@
 
 ```ini
 JAVA_HOME=%dir%\jdk_version
-path=.;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;	# Linux使用":"分割
+# Linux使用":"分割
+path=.;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
 
 # 如果同时安装多个版本
 JAVA_HOME=%JAVA_HOME17% # 指定当前版本
@@ -24,10 +25,12 @@ JAVA_HOME17=/path/to/jdk17
 ### 函数式接口和 Lambda 表达式
 
 ```java
-Runnable runnable = () -> System.out.println("lambda without arguments and return value");
-Supplier<String> supplier = () -> "lambda with return value";
-Consumer<String> consumer = str -> System.out.println("lambda with an argument");
-Function<String, String> function = str -> "lambda with an argument and return value";
+void example() {
+	Runnable runnable = () -> System.out.println("lambda without arguments and return value");
+	Supplier<String> supplier = () -> "lambda with return value";
+	Consumer<String> consumer = str -> System.out.println("lambda with an argument");
+	Function<String, String> function = str -> "lambda with an argument and return value";
+}
 ```
 
 ### Stream API
@@ -35,22 +38,27 @@ Function<String, String> function = str -> "lambda with an argument and return v
 通过 Stream API 流式处理集合和数组等数据结构。
 
 ```java
-Arrays.asList(1, 2, 3, 4, 5).stream()
-	.filter(num -> num % 2 == 0)
-	.map(num -> num * 2)
-	.forEach(System.out::println);
+void example() {
+	Arrays
+		.asList(1, 2, 3, 4, 5).stream()
+		.filter(num -> num % 2 == 0)
+		.map(num -> num * 2)
+		.forEach(System.out::println);
+}
 ```
 
 ### Optional
 
 ```java
-String str = Optional.of("optional string").orElse(null);
+void example() {
+	String str = Optional.of("optional string").orElse(null);
+}
 ```
 
 ### 接口 static 和 default 方法
 
 ```java
-public interface Example {
+interface Example {
 
 	static void staticFunc() {
 		System.out.println("static function");
@@ -65,12 +73,14 @@ public interface Example {
 ### JSR 310 日期和时间
 
 ```java
-LocalDate date = LocalDate.of(2000, 1, 1);
-LocalTime time = LocalTime.of(12, 0, 0);
-LocalDateTime dateTime = LocalDateTime.of(date, time);
-Period period = Period.of(1, 1, 1);
-Duration duration = Duration.of(100, ChronoUnit.HOURS);
-Instant instant = dateTime.toInstant(ZoneOffset.ofHours(8));
+void example() {
+	LocalDate date = LocalDate.of(2000, 1, 1);
+	LocalTime time = LocalTime.of(12, 0, 0);
+	LocalDateTime dateTime = LocalDateTime.of(date, time);
+	Period period = Period.of(1, 1, 1);
+	Duration duration = Duration.of(100, ChronoUnit.HOURS);
+	Instant instant = dateTime.toInstant(ZoneOffset.ofHours(8));
+}
 ```
 
 ## Java 11 新特性
@@ -82,7 +92,7 @@ Instant instant = dateTime.toInstant(ZoneOffset.ofHours(8));
 ### 接口 private 方法
 
 ```java
-public interface Example {
+interface Example {
 
 	private static void staticFunc() {
 		System.out.println("private static function");
@@ -96,8 +106,10 @@ public interface Example {
 
 ### 局部变量类型推断
 
-```
-var a = "Hello World";
+```java
+void example() {
+	var a = "Hello World";
+}
 ```
 
 > 这种推断仅仅发生在编译期，非动态推断。
@@ -105,10 +117,12 @@ var a = "Hello World";
 ### HttpClient
 
 ```java
-HttpClient client=HttpClient.newHttpClient();
-HttpRequest request = HttpRequest.newBuilder().GET().uri(new URI("https://baidu.com")).build();
-HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-System.out.println(response.body());
+void example() {
+	HttpClient client = HttpClient.newHttpClient();
+	HttpRequest request = HttpRequest.newBuilder().GET().uri(new URI("https://baidu.com")).build();
+	HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+	System.out.println(response.body());
+}
 ```
 
 ## Java 17 新特性
@@ -116,7 +130,7 @@ System.out.println(response.body());
 ### switch 语法
 
 ```java
-public String evaluate(int score) {
+String evaluate(int score) {
 	return switch (score) {
 		case 5 -> "A";
 		case 4 -> "B";
@@ -174,10 +188,10 @@ public class D extends C {}
 
 ## 参考
 
--   [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
--   [JDK 11 Documentation](https://docs.oracle.com/en/java/javase/11/)
--   [Java Platform, Standard Edition (Java SE) 8](https://docs.oracle.com/javase/8/)
--   [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/index.html)
--   [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/index.html)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/tutorial/index.html)
--   Java 核心技术 10. 卷 I & 卷 II.
+- [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
+- [JDK 11 Documentation](https://docs.oracle.com/en/java/javase/11/)
+- [Java Platform, Standard Edition (Java SE) 8](https://docs.oracle.com/javase/8/)
+- [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/index.html)
+- [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/index.html)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/tutorial/index.html)
+- Java 核心技术 10. 卷 I & 卷 II.

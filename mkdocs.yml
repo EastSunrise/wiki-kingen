@@ -1,33 +1,43 @@
 site_name: Wiki-Kingen
 site_author: Kingen
 site_url: https://eastsunrise.github.io/wiki-kingen/
-repo_url: https://github.com/eastsunrise/wiki-kingen/
 repo_name: GitHub
+repo_url: https://github.com/eastsunrise/wiki-kingen/
 edit_uri: edit/master/docs
 use_directory_urls: false
 dev_addr: 127.0.0.1:4000
 theme:
   name: material
   language: zh
+  custom_dir: static
   logo: assets/images/Ceil.png
   favicon: assets/images/favicon.ico
   palette:
-    scheme: slate # 深色模式
+    scheme: slate
     primary: indigo
     accent: indigo
   features:
     - navigation.indexes
     - toc.follow
     - navigation.top
+    - content.code.copy
   icon:
     repo: fontawesome/brands/github
+extra:
+  alternate:
+    - name: 中文
+      link: /wiki-kingen/
+      lang: zh
+    - name: English
+      link: /wiki-kingen-en/
+      lang: en
 extra_javascript:
-  - static/js/kingen.js
-  - static/js/katex.js
+  - js/kingen.js
+  - js/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js
 extra_css:
-  - static/css/material.css
-  - static/css/katex.css
+  - css/material.css
+  - css/katex.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css
 markdown_extensions:
   - abbr
@@ -37,12 +47,12 @@ markdown_extensions:
   - footnotes
   - meta
   - md_in_html
+  - tables
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           percent_encode: true
-  - tables
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -50,15 +60,15 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -101,6 +111,7 @@ nav:
               - 归并排序: cs/algorithm/sort/merge-sort.md
               - 快速排序: cs/algorithm/sort/quick-sort.md
               - 计数排序: cs/algorithm/sort/counting-sort.md
+              - 桶排序: cs/algorithm/sort/bucket-sort.md
           - 分治算法: cs/algorithm/divide-and-conquer.md
           - 动态规划: cs/algorithm/dynamic-programming.md
           - 贪心算法: cs/algorithm/greedy-algorithm.md

@@ -13,13 +13,13 @@ Linux 是一种开源的类 Unix 操作系统，包括许多不同的版本，�
 使用 [XShell](https://www.netsarang.com/zh/xshell-download/) 可以通过 **SSH**（Linux 通常自带 SSH）远程连接 Linux 服务器。查看 SSH 状态：`service sshd status`，如果没有，可以按照如下命令安装：
 
 ```bash
-yum install openssh-server	# 安装 SSH
-vim /etc/ssh/ssh_config	 # 编辑配置文件
-/bin/systemctl start sshd.service  # 启动 SSH 服务
+yum install openssh-server  # 安装 SSH
+vim /etc/ssh/ssh_config     # 编辑配置文件
+/bin/systemctl start sshd.service   # 启动 SSH 服务
 /bin/systemctl enable sshd.service  # 开机自启动
 ```
 
-大部分的远程连接（比如 [MySQL](db/mysql/mysql.md) 和 [Redis](db/redis.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
+大部分的远程连接（比如 [MySQL](db/mysql/index.md) 和 [Redis](db/redis.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
 
 ### 镜像
 
@@ -124,7 +124,7 @@ The service name is **firewalld** and the command is **firewall-cmd**.
 Open the specific port when remote connections are refused.
 
 ```shell
-$ firewall-cmd --zone=public --add-port=<port/tcp> [--permanent]
+firewall-cmd --zone=public --add-port=<port/tcp> [--permanent]
 ```
 
 ## FAQ

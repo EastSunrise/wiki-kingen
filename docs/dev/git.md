@@ -13,11 +13,11 @@ ssh-add id_rsa # 将私钥加入到ssh代理中，如果失败需先启动ssh-ag
 ssh -T git@github.com # 测试是否成功
 ```
 
-如果`git clone`失败，尝试执行以下命令，配置 Git 使用系统 SSH 而非自带的 SSH.
-
-```shell
-git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
-```
+???+ note
+    如果`git clone`失败，尝试执行以下命令，配置 Git 使用系统 SSH 而非自带的 SSH.
+    ```shell
+    git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
+    ```
 
 ## 分支和合并
 
