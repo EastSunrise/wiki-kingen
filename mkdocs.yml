@@ -89,9 +89,14 @@ nav:
       - java/index.md
       - 基础语法:
           - Annotation: java/basic/annotation.md
+          - Collection: java/basic/collection.md
       - 扩展库:
           - Apache Commons: java/lib/apache-commons.md
+          - Apache POI: java/lib/apache-poi.md
+          - HttpComponents: java/lib/http-components.md
           - Lombok: java/lib/lombok.md
+          - Fastjson: java/lib/fastjson.md
+          - Jsoup: java/lib/jsoup.md
       - 设计模式:
           - 状态模式: java/design-pattern/state-pattern.md
           - 单例模式: java/design-pattern/singleton-pattern.md
@@ -101,6 +106,10 @@ nav:
           - Transaction: java/spring/transaction.md
           - Actuator: java/spring/actuator.md
       - MyBatis: java/mybatis.md
+      - Tomcat: java/tomcat.md
+      - Maven: java/maven.md
+      - Freemarker: java/freemarker.md
+      - OGNL: java/ognl.md
       - Quarkus: java/quarkus.md
   - CS:
       - 数学:
@@ -109,7 +118,7 @@ nav:
           - 线性代数: cs/math/linear-algebra.md
           - 傅里叶变换: cs/math/fourier-transform.md
       - 算法:
-          - 算法: cs/algo/index.md
+          - cs/algo/index.md
           - 排序:
               - cs/algo/sort/index.md
               - 选择排序: cs/algo/sort/selection-sort.md
@@ -127,7 +136,7 @@ nav:
           - 模式匹配:
               - KMP 算法: cs/algo/pattern-searching/kmp-algorithm.md
               - BM 算法: cs/algo/pattern-searching/bm-algorithm.md
-              - Sunday算法: cs/algo/pattern-searching/sunday-algorithm.md
+              - Sunday 算法: cs/algo/pattern-searching/sunday-algorithm.md
           - 密钥算法:
               - RSA: cs/algo/crypto/rsa.md
               - SHA: cs/algo/crypto/sha.md
@@ -142,6 +151,7 @@ nav:
       - 数据结构:
           - cs/ds/index.md
           - 二叉树: cs/ds/binary-tree.md
+          - 二叉搜索树: cs/ds/binary-search-tree.md
           - 堆: cs/ds/heap.md
           - 线段树: cs/ds/segment-tree.md
           - 红黑树: cs/ds/red-black-tree.md
@@ -149,28 +159,55 @@ nav:
           - 并查集: cs/ds/disjoint-set.md
           - 跳表: cs/ds/skip-list.md
       - 机器学习:
-          - 机器学习: cs/ml/index.md
+          - cs/ml/index.md
           - 神经网络: cs/ml/neural-networks.md
           - 卷积神经网络: cs/ml/convolutional-neural-networks.md
+      - Problem:
+          - 逆序对: cs/problem/inversion-pairs.md
   - Python:
-      - Python: python/index.md
+      - py/index.md
       - 标准库:
+          - 文件和目录访问:
+              - shutil: py/lib/shutil.md
+          - 数据持久化:
+              - sqlite3: py/lib/sqlite3.md
+          - 文件格式:
+              - configParser: py/lib/configparser.md
           - 加密服务:
-              - hashlib: python/lib/hashlib.md
+              - hashlib: py/lib/hashlib.md
+          - 操作系统服务:
+              - logging: py/lib/logging.md
+          - 互联网协议和支持:
+              - urllib: py/lib/urllib.md
+          - GUI: 
+              - tkinter: py/lib/tkinter.md
       - 扩展库:
-          - MkDocs: python/lib/mkdocs.md
-      - Numpy: python/numpy.md
-      - Pandas: python/pandas.md
-      - Matplotlib: python/matplotlib.md
+          - BeautifulSoup: py/lib/bs4.md
+          - PyMySQL: py/lib/pymysql.md
+          - PyYAML: py/lib/pyyaml.md
+          - PyWin32: py/lib/pywin32.md
+          - MkDocs: py/lib/mkdocs.md
+      - 应用:
+          - 爬虫: py/app/spider.md
+          - 任务: py/app/task.md
+          - Excel: py/app/excel.md
+      - Numpy: py/numpy.md
+      - Pandas: py/pandas.md
+      - Matplotlib: py/matplotlib.md
+      - Flask: py/flask.md
   - Development:
       - References: dev/references.md
+      - API:
+          - 豆瓣: dev/api/douban.md
+          - 酷狗: dev/api/kugou.md
+          - 英雄联盟: dev/api/lol.md
       - 数据库:
           - MySQL:
-              - MySQL: dev/db/mysql/index.md
+              - dev/db/mysql/index.md
               - SQL: dev/db/mysql/sql.md
               - FAQ: dev/db/mysql/faq.md
           - Oracle:
-              - Oracle: dev/db/oracle/index.md
+              - dev/db/oracle/index.md
               - SQL: dev/db/oracle/sql.md
           - Redis: dev/db/redis.md
           - InfluxDB: dev/db/influxdb.md
@@ -178,12 +215,14 @@ nav:
           - SQLite: dev/db/sqlite.md
       - Web:
           - JavaScript:
-              - JavaScript: dev/web/js/index.md
+              - dev/web/js/index.md
               - jQuery: dev/web/js/jquery.md
               - Node.js: dev/web/js/nodejs.md
               - React: dev/web/js/react.md
               - Layui: dev/web/js/layui.md
-          - Bootstrap: dev/web/bootstrap.md
+              - Select2: dev/web/js/select2.md
+          - CSS:
+              - Bootstrap: dev/web/css/bootstrap.md
       - Languages:
           - Go: dev/lang/go.md
           - C Language: dev/lang/c.md
@@ -198,10 +237,12 @@ nav:
       - FTP: dev/ftp.md
       - OAuth: dev/oauth.md
       - FasfDFS: dev/fastdfs.md
+      - MinIO: dev/minio.md
       - MQTT: dev/mqtt.md
   - Misc:
       - ChatGPT: misc/chatgpt.md
       - Activation: misc/activation.md
+      - Wiki: misc/wiki.md
       - LaTeX: misc/latex.md
       - Markdown: misc/markdown.md
       - Chrome: misc/chrome.md
