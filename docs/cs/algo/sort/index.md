@@ -9,7 +9,7 @@
 - [插入排序](insertion-sort.md)
 - [归并排序](merge-sort.md)
 - [快速排序](quick-sort.md)
-- [堆排序](../../data-structure/heap.md#堆排序)
+- [堆排序](../../ds/heap.md#堆排序)
 - [计数排序](counting-sort.md)
 - [Radix Sort](https://www.geeksforgeeks.org/radix-sort/)
 - [桶排序](bucket-sort.md)

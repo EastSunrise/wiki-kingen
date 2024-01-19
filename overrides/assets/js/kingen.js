@@ -6,11 +6,6 @@ for (let a of document.getElementsByTagName("a")) {
   }
 }
 
-// replace footers of mkdocs
-for (let footer of document.getElementsByTagName("footer")) {
-  footer.remove();
-}
-
 let currentRoot = null;
 for (let a of document.getElementsByClassName("md-select__link")) {
   if (a.getAttribute("hreflang") === document.documentElement.lang) {

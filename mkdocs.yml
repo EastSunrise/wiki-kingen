@@ -1,7 +1,6 @@
 site_name: Wiki-Kingen
 site_author: Kingen
 site_url: https://eastsunrise.github.io/wiki-kingen/
-repo_name: GitHub
 repo_url: https://github.com/eastsunrise/wiki-kingen/
 edit_uri: edit/master/docs
 use_directory_urls: false
@@ -9,21 +8,28 @@ dev_addr: 127.0.0.1:4000
 theme:
   name: material
   language: zh
-  custom_dir: static
+  custom_dir: overrides
   logo: assets/images/Ceil.png
   favicon: assets/images/favicon.ico
   palette:
-    scheme: slate
+    # scheme: slate
     primary: indigo
     accent: indigo
   features:
+    - navigation.tabs
+    - navigation.sections
     - navigation.indexes
-    - toc.follow
     - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
     - content.code.copy
+    - content.action.view
+    - content.action.edit
   icon:
     repo: fontawesome/brands/github
 extra:
+  generator: false
   alternate:
     - name: 中文
       link: /wiki-kingen/
@@ -32,13 +38,16 @@ extra:
       link: /wiki-kingen-en/
       lang: en
 extra_javascript:
-  - js/kingen.js
-  - js/katex.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.js
+  - assets/js/kingen.js
+  - assets/js/katex.js
+  - assets/js/katex.min.js
 extra_css:
-  - css/material.css
-  - css/katex.css
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css
+  - assets/css/material-custom.css
+  - assets/css/katex.min.css
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: iso_date
 markdown_extensions:
   - abbr
   - admonition
@@ -56,12 +65,11 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
-      smart_enable: all
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -78,7 +86,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Java:
-      - Java: java/index.md
+      - java/index.md
       - 基础语法:
           - Annotation: java/basic/annotation.md
       - 扩展库:
@@ -88,11 +96,10 @@ nav:
           - 状态模式: java/design-pattern/state-pattern.md
           - 单例模式: java/design-pattern/singleton-pattern.md
       - Spring:
-          - Spring: java/spring/index.md
+          - java/spring/index.md
           - AOP: java/spring/aop.md
           - Transaction: java/spring/transaction.md
-      - Spring Boot:
-          - Actuator: java/spring-boot/actuator.md
+          - Actuator: java/spring/actuator.md
       - MyBatis: java/mybatis.md
       - Quarkus: java/quarkus.md
   - CS:
@@ -102,51 +109,49 @@ nav:
           - 线性代数: cs/math/linear-algebra.md
           - 傅里叶变换: cs/math/fourier-transform.md
       - 算法:
-          - 算法: cs/algorithm/index.md
+          - 算法: cs/algo/index.md
           - 排序:
-              - 排序: cs/algorithm/sort/index.md
-              - 选择排序: cs/algorithm/sort/selection-sort.md
-              - 冒泡排序: cs/algorithm/sort/bubble-sort.md
-              - 插入排序: cs/algorithm/sort/insertion-sort.md
-              - 归并排序: cs/algorithm/sort/merge-sort.md
-              - 快速排序: cs/algorithm/sort/quick-sort.md
-              - 计数排序: cs/algorithm/sort/counting-sort.md
-              - 桶排序: cs/algorithm/sort/bucket-sort.md
-          - 分治算法: cs/algorithm/divide-and-conquer.md
-          - 动态规划: cs/algorithm/dynamic-programming.md
-          - 贪心算法: cs/algorithm/greedy-algorithm.md
-          - 回溯算法: cs/algorithm/backtracking.md
-          - 分支界定: cs/algorithm/branch-and-bound.md
+              - cs/algo/sort/index.md
+              - 选择排序: cs/algo/sort/selection-sort.md
+              - 冒泡排序: cs/algo/sort/bubble-sort.md
+              - 插入排序: cs/algo/sort/insertion-sort.md
+              - 归并排序: cs/algo/sort/merge-sort.md
+              - 快速排序: cs/algo/sort/quick-sort.md
+              - 计数排序: cs/algo/sort/counting-sort.md
+              - 桶排序: cs/algo/sort/bucket-sort.md
+          - 分治算法: cs/algo/divide-and-conquer.md
+          - 动态规划: cs/algo/dynamic-programming.md
+          - 贪心算法: cs/algo/greedy-algorithm.md
+          - 回溯算法: cs/algo/backtracking.md
+          - 分支界定: cs/algo/branch-and-bound.md
           - 模式匹配:
-              - KMP 算法: cs/algorithm/pattern-searching/kmp-algorithm.md
-              - BM 算法: cs/algorithm/pattern-searching/bm-algorithm.md
-              - Sunday算法: cs/algorithm/pattern-searching/sunday-algorithm.md
+              - KMP 算法: cs/algo/pattern-searching/kmp-algorithm.md
+              - BM 算法: cs/algo/pattern-searching/bm-algorithm.md
+              - Sunday算法: cs/algo/pattern-searching/sunday-algorithm.md
           - 密钥算法:
-              - RSA: cs/algorithm/cryptography/rsa.md
-              - SHA: cs/algorithm/cryptography/sha.md
+              - RSA: cs/algo/crypto/rsa.md
+              - SHA: cs/algo/crypto/sha.md
           - 图论:
-              - 深度优先搜索: cs/algorithm/graph/dfs.md
-              - Dijkstra's 算法: cs/algorithm/graph/dijkstra's-algorithm.md
-              - Tarjan 算法: cs/algorithm/graph/tarjan-algorithm.md
+              - 深度优先搜索: cs/algo/graph/dfs.md
+              - Dijkstra's 算法: cs/algo/graph/dijkstra's-algorithm.md
+              - Tarjan 算法: cs/algo/graph/tarjan-algorithm.md
           - 其它算法:
-              - Knuth 洗牌算法: cs/algorithm/others/knuth-shuffle-algorithm.md
-              - 蒙特卡洛树搜索: cs/algorithm/others/monte-carlo-tree-search.md
-              - 蓄水池抽样算法: cs/algorithm/others/reservoir-sampling.md
+              - Knuth 洗牌算法: cs/algo/others/knuth-shuffle-algorithm.md
+              - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
+              - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
       - 数据结构:
-          - 数据结构: cs/data-structure/index.md
-          - 二叉树: cs/data-structure/binary-tree.md
-          - 堆: cs/data-structure/heap.md
-          - 线段树: cs/data-structure/segment-tree.md
-          - 红黑树: cs/data-structure/red-black-tree.md
-          - 单调栈: cs/data-structure/monotonic-stack.md
-          - 并查集: cs/data-structure/disjoint-set.md
-          - 跳表: cs/data-structure/skip-list.md
+          - cs/ds/index.md
+          - 二叉树: cs/ds/binary-tree.md
+          - 堆: cs/ds/heap.md
+          - 线段树: cs/ds/segment-tree.md
+          - 红黑树: cs/ds/red-black-tree.md
+          - 单调栈: cs/ds/monotonic-stack.md
+          - 并查集: cs/ds/disjoint-set.md
+          - 跳表: cs/ds/skip-list.md
       - 机器学习:
-          - 机器学习: cs/machine-learning/index.md
-          - 神经网络: cs/machine-learning/neural-networks.md
-          - 卷积神经网络: cs/machine-learning/convolutional-neural-networks.md
-      - 常见问题:
-          - 最大子序列和: cs/problem/max-subsequence-sum.md
+          - 机器学习: cs/ml/index.md
+          - 神经网络: cs/ml/neural-networks.md
+          - 卷积神经网络: cs/ml/convolutional-neural-networks.md
   - Python:
       - Python: python/index.md
       - 标准库:

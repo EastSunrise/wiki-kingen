@@ -1,2 +1,4 @@
+Markdown==latest
 mkdocs==latest
 mkdocs-material==latest
+mkdocs-git-revision-date-localized-plugin==latest
