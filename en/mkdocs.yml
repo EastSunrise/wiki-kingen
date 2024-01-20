@@ -1,16 +1,16 @@
 site_name: Wiki-Kingen
 site_author: Kingen
-site_url: https://eastsunrise.github.io/wiki-kingen/
+site_url: https://eastsunrise.github.io/wiki-kingen/en/
 repo_url: https://github.com/eastsunrise/wiki-kingen/
-edit_uri: edit/master/docs
+edit_uri: edit/master/en/docs
 use_directory_urls: false
-dev_addr: 127.0.0.1:4000
+dev_addr: 127.0.0.1:4001
 docs_dir: docs
-site_dir: site
+site_dir: ../site/en
 theme:
   name: material
-  language: zh
-  custom_dir: overrides
+  language: en
+  custom_dir: ../overrides
   logo: assets/images/Ceil.png
   favicon: assets/images/favicon.ico
   palette:
@@ -89,19 +89,19 @@ nav:
   - Home: index.md
   - Java:
       - java/index.md
-      - 基础语法:
+      - Basic Syntax:
           - Annotation: java/basic/annotation.md
           - Collection: java/basic/collection.md
-      - 扩展库:
+      - Extension Libraries:
           - Apache Commons: java/lib/apache-commons.md
           - Apache POI: java/lib/apache-poi.md
           - HttpComponents: java/lib/http-components.md
           - Lombok: java/lib/lombok.md
           - Fastjson: java/lib/fastjson.md
           - Jsoup: java/lib/jsoup.md
-      - 设计模式:
-          - 状态模式: java/design-pattern/state-pattern.md
-          - 单例模式: java/design-pattern/singleton-pattern.md
+      - Design Patterns:
+          - State Pattern: java/design-pattern/state-pattern.md
+          - Singleton Pattern: java/design-pattern/singleton-pattern.md
       - Spring:
           - java/spring/index.md
           - AOP: java/spring/aop.md
@@ -114,84 +114,84 @@ nav:
       - OGNL: java/ognl.md
       - Quarkus: java/quarkus.md
   - CS:
-      - 数学:
-          - 求和公式: cs/math/summation.md
-          - 正态分布: cs/math/normal-distribution.md
-          - 线性代数: cs/math/linear-algebra.md
-          - 傅里叶变换: cs/math/fourier-transform.md
-      - 算法:
+      - Mathematics:
+          - Summation Formula: cs/math/summation.md
+          - Normal Distribution: cs/math/normal-distribution.md
+          - Linear Algebra: cs/math/linear-algebra.md
+          - Fourier Transform: cs/math/fourier-transform.md
+      - Algorithm:
           - cs/algo/index.md
-          - 排序:
+          - Sort:
               - cs/algo/sort/index.md
-              - 选择排序: cs/algo/sort/selection-sort.md
-              - 冒泡排序: cs/algo/sort/bubble-sort.md
-              - 插入排序: cs/algo/sort/insertion-sort.md
-              - 归并排序: cs/algo/sort/merge-sort.md
-              - 快速排序: cs/algo/sort/quick-sort.md
-              - 计数排序: cs/algo/sort/counting-sort.md
-              - 桶排序: cs/algo/sort/bucket-sort.md
-          - 分治算法: cs/algo/divide-and-conquer.md
-          - 动态规划: cs/algo/dynamic-programming.md
-          - 贪心算法: cs/algo/greedy-algorithm.md
-          - 回溯算法: cs/algo/backtracking.md
-          - 分支界定: cs/algo/branch-and-bound.md
-          - 模式匹配:
-              - KMP 算法: cs/algo/pattern-searching/kmp-algorithm.md
-              - BM 算法: cs/algo/pattern-searching/bm-algorithm.md
-              - Sunday 算法: cs/algo/pattern-searching/sunday-algorithm.md
-          - 密钥算法:
+              - Selection Sort: cs/algo/sort/selection-sort.md
+              - Bubble Sort: cs/algo/sort/bubble-sort.md
+              - Insertion Sort: cs/algo/sort/insertion-sort.md
+              - Merge Sort: cs/algo/sort/merge-sort.md
+              - Quick Sort: cs/algo/sort/quick-sort.md
+              - Counting Sort: cs/algo/sort/counting-sort.md
+              - Bucket Sort: cs/algo/sort/bucket-sort.md
+          - Divide and Conquer: cs/algo/divide-and-conquer.md
+          - Dynamic Programming: cs/algo/dynamic-programming.md
+          - Greedy Algorithm: cs/algo/greedy-algorithm.md
+          - Backtracking: cs/algo/backtracking.md
+          - Branch and Bound: cs/algo/branch-and-bound.md
+          - Pattern Searching:
+              - KMP Algorithm: cs/algo/pattern-searching/kmp-algorithm.md
+              - BM Algorithm: cs/algo/pattern-searching/bm-algorithm.md
+              - Sunday Algorithm: cs/algo/pattern-searching/sunday-algorithm.md
+          - Cryptography Algorithm:
               - RSA: cs/algo/crypto/rsa.md
               - SHA: cs/algo/crypto/sha.md
-          - 图论:
-              - 深度优先搜索: cs/algo/graph/dfs.md
-              - Dijkstra's 算法: cs/algo/graph/dijkstra's-algorithm.md
-              - Tarjan 算法: cs/algo/graph/tarjan-algorithm.md
-          - 其它算法:
-              - Knuth 洗牌算法: cs/algo/others/knuth-shuffle-algorithm.md
-              - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
-              - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
-      - 数据结构:
+          - Graph:
+              - DFS: cs/algo/graph/dfs.md
+              - Dijkstra's Algorithm: cs/algo/graph/dijkstra's-algorithm.md
+              - Tarjan Algorithm: cs/algo/graph/tarjan-algorithm.md
+          - Others:
+              - Knuth-Shuffle Algorithm: cs/algo/others/knuth-shuffle-algorithm.md
+              - Monte Carlo Tree Search: cs/algo/others/monte-carlo-tree-search.md
+              - Reservoir Sampling Algorithm: cs/algo/others/reservoir-sampling.md
+      - Data Structure:
           - cs/ds/index.md
-          - 二叉树: cs/ds/binary-tree.md
-          - 二叉搜索树: cs/ds/binary-search-tree.md
-          - 堆: cs/ds/heap.md
-          - 线段树: cs/ds/segment-tree.md
-          - 红黑树: cs/ds/red-black-tree.md
-          - 单调栈: cs/ds/monotonic-stack.md
-          - 并查集: cs/ds/disjoint-set.md
-          - 跳表: cs/ds/skip-list.md
-      - 机器学习:
+          - Binary Tree: cs/ds/binary-tree.md
+          - Binary Search Tree: cs/ds/binary-search-tree.md
+          - Heap: cs/ds/heap.md
+          - Segment Tree: cs/ds/segment-tree.md
+          - Red Black Tree: cs/ds/red-black-tree.md
+          - Monotonic Stack: cs/ds/monotonic-stack.md
+          - Disjoint Set: cs/ds/disjoint-set.md
+          - Skip List: cs/ds/skip-list.md
+      - Machine Learning:
           - cs/ml/index.md
-          - 神经网络: cs/ml/neural-networks.md
-          - 卷积神经网络: cs/ml/convolutional-neural-networks.md
+          - Neural Network: cs/ml/neural-networks.md
+          - Convolutional Neural Network: cs/ml/convolutional-neural-networks.md
       - Problem:
-          - 逆序对: cs/problem/inversion-pairs.md
+          - Inversion Pairs: cs/problem/inversion-pairs.md
   - Python:
       - py/index.md
-      - 标准库:
-          - 文件和目录访问:
+      - Library:
+          - File and Directory Access:
               - shutil: py/lib/shutil.md
-          - 数据持久化:
+          - Data Persistence:
               - sqlite3: py/lib/sqlite3.md
-          - 文件格式:
+          - File Formats:
               - configParser: py/lib/configparser.md
-          - 加密服务:
+          - Cryptographic Services:
               - hashlib: py/lib/hashlib.md
-          - 操作系统服务:
+          - Operating System Services:
               - logging: py/lib/logging.md
-          - 互联网协议和支持:
+          - Internet Protocols and Support:
               - urllib: py/lib/urllib.md
-          - GUI: 
+          - Graphical User Interfaces:
               - tkinter: py/lib/tkinter.md
-      - 扩展库:
+      - Extension References:
           - BeautifulSoup: py/lib/bs4.md
           - PyMySQL: py/lib/pymysql.md
           - PyYAML: py/lib/pyyaml.md
           - PyWin32: py/lib/pywin32.md
           - MkDocs: py/lib/mkdocs.md
-      - 应用:
-          - 爬虫: py/app/spider.md
-          - 任务: py/app/task.md
+      - Applications:
+          - Spider: py/app/spider.md
+          - Task: py/app/task.md
           - Excel: py/app/excel.md
       - Numpy: py/numpy.md
       - Pandas: py/pandas.md
@@ -200,10 +200,10 @@ nav:
   - Development:
       - References: dev/references.md
       - API:
-          - 豆瓣: dev/api/douban.md
-          - 酷狗: dev/api/kugou.md
-          - 英雄联盟: dev/api/lol.md
-      - 数据库:
+          - Douban: dev/api/douban.md
+          - Kugou: dev/api/kugou.md
+          - League of Legends: dev/api/lol.md
+      - Database:
           - MySQL:
               - dev/db/mysql/index.md
               - SQL: dev/db/mysql/sql.md
