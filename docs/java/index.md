@@ -26,10 +26,10 @@ JAVA_HOME17=/path/to/jdk17
 
 ```java
 void example() {
-	Runnable runnable = () -> System.out.println("lambda without arguments and return value");
-	Supplier<String> supplier = () -> "lambda with return value";
-	Consumer<String> consumer = str -> System.out.println("lambda with an argument");
-	Function<String, String> function = str -> "lambda with an argument and return value";
+    Runnable runnable = () -> System.out.println("lambda without arguments and return value");
+    Supplier<String> supplier = () -> "lambda with return value";
+    Consumer<String> consumer = str -> System.out.println("lambda with an argument");
+    Function<String, String> function = str -> "lambda with an argument and return value";
 }
 ```
 
@@ -39,11 +39,11 @@ void example() {
 
 ```java
 void example() {
-	Arrays
-		.asList(1, 2, 3, 4, 5).stream()
-		.filter(num -> num % 2 == 0)
-		.map(num -> num * 2)
-		.forEach(System.out::println);
+    Arrays
+        .asList(1, 2, 3, 4, 5).stream()
+        .filter(num -> num % 2 == 0)
+        .map(num -> num * 2)
+        .forEach(System.out::println);
 }
 ```
 
@@ -51,7 +51,7 @@ void example() {
 
 ```java
 void example() {
-	String str = Optional.of("optional string").orElse(null);
+    String str = Optional.of("optional string").orElse(null);
 }
 ```
 
@@ -60,13 +60,13 @@ void example() {
 ```java
 interface Example {
 
-	static void staticFunc() {
-		System.out.println("static function");
-	}
+    static void staticFunc() {
+        System.out.println("static function");
+    }
 
-	default void defaultFunc() {
-		System.out.println("default function");
-	}
+    default void defaultFunc() {
+        System.out.println("default function");
+    }
 }
 ```
 
@@ -74,12 +74,12 @@ interface Example {
 
 ```java
 void example() {
-	LocalDate date = LocalDate.of(2000, 1, 1);
-	LocalTime time = LocalTime.of(12, 0, 0);
-	LocalDateTime dateTime = LocalDateTime.of(date, time);
-	Period period = Period.of(1, 1, 1);
-	Duration duration = Duration.of(100, ChronoUnit.HOURS);
-	Instant instant = dateTime.toInstant(ZoneOffset.ofHours(8));
+    LocalDate date = LocalDate.of(2000, 1, 1);
+    LocalTime time = LocalTime.of(12, 0, 0);
+    LocalDateTime dateTime = LocalDateTime.of(date, time);
+    Period period = Period.of(1, 1, 1);
+    Duration duration = Duration.of(100, ChronoUnit.HOURS);
+    Instant instant = dateTime.toInstant(ZoneOffset.ofHours(8));
 }
 ```
 
@@ -94,13 +94,13 @@ void example() {
 ```java
 interface Example {
 
-	private static void staticFunc() {
-		System.out.println("private static function");
-	}
+    private static void staticFunc() {
+        System.out.println("private static function");
+    }
 
-	private void privateFunc() {
-		System.out.println("private function");
-	}
+    private void privateFunc() {
+        System.out.println("private function");
+    }
 }
 ```
 
@@ -108,7 +108,7 @@ interface Example {
 
 ```java
 void example() {
-	var a = "Hello World";
+    var a = "Hello World";
 }
 ```
 
@@ -118,10 +118,10 @@ void example() {
 
 ```java
 void example() {
-	HttpClient client = HttpClient.newHttpClient();
-	HttpRequest request = HttpRequest.newBuilder().GET().uri(new URI("https://baidu.com")).build();
-	HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-	System.out.println(response.body());
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder().GET().uri(new URI("https://baidu.com")).build();
+    HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+    System.out.println(response.body());
 }
 ```
 
@@ -131,13 +131,13 @@ void example() {
 
 ```java
 String evaluate(int score) {
-	return switch (score) {
-		case 5 -> "A";
-		case 4 -> "B";
-		case 3 -> "C";
-		case 0, 1, 2 -> "D";
-		default -> throw new IllegalArgumentException("unknown score");
-	};
+    return switch (score) {
+        case 5 -> "A";
+        case 4 -> "B";
+        case 3 -> "C";
+        case 0, 1, 2 -> "D";
+        default -> throw new IllegalArgumentException("unknown score");
+    };
 }
 ```
 
@@ -145,9 +145,9 @@ String evaluate(int score) {
 
 ```java
 String block = """
-	this is first line;
-	this is second line.
-	""";
+    this is first line;
+    this is second line.
+    """;
 ```
 
 ### instanceof
@@ -155,7 +155,7 @@ String block = """
 ```java
 Object x = "xx";
 if (x instanceof String y) {
-	System.out.println(y);
+    System.out.println(y);
 }
 ```
 

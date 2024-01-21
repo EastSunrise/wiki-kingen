@@ -14,9 +14,18 @@ theme:
   logo: assets/images/Ceil.png
   favicon: assets/images/favicon.ico
   palette:
-    # scheme: slate
-    primary: indigo
-    accent: indigo
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+      primary: indigo
+      accent: blue
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+      primary: indigo
+      accent: blue
   features:
     - navigation.tabs
     - navigation.sections
@@ -91,7 +100,6 @@ nav:
       - java/index.md
       - 基础语法:
           - Annotation: java/basic/annotation.md
-          - Collection: java/basic/collection.md
       - 扩展库:
           - Apache Commons: java/lib/apache-commons.md
           - Apache POI: java/lib/apache-poi.md
@@ -181,7 +189,7 @@ nav:
               - logging: py/lib/logging.md
           - 互联网协议和支持:
               - urllib: py/lib/urllib.md
-          - GUI: 
+          - GUI:
               - tkinter: py/lib/tkinter.md
       - 扩展库:
           - BeautifulSoup: py/lib/bs4.md

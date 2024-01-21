@@ -1,5 +1,7 @@
 # 插入排序
 
+依次遍历所有元素，将其插入到前面已排好的数组中。
+
 === "Python"
     ```python
     def insertion_sort(arr):

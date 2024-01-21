@@ -14,9 +14,18 @@ theme:
   logo: assets/images/Ceil.png
   favicon: assets/images/favicon.ico
   palette:
-    # scheme: slate
-    primary: indigo
-    accent: indigo
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: indigo
+      accent: blue
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: indigo
+      accent: blue
   features:
     - navigation.tabs
     - navigation.sections
@@ -91,7 +100,6 @@ nav:
       - java/index.md
       - Basic Syntax:
           - Annotation: java/basic/annotation.md
-          - Collection: java/basic/collection.md
       - Extension Libraries:
           - Apache Commons: java/lib/apache-commons.md
           - Apache POI: java/lib/apache-poi.md

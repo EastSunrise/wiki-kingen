@@ -1,4 +1,4 @@
-## 概述
+# Apache Commons
 
 [Apache Commons](http://commons.apache.org/) 库.
 
@@ -7,101 +7,95 @@
 ### ArrayUtils
 
 ```java
-public class TestMain {
-	public static void main(String[] args) {
-		int[] nums1 = { 1, 2, 3, 4, 5, 6 };
+public static void main(String[] args) {
+    int[] nums1 = { 1, 2, 3, 4, 5, 6 };
 
-		// 通过常量创建新数组
-		int[] nums2 = ArrayUtils.EMPTY_INT_ARRAY;
+    // 通过常量创建新数组
+    int[] nums2 = ArrayUtils.EMPTY_INT_ARRAY;
 
-		// 比较两个数组是否相等
-		ArrayUtils.isEquals(nums1, nums2);
+    // 比较两个数组是否相等
+    ArrayUtils.isEquals(nums1, nums2);
 
-		// 输出数组,第二参数为数组为空时代替输出
-		ArrayUtils.toString(nums1, "array is null");
+    // 输出数组,第二参数为数组为空时代替输出
+    ArrayUtils.toString(nums1, "array is null");
 
-		// 克隆新数组,注意此拷贝为深拷贝
-		int[] nums3 = ArrayUtils.clone(nums1);
+    // 克隆新数组,注意此拷贝为深拷贝
+    int[] nums3 = ArrayUtils.clone(nums1);
 
-		// 截取数组
-		ArrayUtils.subarray(nums1, 1, 2);
+    // 截取数组
+    ArrayUtils.subarray(nums1, 1, 2);
 
-		// 判断两个数组长度是否相等
-		ArrayUtils.isSameLength(nums1, nums2);
+    // 判断两个数组长度是否相等
+    ArrayUtils.isSameLength(nums1, nums2);
 
-		// 判断两个数组类型是否相等,注意int和Integer比较时不相等
-		ArrayUtils.isSameType(nums1, nums2);
+    // 判断两个数组类型是否相等,注意int和Integer比较时不相等
+    ArrayUtils.isSameType(nums1, nums2);
 
-		// 反转数组
-		ArrayUtils.reverse(nums1);
+    // 反转数组
+    ArrayUtils.reverse(nums1);
 
-		// 查找数组元素位置
-		ArrayUtils.indexOf(nums1, 5);
+    // 查找数组元素位置
+    ArrayUtils.indexOf(nums1, 5);
 
-		// 查找数组元素最后出现位置
-		ArrayUtils.lastIndexOf(nums1, 4);
+    // 查找数组元素最后出现位置
+    ArrayUtils.lastIndexOf(nums1, 4);
 
-		// 查找元素是否存在数组中
-		ArrayUtils.contains(nums1, 2);
+    // 查找元素是否存在数组中
+    ArrayUtils.contains(nums1, 2);
 
-		// 将基本数组类型转为包装类型
-		Integer[] nums4 = ArrayUtils.toObject(nums1);
+    // 将基本数组类型转为包装类型
+    Integer[] nums4 = ArrayUtils.toObject(nums1);
 
-		// 判断是否为空,length=0或null都属于
-		ArrayUtils.isEmpty(nums1);
+    // 判断是否为空,length=0或null都属于
+    ArrayUtils.isEmpty(nums1);
 
-		// 并集操作,合并数组
-		ArrayUtils.addAll(nums1, nums2);
+    // 并集操作,合并数组
+    ArrayUtils.addAll(nums1, nums2);
 
-		// 增加元素,在下标5中插入10,注意此处返回是新数组
-		ArrayUtils.add(nums1, 5, 1111);
+    // 增加元素,在下标5中插入10,注意此处返回是新数组
+    ArrayUtils.add(nums1, 5, 1111);
 
-		// 删除指定位置元素,注意返回新数组,删除元素后面的元素会前移,保持数组有序
-		ArrayUtils.remove(nums1, 5);
+    // 删除指定位置元素,注意返回新数组,删除元素后面的元素会前移,保持数组有序
+    ArrayUtils.remove(nums1, 5);
 
-		// 删除数组中值为10的元素,以值计算不以下标
-		ArrayUtils.removeElement(nums1, 10);
-	}
+    // 删除数组中值为10的元素,以值计算不以下标
+    ArrayUtils.removeElement(nums1, 10);
 }
 ```
 
 ### ClassUtils
 
 ```java
-public class TestMain {
-	public static void main(String[] args) {
-		// 获取Test类所有实现的接口
-		ClassUtils.getAllInterfaces(Test.class);
+public static void main(String[] args) {
+    // 获取Test类所有实现的接口
+    ClassUtils.getAllInterfaces(Test.class);
 
-		// 获取Test类所有父类
-		ClassUtils.getAllSuperclasses(Test.class);
+    // 获取Test类所有父类
+    ClassUtils.getAllSuperclasses(Test.class);
 
-		// 获取Test类所在的包名
-		ClassUtils.getPackageName(Test.class);
+    // 获取Test类所在的包名
+    ClassUtils.getPackageName(Test.class);
 
-		// 获取Test类简单类名
-		ClassUtils.getShortClassName(Test.class);
+    // 获取Test类简单类名
+    ClassUtils.getShortClassName(Test.class);
 
-		// 判断是否可以转型
-		ClassUtils.isAssignable(Test.class, Object.class);
+    // 判断是否可以转型
+    ClassUtils.isAssignable(Test.class, Object.class);
 
-		// 判断是否有内部类
-		ClassUtils.isInnerClass(Test.class);
-	}
+    // 判断是否有内部类
+    ClassUtils.isInnerClass(Test.class);
 }
 ```
 
 ### ConstructorUtils
 
 ```java
-public class TestMain {
-	public static void main(String[] args) {
-		// 获取参数为String的构造函数
-		ConstructorUtils.getAccessibleConstructor(Test.class, String.class);
+public static void main(String[] args) {
+    // 获取参数为String的构造函数
+    ConstructorUtils.getAccessibleConstructor(Test.class, String.class);
 
-		// 执行参数为String的构造函数
-		Test test = (Test) ConstructorUtils.invokeConstructor(Test.class, "Hello");
-	}
+    // 执行参数为String的构造函数
+    Test test = (Test) ConstructorUtils.invokeConstructor(Test.class, "Hello");
 }
 ```
 
@@ -109,44 +103,42 @@ public class TestMain {
 
 ```java
 public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-	// 调用无参方法
-	Test test = new Test();
-	MethodUtils.invokeMethod(test, "publicHello", null);
+    // 调用无参方法
+    Test test = new Test();
+    MethodUtils.invokeMethod(test, "publicHello", null);
 
-	// 调用一参方法
-	MethodUtils.invokeMethod(test, "publicHello", "Hello");
+    // 调用一参方法
+    MethodUtils.invokeMethod(test, "publicHello", "Hello");
 
-	// 调用多参方法
-	MethodUtils.invokeMethod(test, "publicHello", new Object[] { "100", new Integer(10) });
+    // 调用多参方法
+    MethodUtils.invokeMethod(test, "publicHello", new Object[] { "100", new Integer(10) });
 
-	// 调用静态方法
-	MethodUtils.invokeStaticMethod(Test.class, "staticHello", null);
+    // 调用静态方法
+    MethodUtils.invokeStaticMethod(Test.class, "staticHello", null);
 }
 ```
 
 ### FieldUtils
 
 ```java
-public class TestMain {
-	public static void main(String[] args) throws IllegalAccessException {
-		Test test = new Test("1", "Ray", "hello");
+public static void main(String[] args) throws IllegalAccessException {
+    Test test = new Test("1", "Ray", "hello");
 
-		// 以下两个方法完全一样,都能获取共有或私有变量,因为第三个参数都设置了不检查
-		FieldUtils.getDeclaredField(Test.class, "username", true);
-		FieldUtils.getField(Test.class, "username", true);
+    // 以下两个方法完全一样,都能获取共有或私有变量,因为第三个参数都设置了不检查
+    FieldUtils.getDeclaredField(Test.class, "username", true);
+    FieldUtils.getField(Test.class, "username", true);
 
-		// 读取私有或公共变量的值
-		FieldUtils.readField(test, "username", true);
+    // 读取私有或公共变量的值
+    FieldUtils.readField(test, "username", true);
 
-		// 读取静态变量
-		FieldUtils.readStaticField(Test.class, "STATIC_FIELD");
+    // 读取静态变量
+    FieldUtils.readStaticField(Test.class, "STATIC_FIELD");
 
-		// 写入私有或共有变量
-		FieldUtils.writeField(test, "username", "RayRay", true);
+    // 写入私有或共有变量
+    FieldUtils.writeField(test, "username", "RayRay", true);
 
-		// 写入静态变量
-		FieldUtils.writeStaticField(Test.class, "STATIC_FIELD", "static_value");
-	}
+    // 写入静态变量
+    FieldUtils.writeStaticField(Test.class, "STATIC_FIELD", "static_value");
 }
 ```
 
@@ -157,102 +149,98 @@ public class TestMain {
 `RandomUtils` 帮助我们产生随机数，不止是数字类型，连 `boolean` 类型都可以通过 `RandomUtils` 产生
 
 ```java
-public class TestMain {
-	public static void main(String[] args) throws IllegalAccessException {
-		String str = "12.7";
+public static void main(String[] args) throws IllegalAccessException {
+    String str = "12.7";
 
-		// 判断字符串是否为整数
-		NumberUtils.isDigits(str);
+    // 判断字符串是否为整数
+    NumberUtils.isDigits(str);
 
-		// 判断字符串是否为数字
-		NumberUtils.isNumber(str);
+    // 判断字符串是否为数字
+    NumberUtils.isNumber(str);
 
-		// 获取参数中最大的值，支持传入数组
-		NumberUtils.max(10, 20, 30);
+    // 获取参数中最大的值，支持传入数组
+    NumberUtils.max(10, 20, 30);
 
-		// 获取参数中最小的值，支持传入数组
-		NumberUtils.min(10, 20, 30);
+    // 获取参数中最小的值，支持传入数组
+    NumberUtils.min(10, 20, 30);
 
-		// 将字符串转换为int类型，支持float,long,short等数值类型
-		NumberUtils.toInt(str);
+    // 将字符串转换为int类型，支持float,long,short等数值类型
+    NumberUtils.toInt(str);
 
-		// 通过字符串创建BigDecimal类型，支持int,float,long等数值
-		NumberUtils.createBigDecimal(str);
-		RandomUtils.nextBoolean();
-		RandomUtils.nextDouble();
-		RandomUtils.nextLong();
-		RandomUtils.nextInt(1000);
-	}
+    // 通过字符串创建BigDecimal类型，支持int,float,long等数值
+    NumberUtils.createBigDecimal(str);
+    RandomUtils.nextBoolean();
+    RandomUtils.nextDouble();
+    RandomUtils.nextLong();
+    RandomUtils.nextInt(1000);
 }
 ```
 
 ### StringUtils
 
 ```java
-public class TestMain {
-	public static void main(String[] args) throws IllegalAccessException {
-		String str = "Hello World";
+public static void main(String[] args) throws IllegalAccessException {
+    String str = "Hello World";
 
-		// isEmpty和isBlank的区别在于isEmpty不会忽略空格，" "<\\--对于这样的字符串isEmpty会认为不是空，而isBlank会认为是空,isBlank更常用
-		StringUtils.isEmpty(str);
-		StringUtils.isNotEmpty(str);
-		StringUtils.isBlank(str);
-		StringUtils.isNotBlank(str);
+    // isEmpty和isBlank的区别在于isEmpty不会忽略空格，" "<\\--对于这样的字符串isEmpty会认为不是空，而isBlank会认为是空,isBlank更常用
+    StringUtils.isEmpty(str);
+    StringUtils.isNotEmpty(str);
+    StringUtils.isBlank(str);
+    StringUtils.isNotBlank(str);
 
-		StringUtils.strip(str, "aa");
-		StringUtils.stripStart(str, "hell");
-		StringUtils.stripEnd(str, "orld");
+    StringUtils.strip(str, "aa");
+    StringUtils.stripStart(str, "hell");
+    StringUtils.stripEnd(str, "orld");
 
-		// 返回字符串在第三次出现A的位置
-		StringUtils.ordinalIndexOf(str, "A", 3);
+    // 返回字符串在第三次出现A的位置
+    StringUtils.ordinalIndexOf(str, "A", 3);
 
-		// 获取str开始为hello结尾为orld中间的字符串
-		// 注意此方法返回字符串 -->substringBetween
-		StringUtils.substringBetween(str, "hell", "orld");
+    // 获取str开始为hello结尾为orld中间的字符串
+    // 注意此方法返回字符串 -->substringBetween
+    StringUtils.substringBetween(str, "hell", "orld");
 
-		// 注意此方法返回字符串数组(多了个s) --> substringsBetween
-		StringUtils.substringsBetween(str, "hell", "orld");
+    // 注意此方法返回字符串数组(多了个s) --> substringsBetween
+    StringUtils.substringsBetween(str, "hell", "orld");
 
-		 // 重复字符串,第二种重载形式为在重复中用hahah拼接
-		StringUtils.repeat(str, 3);
-		StringUtils.repeat(str, "hahah", 2);
+        // 重复字符串,第二种重载形式为在重复中用hahah拼接
+    StringUtils.repeat(str, 3);
+    StringUtils.repeat(str, "hahah", 2);
 
-		// 统计参数2在字符串中出现的次数
-		StringUtils.countMatches(str, "l");
+    // 统计参数2在字符串中出现的次数
+    StringUtils.countMatches(str, "l");
 
-		// 判断字符串是否全小写或大写
-		StringUtils.isAllLowerCase(str);
-		StringUtils.isAllUpperCase(str);
+    // 判断字符串是否全小写或大写
+    StringUtils.isAllLowerCase(str);
+    StringUtils.isAllUpperCase(str);
 
-		// isAlpha，全部由字母组成返回true
-		StringUtils.isAlpha(str);
+    // isAlpha，全部由字母组成返回true
+    StringUtils.isAlpha(str);
 
-		// isNumeric，全部由数字组成返回true
-		StringUtils.isNumeric(str);
+    // isNumeric，全部由数字组成返回true
+    StringUtils.isNumeric(str);
 
-		// isAlphanumeric，全部由字母或数字组成返回true
-		StringUtils.isAlphanumeric(str);
+    // isAlphanumeric，全部由字母或数字组成返回true
+    StringUtils.isAlphanumeric(str);
 
-		// isAlphaSpace，全部由字母或空格组成返回true
-		StringUtils.isAlphaSpace(str);
+    // isAlphaSpace，全部由字母或空格组成返回true
+    StringUtils.isAlphaSpace(str);
 
-		// isWhitespace -->全部由空格组成返回true
-		StringUtils.isWhitespace(str);
+    // isWhitespace -->全部由空格组成返回true
+    StringUtils.isWhitespace(str);
 
-		// 缩进字符串,第二参数最低为 4,要包含...
-		// 现在Hello World输出为H...
-		StringUtils.abbreviate(str, 4);
+    // 缩进字符串,第二参数最低为 4,要包含...
+    // 现在Hello World输出为H...
+    StringUtils.abbreviate(str, 4);
 
-		// 首字母大写或小写
-		StringUtils.capitalize(str);
-		StringUtils.uncapitalize(str);
+    // 首字母大写或小写
+    StringUtils.capitalize(str);
+    StringUtils.uncapitalize(str);
 
-		// 将字符串数组转变为一个字符串,通过","拼接,支持传入iterator和collection
-		StringUtils.join(new String[] { "Hello", "World" }, ",");
+    // 将字符串数组转变为一个字符串,通过","拼接,支持传入iterator和collection
+    StringUtils.join(new String[] { "Hello", "World" }, ",");
 
-		// 经常性要把后台的字符串传递到前提作为html代码进行解释，可以使用以下方法进行转换,以下方法输出为：`<p>Hello</p>`
-		StringEscapeUtils.escapeHtml("Hello");
-	}
+    // 经常性要把后台的字符串传递到前提作为html代码进行解释，可以使用以下方法进行转换,以下方法输出为：`<p>Hello</p>`
+    StringEscapeUtils.escapeHtml("Hello");
 }
 ```
 
@@ -261,19 +249,17 @@ public class TestMain {
 由于 Aache 的 `DateUtils` 和 `DateFormatUtils` 并没有 Joda 强大，所以在这里只作简单的示例
 
 ```java
-public class TestMain {
-	public static void main(String[] args) throws IllegalAccessException {
-		Date day1 = new Date();
+public static void main(String[] args) throws IllegalAccessException {
+    Date day1 = new Date();
 
-		// 增加一天
-		DateUtils.addDays(day1, 1);
+    // 增加一天
+    DateUtils.addDays(day1, 1);
 
-		// 减少一年
-		DateUtils.addYears(day1, -1);
+    // 减少一年
+    DateUtils.addYears(day1, -1);
 
-		// 格式化时间,第三参数为国际化,表示按美国时间显示
-		DateFormatUtils.format(day1, "yyyy-MM-dd", Locale.UK);
-	}
+    // 格式化时间,第三参数为国际化,表示按美国时间显示
+    DateFormatUtils.format(day1, "yyyy-MM-dd", Locale.UK);
 }
 ```
 
@@ -397,4 +383,4 @@ The commons-validator 提供了一个简单的，可扩展的框架来在一个 
 
 ## 参考
 
--   [apache commons 常用工具类\_Apache 常用工具类 - 冷血天狼的博客 - CSDN 博客](https://blog.csdn.net/YingHuaNanHai/article/details/81273116)
+- [apache commons 常用工具类\_Apache 常用工具类 - 冷血天狼的博客 - CSDN 博客](https://blog.csdn.net/YingHuaNanHai/article/details/81273116)

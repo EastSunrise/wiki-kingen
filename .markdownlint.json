@@ -1,5 +1,10 @@
 {
   "MD007": {
     "indent": 4
-  }
+  },
+  "MD010": {
+    "spaces_per_tab": 4
+  },
+  "MD013": false,
+  "MD038": false
 }
