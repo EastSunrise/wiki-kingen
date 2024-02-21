@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://eastsunrise.github.io/wiki-kingen/java/lib/apache-commons.html">
       
       
-        <link rel="prev" href="../basic/collection.html">
+        <link rel="prev" href="../basic/annotation.html">
       
       
         <link rel="next" href="apache-poi.html">
@@ -66,10 +66,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#%E6%A6%82%E8%BF%B0" class="md-skip">
+        <a href="#Apache-Commons" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +121,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="切换深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="切换浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -494,8 +522,6 @@
       
         
       
-        
-      
     
     
     
@@ -541,27 +567,6 @@
   
   <span class="md-ellipsis">
     Annotation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../basic/collection.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Collection
   </span>
   
 
@@ -648,6 +653,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -676,21 +683,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%A6%82%E8%BF%B0" class="md-nav__link">
-    <span class="md-ellipsis">
-      概述
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#%E7%BB%84%E4%BB%B6" class="md-nav__link">
@@ -1754,6 +1754,349 @@
       
         
       
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cs/ds/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    树
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            树
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/tree/binary-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/tree/binary-search-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉搜索树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/tree/red-black-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    红黑树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/tree/segment-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    线段树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/heap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    堆
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/hash-table.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    散列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/graph.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/monotonic-stack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    单调栈
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/disjoint-set.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    并查集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/skip-list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    跳表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1772,7 +2115,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           
@@ -1788,14 +2131,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             算法
           </label>
@@ -1839,7 +2182,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
         
           
           
@@ -1855,14 +2198,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             排序
           </label>
@@ -2154,10 +2497,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_8" id="__nav_3_3_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2168,8 +2511,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_8">
             <span class="md-nav__icon md-icon"></span>
             模式匹配
           </label>
@@ -2268,10 +2611,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_9" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_9" id="__nav_3_2_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_9" id="__nav_3_3_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2282,8 +2625,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_9">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_9">
             <span class="md-nav__icon md-icon"></span>
             密钥算法
           </label>
@@ -2352,8 +2695,6 @@
       
         
       
-        
-      
     
     
     
@@ -2363,47 +2704,26 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_10" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_10" id="__nav_3_2_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_10" id="__nav_3_3_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    图论
+    图算法
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_10">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_10">
             <span class="md-nav__icon md-icon"></span>
-            图论
+            图算法
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/algo/graph/dfs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    深度优先搜索
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -2470,6 +2790,8 @@
       
         
       
+        
+      
     
     
     
@@ -2479,10 +2801,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_11" id="__nav_3_2_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_11" id="__nav_3_3_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2493,8 +2815,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_11">
             <span class="md-nav__icon md-icon"></span>
             其它算法
           </label>
@@ -2563,257 +2885,30 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/algo/others/gosper%27s-hack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gosper's Hack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../cs/ds/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    数据结构
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            数据结构
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/binary-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    二叉树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/binary-search-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    二叉搜索树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/heap.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    堆
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/segment-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    线段树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/red-black-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    红黑树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/monotonic-stack.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    单调栈
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/disjoint-set.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    并查集
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/ds/skip-list.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    跳表
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4636,8 +4731,6 @@
       
         
       
-        
-      
     
     
     
@@ -4762,27 +4855,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev/web/js/select2.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Select2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4884,6 +4956,8 @@
       
         
       
+        
+      
     
     
     
@@ -4950,6 +5024,27 @@
   
   <span class="md-ellipsis">
     C Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/lang/c%23.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C#
   </span>
   
 
@@ -5589,21 +5684,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%A6%82%E8%BF%B0" class="md-nav__link">
-    <span class="md-ellipsis">
-      概述
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#%E7%BB%84%E4%BB%B6" class="md-nav__link">
@@ -5993,102 +6081,94 @@
   
 
 
-  <h1>Apache Commons</h1>
-
-<h2 id="%E6%A6%82%E8%BF%B0">概述<a class="headerlink" href="#%E6%A6%82%E8%BF%B0" title="Permanent link">&para;</a></h2>
+<h1 id="Apache-Commons">Apache Commons<a class="headerlink" href="#Apache-Commons" title="Permanent link">&para;</a></h1>
 <p><a href="http://commons.apache.org/">Apache Commons</a> 库.</p>
 <h2 id="%E7%BB%84%E4%BB%B6">组件<a class="headerlink" href="#%E7%BB%84%E4%BB%B6" title="Permanent link">&para;</a></h2>
 <h3 id="ArrayUtils">ArrayUtils<a class="headerlink" href="#ArrayUtils" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">};</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="c1">// 通过常量创建新数组</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">EMPTY_INT_ARRAY</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1">// 比较两个数组是否相等</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isEquals</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="c1">// 输出数组,第二参数为数组为空时代替输出</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;array is null&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="c1">// 克隆新数组,注意此拷贝为深拷贝</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">clone</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="c1">// 截取数组</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">subarray</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="c1">// 判断两个数组长度是否相等</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isSameLength</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="c1">// 判断两个数组类型是否相等,注意int和Integer比较时不相等</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isSameType</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="c1">// 反转数组</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">reverse</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="c1">// 查找数组元素位置</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="c1">// 查找数组元素最后出现位置</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">        </span><span class="c1">// 查找元素是否存在数组中</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">        </span><span class="c1">// 将基本数组类型转为包装类型</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">        </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">nums4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">toObject</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">        </span><span class="c1">// 判断是否为空,length=0或null都属于</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">        </span><span class="c1">// 并集操作,合并数组</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">        </span><span class="c1">// 增加元素,在下标5中插入10,注意此处返回是新数组</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1111</span><span class="p">);</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">        </span><span class="c1">// 删除指定位置元素,注意返回新数组,删除元素后面的元素会前移,保持数组有序</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">        </span><span class="c1">// 删除数组中值为10的元素,以值计算不以下标</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">        </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">removeElement</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// 通过常量创建新数组</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">EMPTY_INT_ARRAY</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// 比较两个数组是否相等</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isEquals</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// 输出数组,第二参数为数组为空时代替输出</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;array is null&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">// 克隆新数组,注意此拷贝为深拷贝</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">clone</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="c1">// 截取数组</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">subarray</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="c1">// 判断两个数组长度是否相等</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isSameLength</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="c1">// 判断两个数组类型是否相等,注意int和Integer比较时不相等</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isSameType</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="c1">// 反转数组</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">reverse</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="c1">// 查找数组元素位置</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="c1">// 查找数组元素最后出现位置</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="c1">// 查找元素是否存在数组中</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="c1">// 将基本数组类型转为包装类型</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">nums4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">toObject</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="c1">// 判断是否为空,length=0或null都属于</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">nums1</span><span class="p">);</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="c1">// 并集操作,合并数组</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="n">nums2</span><span class="p">);</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">    </span><span class="c1">// 增加元素,在下标5中插入10,注意此处返回是新数组</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1111</span><span class="p">);</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="c1">// 删除指定位置元素,注意返回新数组,删除元素后面的元素会前移,保持数组有序</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="c1">// 删除数组中值为10的元素,以值计算不以下标</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">    </span><span class="n">ArrayUtils</span><span class="p">.</span><span class="na">removeElement</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="ClassUtils">ClassUtils<a class="headerlink" href="#ClassUtils" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="c1">// 获取Test类所有实现的接口</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getAllInterfaces</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="c1">// 获取Test类所有父类</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getAllSuperclasses</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="c1">// 获取Test类所在的包名</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="c1">// 获取Test类简单类名</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getShortClassName</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="c1">// 判断是否可以转型</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">isAssignable</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="c1">// 判断是否有内部类</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">isInnerClass</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="c1">// 获取Test类所有实现的接口</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getAllInterfaces</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">// 获取Test类所有父类</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getAllSuperclasses</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 获取Test类所在的包名</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 获取Test类简单类名</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getShortClassName</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="c1">// 判断是否可以转型</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">isAssignable</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="c1">// 判断是否有内部类</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">isInnerClass</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="ConstructorUtils">ConstructorUtils<a class="headerlink" href="#ConstructorUtils" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="c1">// 获取参数为String的构造函数</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="n">ConstructorUtils</span><span class="p">.</span><span class="na">getAccessibleConstructor</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="c1">// 执行参数为String的构造函数</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">Test</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Test</span><span class="p">)</span><span class="w"> </span><span class="n">ConstructorUtils</span><span class="p">.</span><span class="na">invokeConstructor</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="c1">// 获取参数为String的构造函数</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">ConstructorUtils</span><span class="p">.</span><span class="na">getAccessibleConstructor</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="c1">// 执行参数为String的构造函数</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">Test</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Test</span><span class="p">)</span><span class="w"> </span><span class="n">ConstructorUtils</span><span class="p">.</span><span class="na">invokeConstructor</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="MethodUtils">MethodUtils<a class="headerlink" href="#MethodUtils" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NoSuchMethodException</span><span class="p">,</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="p">,</span><span class="w"> </span><span class="n">InvocationTargetException</span><span class="w"> </span><span class="p">{</span>
@@ -6107,144 +6187,136 @@
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="FieldUtils">FieldUtils<a class="headerlink" href="#FieldUtils" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">Test</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Test</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ray&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="c1">// 以下两个方法完全一样,都能获取共有或私有变量,因为第三个参数都设置了不检查</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">getField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="c1">// 读取私有或公共变量的值</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">readField</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="c1">// 读取静态变量</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">readStaticField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;STATIC_FIELD&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="c1">// 写入私有或共有变量</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">writeField</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RayRay&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span><span class="c1">// 写入静态变量</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">writeStaticField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;STATIC_FIELD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;static_value&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">Test</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Test</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ray&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1">// 以下两个方法完全一样,都能获取共有或私有变量,因为第三个参数都设置了不检查</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">getField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="c1">// 读取私有或公共变量的值</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">readField</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="c1">// 读取静态变量</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">readStaticField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;STATIC_FIELD&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1">// 写入私有或共有变量</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">writeField</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RayRay&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">// 写入静态变量</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">FieldUtils</span><span class="p">.</span><span class="na">writeStaticField</span><span class="p">(</span><span class="n">Test</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;STATIC_FIELD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;static_value&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="NumberUtils--RandomUtils">NumberUtils &amp; RandomUtils<a class="headerlink" href="#NumberUtils--RandomUtils" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><code>org.apache.commons.lang.NumberUtils</code>已经被弃用，需引入<code>org.apache.commons.lang.math.NumberUtils</code></p>
 </blockquote>
 <p><code>RandomUtils</code> 帮助我们产生随机数，不止是数字类型，连 <code>boolean</code> 类型都可以通过 <code>RandomUtils</code> 产生</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;12.7&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="c1">// 判断字符串是否为整数</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">isDigits</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="c1">// 判断字符串是否为数字</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">isNumber</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="c1">// 获取参数中最大的值，支持传入数组</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="c1">// 获取参数中最小的值，支持传入数组</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="c1">// 将字符串转换为int类型，支持float,long,short等数值类型</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">toInt</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="c1">// 通过字符串创建BigDecimal类型，支持int,float,long等数值</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">createBigDecimal</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">        </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">        </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">        </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">        </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;12.7&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="c1">// 判断字符串是否为整数</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">isDigits</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// 判断字符串是否为数字</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">isNumber</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// 获取参数中最大的值，支持传入数组</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="c1">// 获取参数中最小的值，支持传入数组</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="c1">// 将字符串转换为int类型，支持float,long,short等数值类型</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">toInt</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="c1">// 通过字符串创建BigDecimal类型，支持int,float,long等数值</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="n">NumberUtils</span><span class="p">.</span><span class="na">createBigDecimal</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="StringUtils">StringUtils<a class="headerlink" href="#StringUtils" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="c1">// isEmpty和isBlank的区别在于isEmpty不会忽略空格，&quot; &quot;&lt;\\--对于这样的字符串isEmpty会认为不是空，而isBlank会认为是空,isBlank更常用</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotBlank</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">strip</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;aa&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">stripStart</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hell&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">stripEnd</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orld&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="c1">// 返回字符串在第三次出现A的位置</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">ordinalIndexOf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="c1">// 获取str开始为hello结尾为orld中间的字符串</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="c1">// 注意此方法返回字符串 --&gt;substringBetween</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">substringBetween</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hell&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orld&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="c1">// 注意此方法返回字符串数组(多了个s) --&gt; substringsBetween</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">substringsBetween</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hell&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orld&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">         </span><span class="c1">// 重复字符串,第二种重载形式为在重复中用hahah拼接</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hahah&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
-<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">        </span><span class="c1">// 统计参数2在字符串中出现的次数</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">countMatches</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;l&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>
-<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">        </span><span class="c1">// 判断字符串是否全小写或大写</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAllLowerCase</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAllUpperCase</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>
-<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">        </span><span class="c1">// isAlpha，全部由字母组成返回true</span>
-<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAlpha</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>
-<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">        </span><span class="c1">// isNumeric，全部由数字组成返回true</span>
-<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNumeric</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>
-<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">        </span><span class="c1">// isAlphanumeric，全部由字母或数字组成返回true</span>
-<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAlphanumeric</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>
-<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="w">        </span><span class="c1">// isAlphaSpace，全部由字母或空格组成返回true</span>
-<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAlphaSpace</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>
-<a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">        </span><span class="c1">// isWhitespace --&gt;全部由空格组成返回true</span>
-<a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isWhitespace</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a>
-<a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a><span class="w">        </span><span class="c1">// 缩进字符串,第二参数最低为 4,要包含...</span>
-<a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a><span class="w">        </span><span class="c1">// 现在Hello World输出为H...</span>
-<a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">abbreviate</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a>
-<a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a><span class="w">        </span><span class="c1">// 首字母大写或小写</span>
-<a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">capitalize</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">uncapitalize</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a>
-<a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="w">        </span><span class="c1">// 将字符串数组转变为一个字符串,通过&quot;,&quot;拼接,支持传入iterator和collection</span>
-<a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a><span class="w">        </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">join</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-61" name="__codelineno-6-61" href="#__codelineno-6-61"></a>
-<a id="__codelineno-6-62" name="__codelineno-6-62" href="#__codelineno-6-62"></a><span class="w">        </span><span class="c1">// 经常性要把后台的字符串传递到前提作为html代码进行解释，可以使用以下方法进行转换,以下方法输出为：`&lt;p&gt;Hello&lt;/p&gt;`</span>
-<a id="__codelineno-6-63" name="__codelineno-6-63" href="#__codelineno-6-63"></a><span class="w">        </span><span class="n">StringEscapeUtils</span><span class="p">.</span><span class="na">escapeHtml</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-64" name="__codelineno-6-64" href="#__codelineno-6-64"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-65" name="__codelineno-6-65" href="#__codelineno-6-65"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="c1">// isEmpty和isBlank的区别在于isEmpty不会忽略空格，&quot; &quot;&lt;\\--对于这样的字符串isEmpty会认为不是空，而isBlank会认为是空,isBlank更常用</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotBlank</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">strip</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;aa&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">stripStart</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hell&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">stripEnd</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orld&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="c1">// 返回字符串在第三次出现A的位置</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">ordinalIndexOf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="c1">// 获取str开始为hello结尾为orld中间的字符串</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="c1">// 注意此方法返回字符串 --&gt;substringBetween</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">substringBetween</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hell&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orld&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="c1">// 注意此方法返回字符串数组(多了个s) --&gt; substringsBetween</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">substringsBetween</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hell&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orld&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">        </span><span class="c1">// 重复字符串,第二种重载形式为在重复中用hahah拼接</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hahah&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="c1">// 统计参数2在字符串中出现的次数</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">countMatches</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;l&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">    </span><span class="c1">// 判断字符串是否全小写或大写</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAllLowerCase</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAllUpperCase</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">    </span><span class="c1">// isAlpha，全部由字母组成返回true</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAlpha</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">    </span><span class="c1">// isNumeric，全部由数字组成返回true</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNumeric</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">    </span><span class="c1">// isAlphanumeric，全部由字母或数字组成返回true</span>
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAlphanumeric</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a><span class="w">    </span><span class="c1">// isAlphaSpace，全部由字母或空格组成返回true</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isAlphaSpace</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>
+<a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a><span class="w">    </span><span class="c1">// isWhitespace --&gt;全部由空格组成返回true</span>
+<a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isWhitespace</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a>
+<a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a><span class="w">    </span><span class="c1">// 缩进字符串,第二参数最低为 4,要包含...</span>
+<a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a><span class="w">    </span><span class="c1">// 现在Hello World输出为H...</span>
+<a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">abbreviate</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a>
+<a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a><span class="w">    </span><span class="c1">// 首字母大写或小写</span>
+<a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">capitalize</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">uncapitalize</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a>
+<a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a><span class="w">    </span><span class="c1">// 将字符串数组转变为一个字符串,通过&quot;,&quot;拼接,支持传入iterator和collection</span>
+<a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="w">    </span><span class="n">StringUtils</span><span class="p">.</span><span class="na">join</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a>
+<a id="__codelineno-6-61" name="__codelineno-6-61" href="#__codelineno-6-61"></a><span class="w">    </span><span class="c1">// 经常性要把后台的字符串传递到前提作为html代码进行解释，可以使用以下方法进行转换,以下方法输出为：`&lt;p&gt;Hello&lt;/p&gt;`</span>
+<a id="__codelineno-6-62" name="__codelineno-6-62" href="#__codelineno-6-62"></a><span class="w">    </span><span class="n">StringEscapeUtils</span><span class="p">.</span><span class="na">escapeHtml</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-63" name="__codelineno-6-63" href="#__codelineno-6-63"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="DateUtils--DateFormatUtils">DateUtils &amp; DateFormatUtils<a class="headerlink" href="#DateUtils--DateFormatUtils" title="Permanent link">&para;</a></h3>
 <p>由于 Aache 的 <code>DateUtils</code> 和 <code>DateFormatUtils</code> 并没有 Joda 强大，所以在这里只作简单的示例</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestMain</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="n">Date</span><span class="w"> </span><span class="n">day1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">();</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="c1">// 增加一天</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="n">DateUtils</span><span class="p">.</span><span class="na">addDays</span><span class="p">(</span><span class="n">day1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="c1">// 减少一年</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="n">DateUtils</span><span class="p">.</span><span class="na">addYears</span><span class="p">(</span><span class="n">day1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="c1">// 格式化时间,第三参数为国际化,表示按美国时间显示</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="n">DateFormatUtils</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">day1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yyyy-MM-dd&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Locale</span><span class="p">.</span><span class="na">UK</span><span class="p">);</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IllegalAccessException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">day1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">();</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="c1">// 增加一天</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">DateUtils</span><span class="p">.</span><span class="na">addDays</span><span class="p">(</span><span class="n">day1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="c1">// 减少一年</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">DateUtils</span><span class="p">.</span><span class="na">addYears</span><span class="p">(</span><span class="n">day1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">// 格式化时间,第三参数为国际化,表示按美国时间显示</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="n">DateFormatUtils</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">day1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yyyy-MM-dd&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Locale</span><span class="p">.</span><span class="na">UK</span><span class="p">);</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="BeanUtils">BeanUtils<a class="headerlink" href="#BeanUtils" title="Permanent link">&para;</a></h3>
 <p>Commons-BeanUtils 提供对 Java 反射和自省 API 的包装</p>
@@ -6331,7 +6403,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-09-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-21</span>
   </span>
 
     
@@ -6367,7 +6439,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../basic/collection.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Collection">
+          <a href="../basic/annotation.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Annotation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -6377,7 +6449,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Collection
+                Annotation
               </div>
             </div>
           </a>

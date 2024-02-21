@@ -66,10 +66,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Overview" class="md-skip">
+        <a href="#RSA" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +121,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -494,8 +522,6 @@
       
         
       
-        
-      
     
     
     
@@ -541,27 +567,6 @@
   
   <span class="md-ellipsis">
     Annotation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../java/basic/collection.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Collection
   </span>
   
 
@@ -1904,6 +1909,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1932,21 +1939,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#Overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#Preparation" class="md-nav__link">
@@ -1965,8 +1965,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Coprime">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#Eulers-totient-function" class="md-nav__link">
@@ -1974,11 +1973,6 @@
       Euler's totient function
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1997,13 +1991,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#RSA" class="md-nav__link">
+  <a href="#RSA-Algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      RSA
+      RSA Algorithm
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="RSA">
+    <nav class="md-nav" aria-label="RSA Algorithm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5326,21 +5320,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#Overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#Preparation" class="md-nav__link">
@@ -5359,8 +5346,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Coprime">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#Eulers-totient-function" class="md-nav__link">
@@ -5368,11 +5354,6 @@
       Euler's totient function
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -5391,13 +5372,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#RSA" class="md-nav__link">
+  <a href="#RSA-Algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      RSA
+      RSA Algorithm
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="RSA">
+    <nav class="md-nav" aria-label="RSA Algorithm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5463,9 +5444,7 @@
   
 
 
-  <h1>RSA</h1>
-
-<h2 id="Overview">Overview<a class="headerlink" href="#Overview" title="Permanent link">&para;</a></h2>
+<h1 id="RSA">RSA<a class="headerlink" href="#RSA" title="Permanent link">&para;</a></h1>
 <p>Generally, data transforming from senders to receivers need to be encrypted. A common way is as follows:</p>
 <ul>
 <li>Senders encrypt plain text with a key <strong>K</strong>.</li>
@@ -5490,7 +5469,7 @@
 <li>Any number <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(p-1\)</span> are coprime.</li>
 <li>If <span class="arithmatex">\(p\)</span> is odd, <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(p-2\)</span> are coprime.</li>
 </ul>
-<h4 id="Eulers-totient-function">Euler's totient function<a class="headerlink" href="#Eulers-totient-function" title="Permanent link">&para;</a></h4>
+<h3 id="Eulers-totient-function">Euler's totient function<a class="headerlink" href="#Eulers-totient-function" title="Permanent link">&para;</a></h3>
 <p>Then comes a question: given any positive integer <span class="arithmatex">\(n\)</span>, how many integers <span class="arithmatex">\(k\)</span> in the range <span class="arithmatex">\(1\le{k}\lt{n}\)</span> are relatively prime to <span class="arithmatex">\(n\)</span>?</p>
 <p>The counting is called <strong>Euler's totient function</strong>, expressed as <span class="arithmatex">\(\varphi(n)\)</span>. Steps below are to calculate it.</p>
 <ul>
@@ -5556,7 +5535,7 @@
     \varphi (p^k) = p^k(1-\frac{1}{p})
 \end{equation}
 \]</div>
-<h2 id="RSA">RSA<a class="headerlink" href="#RSA" title="Permanent link">&para;</a></h2>
+<h2 id="RSA-Algorithm">RSA Algorithm<a class="headerlink" href="#RSA-Algorithm" title="Permanent link">&para;</a></h2>
 <h3 id="Key-Generation">Key Generation<a class="headerlink" href="#Key-Generation" title="Permanent link">&para;</a></h3>
 <p>Assume Zoe wants to communicate with EZ, then how do Zoe generate the public and private keys?</p>
 <ol>
@@ -5658,7 +5637,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-21</span>
   </span>
 
     

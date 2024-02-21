@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://eastsunrise.github.io/wiki-kingen/cs/algo/graph/dijkstra%27s-algorithm.html">
       
       
-        <link rel="prev" href="dfs.html">
+        <link rel="prev" href="../crypto/sha.html">
       
       
         <link rel="next" href="tarjan-algorithm.html">
@@ -66,10 +66,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#%E6%A6%82%E8%BF%B0" class="md-skip">
+        <a href="#Dijkstra-%E7%AE%97%E6%B3%95" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +121,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="切换深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="切换浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -494,8 +522,6 @@
       
         
       
-        
-      
     
     
     
@@ -541,27 +567,6 @@
   
   <span class="md-ellipsis">
     Annotation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../java/basic/collection.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Collection
   </span>
   
 
@@ -1329,6 +1334,349 @@
                 
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ds/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    树
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            树
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/binary-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/binary-search-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉搜索树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/red-black-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    红黑树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/segment-tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    线段树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/heap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    堆
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/hash-table.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    散列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/graph.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/monotonic-stack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    单调栈
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/disjoint-set.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    并查集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/skip-list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    跳表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1372,7 +1720,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           
@@ -1388,14 +1736,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             算法
           </label>
@@ -1439,7 +1787,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
         
           
           
@@ -1455,14 +1803,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             排序
           </label>
@@ -1754,10 +2102,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_8" id="__nav_3_3_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1768,8 +2116,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_8">
             <span class="md-nav__icon md-icon"></span>
             模式匹配
           </label>
@@ -1868,10 +2216,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_9" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_9" id="__nav_3_2_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_9" id="__nav_3_3_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1882,8 +2230,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_9">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_9">
             <span class="md-nav__icon md-icon"></span>
             密钥算法
           </label>
@@ -1954,8 +2302,6 @@
       
         
       
-        
-      
     
     
     
@@ -1965,47 +2311,26 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_2_10" id="__nav_3_2_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_10" id="__nav_3_3_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    图论
+    图算法
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_10_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_2_10">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_10">
             <span class="md-nav__icon md-icon"></span>
-            图论
+            图算法
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="dfs.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    深度优先搜索
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -2019,6 +2344,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -2048,21 +2375,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%A6%82%E8%BF%B0" class="md-nav__link">
-    <span class="md-ellipsis">
-      概述
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#%E9%97%AE%E9%A2%98" class="md-nav__link">
@@ -2074,16 +2394,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#Dijkstra-%E7%AE%97%E6%B3%95" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dijkstra 算法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dijkstra 算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#%E5%AE%9A%E4%B9%89" class="md-nav__link">
     <span class="md-ellipsis">
       定义
@@ -2091,8 +2401,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#%E8%AE%BE%E8%AE%A1" class="md-nav__link">
     <span class="md-ellipsis">
       设计
@@ -2100,8 +2410,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#%E7%A4%BA%E4%BE%8B" class="md-nav__link">
     <span class="md-ellipsis">
       示例
@@ -2109,18 +2419,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#%E5%AE%9E%E7%8E%B0" class="md-nav__link">
     <span class="md-ellipsis">
       实现
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2186,6 +2491,8 @@
       
         
       
+        
+      
     
     
     
@@ -2195,10 +2502,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_11" id="__nav_3_2_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_11" id="__nav_3_3_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2209,8 +2516,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_11">
             <span class="md-nav__icon md-icon"></span>
             其它算法
           </label>
@@ -2279,257 +2586,30 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../others/gosper%27s-hack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gosper's Hack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../ds/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    数据结构
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            数据结构
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/binary-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    二叉树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/binary-search-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    二叉搜索树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/heap.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    堆
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/segment-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    线段树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/red-black-tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    红黑树
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/monotonic-stack.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    单调栈
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/disjoint-set.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    并查集
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/skip-list.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    跳表
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4352,8 +4432,6 @@
       
         
       
-        
-      
     
     
     
@@ -4478,27 +4556,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../dev/web/js/select2.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Select2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4600,6 +4657,8 @@
       
         
       
+        
+      
     
     
     
@@ -4666,6 +4725,27 @@
   
   <span class="md-ellipsis">
     C Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/lang/c%23.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C#
   </span>
   
 
@@ -5305,21 +5385,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%A6%82%E8%BF%B0" class="md-nav__link">
-    <span class="md-ellipsis">
-      概述
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#%E9%97%AE%E9%A2%98" class="md-nav__link">
@@ -5331,16 +5404,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#Dijkstra-%E7%AE%97%E6%B3%95" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dijkstra 算法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dijkstra 算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#%E5%AE%9A%E4%B9%89" class="md-nav__link">
     <span class="md-ellipsis">
       定义
@@ -5348,8 +5411,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#%E8%AE%BE%E8%AE%A1" class="md-nav__link">
     <span class="md-ellipsis">
       设计
@@ -5357,8 +5420,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#%E7%A4%BA%E4%BE%8B" class="md-nav__link">
     <span class="md-ellipsis">
       示例
@@ -5366,18 +5429,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#%E5%AE%9E%E7%8E%B0" class="md-nav__link">
     <span class="md-ellipsis">
       实现
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5421,14 +5479,11 @@
   
 
 
-  <h1>Dijkstra's 算法</h1>
-
-<h2 id="%E6%A6%82%E8%BF%B0">概述<a class="headerlink" href="#%E6%A6%82%E8%BF%B0" title="Permanent link">&para;</a></h2>
-<p>Dijkstra 算法，使用类似广度优先搜索的方法解决加权图的单源最短路径问题，其原始版本仅适用于找到两个顶点之间的最短路径，后来更常见的变体固定了一个顶点作为源结点然后找到该顶点到图中所有其它结点的最短路径，产生一个最短路径树。</p>
+<h1 id="Dijkstra-%E7%AE%97%E6%B3%95">Dijkstra 算法<a class="headerlink" href="#Dijkstra-%E7%AE%97%E6%B3%95" title="Permanent link">&para;</a></h1>
+<p>Dijkstra 算法，使用类似<a href="../../ds/graph.html#广度优先搜索">广度优先搜索</a>的方法解决加权图的单源最短路径问题，其原始版本仅适用于找到两个顶点之间的最短路径，后来更常见的变体固定了一个顶点作为源结点然后找到该顶点到图中所有其它结点的最短路径，产生一个最短路径树。</p>
 <h2 id="%E9%97%AE%E9%A2%98">问题<a class="headerlink" href="#%E9%97%AE%E9%A2%98" title="Permanent link">&para;</a></h2>
-<p>给定加权有向图 <span class="arithmatex">\(G=\{V,E,W\}\)</span>，其顶点集合 <span class="arithmatex">\(V=\{v_1,v_2,...,v_n\}\)</span>，每条边 <span class="arithmatex">\(e_{i,j}(i\ne j)\)</span> 对应一个权重 <span class="arithmatex">\(w_{i,j}(w_{i,j}\ge0)\)</span>，表示从顶点 <span class="arithmatex">\(v_i\)</span> 到 <span class="arithmatex">\(v_{j}\)</span> 的距离。设一源点 <span class="arithmatex">\(v_s\in V\)</span>，求：从 <span class="arithmatex">\(v_s\)</span> 出发，到其它顶点的最短路径 <span class="arithmatex">\(d_{s,i}(1\le i\le n)\)</span>。</p>
-<h2 id="Dijkstra-%E7%AE%97%E6%B3%95">Dijkstra 算法<a class="headerlink" href="#Dijkstra-%E7%AE%97%E6%B3%95" title="Permanent link">&para;</a></h2>
-<h3 id="%E5%AE%9A%E4%B9%89">定义<a class="headerlink" href="#%E5%AE%9A%E4%B9%89" title="Permanent link">&para;</a></h3>
+<p>给定加权有向图 <span class="arithmatex">\(G=\{V,E,W\}\)</span>，其顶点集合 <span class="arithmatex">\(V=\{v_1,v_2,\cdots,v_n\}\)</span>，每条边 <span class="arithmatex">\(e_{i,j}(i\ne j)\)</span> 对应一个权重 <span class="arithmatex">\(w_{i,j}(w_{i,j}\ge0)\)</span>，表示从顶点 <span class="arithmatex">\(v_i\)</span> 到 <span class="arithmatex">\(v_{j}\)</span> 的距离。设一源点 <span class="arithmatex">\(v_s\in V\)</span>，求：从 <span class="arithmatex">\(v_s\)</span> 出发，到其它顶点的最短路径 <span class="arithmatex">\(d_{s,i}(1\le i\le n)\)</span>。</p>
+<h2 id="%E5%AE%9A%E4%B9%89">定义<a class="headerlink" href="#%E5%AE%9A%E4%B9%89" title="Permanent link">&para;</a></h2>
 <ul>
 <li>集合 <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(S'\)</span>，包括已经确定最短路径的顶点，初始时，<span class="arithmatex">\(S=\{v_s\}\)</span>，当且仅当 <span class="arithmatex">\(S=V\)</span> 时，算法结束，</li>
 </ul>
@@ -5440,11 +5495,9 @@
 <ul>
 <li>数组 <span class="arithmatex">\(F=\{f_{s,i}\ |\ v_i\in S'\}\)</span>，其中 <span class="arithmatex">\(f_{s,i}\)</span> 表示从顶点 <span class="arithmatex">\(v_s\)</span> 到 <span class="arithmatex">\(v_i\)</span> 的最短路径，且该路径上的所有顶点必须在 <span class="arithmatex">\(S\)</span> 中。显然，<span class="arithmatex">\(f_{s,i}\ge d_{s,i}\)</span>.</li>
 </ul>
-<h3 id="%E8%AE%BE%E8%AE%A1">设计<a class="headerlink" href="#%E8%AE%BE%E8%AE%A1" title="Permanent link">&para;</a></h3>
+<h2 id="%E8%AE%BE%E8%AE%A1">设计<a class="headerlink" href="#%E8%AE%BE%E8%AE%A1" title="Permanent link">&para;</a></h2>
 <p>Dijkstra 算法的思路是，<strong>每次从 <span class="arithmatex">\(S'\)</span> 中选择到 <span class="arithmatex">\(v_s\)</span> 相对最近的顶点加入 <span class="arithmatex">\(S\)</span> 中，直至 <span class="arithmatex">\(f_{s,i}=d_{s,i},\ S=V\)</span></strong>，具体步骤如下：</p>
-<ol>
-<li>初始化，<span class="arithmatex">\(S=\{v_s\}\)</span>，</li>
-</ol>
+<p>初始化，<span class="arithmatex">\(S=\{v_s\}\)</span>，</p>
 <div class="arithmatex">\[
 \begin{equation}
    f_{s,i}=
@@ -5454,34 +5507,28 @@
       \end{cases}
 \end{equation}
 \]</div>
-<ol>
-<li>从 <span class="arithmatex">\(S'\)</span> 中选择 <span class="arithmatex">\(v_k\)</span>，使得 <span class="arithmatex">\(f_{s,k}\)</span> 最小，即：</li>
-</ol>
+<p>从 <span class="arithmatex">\(S'\)</span> 中选择 <span class="arithmatex">\(v_k\)</span>，使得 <span class="arithmatex">\(f_{s,k}\)</span> 最小，即：</p>
 <div class="arithmatex">\[
 \begin{equation}
    f_{s,k}=\min\{f_{s,i}\ |\ v_i\in S'\}
 \end{equation}
 \]</div>
-<ol>
-<li>此时 <span class="arithmatex">\(d_{s,k}=f_{s,k}\)</span>，即为最短路径（稍后证明），将 <span class="arithmatex">\(v_k\)</span> 加入 <span class="arithmatex">\(S\)</span>，并更新 <span class="arithmatex">\(F\)</span>：</li>
-</ol>
+<p>此时 <span class="arithmatex">\(d_{s,k}=f_{s,k}\)</span>，即为最短路径（稍后证明），将 <span class="arithmatex">\(v_k\)</span> 加入 <span class="arithmatex">\(S\)</span>，并更新 <span class="arithmatex">\(F\)</span>：</p>
 <div class="arithmatex">\[
 \begin{gather}
    S=S\cup \{v_k\} \\
    f_{s,i} = \min\{f_{s,i},\ f_{s,k}+w_{k,i}\}
 \end{gather}
 \]</div>
-<ol>
-<li>重复步骤 2 和 3 直至 <span class="arithmatex">\(S=V\)</span>.</li>
-</ol>
+<p>重复第2步和第3步直至 <span class="arithmatex">\(S=V\)</span>.</p>
 <p>以下证明 <span class="arithmatex">\(d_{s,k}=f_{s,k}\)</span>.</p>
 <p>设任意从 <span class="arithmatex">\(v_s\)</span> 到 <span class="arithmatex">\(v_k\)</span> 的路径 <span class="arithmatex">\(p_{s,k}=v_s\to v_{s_{1}}\to v_{s_{2}}\to···\to v_{s_{j}}\to v_k\)</span>，</p>
 <ul>
 <li>
-<p>若 <span class="arithmatex">\(\{v_{s_{1}},v_{s_{2}},...,v_{s_{j}}\}\subset S\)</span>，<span class="arithmatex">\(p_{s,k}\ge f_{s,k}\)</span>；</p>
+<p>若 <span class="arithmatex">\(\{v_{s_{1}},v_{s_{2}},\cdots,v_{s_{j}}\}\subset S\)</span>，<span class="arithmatex">\(p_{s,k}\ge f_{s,k}\)</span>；</p>
 </li>
 <li>
-<p>否则 <span class="arithmatex">\(\exists\ v_{s_{i}}\in S'\text{ 且 }\{v_{s_{1}},v_{s_{2}},...,v_{s_{i-1}}\}\subset S,\ 1\le i\le j\)</span>，同时，根据式 <span class="arithmatex">\((3)\)</span> 有 <span class="arithmatex">\(f_{s,k}\le f_{s,s_{i}}\)</span>，那么</p>
+<p>否则 <span class="arithmatex">\(\exists\ v_{s_{i}}\in S'\text{ 且 }\{v_{s_{1}},v_{s_{2}},\cdots,v_{s_{i-1}}\}\subset S,\ 1\le i\le j\)</span>，同时，根据式 <span class="arithmatex">\((3)\)</span> 有 <span class="arithmatex">\(f_{s,k}\le f_{s,s_{i}}\)</span>，那么</p>
 </li>
 </ul>
 <div class="arithmatex">\[
@@ -5494,21 +5541,21 @@
 \end{equation}
 \]</div>
 <p>因此 <span class="arithmatex">\(f_{s,k}\)</span> 为最短路径，即 <span class="arithmatex">\(d_{s,k}=f_{s,k}\)</span>.</p>
-<h3 id="%E7%A4%BA%E4%BE%8B">示例<a class="headerlink" href="#%E7%A4%BA%E4%BE%8B" title="Permanent link">&para;</a></h3>
+<h2 id="%E7%A4%BA%E4%BE%8B">示例<a class="headerlink" href="#%E7%A4%BA%E4%BE%8B" title="Permanent link">&para;</a></h2>
 <p>给定如图有向图：</p>
-<p><img src="../../img/Dijkstra 示例-1.jpg" alt="例图" style="zoom:50%;" /></p>
+<p><img src="../../img/dijkstra-ex-1.jpg" alt="例图" style="zoom:50%;" /></p>
 <p>初始化 <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(F\)</span>，有：</p>
 <div class="arithmatex">\[
 \begin{equation}
    \begin{aligned}
-      &amp;S=\{v_1\},\quad S‘=\{v_2,v_3,v_4,v_5,v_6\} \\
+      &amp;S=\{v_1\},\quad S'=\{v_2,v_3,v_4,v_5,v_6\} \\
       &amp;d_{1,1}=0 \\
       &amp;f_{1,2}=10,\ f_{1,3}=\infty,\ f_{1,4}=\infty,\ f_{1,5}=\infty,\ f_{1,6}=3
    \end{aligned}
 \end{equation}
 \]</div>
 <p>其中 <span class="arithmatex">\(f_{1,6}=3\)</span> 最小，选择 <span class="arithmatex">\(v_6\)</span>，加入 <span class="arithmatex">\(S\)</span> 并更新 <span class="arithmatex">\(F\)</span>：</p>
-<p><img src="../../img/Dijkstra 示例-2.jpg" alt="例图" style="zoom:75%;" /></p>
+<p><img src="../../img/dijkstra-ex-2.jpg" alt="例图" style="zoom:75%;" /></p>
 <div class="arithmatex">\[
 \begin{equation}
    \begin{aligned}
@@ -5519,7 +5566,7 @@
 \end{equation}
 \]</div>
 <p>其中 <span class="arithmatex">\(f_{1,5}=4\)</span> 最小，选择 <span class="arithmatex">\(v_5\)</span>，加入 <span class="arithmatex">\(S\)</span> 并更新 <span class="arithmatex">\(F\)</span>：</p>
-<p><img src="../../img/Dijkstra 示例-3.jpg" alt="例图" style="zoom:75%;" /></p>
+<p><img src="../../img/dijkstra-ex-3.jpg" alt="例图" style="zoom:75%;" /></p>
 <div class="arithmatex">\[
 \begin{equation}
    \begin{aligned}
@@ -5530,7 +5577,7 @@
 \end{equation}
 \]</div>
 <p>其中 <span class="arithmatex">\(f_{1,2}=5\)</span> 最小，选择 <span class="arithmatex">\(v_2\)</span>，加入 <span class="arithmatex">\(S\)</span> 并更新 <span class="arithmatex">\(F\)</span>：</p>
-<p><img src="../../img/Dijkstra 示例-4.jpg" alt="例图" style="zoom:75%;" /></p>
+<p><img src="../../img/dijkstra-ex-4.jpg" alt="例图" style="zoom:75%;" /></p>
 <div class="arithmatex">\[
 \begin{equation}
    \begin{aligned}
@@ -5541,7 +5588,7 @@
 \end{equation}
 \]</div>
 <p>其中 <span class="arithmatex">\(f_{1,4}=9\)</span> 最小，选择 <span class="arithmatex">\(v_4\)</span>，加入 <span class="arithmatex">\(S\)</span> 并更新 <span class="arithmatex">\(F\)</span>：</p>
-<p><img src="../../img/Dijkstra 示例-5.jpg" alt="例图" style="zoom:75%;" /></p>
+<p><img src="../../img/dijkstra-ex-5.jpg" alt="例图" style="zoom:75%;" /></p>
 <div class="arithmatex">\[
 \begin{equation}
    \begin{aligned}
@@ -5560,8 +5607,45 @@
    \end{aligned}
 \end{equation}
 \]</div>
-<h3 id="%E5%AE%9E%E7%8E%B0">实现<a class="headerlink" href="#%E5%AE%9E%E7%8E%B0" title="Permanent link">&para;</a></h3>
-<p>待定.</p>
+<h2 id="%E5%AE%9E%E7%8E%B0">实现<a class="headerlink" href="#%E5%AE%9E%E7%8E%B0" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">minDistance</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">graph</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// dist[v]: the distance from s to v</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">visited</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">Arrays</span><span class="p">.</span><span class="na">fill</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">dist</span><span class="o">[</span><span class="n">s</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="c1">// choose the nearest one from reachable and not visited vertices</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">dist</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">min</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">dist</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dist</span><span class="o">[</span><span class="n">min</span><span class="o">]</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">min</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">dist</span><span class="p">;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">visited</span><span class="o">[</span><span class="n">min</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="c1">// vertex v is reachable</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">graph</span><span class="o">[</span><span class="n">min</span><span class="o">][</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dist</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">dist</span><span class="o">[</span><span class="n">min</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">graph</span><span class="o">[</span><span class="n">min</span><span class="o">][</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dist</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">                    </span><span class="c1">// a shorter path: s → min → v</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                    </span><span class="n">dist</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dist</span><span class="o">[</span><span class="n">min</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">graph</span><span class="o">[</span><span class="n">min</span><span class="o">][</span><span class="n">v</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dist</span><span class="p">;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="%E5%8F%82%E8%80%83">参考<a class="headerlink" href="#%E5%8F%82%E8%80%83" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/">Dijsktra's algorithm (geeksforgeeks.org)</a></li>
@@ -5587,7 +5671,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-01-19</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-02-21</span>
   </span>
 
     
@@ -5623,7 +5707,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="dfs.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 深度优先搜索">
+          <a href="../crypto/sha.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: SHA">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5633,7 +5717,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                深度优先搜索
+                SHA
               </div>
             </div>
           </a>
