@@ -13,7 +13,7 @@
 设 $m=\frac{n}{2}$，将数组 $A$ 分割为两个部分：$A[1, m]$ 和 $A[m+1,n]$. 分别计算两个子数组的最大连续子序列和，以及同时包含 $A[m]$ 和 $A[m+1]$ 的连续子序列和的最大值 $X$，易知
 
 $$
-X = \max\left\{\sum_{i=1}^{m}A_i, \sum_{i=2}^{m}A_i, ..., \sum_{i=m}^{m}A_i\right\} + \max\left\{\sum_{i=m+1}^{m+1}A_i, \sum_{i=m+1}^{m+2}A_i, ..., \sum_{i=m+1}^{n}A_i\right\}
+X = \max\left\{\sum_{i=1}^{m}A_i, \sum_{i=2}^{m}A_i, \cdots, \sum_{i=m}^{m}A_i\right\} + \max\left\{\sum_{i=m+1}^{m+1}A_i, \sum_{i=m+1}^{m+2}A_i, \cdots, \sum_{i=m+1}^{n}A_i\right\}
 $$
 
 从而有
@@ -25,7 +25,7 @@ $$
 其中，求解 $X$ 的时间复杂度为 $O(n)$，则算法的总的时间复杂度为
 
 $$
-T(n) = 2T(\frac{n}{2}) + O(n) = O(n\log{n})
+T(n) = 2T(\frac{n}{2}) + O(n) = O(n\lg{n})
 $$
 
 ???+ tip

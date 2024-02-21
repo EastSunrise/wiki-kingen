@@ -1,8 +1,8 @@
-## 问题
+# Boyer-Moore 算法
 
 给定文本字符串 $txt[0,n-1]$（以下称为 $T$） 和模式字符串 $pat[0,m-1]$（以下称为 $P$），在 $T$ 中查找 $P$（假定 $n\ge m\ge 1$）。
 
-## Boyer-Moore 算法
+## 算法
 
 BM 算法从右往左进行比较匹配，与 KMP 算法相似，BM 算法通过预处理模式串，使得匹配失败时，模式串可以向后移动多位，即利用模式串的一些特征，排除无法匹配的的位置，加快了匹配的速度。
 
@@ -57,7 +57,7 @@ class BM {
 
 我们称已经匹配的部分 **u** 为 **好后缀**，此时分三种情况讨论：
 
-1. 如果模式串 $P$ 在 **a** 的左侧包含 **u**，将其中最右侧的 **u** 与好后缀对齐；
+如果模式串 $P$ 在 **a** 的左侧包含 **u**，将其中最右侧的 **u** 与好后缀对齐；
 
 ![contained.png](../../img/bm-suffix-1.png)
 
@@ -67,7 +67,7 @@ $$
 \end{equation}
 $$
 
-2. 如果模式串 $P$ 在 **a** 的左侧不存在完全匹配的 **u**，但是存在最长的子串 **v** 既是 **u** 的后缀，也是 $P$ 的前缀，则将二者对齐；
+如果模式串 $P$ 在 **a** 的左侧不存在完全匹配的 **u**，但是存在最长的子串 **v** 既是 **u** 的后缀，也是 $P$ 的前缀，则将二者对齐；
 
 ![suffix.png](../../img/bm-suffix-2.png)
 
@@ -77,7 +77,7 @@ $$
 \end{equation}
 $$
 
-3. 如果上述两步都不满足，则将整个模式串移至好后缀右侧。
+如果上述两步都不满足，则将整个模式串移至好后缀右侧。
 
 ![no suffix.png](../../img/bm-suffix-3.png)
 
@@ -121,6 +121,6 @@ $$
 
 ## 参考
 
--   [Boyer Moore Algorithm for Pattern Searching - GeeksforGeeks](https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/).
--   [字符串匹配的 Boyer-Moore 算法 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html).
--   [grep 之字符串搜索算法 Boyer-Moore 由浅入深（比 KMP 快 3-5 倍） - Alexia(minmin) - 博客园](https://www.cnblogs.com/lanxuezaipiao/p/3452579.html).
+- [Boyer Moore Algorithm for Pattern Searching - GeeksforGeeks](https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/).
+- [字符串匹配的 Boyer-Moore 算法 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html).
+- [grep 之字符串搜索算法 Boyer-Moore 由浅入深（比 KMP 快 3-5 倍） - Alexia(minmin) - 博客园](https://www.cnblogs.com/lanxuezaipiao/p/3452579.html).

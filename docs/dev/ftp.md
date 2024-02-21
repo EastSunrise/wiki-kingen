@@ -1,4 +1,4 @@
-## Get Started
+# FTP
 
 Install a FTP server on Linux and start service:
 
@@ -17,7 +17,7 @@ password <username>
 
 Customize relative configurations in _/etc/vsftpd/vsftpd.conf_ like:
 
-```
+```conf
 anonymous_enable=NO
 
 userlist_enable=YES

@@ -1,4 +1,4 @@
-## 概述
+# 二叉树
 
 二叉树是一种重要的树形结构，其特点是每个结点最多只有两个子树，且有左右之分。
 
@@ -11,6 +11,10 @@ class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
+
+    TreeNode(int val) {
+        this.val = val;
+    }
 }
 ```
 
@@ -35,11 +39,7 @@ class BinaryTree {
             preorderTraversal(node.right, action);
         }
     }
-}
-```
 
-```java
-class BinaryTree {
     // 栈实现
     public void preorderTraversalWithStack(TreeNode root, Consumer<Integer> action) {
         Stack<TreeNode> stack = new Stack<>();
@@ -75,11 +75,7 @@ class BinaryTree {
             inorderTraversal(node.right, action);
         }
     }
-}
-```
 
-```java
-class BinaryTree {
     // 栈实现
     public void inorderTraversalWithStack(TreeNode root, Consumer<Integer> action) {
         Stack<TreeNode> stack = new Stack<>();
@@ -117,11 +113,7 @@ class BinaryTree {
             action.accept(node.val);
         }
     }
-}
-```
 
-```java
-class BinaryTree {
     // 栈实现
     public void postorderTraversalWithStack(TreeNode root, Consumer<Integer> action) {
         TreeNode current = root;
@@ -209,4 +201,4 @@ class BinaryTree {
 
 ## 参考
 
--   [Binary Tree Data Structure](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+- [Binary Tree Data Structure](https://www.geeksforgeeks.org/binary-tree-data-structure/)

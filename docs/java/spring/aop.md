@@ -41,7 +41,7 @@ Spring AOP 是一个支持在 Spring 应用中进行面向切面编程的框架�
 @Configuration
 @EnableAspectJAutoProxy
 public class AppConfig {
-    // ...
+    // do something
 }
 
 @Aspect
@@ -55,7 +55,7 @@ public class LoggingAspect {
     // 使用@Before注解定义一个通知
     @Before("allMethods()")
     public void logBefore(JoinPoint joinPoint) {
-        // ...
+        // do something
     }
 }
 ```
@@ -66,10 +66,10 @@ public class LoggingAspect {
 
 切入点表达式（Pointcut expressions）用于指定哪些连接点应该被一个切面匹配。Spring AOP 使用 AspectJ 的切入点表达式语言，它支持各种类型的指示符来匹配不同类型的连接点。一些常用的指示符有：
 
--   `execution`：匹配方法执行的连接点。它接受一个指定方法签名的模式，例如修饰符、返回类型、类名、方法名和参数。例如，`execution(public * com.example.service.*.*(..))`匹配了`com.example.service`包中的任何公共方法。
--   `within`：匹配某些类型内的连接点。它接受一个指定类型名的模式，例如包名、类名或接口名。例如，`within(com.example.service.*)`匹配了`com.example.service`包中的任何类内的任何连接点。
--   `args`：匹配参数是给定类型实例的连接点。它接受一个类型名或模式的列表。例如，`args(String, int)`匹配了第一个参数是`String`，第二个参数是`int`的任何连接点。
--   `@annotation`：匹配主体有给定注解的连接点。它接受注解类型名。例如，`@annotation(com.example.annotation.Loggable)`匹配了方法或类有`@Loggable`注解的任何连接点。
+- `execution`：匹配方法执行的连接点。它接受一个指定方法签名的模式，例如修饰符、返回类型、类名、方法名和参数。例如，`execution(public * com.example.service.*.*(..))`匹配了`com.example.service`包中的任何公共方法。
+- `within`：匹配某些类型内的连接点。它接受一个指定类型名的模式，例如包名、类名或接口名。例如，`within(com.example.service.*)`匹配了`com.example.service`包中的任何类内的任何连接点。
+- `args`：匹配参数是给定类型实例的连接点。它接受一个类型名或模式的列表。例如，`args(String, int)`匹配了第一个参数是`String`，第二个参数是`int`的任何连接点。
+- `@annotation`：匹配主体有给定注解的连接点。它接受注解类型名。例如，`@annotation(com.example.annotation.Loggable)`匹配了方法或类有`@Loggable`注解的任何连接点。
 
 ## 通知注解
 
@@ -109,13 +109,13 @@ public class LoggingAspect {
 
 AOP 是一种强大而有用的软件开发技术，但它也需要一些注意和纪律才能有效和高效地使用它。以下是一些使用 AOP 的技巧和最佳实践：
 
--   选择合适的连接点和切入点：使用最具体和表达力的切入点表达式来匹配你的需求。避免使用太宽泛或太狭窄的切入点，可能会导致不必要的副作用或错过一些连接点。使用命名的切入点或切入点方法来提高可读性和可重用性。
--   避免过度使用或滥用切面：只对那些不能通过其他方式轻易实现的横切关注点使用切面。避免对属于程序主要逻辑的核心关注点使用切面。避免对不太重要或只是美化的关注点使用切面。
--   遵循命名规范和编码标准：为你的切面、切入点和通知使用一致和有意义的名称。遵循你的项目或组织的编码标准和规范。使用适当的缩进、空格、注释等，来提高可读性和可维护性。
--   测试和调试你的切面：彻底并独立地测试你的切面，与核心关注点分开。使用单元测试、集成测试或端到端测试工具和框架来验证你的切面的正确性和功能性。仔细和系统地调试你的切面，使用日志、跟踪、断点等，来识别和修复错误或缺陷。
+- 选择合适的连接点和切入点：使用最具体和表达力的切入点表达式来匹配你的需求。避免使用太宽泛或太狭窄的切入点，可能会导致不必要的副作用或错过一些连接点。使用命名的切入点或切入点方法来提高可读性和可重用性。
+- 避免过度使用或滥用切面：只对那些不能通过其他方式轻易实现的横切关注点使用切面。避免对属于程序主要逻辑的核心关注点使用切面。避免对不太重要或只是美化的关注点使用切面。
+- 遵循命名规范和编码标准：为你的切面、切入点和通知使用一致和有意义的名称。遵循你的项目或组织的编码标准和规范。使用适当的缩进、空格、注释等，来提高可读性和可维护性。
+- 测试和调试你的切面：彻底并独立地测试你的切面，与核心关注点分开。使用单元测试、集成测试或端到端测试工具和框架来验证你的切面的正确性和功能性。仔细和系统地调试你的切面，使用日志、跟踪、断点等，来识别和修复错误或缺陷。
 
 ## 参考
 
--   [The AspectJ Programming Guide](https://www.eclipse.org/aspectj/doc/released/progguide/index.html)
--   [AOP with Spring](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop)
--   [Spring AOP APIs](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop-api)
+- [The AspectJ Programming Guide](https://www.eclipse.org/aspectj/doc/released/progguide/index.html)
+- [AOP with Spring](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop)
+- [Spring AOP APIs](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop-api)

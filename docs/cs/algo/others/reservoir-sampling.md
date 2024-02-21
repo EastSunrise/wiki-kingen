@@ -1,6 +1,6 @@
-## 问题
+# 蓄水池抽样
 
-给定一个数据流 $a_1,...,a_N$，其长度 $N$ 很大或者未知，请问如何在 $O(N)$ 情况下，随机取出 $k$ 个数？要求：
+给定一个数据流 $a_1,\cdots,a_N$，其长度 $N$ 很大或者未知，请问如何在 $O(N)$ 情况下，随机取出 $k$ 个数？要求：
 
 1. _N_ 很大，因此无法一次性存储数据流；
 2. 随机选出 $k$ 个数，每个数被选到的概率为 $\frac{k}{N}$.
@@ -9,7 +9,7 @@
 
 一个简单的算法步骤如下：
 
-1. 维护一个容量为 $k$ 的蓄水池 $R_1,...,R_k$，将数据流的前 $k$ 个数放入池中；
+1. 维护一个容量为 $k$ 的蓄水池 $R_1,\cdots,R_k$，将数据流的前 $k$ 个数放入池中；
 2. 遍历剩余数据。对于 $a_i$，在 $[1,i]$ 范围内取随机数 $d$，如果 $1\le d\le k$，则替换 $R_d$。
 
 现在证明，对 $a_i$，其被选中的概率 $P(i)=\frac{k}{N}$.
@@ -22,20 +22,20 @@
 5. 当 $i>k$，$O(i)=\prod_{i<j\le N} \frac{j-1}{j}=\frac{i}{N}$；
 6. 综上可知，$P(i)=\frac{k}{N}$.
 
-```
+```text
 // R数组储存最后的结果
 ReservoirSampling(a[1...N], R[1...k])
-	for i from 1 to k:
-		R[i]=a[i]
+    for i from 1 to k:
+        R[i]=a[i]
 
-	for i from k+1 to n:
-		d = random(1, i)
-		if j <= k:
-			R[d]=a[i]
+    for i from k+1 to n:
+        d = random(1, i)
+        if j <= k:
+            R[d]=a[i]
 ```
 
 由上可知，算法的时间复杂度为 $O(N)$，空间复杂度为 $O(k)$.
 
 ## 参考
 
--   [Reservoir sampling - Wikipedia](https://en.wikipedia.org/wiki/Reservoir_sampling)
+- [Reservoir sampling - Wikipedia](https://en.wikipedia.org/wiki/Reservoir_sampling)

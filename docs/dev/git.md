@@ -42,9 +42,9 @@ git branch -d dev
 
 ```sh
 # 切换分支
-git checkout dev
+git checkout <branch_name>
 # 不存在时创建
-git checkout -b dev
+git checkout -b <branch_name>
 ```
 
 ### stash
@@ -69,6 +69,30 @@ git stash [pop|apply] stash@{1}
 git stash clear
 # 清理指定暂存
 git stash drop stash@{1}
+```
+
+### tag
+
+```sh
+# 打标签到最新提交的commit
+git tag <tag_name>
+# 或指定的commit(可以通过 git log 查看)
+git tag <tag_name> <commit_id>
+# 添加说明
+git tag -m <msg> <tag_name>
+
+# 查看所有标签
+git tag
+# 查看指定标签详情
+git show <tag_name>
+
+# 删除指定标签
+git tag -d <tag_name>
+
+# 标签默认不会push到远程，除非
+git push origin <tag_name>
+# 或者推送所有标签
+git push origin --tags
 ```
 
 ## .gitignore

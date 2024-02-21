@@ -1,4 +1,4 @@
-## 问题
+# KMP 算法
 
 给定文本字符串 $txt[0,n-1]$（以下称为 $T$） 和模式字符串 $pat[0,m-1]$（以下称为 $P$），在 $T$ 中查找 $P$（假定 $n\ge m\ge 1$）。
 
@@ -26,13 +26,13 @@ class PatternSearching {
 }
 ```
 
-## KMP 算法
+## 算法
 
 上述暴力匹配算法中，一旦匹配失败时，$P$ 就会右移一位（即 $i=i+1$），然后从头开始匹配（$j=0$），已经匹配的部分直接被丢弃，而 KMP 算法的关键思想就在于：**利用已经匹配的部分，保持 $i$ 不变，修改 $j$ 使得 $P$ 移动到下一个有效的位置**。
 
 ### 找到下一个位置
 
-讨论一般情形，设 $T=t_0,t_1,...,t_{n-1};\ P=p_0,p_1,...,p_{m-1}$，在如图位置时，匹配失败，即 $t_{i+j}\ne p_j$
+讨论一般情形，设 $T=t_0,t_1,\cdots,t_{n-1};\ P=p_0,p_1,\cdots,p_{m-1}$，在如图位置时，匹配失败，即 $t_{i+j}\ne p_j$
 
 $$
 \begin{matrix}
@@ -230,6 +230,6 @@ class PatternSearching {
 
 ## 参考
 
--   [KMP Algorithm for Pattern Searching - GeeksforGeeks](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/)
--   [Knuth–Morris–Pratt algorithm - Wikipedia](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
--   [（原创）详解 KMP 算法 - 孤~影 - 博客园](https://www.cnblogs.com/yjiyjige/p/3263858.html)
+- [KMP Algorithm for Pattern Searching - GeeksforGeeks](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/)
+- [Knuth–Morris–Pratt algorithm - Wikipedia](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
+- [（原创）详解 KMP 算法 - 孤~影 - 博客园](https://www.cnblogs.com/yjiyjige/p/3263858.html)

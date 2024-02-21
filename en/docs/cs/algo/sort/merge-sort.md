@@ -41,4 +41,4 @@ def merge_sort(arr):
         k += 1
 ```
 
-Its time complexity is $O(n\log n)$.
+Its time complexity is $O(n\lg n)$.

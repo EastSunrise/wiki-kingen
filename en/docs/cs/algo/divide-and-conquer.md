@@ -28,7 +28,7 @@ $$
 
 ### Time Complexity
 
-Time complexity of $X$ is $O(n)$. So, $T(n) = 2T(\frac{n}{2}) + O(n)$. Then the total time complexity is $O(n\log{n})$.
+Time complexity of $X$ is $O(n)$. So, $T(n) = 2T(\frac{n}{2}) + O(n)$. Then the total time complexity is $O(n\lg{n})$.
 
 ### Notes
 
@@ -46,4 +46,4 @@ Then, $MS(k+1)$ is the larger one. In this way, $T(n) = T(n-1) + C = O(n)$.
 
 ## References
 
--   [Divide and Conquer - GeeksforGeeks](https://www.geeksforgeeks.org/divide-and-conquer/)
+- [Divide and Conquer - GeeksforGeeks](https://www.geeksforgeeks.org/divide-and-conquer/)

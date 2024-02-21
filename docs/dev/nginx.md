@@ -1,8 +1,10 @@
+# Nginx
+
 ## 安装
 
 预先安装，
 
-```shell
+```sh
 yum install yum-utils
 ```
 
@@ -28,7 +30,7 @@ module_hotfixes=true
 
 执行安装，
 
-```shell
+```sh
 yum install nginx
 ```
 
@@ -52,4 +54,4 @@ nginx 的默认主配置文件为 _nginx.conf_，目录为 _/usr/local/nginx/con
 
 ## 参考
 
--   [nginx documentation](http://nginx.org/en/docs/)
+- [nginx documentation](http://nginx.org/en/docs/)

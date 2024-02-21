@@ -26,7 +26,7 @@ def inversion_pairs(arr):
 
 ## Enhanced Merge Sort
 
-Like [Merge Sort](../algo/sort/merge-sort.md), the algorithm divides the array into two halves, counts and sorts the halves, then merges the two halves. Its time complexity is $O(n\log{n})$.
+Like [Merge Sort](../algo/sort/merge-sort.md), the algorithm divides the array into two halves, counts and sorts the halves, then merges the two halves. Its time complexity is $O(n\lg{n})$.
 
 ```python
 def inversion_pairs(arr):

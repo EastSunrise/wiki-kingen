@@ -66,4 +66,4 @@ bind-address = 0.0.0.0
 ## 参考
 
 - [MySQL Documentation](https://dev.mysql.com/doc/)
-  - [Installing and Upgrading MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
+    - [Installing and Upgrading MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html)

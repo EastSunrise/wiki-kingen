@@ -1,6 +1,4 @@
-- [x] TODO
-
-#### Overview
+# SQL
 
 Oracle SQL statements are divided into the following categories:
 

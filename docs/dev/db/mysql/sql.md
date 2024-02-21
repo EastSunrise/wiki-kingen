@@ -43,8 +43,8 @@ SHOW INDEX FROM table_name FROM db_name;
 ## 参考目录
 
 - [SQL Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
-  - [Data Definition Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html)
-  - [Data Manipulation Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-manipulation-statements.html)
-  - [Database Administration Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-server-administration-statements.html)
-    - [Account Management Statements](https://dev.mysql.com/doc/refman/8.0/en/account-management-statements.html)
-    - [SHOW Statements](https://dev.mysql.com/doc/refman/8.0/en/show.html)
+    - [Data Definition Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html)
+    - [Data Manipulation Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-manipulation-statements.html)
+    - [Database Administration Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-server-administration-statements.html)
+        - [Account Management Statements](https://dev.mysql.com/doc/refman/8.0/en/account-management-statements.html)
+        - [SHOW Statements](https://dev.mysql.com/doc/refman/8.0/en/show.html)

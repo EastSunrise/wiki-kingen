@@ -1,36 +1,32 @@
--   [x] TODO
+# Node.js
 
-#### Installation
+## Installation
 
-Download and install from [Download | Node.js](https://nodejs.org/en/download/).
+Download and install from [here](https://nodejs.org/en/download/).
 
-#### NPM
+## NPM
 
-##### Commands
+### Commands
 
-```shell
-$ npm view {module_name} versions # view all version of specified module
-$ npm install {module_name}@{version} # install specified version of a module
+```sh
+npm view {module_name} versions # view all version of specified module
+npm install {module_name}@{version} # install specified version of a module
 ```
 
-##### Mirrors
+### Mirrors
 
-###### Temparory
+```sh
+# specify mirror manually
+npm --registry https://registry.npm.taobao.org install {module_name}
 
-```shell
-$ npm --registry https://registry.npm.taobao.org install {module_name}
-```
-
-###### Permanent
-
-```shell
-$ npm config set registry https://registry.npm.taobao.org
+# configure mirror permanently
+npm config set registry https://registry.npm.taobao.org
 
 # verify
-$ npm config get registry
+npm config get registry
 ```
 
-#### References
+## References
 
 1. [Node.js Documentation](https://nodejs.org/dist/latest/docs/api/)
 2. [API 文档 | Node.js 中文网](http://nodejs.cn/api/)

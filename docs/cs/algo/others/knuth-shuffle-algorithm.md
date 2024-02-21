@@ -1,19 +1,17 @@
-## 问题
+# Knuth 洗牌算法
 
-给定一个数组 $a_1,...,a_n$，设计一个公平的洗牌算法。
-
-## 分析
+给定一个数组 $a_1,\cdots,a_n$，设计一个公平的洗牌算法。
 
 洗牌即随机生成给定数组所有元素的一个排列，这样的排列一共有 $n!$ 个，因此算法的目标是 **等概率** 地给出其中的一个。对于任意一个元素都能 **独立且等概率** 地放置在任意一个位置上。
 
-## Knuth 洗牌算法
+## 算法
 
-从后向前遍历数组，对于当前元素 $a_i$，从 $a[1,...,i]$ 中随机选取 $a_j$，和 $a_i$ 交换。
+从后向前遍历数组，对于当前元素 $a_i$，从 $a[1,\cdots,i]$ 中随机选取 $a_j$，和 $a_i$ 交换。
 
-```
+```text
 for i from n to 1:
-	j = random(1,i)
-	swap(a[i], a[j])
+    j = random(1,i)
+    swap(a[i], a[j])
 ```
 
 现在证明，任意元素 $a$ 出现在位置 $p$ 上的概率 $P(a,p)=\frac{1}{n}$.
@@ -28,17 +26,17 @@ for i from n to 1:
 
 每次从数组中随机不放回地抽取一个元素，生成的排列即是洗牌的一个结果。
 
-```
-b[1,...,n] // 存放结果
+```text
+b[1,···,n] // 存放结果
 k=1
 for i from n to 1:
-	j = random(1,i)
-	b[k++]=a[j]
-	remove(a[j])
+    j = random(1,i)
+    b[k++]=a[j]
+    remove(a[j])
 ```
 
 算法的时间复杂度和空间复杂度均为 $O(n)$.
 
 ## 参考
 
--   [Fisher–Yates shuffle - Wikipedia](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)
+- [Fisher–Yates shuffle - Wikipedia](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)

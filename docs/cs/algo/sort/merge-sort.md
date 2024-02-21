@@ -42,7 +42,7 @@
 
 $$
 \begin{array}{rl}
-    T(n)=2·T(\frac{n}{2})+O(n)=O(n\log n)
+    T(n)=2·T(\frac{n}{2})+O(n)=O(n\lg n)
 \end{array}
 $$
 

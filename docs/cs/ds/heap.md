@@ -4,15 +4,15 @@
 
 ```java
 int parent(int i) {
-	return (i - 1) >> 1;
+    return (i - 1) >> 1;
 }
 
 int left(int i) {
-	return (i << 1) + 1;
+    return (i << 1) + 1;
 }
 
 int right(int i) {
-	return (i + 1) << 1;
+    return (i + 1) << 1;
 }
 ```
 
@@ -38,20 +38,20 @@ $$
 
 ```java
 void heapify(int[] array, int size, int i) {
-	while (true) {
-		int l = left(i), r = right(i), largest = i;
-		if (l < size && array[l] > array[largest]) {
-			largest = l;
-		}
-		if (r < size && array[r] > array[largest]) {
-			largest = r;
-		}
-		if (largest == i) {
-			break;
-		}
-		swap(array, largest, i);
-		i = largest;
-	}
+    while (true) {
+        int l = left(i), r = right(i), largest = i;
+        if (l < size && array[l] > array[largest]) {
+            largest = l;
+        }
+        if (r < size && array[r] > array[largest]) {
+            largest = r;
+        }
+        if (largest == i) {
+            break;
+        }
+        swap(array, largest, i);
+        i = largest;
+    }
 }
 ```
 
@@ -63,9 +63,9 @@ void heapify(int[] array, int size, int i) {
 
 ```java
 void buildHeap(int[] array) {
-	for (int i = array.length / 2 - 1; i >= 0; i--) {
-		heapify(array, array.length, i);
-	}
+    for (int i = array.length / 2 - 1; i >= 0; i--) {
+        heapify(array, array.length, i);
+    }
 }
 ```
 
@@ -101,11 +101,11 @@ $$
 
 ```java
 void heapSort(int[] array) {
-	buildHeap(array);
-	for (int i = array.length - 1; i > 0; i--) {
-		swap(array, i, 0);
-		heapify(array, i, 0);
-	}
+    buildHeap(array);
+    for (int i = array.length - 1; i > 0; i--) {
+        swap(array, i, 0);
+        heapify(array, i, 0);
+    }
 }
 ```
 
