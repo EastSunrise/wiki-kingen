@@ -91,6 +91,32 @@ ffmpeg -i INPUT -c:v copy OUTPUT # 提取视频流
 ffmpeg -ss 02:30 -to 10:20 -i INPUT.mp4 -c copy OUTPUT.mp4
 ```
 
+## 偏移
+
+```sh
+# 添加偏移量
+-itsoffset <offset>
+
+# 字幕增加5秒
+ffmpeg -itsoffset 5 -i subtitle.srt -c copy subtitle_delayed.srt 
+```
+
+## 裁剪和填充
+
+```sh
+# 裁剪
+ffmpeg -i input.mp4 -vf "crop=out_w:out_h:x:y" output.mp4
+```
+
+其中，`out_w` 和 `out_h` 对应输出视频的宽和高，`x:y` 对应输出视频左上角在输入视频中的坐标。
+
+```sh
+# 填充
+ffmpeg -i input.mp4 -vf "pad=out_w:out_h:x:y" output.mp4
+```
+
+其中，`out_w` 和 `out_h` 对应输出视频的宽和高，`x:y` 对应输入视频左上角在输出视频中的坐标。
+
 ## 参考
 
 - [ffmpeg Documentation](https://ffmpeg.org/ffmpeg.html)
