@@ -160,40 +160,41 @@ $$
 
 ## 实现
 
-=== "Java"
-    ```java
-    int[] minDistance(int[][] graph, int n, int s) {
-        // dist[v]: the distance from s to v
-        int[] dist = new int[n];
-        boolean[] visited = new boolean[n];
-        Arrays.fill(dist, -1);
+```java
+int[] minDistance(int[][] graph, int n, int s) {
+   // dist[v]: the distance from s to v
+   int[] dist = new int[n];
+   boolean[] visited = new boolean[n];
+   Arrays.fill(dist, -1);
 
-        dist[s] = 0;
-        for (int i = 1; i < n; i++) {
-            int min = -1;
-            for (int v = 0; v < n; v++) {
-                // choose the nearest one from reachable and not visited vertices
-                if (!visited[v] && dist[v] != -1 && (min == -1 || dist[v] < dist[min])) {
-                    min = v;
-                }
+   dist[s] = 0;
+   for (int i = 1; i < n; i++) {
+      int min = -1;
+      for (int v = 0; v < n; v++) {
+            // choose the nearest vertex from reachable but not visited vertices
+            if (!visited[v] && dist[v] != -1 && (min == -1 || dist[v] < dist[min])) {
+               min = v;
             }
-            if (min == -1) {
-                return dist;
+      }
+      if (min == -1) {
+            return dist;
+      }
+      visited[min] = true;
+      for (int v = 0; v < n; v++) {
+            // vertex v is reachable, update its distance to s
+            if (!visited[v] && graph[min][v] > 0) {
+               if (dist[v] == -1 || dist[min] + graph[min][v] < dist[v]) {
+                  // a shorter path: s → min → v
+                  dist[v] = dist[min] + graph[min][v];
+               }
             }
-            visited[min] = true;
-            for (int v = 0; v < n; v++) {
-                // vertex v is reachable
-                if (!visited[v] && graph[min][v] > 0) {
-                    if (dist[v] == -1 || dist[min] + graph[min][v] < dist[v]) {
-                        // a shorter path: s → min → v
-                        dist[v] = dist[min] + graph[min][v];
-                    }
-                }
-            }
-        }
-        return dist;
-    }
-    ```
+      }
+   }
+   return dist;
+}
+```
+
+易知，时间复杂度为 $O(|V|^2)$.
 
 ## 参考
 

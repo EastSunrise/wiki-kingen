@@ -6,3 +6,7 @@
 - Producer：消息生产者；
 - Consumer：消息消费者；
 - Consumer Group：每一个 _Consumer_ 属于一个特定的 _Group_。
+
+## 参考
+
+- [Apache Kafka](https://kafka.apache.org/documentation/)

@@ -7,13 +7,19 @@
 ### 链表
 
 ```java
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+class BinaryTree {
 
-    TreeNode(int val) {
-        this.val = val;
+    TreeNode root;
+
+    class TreeNode {
+
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int val) {
+            this.val = val;
+        }
     }
 }
 ```
@@ -30,24 +36,17 @@ class TreeNode {
 
 ```java
 class BinaryTree {
-    // 递归实现
-    public void preorderTraversal(TreeNode node, Consumer<Integer> action) {
-        if (node != null) {
-            // 访问当前结点
-            action.accept(node.val);
-            preorderTraversal(node.left, action);
-            preorderTraversal(node.right, action);
-        }
-    }
 
-    // 栈实现
-    public void preorderTraversalWithStack(TreeNode root, Consumer<Integer> action) {
+    // 迭代实现前序遍历
+    void preorderIteratively() {
         Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
+        if (root != null) {
+            stack.push(root);
+        }
         while (!stack.isEmpty()) {
             TreeNode current = stack.pop();
-            // 访问当前结点
-            action.accept(current.val);
+            System.out.println(current.val);
+
             // 先后将右子结点和左子结点入栈
             if (current.right != null) {
                 stack.push(current.right);
@@ -66,34 +65,23 @@ class BinaryTree {
 
 ```java
 class BinaryTree {
-    // 递归实现
-    public void inorderTraversal(TreeNode node, Consumer<Integer> action) {
-        if (node != null) {
-            inorderTraversal(node.left, action);
-            // 访问当前结点
-            action.accept(node.val);
-            inorderTraversal(node.right, action);
-        }
-    }
 
-    // 栈实现
-    public void inorderTraversalWithStack(TreeNode root, Consumer<Integer> action) {
+    // 迭代实现中序遍历
+    void inorderIteratively() {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;
-        do {
+        while (!stack.isEmpty() || current != null) {
             // 将当前结点的最左路径（包括自身）入栈，即先进入左子树
             while (current != null) {
                 stack.push(current);
                 current = current.left;
             }
-            if (!stack.isEmpty()) {
-                // 退栈并访问结点
-                current = stack.pop();
-                action.accept(current.val);
-                // 转向右子树
-                current = current.right;
-            }
-        } while (current != null || !stack.isEmpty());
+            current = stack.pop();
+            System.out.println(current.val);
+
+            // 转向右子树
+            current = current.right;
+        }
     }
 }
 ```
@@ -104,40 +92,28 @@ class BinaryTree {
 
 ```java
 class BinaryTree {
-    // 递归实现
-    public void postorderTraversal(TreeNode node, Consumer<Integer> action) {
-        if (node != null) {
-            inorderTraversal(node.left, action);
-            inorderTraversal(node.right, action);
-            // 访问当前结点
-            action.accept(node.val);
-        }
-    }
 
-    // 栈实现
-    public void postorderTraversalWithStack(TreeNode root, Consumer<Integer> action) {
-        TreeNode current = root;
-        // 标记最后一次访问的结点
-        TreeNode last = null;
+    // 迭代实现后序遍历
+    void postorderIteratively() {
         Stack<TreeNode> stack = new Stack<>();
+        // 当前结点和最后一次访问的结点
+        TreeNode current = root, last = null;
         while (!stack.isEmpty() || current != null) {
-            // 先将当前结点的最左路径上所有结点（包括自身）入栈，即先访问左子树
+            // 将当前结点的最左路径（包括自身）入栈，即先进入左子树
             while (current != null) {
                 stack.push(current);
                 current = current.left;
             }
             current = stack.peek();
-            // 判断当前结点是否有右子树，或者右子树是否已经访问结束
             if (current.right == null || current.right == last) {
-                // 如果是，访问当前结点
-                action.accept(current.val);
-                // 将当前结点出栈
+                // 当前结点没有右子树，或者右子树已经访问结束，则访问当前结点，并出栈
+                System.out.println(current.val);
+
                 stack.pop();
-                // 记下该结点
                 last = current;
                 current = null;
             } else {
-                // 右子树存在且访问，则转向访问右子树
+                // 右子树存在且未访问，则转向访问右子树
                 current = current.right;
             }
         }
@@ -151,49 +127,50 @@ class BinaryTree {
 
 ```java
 class BinaryTree {
+
     // 队列实现（不分层）
-    public void levelOrderTraversal(TreeNode root, Consumer<Integer> action) {
+    void levelOrder() {
         if (root == null) {
             return;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
         while (!queue.isEmpty()) {
             // 访问队列前端的结点
             TreeNode current = queue.remove();
-            action.accept(current.val);
+            System.out.println(current.val);
+
             // 将该结点左右子结点进队
             if (current.left != null) {
-                queue.add(current.left);
+                queue.offer(current.left);
             }
             if (current.right != null) {
-                queue.add(current.right);
+                queue.offer(current.right);
             }
         }
     }
 
     // 队列实现（分层）
-    public void traverseLevels(TreeNode root, Consumer<List<Integer>> levelAction) {
+    public void traverseLevels() {
         if (root == null) {
             return;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
         while (!queue.isEmpty()) {
             // 访问当前层，并将左右子结点进队
             int size = queue.size();
-            List<Integer> level = new ArrayList<>(size);
             for (int i = 0; i < size; i++) {
-                TreeNode node = queue.remove();
-                level.add(node.val);
-                if (node.left != null) {
-                    queue.add(node.left);
+                TreeNode current = queue.remove();
+                System.out.println(current.val);
+
+                if (current.left != null) {
+                    queue.offer(current.left);
                 }
-                if (node.right != null) {
-                    queue.add(node.right);
+                if (current.right != null) {
+                    queue.offer(current.right);
                 }
             }
-            levelAction.accept(level);
         }
     }
 }

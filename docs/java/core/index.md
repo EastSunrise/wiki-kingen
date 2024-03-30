@@ -186,6 +186,23 @@ public non-sealed class C extends A {}
 public class D extends C {}
 ```
 
+## Java 21 新特性
+
+### 虚拟线程
+
+平台线程和内核线程一一对应，由操作系统管理和调度；虚拟线程是用户模式线程，在 JVM 内部实现，由 JVM 管理和调度，开销比较小。如果某个任务经常处于阻塞状态（等待 I/O 操作），适合使用虚拟线程。
+
+```java
+public static void main(String[] args) {
+    try (ExecutorService executor = Executors.newThreadPerTaskExecutor(Thread.ofVirtual().factory())) {
+        for (int i = 0; i < 100_000; i++) {
+            final int j = i;
+            executor.execute(() -> System.out.println(j));
+        }
+    }
+}
+```
+
 ## 参考
 
 - [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
