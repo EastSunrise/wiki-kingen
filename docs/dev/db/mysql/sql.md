@@ -1,12 +1,17 @@
 # SQL
 
-MqSQL 支持的 [SQL 语法](ttps://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+MqSQL 支持的 [SQL 语法](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
 
 ## 数据定义
 
 ### ALTER TABLE
 
 ```sql
+# 添加字段
+ALTER TABLE table_name ADD column_name VARCHAR(32) NOT NULL;
+# 修改字段
+ALTER TABLE table_name MODIFY column_name VARCHAR(64) NOT NULL;
+
 # 添加普通索引和唯一性索引
 ALTER TABLE table_name ADD INDEX idx_name ( `column_name` );
 ALTER TABLE table_name ADD UNIQUE KEY ui_name ( `column_name` );
@@ -43,8 +48,3 @@ SHOW INDEX FROM table_name FROM db_name;
 ## 参考目录
 
 - [SQL Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
-    - [Data Definition Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html)
-    - [Data Manipulation Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-manipulation-statements.html)
-    - [Database Administration Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-server-administration-statements.html)
-        - [Account Management Statements](https://dev.mysql.com/doc/refman/8.0/en/account-management-statements.html)
-        - [SHOW Statements](https://dev.mysql.com/doc/refman/8.0/en/show.html)

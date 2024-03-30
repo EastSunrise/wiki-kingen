@@ -38,6 +38,14 @@ git merge dev
 git branch -d dev
 ```
 
+企业开发中常用的分支策略：
+
+- master：主分支，提供给用户的正式版本；
+- develop：开发分支，日常开发使用的分支，开发完成后合并到 master 分支；
+- feature：功能分支，从 develop 分支拉取，开发特定的功能，完成后合并到 develop 分支；单人开发可以不推送到远程仓库；
+- release：预发布分支，合并到 master 正式版本前，从 develop 分支拉取，进行测试，结束后合并到 master 和 develop 分支；
+- bug：bug 分支，从 master 分支拉取，修复 bug，然后合并到 master 和 develop 分支；本地使用，一般不用推送到远程仓库。
+
 ### checkout
 
 ```sh

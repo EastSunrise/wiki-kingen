@@ -28,8 +28,6 @@ theme:
       accent: blue
   features:
     - navigation.tabs
-    - navigation.sections
-    - navigation.indexes
     - navigation.top
     - navigation.footer
     - toc.follow
@@ -97,10 +95,26 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Java:
-      - java/index.md
-      - 基础语法:
-          - Annotation: java/basic/annotation.md
-      - 扩展库:
+      - Core:
+          - Get Started: java/core/index.md
+          - Annotation: java/core/annotation.md
+          - Generic: java/core/generic.md
+          - Exception: java/core/exception.md
+          - I/O: java/core/io.md
+          - Collection: java/core/collection.md
+          - Concurrency: java/core/concurrency.md
+          - Reflection: java/core/reflection.md
+          - JVM: java/core/jvm.md
+          - GC: java/core/gc.md
+          - FAQ: java/core/faq.md
+      - Spring:
+          - Get Started: java/spring/index.md
+          - IoC: java/spring/ioc.md
+          - AOP: java/spring/aop.md
+          - Transaction: java/spring/transaction.md
+          - Actuator: java/spring/actuator.md
+          - FAQ: java/spring/faq.md
+      - Libraries:
           - Apache Commons: java/lib/apache-commons.md
           - Apache POI: java/lib/apache-poi.md
           - HttpComponents: java/lib/http-components.md
@@ -110,13 +124,10 @@ nav:
       - 设计模式:
           - 状态模式: java/design-pattern/state-pattern.md
           - 单例模式: java/design-pattern/singleton-pattern.md
-      - Spring:
-          - java/spring/index.md
-          - AOP: java/spring/aop.md
-          - Transaction: java/spring/transaction.md
-          - Actuator: java/spring/actuator.md
       - MyBatis: java/mybatis.md
       - Tomcat: java/tomcat.md
+      - Netty: java/netty.md
+      - Quartz: java/quartz.md
       - Maven: java/maven.md
       - Freemarker: java/freemarker.md
       - OGNL: java/ognl.md
@@ -132,6 +143,7 @@ nav:
           - 树:
               - 二叉树: cs/ds/tree/binary-tree.md
               - 二叉搜索树: cs/ds/tree/binary-search-tree.md
+              - AVL树: cs/ds/tree/avl-tree.md
               - 红黑树: cs/ds/tree/red-black-tree.md
               - 线段树: cs/ds/tree/segment-tree.md
           - 堆: cs/ds/heap.md
@@ -178,23 +190,23 @@ nav:
       - Problem:
           - 逆序对: cs/problem/inversion-pairs.md
   - Python:
-      - py/index.md
-      - 标准库:
+      - Core:
+          - Get Started: py/core/index.md
           - 文件和目录访问:
-              - shutil: py/lib/shutil.md
+              - shutil: py/core/shutil.md
           - 数据持久化:
-              - sqlite3: py/lib/sqlite3.md
+              - sqlite3: py/core/sqlite3.md
           - 文件格式:
-              - configParser: py/lib/configparser.md
+              - configParser: py/core/configparser.md
           - 加密服务:
-              - hashlib: py/lib/hashlib.md
+              - hashlib: py/core/hashlib.md
           - 操作系统服务:
-              - logging: py/lib/logging.md
+              - logging: py/core/logging.md
           - 互联网协议和支持:
-              - urllib: py/lib/urllib.md
+              - urllib: py/core/urllib.md
           - GUI:
-              - tkinter: py/lib/tkinter.md
-      - 扩展库:
+              - tkinter: py/core/tkinter.md
+      - Libraries:
           - BeautifulSoup: py/lib/bs4.md
           - PyMySQL: py/lib/pymysql.md
           - PyYAML: py/lib/pyyaml.md
@@ -210,20 +222,20 @@ nav:
       - Flask: py/flask.md
   - Development:
       - References: dev/references.md
-      - API:
-          - 豆瓣: dev/api/douban.md
-          - 酷狗: dev/api/kugou.md
-          - 英雄联盟: dev/api/lol.md
       - 数据库:
           - MySQL:
               - dev/db/mysql/index.md
               - SQL: dev/db/mysql/sql.md
+              - 函数和操作符: dev/db/mysql/func&ops.md
+              - Optimization: dev/db/mysql/optimization.md
               - FAQ: dev/db/mysql/faq.md
           - Oracle:
               - dev/db/oracle/index.md
               - SQL: dev/db/oracle/sql.md
           - Redis: dev/db/redis.md
+          - MongoDB: dev/db/mongodb.md
           - InfluxDB: dev/db/influxdb.md
+          - ElasticSearch: dev/db/elasticsearch.md
           - IoTDB: dev/db/iotdb.md
           - SQLite: dev/db/sqlite.md
       - Web:
@@ -242,10 +254,13 @@ nav:
           - C Language: dev/lang/c.md
           - C#: dev/lang/c#.md
           - PHP: dev/lang/php.md
+      - 中间件:
+          - Kafka: dev/mw/kafka.md
+          - RabbitMQ: dev/mw/rabbitmq.md
+          - ZooKeeper: dev/mw/zookeeper.md
       - Linux: dev/linux.md
       - Git: dev/git.md
       - Docker: dev/docker.md
-      - Kafka: dev/kafka.md
       - Nginx: dev/nginx.md
       - Prometheus: dev/prometheus.md
       - Grafana: dev/grafana.md
