@@ -246,6 +246,8 @@ nav:
               - Node.js: dev/web/js/nodejs.md
               - React: dev/web/js/react.md
               - Layui: dev/web/js/layui.md
+              - Video.js: dev/web/js/video.js.md
+              - Hammer.js: dev/web/js/hammer.js.md
           - CSS:
               - Bootstrap: dev/web/css/bootstrap.md
       - Languages:
