@@ -163,6 +163,7 @@ nav:
               - 快速排序: cs/algo/sort/quick-sort.md
               - 计数排序: cs/algo/sort/counting-sort.md
               - 桶排序: cs/algo/sort/bucket-sort.md
+              - 拓扑排序: cs/algo/sort/topological-sort.md
           - 分治算法: cs/algo/divide-and-conquer.md
           - 动态规划: cs/algo/dynamic-programming.md
           - 贪心算法: cs/algo/greedy-algorithm.md
@@ -261,6 +262,7 @@ nav:
       - Docker: dev/docker.md
       - Nginx: dev/nginx.md
       - Prometheus: dev/prometheus.md
+      - GraphQL: dev/graphql.md
       - Grafana: dev/grafana.md
       - FTP: dev/ftp.md
       - OAuth: dev/oauth.md

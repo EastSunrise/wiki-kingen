@@ -13,5 +13,5 @@
 - [计数排序](counting-sort.md)
 - [Radix Sort](https://www.geeksforgeeks.org/radix-sort/)
 - [桶排序](bucket-sort.md)
-- [Topological Sort](https://www.geeksforgeeks.org/topological-sorting/)
+- [拓扑排序](./topological-sort.md)
 - [Shell Sort](https://www.geeksforgeeks.org/shellsort/)
