@@ -10,28 +10,28 @@
         <meta name="author" content="Kingen">
       
       
-        <link rel="canonical" href="https://eastsunrise.github.io/wiki-kingen/java/spring/aop.html">
+        <link rel="canonical" href="https://eastsunrise.github.io/wiki-kingen/java/spring/spring-framework/ioc.html">
       
       
-        <link rel="prev" href="ioc.html">
+        <link rel="prev" href="../../core/faq.html">
       
       
-        <link rel="next" href="transaction.html">
+        <link rel="next" href="aop.html">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+      <link rel="icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
-        <title>AOP - Wiki-Kingen</title>
+        <title>IoC - Wiki-Kingen</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/material-custom.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/material-custom.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/katex/katex.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/katex/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#%E4%BB%8B%E7%BB%8D" class="md-skip">
+        <a href="#IoC" class="md-skip">
           跳转至
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="Wiki-Kingen" class="md-header__button md-logo" aria-label="Wiki-Kingen" data-md-component="logo">
+    <a href="../../../index.html" title="Wiki-Kingen" class="md-header__button md-logo" aria-label="Wiki-Kingen" data-md-component="logo">
       
-  <img src="../../assets/images/Ceil.png" alt="logo">
+  <img src="../../../assets/images/Ceil.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AOP
+              IoC
             
           </span>
         </div>
@@ -246,7 +246,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../../../index.html" class="md-tabs__link">
         
   
     
@@ -275,7 +275,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../core/index.html" class="md-tabs__link">
+        <a href="../../core/index.html" class="md-tabs__link">
           
   
   Java
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cs/math/summation.html" class="md-tabs__link">
+        <a href="../../../cs/math/summation.html" class="md-tabs__link">
           
   
   CS
@@ -329,7 +329,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../py/core/index.html" class="md-tabs__link">
+        <a href="../../../py/core/index.html" class="md-tabs__link">
           
   
   Python
@@ -350,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../dev/references.html" class="md-tabs__link">
+        <a href="../../../dev/references.html" class="md-tabs__link">
           
   
   Development
@@ -368,7 +368,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../misc/chatgpt.html" class="md-tabs__link">
+        <a href="../../../misc/chatgpt.html" class="md-tabs__link">
           
   
   Misc
@@ -401,9 +401,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Wiki-Kingen" class="md-nav__button md-logo" aria-label="Wiki-Kingen" data-md-component="logo">
+    <a href="../../../index.html" title="Wiki-Kingen" class="md-nav__button md-logo" aria-label="Wiki-Kingen" data-md-component="logo">
       
-  <img src="../../assets/images/Ceil.png" alt="logo">
+  <img src="../../../assets/images/Ceil.png" alt="logo">
 
     </a>
     Wiki-Kingen
@@ -430,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/index.html" class="md-nav__link">
+      <a href="../../core/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/annotation.html" class="md-nav__link">
+      <a href="../../core/annotation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/generic.html" class="md-nav__link">
+      <a href="../../core/generic.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/exception.html" class="md-nav__link">
+      <a href="../../core/exception.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/io.html" class="md-nav__link">
+      <a href="../../core/io.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/collection.html" class="md-nav__link">
+      <a href="../../core/collection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/concurrency.html" class="md-nav__link">
+      <a href="../../core/concurrency.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/reflection.html" class="md-nav__link">
+      <a href="../../core/reflection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/jvm.html" class="md-nav__link">
+      <a href="../../core/jvm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -718,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/gc.html" class="md-nav__link">
+      <a href="../../core/gc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core/faq.html" class="md-nav__link">
+      <a href="../../core/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -804,43 +804,40 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
         
-  
-  <span class="md-ellipsis">
-    Get Started
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ioc.html" class="md-nav__link">
-        
   
   <span class="md-ellipsis">
-    IoC
+    Spring Framework
   </span>
   
 
-      </a>
-    </li>
-  
-
-              
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Spring Framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -855,23 +852,25 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    AOP
+    IoC
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="aop.html" class="md-nav__link md-nav__link--active">
+      <a href="ioc.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    AOP
+    IoC
   </span>
   
 
@@ -883,6 +882,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -891,46 +892,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#%E4%BB%8B%E7%BB%8D" class="md-nav__link">
+  <a href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE" class="md-nav__link">
     <span class="md-ellipsis">
-      介绍
+      基于注解配置
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5" class="md-nav__link">
-    <span class="md-ellipsis">
-      核心概念
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#Spring-AOP" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spring AOP
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spring AOP">
+    <nav class="md-nav" aria-label="基于注解配置">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#XML-%E9%85%8D%E7%BD%AE" class="md-nav__link">
+  <a href="#Autowired" class="md-nav__link">
     <span class="md-ellipsis">
-      XML 配置
+      @Autowired
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE" class="md-nav__link">
+  <a href="#Resource" class="md-nav__link">
     <span class="md-ellipsis">
-      注解配置
+      @Resource
     </span>
   </a>
   
@@ -938,84 +921,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E5%88%87%E5%85%A5%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F" class="md-nav__link">
-    <span class="md-ellipsis">
-      切入点表达式
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E9%80%9A%E7%9F%A5%E6%B3%A8%E8%A7%A3" class="md-nav__link">
-    <span class="md-ellipsis">
-      通知注解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="通知注解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Before" class="md-nav__link">
-    <span class="md-ellipsis">
-      @Before
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#After" class="md-nav__link">
-    <span class="md-ellipsis">
-      @After
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AfterReturning" class="md-nav__link">
-    <span class="md-ellipsis">
-      @AfterReturning
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AfterThrowing" class="md-nav__link">
-    <span class="md-ellipsis">
-      @AfterThrowing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Around" class="md-nav__link">
-    <span class="md-ellipsis">
-      @Around
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" class="md-nav__link">
-    <span class="md-ellipsis">
-      最佳实践
-    </span>
-  </a>
   
 </li>
       
@@ -1044,6 +949,48 @@
   
   
     <li class="md-nav__item">
+      <a href="aop.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AOP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="web-mvc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Web MVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="transaction.html" class="md-nav__link">
         
   
@@ -1058,6 +1005,51 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Spring Boot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Spring Boot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -1065,11 +1057,106 @@
   
   
     <li class="md-nav__item">
-      <a href="actuator.html" class="md-nav__link">
+      <a href="../spring-boot/actuator.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Actuator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Spring Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Spring Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-data/elasticsearch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Data Elasticsearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Security
   </span>
   
 
@@ -1086,11 +1173,32 @@
   
   
     <li class="md-nav__item">
-      <a href="faq.html" class="md-nav__link">
+      <a href="../spring-batch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FAQ
+    Spring Batch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-ldap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring LDAP
   </span>
   
 
@@ -1152,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lib/apache-commons.html" class="md-nav__link">
+      <a href="../../lib/apache-commons.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lib/apache-poi.html" class="md-nav__link">
+      <a href="../../lib/apache-poi.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lib/http-components.html" class="md-nav__link">
+      <a href="../../lib/http-components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1215,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lib/lombok.html" class="md-nav__link">
+      <a href="../../lib/lombok.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lib/fastjson.html" class="md-nav__link">
+      <a href="../../lib/fastjson.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lib/jsoup.html" class="md-nav__link">
+      <a href="../../lib/jsoup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-pattern/state-pattern.html" class="md-nav__link">
+      <a href="../../design-pattern/state-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-pattern/singleton-pattern.html" class="md-nav__link">
+      <a href="../../design-pattern/singleton-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1373,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mybatis.html" class="md-nav__link">
+      <a href="../../mybatis.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1394,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tomcat.html" class="md-nav__link">
+      <a href="../../tomcat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1415,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../netty.html" class="md-nav__link">
+      <a href="../../netty.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1436,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quartz.html" class="md-nav__link">
+      <a href="../../quartz.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1457,7 +1565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maven.html" class="md-nav__link">
+      <a href="../../maven.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1478,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../freemarker.html" class="md-nav__link">
+      <a href="../../freemarker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1499,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ognl.html" class="md-nav__link">
+      <a href="../../ognl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1520,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quarkus.html" class="md-nav__link">
+      <a href="../../quarkus.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1625,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/math/summation.html" class="md-nav__link">
+      <a href="../../../cs/math/summation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1646,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/math/normal-distribution.html" class="md-nav__link">
+      <a href="../../../cs/math/normal-distribution.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/math/linear-algebra.html" class="md-nav__link">
+      <a href="../../../cs/math/linear-algebra.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1688,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/math/fourier-transform.html" class="md-nav__link">
+      <a href="../../../cs/math/fourier-transform.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1754,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/index.html" class="md-nav__link">
+      <a href="../../../cs/ds/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1812,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/tree/binary-tree.html" class="md-nav__link">
+      <a href="../../../cs/ds/tree/binary-tree.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1833,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/tree/binary-search-tree.html" class="md-nav__link">
+      <a href="../../../cs/ds/tree/binary-search-tree.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,7 +1962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/tree/avl-tree.html" class="md-nav__link">
+      <a href="../../../cs/ds/tree/avl-tree.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1875,7 +1983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/tree/red-black-tree.html" class="md-nav__link">
+      <a href="../../../cs/ds/tree/red-black-tree.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/tree/segment-tree.html" class="md-nav__link">
+      <a href="../../../cs/ds/tree/segment-tree.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1925,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/heap.html" class="md-nav__link">
+      <a href="../../../cs/ds/heap.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1946,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/hash-table.html" class="md-nav__link">
+      <a href="../../../cs/ds/hash-table.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1967,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/graph.html" class="md-nav__link">
+      <a href="../../../cs/ds/graph.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1988,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/monotonic-stack.html" class="md-nav__link">
+      <a href="../../../cs/ds/monotonic-stack.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2009,7 +2117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/disjoint-set.html" class="md-nav__link">
+      <a href="../../../cs/ds/disjoint-set.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2030,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ds/skip-list.html" class="md-nav__link">
+      <a href="../../../cs/ds/skip-list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2096,11 +2204,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/index.html" class="md-nav__link">
+      <a href="../../../cs/algo/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    算法
+    算法分析
   </span>
   
 
@@ -2154,28 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    排序
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cs/algo/sort/selection-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/selection-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2196,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/bubble-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/bubble-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2217,7 +2304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/insertion-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/insertion-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2238,7 +2325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/merge-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/merge-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2259,7 +2346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/quick-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/quick-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2280,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/counting-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/counting-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2301,11 +2388,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/sort/bucket-sort.html" class="md-nav__link">
+      <a href="../../../cs/algo/sort/bucket-sort.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     桶排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/algo/sort/topological-sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    拓扑排序
   </span>
   
 
@@ -2330,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/divide-and-conquer.html" class="md-nav__link">
+      <a href="../../../cs/algo/divide-and-conquer.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2351,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/dynamic-programming.html" class="md-nav__link">
+      <a href="../../../cs/algo/dynamic-programming.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2372,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/greedy-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/greedy-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2393,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/backtracking.html" class="md-nav__link">
+      <a href="../../../cs/algo/backtracking.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2414,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/branch-and-bound.html" class="md-nav__link">
+      <a href="../../../cs/algo/branch-and-bound.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2472,7 +2580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/pattern-searching/kmp-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/pattern-searching/kmp-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2493,7 +2601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/pattern-searching/bm-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/pattern-searching/bm-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2514,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/pattern-searching/sunday-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/pattern-searching/sunday-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2580,7 +2688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/crypto/rsa.html" class="md-nav__link">
+      <a href="../../../cs/algo/crypto/rsa.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2601,7 +2709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/crypto/sha.html" class="md-nav__link">
+      <a href="../../../cs/algo/crypto/sha.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2667,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/graph/dijkstra%27s-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/graph/dijkstra%27s-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2688,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/graph/tarjan-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/graph/tarjan-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2754,7 +2862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/others/knuth-shuffle-algorithm.html" class="md-nav__link">
+      <a href="../../../cs/algo/others/knuth-shuffle-algorithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2775,7 +2883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/others/monte-carlo-tree-search.html" class="md-nav__link">
+      <a href="../../../cs/algo/others/monte-carlo-tree-search.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2796,7 +2904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/others/reservoir-sampling.html" class="md-nav__link">
+      <a href="../../../cs/algo/others/reservoir-sampling.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2817,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algo/others/gosper%27s-hack.html" class="md-nav__link">
+      <a href="../../../cs/algo/others/gosper%27s-hack.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2891,7 +2999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ml/index.html" class="md-nav__link">
+      <a href="../../../cs/ml/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2912,7 +3020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ml/neural-networks.html" class="md-nav__link">
+      <a href="../../../cs/ml/neural-networks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2933,7 +3041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ml/convolutional-neural-networks.html" class="md-nav__link">
+      <a href="../../../cs/ml/convolutional-neural-networks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2999,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/problem/inversion-pairs.html" class="md-nav__link">
+      <a href="../../../cs/problem/inversion-pairs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3112,7 +3220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/index.html" class="md-nav__link">
+      <a href="../../../py/core/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3170,7 +3278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/shutil.html" class="md-nav__link">
+      <a href="../../../py/core/shutil.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3236,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/sqlite3.html" class="md-nav__link">
+      <a href="../../../py/core/sqlite3.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3302,7 +3410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/configparser.html" class="md-nav__link">
+      <a href="../../../py/core/configparser.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3368,7 +3476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/hashlib.html" class="md-nav__link">
+      <a href="../../../py/core/hashlib.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3434,7 +3542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/logging.html" class="md-nav__link">
+      <a href="../../../py/core/logging.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3500,7 +3608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/urllib.html" class="md-nav__link">
+      <a href="../../../py/core/urllib.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3566,7 +3674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/core/tkinter.html" class="md-nav__link">
+      <a href="../../../py/core/tkinter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3640,7 +3748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/lib/bs4.html" class="md-nav__link">
+      <a href="../../../py/lib/bs4.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3661,7 +3769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/lib/pymysql.html" class="md-nav__link">
+      <a href="../../../py/lib/pymysql.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3682,7 +3790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/lib/pyyaml.html" class="md-nav__link">
+      <a href="../../../py/lib/pyyaml.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3703,7 +3811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/lib/pywin32.html" class="md-nav__link">
+      <a href="../../../py/lib/pywin32.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3724,7 +3832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/lib/mkdocs.html" class="md-nav__link">
+      <a href="../../../py/lib/mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3790,7 +3898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/app/spider.html" class="md-nav__link">
+      <a href="../../../py/app/spider.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3811,7 +3919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/app/task.html" class="md-nav__link">
+      <a href="../../../py/app/task.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3832,7 +3940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/app/excel.html" class="md-nav__link">
+      <a href="../../../py/app/excel.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3861,7 +3969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/numpy.html" class="md-nav__link">
+      <a href="../../../py/numpy.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3882,7 +3990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/pandas.html" class="md-nav__link">
+      <a href="../../../py/pandas.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3903,7 +4011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/matplotlib.html" class="md-nav__link">
+      <a href="../../../py/matplotlib.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3924,7 +4032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../py/flask.html" class="md-nav__link">
+      <a href="../../../py/flask.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3992,7 +4100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/references.html" class="md-nav__link">
+      <a href="../../../dev/references.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4087,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/mysql/index.html" class="md-nav__link">
+      <a href="../../../dev/db/mysql/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4108,7 +4216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/mysql/sql.html" class="md-nav__link">
+      <a href="../../../dev/db/mysql/sql.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4129,7 +4237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/mysql/func%26ops.html" class="md-nav__link">
+      <a href="../../../dev/db/mysql/func%26ops.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4150,7 +4258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/mysql/optimization.html" class="md-nav__link">
+      <a href="../../../dev/db/mysql/optimization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4171,7 +4279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/mysql/faq.html" class="md-nav__link">
+      <a href="../../../dev/db/mysql/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4237,7 +4345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/oracle/index.html" class="md-nav__link">
+      <a href="../../../dev/db/oracle/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4258,7 +4366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/oracle/sql.html" class="md-nav__link">
+      <a href="../../../dev/db/oracle/sql.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4287,7 +4395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/redis.html" class="md-nav__link">
+      <a href="../../../dev/db/redis.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4308,7 +4416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/mongodb.html" class="md-nav__link">
+      <a href="../../../dev/db/mongodb.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4329,7 +4437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/influxdb.html" class="md-nav__link">
+      <a href="../../../dev/db/influxdb.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4350,7 +4458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/elasticsearch.html" class="md-nav__link">
+      <a href="../../../dev/db/elasticsearch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4371,7 +4479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/iotdb.html" class="md-nav__link">
+      <a href="../../../dev/db/iotdb.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4392,7 +4500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/db/sqlite.html" class="md-nav__link">
+      <a href="../../../dev/db/sqlite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4457,6 +4565,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../dev/web/http.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -4467,10 +4596,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4481,8 +4610,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2">
             <span class="md-nav__icon md-icon"></span>
             JavaScript
           </label>
@@ -4495,7 +4624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/web/js/index.html" class="md-nav__link">
+      <a href="../../../dev/web/js/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4516,7 +4645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/web/js/jquery.html" class="md-nav__link">
+      <a href="../../../dev/web/js/jquery.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4537,7 +4666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/web/js/nodejs.html" class="md-nav__link">
+      <a href="../../../dev/web/js/nodejs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4558,7 +4687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/web/js/react.html" class="md-nav__link">
+      <a href="../../../dev/web/js/react.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4579,11 +4708,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/web/js/layui.html" class="md-nav__link">
+      <a href="../../../dev/web/js/layui.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Layui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/web/js/video.js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/web/js/hammer.js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hammer.js
   </span>
   
 
@@ -4617,10 +4788,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4631,8 +4802,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_3">
             <span class="md-nav__icon md-icon"></span>
             CSS
           </label>
@@ -4645,7 +4816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/web/css/bootstrap.html" class="md-nav__link">
+      <a href="../../../dev/web/css/bootstrap.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4719,7 +4890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/lang/go.html" class="md-nav__link">
+      <a href="../../../dev/lang/go.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4740,7 +4911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/lang/c.html" class="md-nav__link">
+      <a href="../../../dev/lang/c.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4761,7 +4932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/lang/c%23.html" class="md-nav__link">
+      <a href="../../../dev/lang/c%23.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4782,7 +4953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/lang/php.html" class="md-nav__link">
+      <a href="../../../dev/lang/php.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4848,7 +5019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/mw/kafka.html" class="md-nav__link">
+      <a href="../../../dev/mw/kafka.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4869,7 +5040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/mw/rabbitmq.html" class="md-nav__link">
+      <a href="../../../dev/mw/rabbitmq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4890,7 +5061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/mw/zookeeper.html" class="md-nav__link">
+      <a href="../../../dev/mw/zookeeper.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4919,7 +5090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/linux.html" class="md-nav__link">
+      <a href="../../../dev/linux.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4940,7 +5111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/git.html" class="md-nav__link">
+      <a href="../../../dev/git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4961,7 +5132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/docker.html" class="md-nav__link">
+      <a href="../../../dev/docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4982,7 +5153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/nginx.html" class="md-nav__link">
+      <a href="../../../dev/nginx.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5003,7 +5174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/prometheus.html" class="md-nav__link">
+      <a href="../../../dev/prometheus.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5024,7 +5195,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/grafana.html" class="md-nav__link">
+      <a href="../../../dev/graphql.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/grafana.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5045,7 +5237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/ftp.html" class="md-nav__link">
+      <a href="../../../dev/ftp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5066,7 +5258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/oauth.html" class="md-nav__link">
+      <a href="../../../dev/oauth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5087,7 +5279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/fastdfs.html" class="md-nav__link">
+      <a href="../../../dev/fastdfs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5108,7 +5300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/minio.html" class="md-nav__link">
+      <a href="../../../dev/minio.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5129,7 +5321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/mqtt.html" class="md-nav__link">
+      <a href="../../../dev/mqtt.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5197,7 +5389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/chatgpt.html" class="md-nav__link">
+      <a href="../../../misc/chatgpt.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5218,7 +5410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/activation.html" class="md-nav__link">
+      <a href="../../../misc/activation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5239,7 +5431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/wiki.html" class="md-nav__link">
+      <a href="../../../misc/wiki.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5260,7 +5452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/latex.html" class="md-nav__link">
+      <a href="../../../misc/latex.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5281,7 +5473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/markdown.html" class="md-nav__link">
+      <a href="../../../misc/markdown.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5302,7 +5494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/chrome.html" class="md-nav__link">
+      <a href="../../../misc/chrome.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5323,7 +5515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/windows.html" class="md-nav__link">
+      <a href="../../../misc/windows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5344,7 +5536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/idea.html" class="md-nav__link">
+      <a href="../../../misc/idea.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5365,7 +5557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/vscode.html" class="md-nav__link">
+      <a href="../../../misc/vscode.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5386,7 +5578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/fiddler.html" class="md-nav__link">
+      <a href="../../../misc/fiddler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5407,7 +5599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/charles.html" class="md-nav__link">
+      <a href="../../../misc/charles.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5428,7 +5620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../misc/ffmpeg.html" class="md-nav__link">
+      <a href="../../../misc/ffmpeg.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5466,6 +5658,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5474,46 +5668,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#%E4%BB%8B%E7%BB%8D" class="md-nav__link">
+  <a href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE" class="md-nav__link">
     <span class="md-ellipsis">
-      介绍
+      基于注解配置
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5" class="md-nav__link">
-    <span class="md-ellipsis">
-      核心概念
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#Spring-AOP" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spring AOP
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spring AOP">
+    <nav class="md-nav" aria-label="基于注解配置">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#XML-%E9%85%8D%E7%BD%AE" class="md-nav__link">
+  <a href="#Autowired" class="md-nav__link">
     <span class="md-ellipsis">
-      XML 配置
+      @Autowired
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE" class="md-nav__link">
+  <a href="#Resource" class="md-nav__link">
     <span class="md-ellipsis">
-      注解配置
+      @Resource
     </span>
   </a>
   
@@ -5521,84 +5697,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E5%88%87%E5%85%A5%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F" class="md-nav__link">
-    <span class="md-ellipsis">
-      切入点表达式
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E9%80%9A%E7%9F%A5%E6%B3%A8%E8%A7%A3" class="md-nav__link">
-    <span class="md-ellipsis">
-      通知注解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="通知注解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Before" class="md-nav__link">
-    <span class="md-ellipsis">
-      @Before
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#After" class="md-nav__link">
-    <span class="md-ellipsis">
-      @After
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AfterReturning" class="md-nav__link">
-    <span class="md-ellipsis">
-      @AfterReturning
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AfterThrowing" class="md-nav__link">
-    <span class="md-ellipsis">
-      @AfterThrowing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Around" class="md-nav__link">
-    <span class="md-ellipsis">
-      @Around
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" class="md-nav__link">
-    <span class="md-ellipsis">
-      最佳实践
-    </span>
-  </a>
   
 </li>
       
@@ -5626,7 +5724,7 @@
                   
 
   
-    <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/java/spring/aop.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/eastsunrise/wiki-kingen/edit/master/docs/java/spring/spring-framework/ioc.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -5635,102 +5733,89 @@
     
       
     
-    <a href="https://github.com/eastsunrise/wiki-kingen/raw/master/docs/java/spring/aop.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/eastsunrise/wiki-kingen/raw/master/docs/java/spring/spring-framework/ioc.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-  <h1>AOP</h1>
-
-<h2 id="%E4%BB%8B%E7%BB%8D">介绍<a class="headerlink" href="#%E4%BB%8B%E7%BB%8D" title="Permanent link">&para;</a></h2>
-<p>面向切面编程（aspect-oriented programming）是一种编程范式，旨在通过允许分离横切关注点来提高模块化。横切关注点是指那些影响其他关注点的程序方面，例如日志、安全、事务管理等。AOP 允许我们将这些关注点封装在单独的模块中，并声明式地将它们应用到所需的点，而无需修改程序的核心逻辑。</p>
-<h2 id="%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">核心概念<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5" title="Permanent link">&para;</a></h2>
-<p>AOP 的核心概念有：</p>
-<ol>
-<li><strong>Aspect</strong>：Aspect 是一个封装了横切关注点的模块。它可以包含通知、切入点和引入。</li>
-<li><strong>Join point</strong>：连接点是程序执行过程中的一个点，例如方法调用、异常抛出、字段访问等。一个切面可以应用在一个或多个连接点上。</li>
-<li><strong>Pointcut</strong>：切入点是一个表达式，定义了一组连接点。它指定了一个切面应该应用在哪里。</li>
-<li><strong>Advice</strong>：通知是一个切面在一个连接点上执行的动作。它可以在连接点之前、之后或者围绕着连接点执行。</li>
-</ol>
-<h2 id="Spring-AOP">Spring AOP<a class="headerlink" href="#Spring-AOP" title="Permanent link">&para;</a></h2>
-<p>Spring AOP 是一个支持在 Spring 应用中进行面向切面编程的框架。它允许我们使用 XML 配置或者注解配置来定义切面。</p>
-<h3 id="XML-%E9%85%8D%E7%BD%AE">XML 配置<a class="headerlink" href="#XML-%E9%85%8D%E7%BD%AE" title="Permanent link">&para;</a></h3>
-<p>要使用 XML 配置，我们需要在 Spring 上下文文件中启用 AOP 支持，通过添加<code>&lt;aop:aspectj-autoproxy/&gt;</code>元素。然后我们可以使用<code>&lt;aop:config&gt;</code>元素及其子元素来定义切面。例如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;aop:config&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="cm">&lt;!-- 定义一个切面 --&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;aop:aspect</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;loggingAspect&quot;</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;loggingBean&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="cm">&lt;!-- 定义一个切入点 --&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&lt;aop:pointcut</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;allMethods&quot;</span><span class="w"> </span><span class="na">expression=</span><span class="s">&quot;execution(* com.example.service.*.*(..))&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="cm">&lt;!-- 定义一个通知 --&gt;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&lt;aop:before</span><span class="w"> </span><span class="na">pointcut-ref=</span><span class="s">&quot;allMethods&quot;</span><span class="w"> </span><span class="na">method=</span><span class="s">&quot;logBefore&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;/aop:aspect&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">&lt;/aop:config&gt;</span>
+<h1 id="IoC">IoC<a class="headerlink" href="#IoC" title="Permanent link">&para;</a></h1>
+<h2 id="%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE">基于注解配置<a class="headerlink" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE" title="Permanent link">&para;</a></h2>
+<h3 id="Autowired">@Autowired<a class="headerlink" href="#Autowired" title="Permanent link">&para;</a></h3>
+<p><code>@Autowired</code> 注解可以用于构造函数、setter、任意方法和成员变量来注入 bean.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MovieRecommender</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CustomerPreferenceDao</span><span class="w"> </span><span class="n">customerPreferenceDao</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">MovieFinder</span><span class="w"> </span><span class="n">movieFinder</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">MovieCatalog</span><span class="w"> </span><span class="n">movieCatalog</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">PreferenceDao</span><span class="w"> </span><span class="n">preferenceDao</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cm">     * It can be ignored when there is only one constructor.</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cm">     * At least one of constructors must be annotated </span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cm">     * if more than one constructors are available and there is no primary/default one.</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="cm">     */</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MovieRecommender</span><span class="p">(</span><span class="n">CustomerPreferenceDao</span><span class="w"> </span><span class="n">customerPreferenceDao</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">customerPreferenceDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customerPreferenceDao</span><span class="p">;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMovieFinder</span><span class="p">(</span><span class="n">MovieFinder</span><span class="w"> </span><span class="n">movieFinder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">movieFinder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">movieFinder</span><span class="p">;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">prepare</span><span class="p">(</span><span class="n">MovieCatalog</span><span class="w"> </span><span class="n">movieCatalog</span><span class="p">,</span><span class="w"> </span><span class="n">PreferenceDao</span><span class="w"> </span><span class="n">preferenceDao</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">movieCatalog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">movieCatalog</span><span class="p">;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">preferenceDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">preferenceDao</span><span class="p">;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="p">}</span>
 </code></pre></div>
-<p>这个例子定义了一个名为<code>loggingAspect</code>的切面，它引用了一个名为<code>loggingBean</code>的 bean。这个切面有一个名为<code>allMethods</code>的切入点，它匹配了<code>com.example.service</code>包中的所有方法。这个切面还有一个前置通知，它在每个匹配的连接点之前调用<code>loggingBean</code>的<code>logBefore</code>方法。</p>
-<h3 id="%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE">注解配置<a class="headerlink" href="#%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE" title="Permanent link">&para;</a></h3>
-<p>要使用注解配置，我们需要通过在配置类上添加<code>@EnableAspectJAutoProxy</code>注解来启用 AOP 支持。然后我们可以使用<code>@Aspect</code>注解和其他注解来定义切面和通知。例如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@Configuration</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nd">@EnableAspectJAutoProxy</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">// do something</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nd">@Aspect</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nd">@Component</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LoggingAspect</span><span class="w"> </span><span class="p">{</span>
+<p>也可以通过数组和集合类型注入同类型的多个 beans.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MovieRecommender</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">MovieFinder</span><span class="o">[]</span><span class="w"> </span><span class="n">movieFinders</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">MovieCatalog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">movieCatalogs</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// key is name of the bean</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">MovieCreator</span><span class="o">&gt;</span><span class="w"> </span><span class="n">movieCreators</span><span class="p">;</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 使用@Pointcut注解定义一个切入点</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nd">@Pointcut</span><span class="p">(</span><span class="s">&quot;execution(* com.example.service.*.*(..))&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">allMethods</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="c1">// 使用@Before注解定义一个通知</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nd">@Before</span><span class="p">(</span><span class="s">&quot;allMethods()&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">logBefore</span><span class="p">(</span><span class="n">JoinPoint</span><span class="w"> </span><span class="n">joinPoint</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="c1">// do something</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMovieCatalogs</span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">MovieCatalog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">movieCatalogs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">movieCatalogs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">movieCatalogs</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMovieCreators</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">MovieCreator</span><span class="o">&gt;</span><span class="w"> </span><span class="n">movieCreators</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">movieCreators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">movieCreators</span><span class="p">;</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
 </code></pre></div>
-<p>这个例子定义了一个名为<code>LoggingAspect</code>的切面，它也是一个 Spring 组件。这个切面有一个名为<code>allMethods</code>的切入点，它匹配了<code>com.example.service</code>包中的所有方法。这个切面还有一个前置通知，它在每个匹配的连接点之前调用<code>logBefore</code>方法。</p>
-<h2 id="%E5%88%87%E5%85%A5%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F">切入点表达式<a class="headerlink" href="#%E5%88%87%E5%85%A5%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F" title="Permanent link">&para;</a></h2>
-<p>切入点表达式（Pointcut expressions）用于指定哪些连接点应该被一个切面匹配。Spring AOP 使用 AspectJ 的切入点表达式语言，它支持各种类型的指示符来匹配不同类型的连接点。一些常用的指示符有：</p>
-<ul>
-<li><code>execution</code>：匹配方法执行的连接点。它接受一个指定方法签名的模式，例如修饰符、返回类型、类名、方法名和参数。例如，<code>execution(public * com.example.service.*.*(..))</code>匹配了<code>com.example.service</code>包中的任何公共方法。</li>
-<li><code>within</code>：匹配某些类型内的连接点。它接受一个指定类型名的模式，例如包名、类名或接口名。例如，<code>within(com.example.service.*)</code>匹配了<code>com.example.service</code>包中的任何类内的任何连接点。</li>
-<li><code>args</code>：匹配参数是给定类型实例的连接点。它接受一个类型名或模式的列表。例如，<code>args(String, int)</code>匹配了第一个参数是<code>String</code>，第二个参数是<code>int</code>的任何连接点。</li>
-<li><code>@annotation</code>：匹配主体有给定注解的连接点。它接受注解类型名。例如，<code>@annotation(com.example.annotation.Loggable)</code>匹配了方法或类有<code>@Loggable</code>注解的任何连接点。</li>
-</ul>
-<h2 id="%E9%80%9A%E7%9F%A5%E6%B3%A8%E8%A7%A3">通知注解<a class="headerlink" href="#%E9%80%9A%E7%9F%A5%E6%B3%A8%E8%A7%A3" title="Permanent link">&para;</a></h2>
-<p>通知注解用于指定在一个连接点上应该应用什么类型的通知。Spring AOP 支持五种类型的通知注解：</p>
-<h3 id="Before">@Before<a class="headerlink" href="#Before" title="Permanent link">&para;</a></h3>
-<p>表示通知应该在连接点之前执行。它接受一个切入点表达式或一个切入点方法的引用作为值。</p>
-<p>例如，<code>@Before("allMethods()")</code>表示通知应该在任何被<code>allMethods</code>切入点匹配的连接点之前执行。</p>
-<h3 id="After">@After<a class="headerlink" href="#After" title="Permanent link">&para;</a></h3>
-<p>表示通知应该在连接点之后执行，无论它是正常完成还是抛出异常。它接受一个切入点表达式或一个切入点方法的引用作为值。</p>
-<p>例如，<code>@After("allMethods()")</code>表示通知应该在任何被<code>allMethods</code>切入点匹配的连接点之后执行。</p>
-<h3 id="AfterReturning">@AfterReturning<a class="headerlink" href="#AfterReturning" title="Permanent link">&para;</a></h3>
-<p>表示通知应该在连接点正常返回后执行。它接受一个切入点表达式或一个切入点方法的引用作为值。它还有一个可选属性名为<code>returning</code>，它指定了通知方法中一个参数的名字，这个参数将接收连接点的返回值。</p>
-<p>例如，<code>@AfterReturning(value = "allMethods()", returning = "result")</code>表示通知应该在任何被<code>allMethods</code>切入点匹配的连接点正常返回后执行，并且连接点的返回值应该传递给通知方法中名为<code>result</code>的参数。</p>
-<h3 id="AfterThrowing">@AfterThrowing<a class="headerlink" href="#AfterThrowing" title="Permanent link">&para;</a></h3>
-<p>表示通知应该在连接点抛出异常后执行。它接受一个切入点表达式或一个切入点方法的引用作为值。它还有一个可选属性名为<code>throwing</code>，它指定了通知方法中一个参数的名字，这个参数将接收连接点抛出的异常。</p>
-<p>例如，<code>@AfterThrowing(value = "allMethods()", throwing = "ex")</code>表示通知应该在任何被<code>allMethods</code>切入点匹配的连接点抛出异常后执行，并且连接点抛出的异常应该传递给通知方法中名为<code>ex</code>的参数。</p>
-<h3 id="Around">@Around<a class="headerlink" href="#Around" title="Permanent link">&para;</a></h3>
-<p>表示通知应该围绕着连接点执行，意味着它可以控制是否以及何时继续执行连接点或从它返回。它接受一个切入点表达式或一个切入点方法的引用作为值。它还要求通知方法有一个类型为<code>ProceedingJoinPoint</code>的参数，这是一种特殊的<code>JoinPoint</code>，它允许我们显式地调用连接点。</p>
-<p>例如，<code>@Around("allMethods()")</code>表示通知应该围绕着任何被<code>allMethods</code>切入点匹配的连接点执行，并且通知方法应该有一个类型为<code>ProceedingJoinPoint</code>的参数。</p>
-<h2 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践<a class="headerlink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5" title="Permanent link">&para;</a></h2>
-<p>AOP 是一种强大而有用的软件开发技术，但它也需要一些注意和纪律才能有效和高效地使用它。以下是一些使用 AOP 的技巧和最佳实践：</p>
-<ul>
-<li>选择合适的连接点和切入点：使用最具体和表达力的切入点表达式来匹配你的需求。避免使用太宽泛或太狭窄的切入点，可能会导致不必要的副作用或错过一些连接点。使用命名的切入点或切入点方法来提高可读性和可重用性。</li>
-<li>避免过度使用或滥用切面：只对那些不能通过其他方式轻易实现的横切关注点使用切面。避免对属于程序主要逻辑的核心关注点使用切面。避免对不太重要或只是美化的关注点使用切面。</li>
-<li>遵循命名规范和编码标准：为你的切面、切入点和通知使用一致和有意义的名称。遵循你的项目或组织的编码标准和规范。使用适当的缩进、空格、注释等，来提高可读性和可维护性。</li>
-<li>测试和调试你的切面：彻底并独立地测试你的切面，与核心关注点分开。使用单元测试、集成测试或端到端测试工具和框架来验证你的切面的正确性和功能性。仔细和系统地调试你的切面，使用日志、跟踪、断点等，来识别和修复错误或缺陷。</li>
-</ul>
+<h3 id="Resource">@Resource<a class="headerlink" href="#Resource" title="Permanent link">&para;</a></h3>
+<p><code>@Resource</code> 根据名称注入 bean，未指定或找不到再根据类型匹配。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SimpleMovieLister</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">MovieFinder</span><span class="w"> </span><span class="n">movieFinder</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nd">@Resource</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;myMovieFinder&quot;</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMovieFinder</span><span class="p">(</span><span class="n">MovieFinder</span><span class="w"> </span><span class="n">movieFinder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">movieFinder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">movieFinder</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</code></pre></div>
 <h2 id="%E5%8F%82%E8%80%83">参考<a class="headerlink" href="#%E5%8F%82%E8%80%83" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.eclipse.org/aspectj/doc/released/progguide/index.html">The AspectJ Programming Guide</a></li>
-<li><a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop">AOP with Spring</a></li>
-<li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop-api">Spring AOP APIs</a></li>
+<li><a href="https://docs.spring.io/spring-framework/reference/core/beans.html">The IoC Container</a></li>
 </ul>
 
 
@@ -5752,7 +5837,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-02-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-04-09</span>
   </span>
 
     
@@ -5788,7 +5873,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="ioc.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: IoC">
+          <a href="../../core/faq.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: FAQ">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5798,20 +5883,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                IoC
+                FAQ
               </div>
             </div>
           </a>
         
         
           
-          <a href="transaction.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Transaction">
+          <a href="aop.html" class="md-footer__link md-footer__link--next" aria-label="下一页: AOP">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Transaction
+                AOP
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5837,16 +5922,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "content.code.copy", "content.action.view", "content.action.edit"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "content.code.copy", "content.action.view", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
-        <script src="../../assets/javascripts/kingen.js"></script>
+        <script src="../../../assets/javascripts/kingen.js"></script>
       
-        <script src="../../assets/javascripts/katex/katex.js"></script>
+        <script src="../../../assets/javascripts/katex/katex.js"></script>
       
-        <script src="../../assets/javascripts/katex/katex.min.js"></script>
+        <script src="../../../assets/javascripts/katex/katex.min.js"></script>
       
     
   </body>
