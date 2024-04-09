@@ -86,7 +86,11 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -108,12 +112,18 @@ nav:
           - GC: java/core/gc.md
           - FAQ: java/core/faq.md
       - Spring:
-          - Get Started: java/spring/index.md
-          - IoC: java/spring/ioc.md
-          - AOP: java/spring/aop.md
-          - Transaction: java/spring/transaction.md
-          - Actuator: java/spring/actuator.md
-          - FAQ: java/spring/faq.md
+          - Spring Framework:
+              - IoC: java/spring/spring-framework/ioc.md
+              - AOP: java/spring/spring-framework/aop.md
+              - Spring Web MVC: java/spring/spring-framework/web-mvc.md
+              - Transaction: java/spring/spring-framework/transaction.md
+          - Spring Boot:
+              - Actuator: java/spring/spring-boot/actuator.md
+          - Spring Data:
+              - Spring Data Elasticsearch: java/spring/spring-data/elasticsearch.md
+          - Spring Security: java/spring/spring-security.md
+          - Spring Batch: java/spring/spring-batch.md
+          - Spring LDAP: java/spring/spring-ldap.md
       - Libraries:
           - Apache Commons: java/lib/apache-commons.md
           - Apache POI: java/lib/apache-poi.md
@@ -153,9 +163,8 @@ nav:
           - 并查集: cs/ds/disjoint-set.md
           - 跳表: cs/ds/skip-list.md
       - 算法:
-          - cs/algo/index.md
+          - 算法分析: cs/algo/index.md
           - 排序:
-              - cs/algo/sort/index.md
               - 选择排序: cs/algo/sort/selection-sort.md
               - 冒泡排序: cs/algo/sort/bubble-sort.md
               - 插入排序: cs/algo/sort/insertion-sort.md
@@ -240,6 +249,7 @@ nav:
           - IoTDB: dev/db/iotdb.md
           - SQLite: dev/db/sqlite.md
       - Web:
+          - HTTP: dev/web/http.md
           - JavaScript:
               - dev/web/js/index.md
               - jQuery: dev/web/js/jquery.md
