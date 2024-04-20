@@ -45,6 +45,6 @@ GRANT ALL ON db_name.table_name TO 'username'@'hostname';
 SHOW INDEX FROM table_name FROM db_name;
 ```
 
-## 参考目录
+## 参考
 
 - [SQL Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)

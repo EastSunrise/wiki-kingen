@@ -56,6 +56,7 @@ extra_css:
 plugins:
   - search
   - git-revision-date-localized:
+      timezone: Asia/Shanghai
       type: iso_date
 markdown_extensions:
   - abbr
@@ -118,6 +119,7 @@ nav:
               - Spring Web MVC: java/spring/spring-framework/web-mvc.md
               - Transaction: java/spring/spring-framework/transaction.md
           - Spring Boot:
+              - Get Started: java/spring/spring-boot/index.md
               - Actuator: java/spring/spring-boot/actuator.md
           - Spring Data:
               - Spring Data Elasticsearch: java/spring/spring-data/elasticsearch.md
@@ -272,6 +274,7 @@ nav:
       - Linux: dev/linux.md
       - Git: dev/git.md
       - Docker: dev/docker.md
+      - Kubernetes: dev/k8s.md
       - Nginx: dev/nginx.md
       - Prometheus: dev/prometheus.md
       - GraphQL: dev/graphql.md
@@ -281,6 +284,7 @@ nav:
       - FasfDFS: dev/fastdfs.md
       - MinIO: dev/minio.md
       - MQTT: dev/mqtt.md
+      - Mermaid: dev/mermaid.md
   - Misc:
       - ChatGPT: misc/chatgpt.md
       - Activation: misc/activation.md
