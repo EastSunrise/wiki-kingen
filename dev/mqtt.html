@@ -4090,6 +4090,48 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="db/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    索引
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="db/transaction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    事务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -4100,10 +4142,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4114,8 +4156,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_3">
             <span class="md-nav__icon md-icon"></span>
             MySQL
           </label>
@@ -4250,10 +4292,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4264,8 +4306,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_4">
             <span class="md-nav__icon md-icon"></span>
             Oracle
           </label>
@@ -5381,6 +5423,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#MQTT-vs-HTTP" class="md-nav__link">
+    <span class="md-ellipsis">
+      MQTT vs HTTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Mosquitto" class="md-nav__link">
     <span class="md-ellipsis">
       Mosquitto
@@ -5830,6 +5881,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#MQTT-vs-HTTP" class="md-nav__link">
+    <span class="md-ellipsis">
+      MQTT vs HTTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Mosquitto" class="md-nav__link">
     <span class="md-ellipsis">
       Mosquitto
@@ -5937,9 +5997,23 @@
 <p><img alt="MQTT QoS 1" src="img/mqtt-qos-1.png" /></p>
 <p>当 QoS=2 时，在 Qos=1 的基础上，保证接收者不会因为消息重传收到重复的消息，需要至少两次的请求-应答。</p>
 <p><img alt="MQTT QoS 2" src="img/mqtt-qos-2.png" /></p>
-<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>QoS 是消息发送和接收双方的协议，而非发布者和订阅者之间的协议。</p>
-</blockquote>
+</div>
+<h2 id="MQTT-vs-HTTP">MQTT vs HTTP<a class="headerlink" href="#MQTT-vs-HTTP" title="Permanent link">&para;</a></h2>
+<ul>
+<li>MQTT 和 HTTP 底层都基于 TCP；</li>
+<li>MQTT 为数据设计，其消息载荷是二进制数据，而 HTTP 为文档传输设计，需要进行额外的编码；</li>
+<li>MQTT 采用发布/订阅机制，允许双向发送消息，而 HTTP 请求是单向的；</li>
+<li>MQTT 客户端和 Broker 连接建立后，可以发送任意双向消息，而 HTTP 请求是无状态的，每次都需要携带认证信息；</li>
+<li>MQTT 通信是异步的，而 HTTP 则是同步的；</li>
+<li>MQTT Broker 可以存储消息，订阅者断线重连后重新获取；</li>
+<li>MQTT 消息最小为 2 个字节，而 HTTP 为 8 个字节，通常还会包括请求头等信息；</li>
+<li>MQTT 可以通过订阅同一 topic 将消息分发给多个接收端，而 HTTP 则是一对一的；</li>
+<li>性能上，消息越多，MQTT 在速度上比 HTTP 越有优势；</li>
+<li>MQTT 更适合性能有限且工作在低带宽、不可靠网络上的设备通信。</li>
+</ul>
 <h2 id="Mosquitto">Mosquitto<a class="headerlink" href="#Mosquitto" title="Permanent link">&para;</a></h2>
 <h2 id="EMQX">EMQX<a class="headerlink" href="#EMQX" title="Permanent link">&para;</a></h2>
 <h2 id="%E5%8F%82%E8%80%83">参考<a class="headerlink" href="#%E5%8F%82%E8%80%83" title="Permanent link">&para;</a></h2>
@@ -5969,7 +6043,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-02-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-04-25</span>
   </span>
 
     
