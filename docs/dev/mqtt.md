@@ -17,7 +17,7 @@ MQTT 采取发布/订阅（publish/subscribe）机制，客户端（client）之
 - clientId：客户端 ID，Broker 用来区分不同的客户端，应当唯一
 - cleanSession：如果为`false`，Broker 保存客户端的所有订阅和所有错过的消息（QoS=0 的除外）；如果为`true`，Broker 清除该客户端以前所有会话信息
 - username/password：认证信息
-- lastWill\_\_\_：客户端意外断开连接时通知其他客户端
+- lastWill：客户端意外断开连接时通知其他客户端
 - keepAlive
 
 Broker 接收到上述内容后，需要发送一个连接应答（connack）消息，包括会话状态和响应码。

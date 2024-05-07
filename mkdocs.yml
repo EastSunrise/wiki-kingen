@@ -164,6 +164,7 @@ nav:
           - 单调栈: cs/ds/monotonic-stack.md
           - 并查集: cs/ds/disjoint-set.md
           - 跳表: cs/ds/skip-list.md
+          - 布隆过滤器: cs/ds/bloom-filter.md
       - 算法:
           - 算法分析: cs/algo/index.md
           - 排序:
