@@ -778,6 +778,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="volatile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#%E5%8F%8C%E9%87%8D%E6%A0%A1%E9%AA%8C%E9%94%81" class="md-nav__link">
+    <span class="md-ellipsis">
+      双重校验锁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2216,6 +2231,27 @@
   
   <span class="md-ellipsis">
     跳表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/ds/bloom-filter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    布隆过滤器
   </span>
   
 
@@ -5900,6 +5936,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="volatile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#%E5%8F%8C%E9%87%8D%E6%A0%A1%E9%AA%8C%E9%94%81" class="md-nav__link">
+    <span class="md-ellipsis">
+      双重校验锁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5983,13 +6034,33 @@
 <li>两个操作之间存在 Happens-before 关系，并不意味着 Java 平台的具体实现必须要按照 Happens-before 关系指定的顺序来执行。如果重排序之后的执行结果，与按 Happens-before 关系来执行的结果一致，那么这种重排序并不非法（也就是说，JMM 允许这种重排序）</li>
 </ol>
 <h2 id="volatile">volatile<a class="headerlink" href="#volatile" title="Permanent link">&para;</a></h2>
-<p>当一个变量被声明为 <code>volatile</code> 时，JVM 会保证每次读取变量的值时都从主存中读取，而不会缓存变量的值；而且对它的操作不会被重排序。</p>
+<p>当一个变量被声明为 <code>volatile</code> 时，JVM 会保证每次读取变量的值时都从主存中读取，而不会缓存变量的值，写变量值时，JMM 会把写线程本地内存中的该共享变量刷新到主内存中；而且对它的操作不会被重排序。</p>
 <p>使用标准：</p>
 <ul>
 <li>写入变量时并不依赖变量的当前值；或者只有单一的线程修改变量的值；</li>
 <li>变量不需要和其他状态变量共同参与不变约束；</li>
 <li>访问变量时，没有其他原因需要加锁。</li>
 </ul>
+<h3 id="%E5%8F%8C%E9%87%8D%E6%A0%A1%E9%AA%8C%E9%94%81">双重校验锁<a class="headerlink" href="#%E5%8F%8C%E9%87%8D%E6%A0%A1%E9%AA%8C%E9%94%81" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Singleton</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">volatile</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Singleton</span><span class="w"> </span><span class="n">instance</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">Singleton</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Singleton</span><span class="w"> </span><span class="nf">getInstance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">instance</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="kd">synchronized</span><span class="w"> </span><span class="p">(</span><span class="n">Singleton</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">instance</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                    </span><span class="n">instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Singleton</span><span class="p">();</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">instance</span><span class="p">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+</code></pre></div>
+<p>创建对象的过程大致分为三个步骤：在堆中分配空间；调用构造函数，初始化实例；将栈中对象引用执行分配的内存空间。如果不使用 <code>volatile</code>，JVM 可能会指令重排第二三步，第二个线程可能得到一个未完成初始化的对象，产生空指针异常。</p>
 <h2 id="FAQ">FAQ<a class="headerlink" href="#FAQ" title="Permanent link">&para;</a></h2>
 <p>对于非 <code>volatile</code> 的 <code>long</code> 和 <code>double</code> 变量，JVM 允许将 64 位的读写拆分为两个 32 位的读写。</p>
 <h2 id="%E5%8F%82%E8%80%83">参考<a class="headerlink" href="#%E5%8F%82%E8%80%83" title="Permanent link">&para;</a></h2>
@@ -6016,7 +6087,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-04-25</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-05-07</span>
   </span>
 
     
