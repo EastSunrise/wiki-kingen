@@ -14,6 +14,15 @@ ICP 适用于以下条件：
 - 对于 InnoDB 引擎，ICP 仅用于二级索引；
 - 包含子查询或存储函数的条件无法下推；
 
+## 查询执行计划
+
+### EXPLAIN
+
+|    字段     | 说明          |
+| :---------: | :------------ |
+|     id      | 执行序号      |
+| select_type | `SELECT` 类型 |
+
 ## 参考
 
 - [Optimization](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)

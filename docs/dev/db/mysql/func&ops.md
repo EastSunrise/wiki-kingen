@@ -1,6 +1,13 @@
 # 函数和操作符
 
-## 窗口函数
+## JSON
+
+```sql
+# returns 1 if target contains candidate, 0 otherwise
+JSON_CONTAINS(target, candidate [, path])
+```
+
+## Window
 
 | id  | score |
 | --- | ----- |

@@ -16,7 +16,7 @@
         # 基准数的位置
         i = low
         for j in range(low, high):
-            if arr[j] <= pivot:
+            if arr[j] < pivot:
                 arr[i], arr[j] = arr[j], arr[i]
                 i += 1
         arr[i], arr[high] = arr[high], arr[i]

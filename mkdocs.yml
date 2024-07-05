@@ -244,11 +244,14 @@ nav:
               - 函数和操作符: dev/db/mysql/func&ops.md
               - Optimization: dev/db/mysql/optimization.md
               - FAQ: dev/db/mysql/faq.md
+          - MongoDB:
+              - dev/db/mongodb/index.md
+              - Reference: dev/db/mongodb/reference.md
+              - FAQ: dev/db/mongodb/faq.md
           - Oracle:
               - dev/db/oracle/index.md
               - SQL: dev/db/oracle/sql.md
           - Redis: dev/db/redis.md
-          - MongoDB: dev/db/mongodb.md
           - InfluxDB: dev/db/influxdb.md
           - ElasticSearch: dev/db/elasticsearch.md
           - IoTDB: dev/db/iotdb.md
@@ -265,6 +268,7 @@ nav:
               - Hammer.js: dev/web/js/hammer.js.md
           - CSS:
               - Bootstrap: dev/web/css/bootstrap.md
+          - Vite: dev/web/vite.md
       - Languages:
           - Go: dev/lang/go.md
           - C Language: dev/lang/c.md
