@@ -50,6 +50,7 @@ extra_javascript:
   - assets/javascripts/kingen.js
   - assets/javascripts/katex/katex.js
   - assets/javascripts/katex/katex.min.js
+  - assets/javascripts/massiliaGraphviz.js
 extra_css:
   - assets/stylesheets/material-custom.css
   - assets/stylesheets/katex/katex.min.css
@@ -62,10 +63,12 @@ markdown_extensions:
   - abbr
   - admonition
   - attr_list
+  - codehilite
   - def_list
   - footnotes
-  - meta
   - md_in_html
+  - meta
+  - mkdocs_graphviz
   - tables
   - toc:
       permalink: true
@@ -146,6 +149,8 @@ nav:
       - Quarkus: java/quarkus.md
   - CS:
       - 数学:
+          - 数论:
+              - 欧拉定理: cs/math/number-theory/euler's-theorem.md
           - 求和公式: cs/math/summation.md
           - 正态分布: cs/math/normal-distribution.md
           - 线性代数: cs/math/linear-algebra.md
@@ -157,6 +162,7 @@ nav:
               - 二叉搜索树: cs/ds/tree/binary-search-tree.md
               - AVL树: cs/ds/tree/avl-tree.md
               - 红黑树: cs/ds/tree/red-black-tree.md
+              - B+树: cs/ds/tree/b+tree.md
               - 线段树: cs/ds/tree/segment-tree.md
           - 堆: cs/ds/heap.md
           - 散列表: cs/ds/hash-table.md
@@ -190,12 +196,14 @@ nav:
               - SHA: cs/algo/crypto/sha.md
           - 图算法:
               - Dijkstra's 算法: cs/algo/graph/dijkstra's-algorithm.md
+              - Floyd's 算法: cs/algo/graph/floyd's-algorithm.md
               - Tarjan 算法: cs/algo/graph/tarjan-algorithm.md
           - 其它算法:
               - Knuth 洗牌算法: cs/algo/others/knuth-shuffle-algorithm.md
               - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
               - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
               - Gosper's Hack: cs/algo/others/gosper's-hack.md
+              - Manachar 算法: cs/algo/others/manachar-algorithm.md
       - 机器学习:
           - cs/ml/index.md
           - 神经网络: cs/ml/neural-networks.md
@@ -224,7 +232,6 @@ nav:
           - PyMySQL: py/lib/pymysql.md
           - PyYAML: py/lib/pyyaml.md
           - PyWin32: py/lib/pywin32.md
-          - MkDocs: py/lib/mkdocs.md
       - 应用:
           - 爬虫: py/app/spider.md
           - 任务: py/app/task.md
@@ -236,13 +243,18 @@ nav:
   - Development:
       - References: dev/references.md
       - 数据库:
-          - 索引: dev/db/index.md
           - 事务: dev/db/transaction.md
           - MySQL:
               - dev/db/mysql/index.md
-              - SQL: dev/db/mysql/sql.md
+              - SQL:
+                  - DDL: dev/db/mysql/sql/ddl.md
+                  - DML: dev/db/mysql/sql/dml.md
+                  - DCL: dev/db/mysql/sql/dcl.md
               - 函数和操作符: dev/db/mysql/func&ops.md
-              - Optimization: dev/db/mysql/optimization.md
+              - 优化:
+                  - SQL优化: dev/db/mysql/optimization/sql-optimization.md
+                  - 索引优化: dev/db/mysql/optimization/index-optimization.md
+                  - 查询执行计划: dev/db/mysql/optimization/query-execution-plan.md
               - FAQ: dev/db/mysql/faq.md
           - MongoDB:
               - dev/db/mongodb/index.md
@@ -253,8 +265,8 @@ nav:
               - SQL: dev/db/oracle/sql.md
           - Redis: dev/db/redis.md
           - InfluxDB: dev/db/influxdb.md
-          - ElasticSearch: dev/db/elasticsearch.md
           - IoTDB: dev/db/iotdb.md
+          - PostgreSQL: dev/db/postgresql.md
           - SQLite: dev/db/sqlite.md
       - Web:
           - HTTP: dev/web/http.md
@@ -277,6 +289,7 @@ nav:
       - 中间件:
           - Kafka: dev/mw/kafka.md
           - RabbitMQ: dev/mw/rabbitmq.md
+          - ElasticSearch: dev/mw/elasticsearch.md
           - ZooKeeper: dev/mw/zookeeper.md
       - Linux: dev/linux.md
       - Git: dev/git.md
@@ -291,13 +304,14 @@ nav:
       - FasfDFS: dev/fastdfs.md
       - MinIO: dev/minio.md
       - MQTT: dev/mqtt.md
-      - Mermaid: dev/mermaid.md
   - Misc:
       - ChatGPT: misc/chatgpt.md
       - Activation: misc/activation.md
       - Wiki: misc/wiki.md
       - LaTeX: misc/latex.md
       - Markdown: misc/markdown.md
+      - MkDocs: misc/mkdocs.md
+      - Mermaid: misc/mermaid.md
       - Chrome: misc/chrome.md
       - Windows: misc/windows.md
       - IntelliJ IDEA: misc/idea.md

@@ -26,7 +26,7 @@ mkdocs new my-wiki
 目录结构如下：
 
 - _docs_：保存 Markdown 文件
-  - _index.md_：默认首页文件
+    - _index.md_：默认首页文件
 - _mkdocs.yml_：配置文件
 
 ## 配置
@@ -83,12 +83,12 @@ mkdocs build
 根目录下即会创建 _site_ 目录，包含输出的文件：
 
 - _site_
-  - _css_
-  - _fonts_
-  - _img_
-  - _js_
-  - _index.html_：_index.md_
-  - _example_
+    - _css_
+    - _fonts_
+    - _img_
+    - _js_
+    - _index.html_：_index.md_
+    - _example_
     - _index.html_：_example.md_
 
 ## 发布
@@ -119,6 +119,43 @@ mkdocs gh-deploy
 pip install mkdocs-material
 ```
 
+## 插件
+
+### mkdocs-graphviz
+
+需要先安装 [Graphviz](https://graphviz.org/download/).
+
+```sh
+pip install mkdocs-graphviz
+```
+
+```yml
+markdown_extensions:
+  - mkdocs_graphviz
+
+extra_javascript:
+  # support light and dark modes
+  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/massiliaGraphviz.js
+```
+
+```markdown
+digraph G {
+    rankdir=LR
+    Earth [peripheries=2]
+    Mars
+    Earth -> Mars
+}
+```
+
+```dot
+digraph G {
+    rankdir=LR
+    Earth [peripheries=2]
+    Mars
+    Earth -> Mars
+}
+```
+
 ## 其他 WiKi
 
 - [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
@@ -133,3 +170,4 @@ pip install mkdocs-material
 - [MkDocs](https://www.mkdocs.org/)
 - [MkDocs 中文文档](https://markdown-docs-zh.readthedocs.io/zh_CN/latest/)
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
+- [rod2ik / mkdocs-graphviz · GitLab](https://gitlab.com/rod2ik/mkdocs-graphviz)
