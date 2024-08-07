@@ -43,7 +43,43 @@ SELECT c, c->'$.a' FROM example;
 
 `column->>path` 等价于 `JSON_UNQUOTE(column->path)`，等价于 `JSON_UNQUOTE(JSON_EXTRACT(column, path))`。
 
+## Aggregate
+
 ## Window
+
+Window 函数和[聚合函数](#aggregate)的区别在于，前者对每一个数据行都生成一个计算结果，而后者每个分组只有一个结果。
+
+Window 函数使用 `OVER` 关键字对数据行分组，只用于 `SELECT` 列和 `ORDER BY` 列，在 `WHERE`，`GROUP BY`，`HAVING` 之后，在 `ORDER BY`，`LIMIT`，`SELECT DISTINCT` 之前执行。
+
+```sql
+over_clause:
+    {OVER (window_spec) | OVER window_name}
+
+window_spec:
+    [window_name] [partition_clause] [order_clause] [frame_clause]
+
+partition_clause:
+    PARTITION BY expr [, expr] ...
+
+order_clause:
+    ORDER BY expr [ASC|DESC] [, expr [ASC|DESC]] ...
+```
+
+如果 `OVER()` 不带参数，则使用默认的窗口，即整个数据集。
+
+- `window_name`：窗口名称，用于引用窗口；
+- `partition_clause`：`PARTITION BY` 语句，作为分组条件，默认为整个数据集；
+- `order_clause`：`ORDER BY` 语句，作为分组的排序条件，升序时 `NULL` 在前，倒序时 `NULL` 在后；
+
+MySQL 支持以下 Window 函数：
+
+| 名称           | 描述                                        |
+| -------------- | ------------------------------------------- |
+| `RANK()`       | 当前行在分组内的排名，从 1 开始，包含间隔   |
+| `DENSE_RANK()` | 当前行在分组内的排名，从 1 开始，不包含间隔 |
+| `ROW_NUMBER()` | 当前行在分组内的行号，从 1 开始             |
+
+### RANK()/DENSE_RANK()/ROW_NUMBER()
 
 | id  | score |
 | --- | ----- |

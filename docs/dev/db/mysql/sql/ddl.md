@@ -66,6 +66,8 @@ CREATE TABLE person (
 )
 ```
 
+## TRUNCATE TABLE
+
 ## 参考
 
 - [MySQL :: MySQL 8.0 Reference Manual :: 15.1 Data Definition Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html)

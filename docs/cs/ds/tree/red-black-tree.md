@@ -756,7 +756,7 @@ config:
   themeVariables:
     fontSize: "24px"
 ---
-flowchart LR
+graph LR
     subgraph A[" "]
         direction TB
         p1((p))
