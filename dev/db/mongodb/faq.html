@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://eastsunrise.github.io/wiki-kingen/dev/db/mongodb/faq.html">
       
       
-        <link rel="prev" href="reference.html">
+        <link rel="prev" href="tools.html">
       
       
         <link rel="next" href="../oracle/index.html">
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#FAQ" class="md-skip">
+        <a href="#faq" class="md-skip">
           跳转至
         </a>
       
@@ -4547,6 +4547,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../mysql/programs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mysql/faq.html" class="md-nav__link">
         
   
@@ -4654,6 +4675,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -4703,7 +4745,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#MongoCursorNotFoundException" class="md-nav__link">
+  <a href="#mongocursornotfoundexception" class="md-nav__link">
     <span class="md-ellipsis">
       MongoCursorNotFoundException
     </span>
@@ -5050,6 +5092,93 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_2_2" id="__nav_5_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            React
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/js/react/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/js/react/react-router.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../web/js/jquery.html" class="md-nav__link">
         
@@ -5077,27 +5206,6 @@
   
   <span class="md-ellipsis">
     Node.js
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../web/js/react.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    React
   </span>
   
 
@@ -6005,6 +6113,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../misc/excel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Excel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../misc/chrome.html" class="md-nav__link">
         
   
@@ -6179,7 +6308,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#MongoCursorNotFoundException" class="md-nav__link">
+  <a href="#mongocursornotfoundexception" class="md-nav__link">
     <span class="md-ellipsis">
       MongoCursorNotFoundException
     </span>
@@ -6218,8 +6347,8 @@
   
 
 
-<h1 id="FAQ">FAQ<a class="headerlink" href="#FAQ" title="Permanent link">&para;</a></h1>
-<h2 id="MongoCursorNotFoundException">MongoCursorNotFoundException<a class="headerlink" href="#MongoCursorNotFoundException" title="Permanent link">&para;</a></h2>
+<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<h2 id="mongocursornotfoundexception">MongoCursorNotFoundException<a class="headerlink" href="#mongocursornotfoundexception" title="Permanent link">&para;</a></h2>
 <p>假设 MongoDB 集群有多个节点且使用负载均衡来处理数据请求，当客户端请求超过 <code>batchSize</code> 的数据时，需要分多次请求，第一次请求的 MongoDB 节点会创建游标（cursor），记录下次请求的位置，但是负载均衡器可能将下一个请求分配到其他节点，导致这个异常。</p>
 <p>解决方案是使用 MongoDB 驱动本身实现负载均衡：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># 游标异常
@@ -6284,7 +6413,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="reference.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Reference">
+          <a href="tools.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Tools">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -6294,7 +6423,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Reference
+                Tools
               </div>
             </div>
           </a>

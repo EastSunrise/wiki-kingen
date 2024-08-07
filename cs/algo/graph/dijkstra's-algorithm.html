@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Dijkstra-%E7%AE%97%E6%B3%95" class="md-skip">
+        <a href="#dijkstra-%E7%AE%97%E6%B3%95" class="md-skip">
           跳转至
         </a>
       
@@ -4647,6 +4647,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../dev/db/mysql/programs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../dev/db/mysql/faq.html" class="md-nav__link">
         
   
@@ -4739,6 +4760,27 @@
   
   <span class="md-ellipsis">
     Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/db/mongodb/tools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
   </span>
   
 
@@ -5099,6 +5141,93 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_2_2" id="__nav_5_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            React
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/web/js/react/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/web/js/react/react-router.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../dev/web/js/jquery.html" class="md-nav__link">
         
@@ -5126,27 +5255,6 @@
   
   <span class="md-ellipsis">
     Node.js
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../dev/web/js/react.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    React
   </span>
   
 
@@ -6054,6 +6162,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../misc/excel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Excel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../misc/chrome.html" class="md-nav__link">
         
   
@@ -6312,7 +6441,7 @@
   
 
 
-<h1 id="Dijkstra-%E7%AE%97%E6%B3%95">Dijkstra 算法<a class="headerlink" href="#Dijkstra-%E7%AE%97%E6%B3%95" title="Permanent link">&para;</a></h1>
+<h1 id="dijkstra-%E7%AE%97%E6%B3%95">Dijkstra 算法<a class="headerlink" href="#dijkstra-%E7%AE%97%E6%B3%95" title="Permanent link">&para;</a></h1>
 <p>Dijkstra 算法，使用类似<a href="../../ds/graph.html#广度优先搜索">广度优先搜索</a>的方法解决加权图的单源最短路径问题，其原始版本仅适用于找到两个顶点之间的最短路径，后来更常见的变体固定了一个顶点作为源结点然后找到该顶点到图中所有其它结点的最短路径，产生一个最短路径树。</p>
 <h2 id="%E9%97%AE%E9%A2%98">问题<a class="headerlink" href="#%E9%97%AE%E9%A2%98" title="Permanent link">&para;</a></h2>
 <p>给定加权有向图 <span class="arithmatex">\(G=\{V,E,W\}\)</span>，其顶点集合 <span class="arithmatex">\(V=\{v_1,v_2,\cdots,v_n\}\)</span>，每条边 <span class="arithmatex">\(e_{i,j}(i\ne j)\)</span> 对应一个权重 <span class="arithmatex">\(w_{i,j}(w_{i,j}\ge0)\)</span>，表示从顶点 <span class="arithmatex">\(v_i\)</span> 到 <span class="arithmatex">\(v_{j}\)</span> 的距离。设一源点 <span class="arithmatex">\(v_s\in V\)</span>，求：从 <span class="arithmatex">\(v_s\)</span> 出发，到其它顶点的最短路径 <span class="arithmatex">\(d_{s,i}(1\le i\le n)\)</span>。记 <span class="arithmatex">\(m=|E|\)</span>。</p>
