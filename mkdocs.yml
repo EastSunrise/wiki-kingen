@@ -75,6 +75,7 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           percent_encode: true
+          case: lower
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -255,10 +256,12 @@ nav:
                   - SQL优化: dev/db/mysql/optimization/sql-optimization.md
                   - 索引优化: dev/db/mysql/optimization/index-optimization.md
                   - 查询执行计划: dev/db/mysql/optimization/query-execution-plan.md
+              - Programs: dev/db/mysql/programs.md
               - FAQ: dev/db/mysql/faq.md
           - MongoDB:
               - dev/db/mongodb/index.md
               - Reference: dev/db/mongodb/reference.md
+              - Tools: dev/db/mongodb/tools.md
               - FAQ: dev/db/mongodb/faq.md
           - Oracle:
               - dev/db/oracle/index.md
@@ -272,9 +275,11 @@ nav:
           - HTTP: dev/web/http.md
           - JavaScript:
               - dev/web/js/index.md
+              - React:
+                  - dev/web/js/react/index.md
+                  - React Router: dev/web/js/react/react-router.md
               - jQuery: dev/web/js/jquery.md
               - Node.js: dev/web/js/nodejs.md
-              - React: dev/web/js/react.md
               - Layui: dev/web/js/layui.md
               - Video.js: dev/web/js/video.js.md
               - Hammer.js: dev/web/js/hammer.js.md
@@ -312,6 +317,7 @@ nav:
       - Markdown: misc/markdown.md
       - MkDocs: misc/mkdocs.md
       - Mermaid: misc/mermaid.md
+      - Excel: misc/excel.md
       - Chrome: misc/chrome.md
       - Windows: misc/windows.md
       - IntelliJ IDEA: misc/idea.md
