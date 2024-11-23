@@ -24,7 +24,6 @@ class RedBlackTree {
         }
     }
 }
-
 ```
 
 ## 性质
@@ -59,7 +58,49 @@ $$
 
 对红黑树执行常规的插入和删除操作后，结果可能不符合红黑树的性质，为了维护这些性质，需要修改某些结点的颜色和树的结构。通过**旋转**修改树的结构，仍能保持二叉搜索树的性质。
 
-![二叉搜索树旋转](img/bst-rotation.png)
+```mermaid
+---
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        x1((x))
+        y1((y))
+        a1((a))
+        b1((b))
+        c1((c))
+
+        y1 --> x1 & c1
+        x1 --> a1 & b1
+    end
+
+    subgraph B[" "]
+        direction TB
+        x2((x))
+        y2((y))
+        a2((a))
+        b2((b))
+        c2((c))
+
+        x2 --> a2 & y2
+        y2 --> b2 & c2
+    end
+
+    B -->|左旋 x| A
+    A -->|右旋 y| B
+
+classDef no-boarder fill:transparent,stroke-width:0;
+classDef grey-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B no-boarder
+class x1,y1,x2,y2 grey-node
+class a1,b1,c1,a2,b2,c2 no-color
+```
 
 ```java
 class RedBlackTree {
@@ -118,7 +159,66 @@ class RedBlackTree {
 
 （情形 3.1）如果 $u$ 是红色，那么将 $p$ 和 $u$ 变为黑色，$g$ 变为红色，然后对 $g$ 重复上述步骤。
 
-![u 为红色](img/rbt-insertion-case-i.png)
+```mermaid
+---
+title: "叔父结点为红色"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        g1((g))
+        p1((p))
+        u1((u))
+        x1((x))
+        c1((c))
+        d1((d))
+        e1((e))
+        a1((N))
+        b1((N))
+
+        g1 --> p1 & u1
+        p1 --> x1 & c1
+        u1 --> d1 & e1
+        x1 --> a1 & b1
+        d1 ~~~ xa1 & xb1
+    end
+
+    subgraph B[" "]
+        direction TB
+        g2((g))
+        p2((p))
+        u2((u))
+        x2((x))
+        c2((c))
+        d2((d))
+        e2((e))
+        a2((N))
+        b2((N))
+
+        g2 --> p2 & u2
+        p2 --> x2 & c2
+        u2 --> d2 & e2
+        x2 --> a2 & b2
+        d2 ~~~ xa2 & xb2
+    end
+
+    A --> B
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B no-boarder
+class xa1,xb1,xa2,xb2 hidden
+class g1,a1,b1,c1,d1,e1,p2,u2,a2,b2,c2,d2,e2 black-node
+class p1,u1,x1,g2,x2 red-node
+```
 
 （情形 3.2）如果 $u$ 是黑色，考虑 $p$ 和 $g$、$x$ 和 $p$ 的位置关系，根据不同情况进行旋转和变色：
 
@@ -129,11 +229,171 @@ class RedBlackTree {
 
 如果为 LL 型，将 $p$ 变为黑色，$g$ 变为红色，然后以祖父结点 $g$ 为支点进行右旋，树的黑高不变。
 
-![LL 型变换](img/rbt-insertion-case-ll.png)
+```mermaid
+---
+title: "LL 型变换"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        g1((g))
+        p1((p))
+        u1((u))
+        x1((x))
+        c1((c))
+        d1((d))
+        e1((e))
+        a1((N))
+        b1((N))
+
+        g1 --> p1 & u1
+        p1 --> x1 & c1
+        u1 --> d1 & e1
+        x1 --> a1 & b1
+        d1 ~~~ xa1 & xb1
+    end
+
+    subgraph B[" "]
+        direction TB
+        g2((g))
+        p2((p))
+        u2((u))
+        x2((x))
+        c2((c))
+        d2((d))
+        e2((e))
+        a2((N))
+        b2((N))
+
+        g2 --> p2 & u2
+        p2 --> x2 & c2
+        u2 --> d2 & e2
+        x2 --> a2 & b2
+        d2 ~~~ xa2 & xb2
+    end
+
+    subgraph C[" "]
+        direction TB
+        p3((p))
+        x3((x))
+        g3((g))
+        a3((N))
+        b3((N))
+        c3((c))
+        u3((u))
+        d3((d))
+        e3((e))
+
+        p3 --> x3 & g3
+        x3 --> a3 & b3
+        g3 --> c3 & u3
+        b3 ~~~ xa3 & xb3
+        u3 --> d3 & e3
+    end
+
+    A --> B
+    B --> C
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B,C no-boarder
+class xa1,xb1,xa2,xb2,xa3,xb3 hidden
+class g1,u1,a1,b1,c1,p2,u2,a2,b2,c2,p3,a3,b3,c3,u3 black-node
+class p1,x1,g2,x2,x3,g3 red-node
+class d1,e1,d2,e2,d3,e3 no-color
+```
 
 如果为 LR 型，交换 $x$ 和 $p$ 的指针，以结点 $x$ 为支点进行左旋后，变为 LL 型。
 
-![LR 型变换](img/rbt-insertion-case-lr.png)
+```mermaid
+---
+title: "LR 型变换"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        g1((g))
+        p1((p))
+        u1((u))
+        a1((a))
+        x1((x))
+        d1((d))
+        e1((e))
+        b1((N))
+        c1((N))
+
+        g1 --> p1 & u1
+        p1 --> a1 & x1
+        u1 --> d1 & e1
+        x1 --> b1 & c1
+        e1 ~~~ xa1 & xb1
+    end
+
+    subgraph B[" "]
+        direction TB
+        g2((g))
+        x2((x))
+        u2((u))
+        a2((a))
+        p2((p))
+        d2((d))
+        e2((e))
+        b2((N))
+        c2((N))
+
+        g2 --> x2 & u2
+        x2 --> a2 & p2
+        u2 --> d2 & e2
+        p2 --> b2 & c2
+        e2 ~~~ xa2 & xb2
+    end
+
+    subgraph C[" "]
+        direction TB
+        g3((g))
+        p3((p))
+        u3((u))
+        x3((x))
+        c3((N))
+        d3((d))
+        e3((e))
+        a3((a))
+        b3((N))
+
+        g3 --> p3 & u3
+        p3 --> x3 & c3
+        u3 --> d3 & e3
+        x3 --> a3 & b3
+        d3 ~~~ xa3 & xb3
+    end
+
+    A --> B
+    B --> C
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B,C no-boarder
+class xa1,xb1,xa2,xb2,xa3,xb3 hidden
+class g1,u1,a1,b1,c1,g2,u2,a2,b2,c2,g3,u3,c3,a3,b3 black-node
+class p1,x1,x2,p2,p3,x3 red-node
+class d1,e1,d2,e2,d3,e3 no-color
+```
 
 ```java
 class RedBlackTree {
@@ -222,18 +482,198 @@ class RedBlackTree {
 2. 如果 $t$ 和 $x$ 均为黑色，且 $t$ 为根结点，删除后仍然满足红黑树的性质，此时树的黑高减一；
 3. 否则，将 $x$ 标记为**双黑**（double black），考虑其**兄弟结点**，即父结点 $p$ 的另一个子结点 $s$.
 
-![双黑标记](img/rbt-deletion-db.png)
+```mermaid
+---
+title: "双黑标记"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        p1((p))
+        t1((t))
+        s1((s))
+        x1((x))
+        q1((q))
+        r1((r))
+
+        p1 --> t1 & s1
+        t1 --> x1
+        t1 ~~~ xa1
+        s1 --> q1 & r1
+    end
+
+    subgraph B[" "]
+        direction TB
+        p2((p))
+        x2(((x)))
+        s2((s))
+        q2((q))
+        r2((r))
+
+        p2 --> x2 & s2
+        s2 --> q2 & r2
+    end
+
+    A --> B
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef double-node fill:lightgrey,stroke:black,stroke-width:2px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B no-boarder
+class xa1 hidden
+class t1,x1 black-node
+class x2 double-node
+class p1,s1,q1,r1,p2,s2,q2,r2 no-color
+```
 
 （情形 3.1）如果 $s$ 是红色，将 $s$ 变为黑色，$p$ 变为红色，并以 $p$ 为支点进行左旋（$s$ 为 $p$ 的右子结点）或右旋（$s$ 为 $p$ 的左子结点），讨论 $x$ 的新的兄弟结点（原 $s$ 的子结点，所以必定是黑色）。
 
-![兄弟结点为红色](img/rbt-deletion-case-3.1.png)
+```mermaid
+---
+title: "兄弟结点为红色"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        p1((p))
+        x1(((x)))
+        s1((s))
+        q1((q))
+        r1((r))
+
+        p1 --> x1 & s1
+        s1 --> q1 & r1
+    end
+
+    subgraph B[" "]
+        direction TB
+        p2((p))
+        x2(((x)))
+        s2((s))
+        q2((q))
+        r2((r))
+
+        p2 --> x2 & s2
+        s2 --> q2 & r2
+    end
+
+    subgraph C[" "]
+        direction TB
+        s3((s))
+        p3((p))
+        r3((r))
+        x3(((x)))
+        q3((q))
+
+        s3 --> p3 & r3
+        p3 --> x3 & q3
+    end
+
+    A --> B
+    B --> C
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef double-node fill:lightgrey,stroke:black,stroke-width:2px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B,C no-boarder
+class p1,q1,r1,s2,q2,r2,s3,r3,q3 black-node
+class s1,p2,p3 red-node
+class x1,x2,x3 double-node
+```
 
 （情形 3.2）如果 $s$ 是黑色，且其子结点均为黑色，考虑 $p$ 的颜色：
 
 - 如果 $p$ 为黑色，将 $s$ 变为红色，双黑标记改为 $p$ 结点，对双黑结点 $p$ 进行处理；
 - 如果 $p$ 为红色，将 $s$ 变为红色，将 $p$ 变为黑色，树的黑高不变。
 
-![兄弟结点及其子结点为黑色](img/rbt-deletion-case-3.2.png)
+```mermaid
+---
+title: "兄弟结点及其子结点为黑色"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        p1((p))
+        x1(((x)))
+        s1((s))
+        q1((q))
+        r1((r))
+
+        p1 --> x1 & s1
+        s1 --> q1 & r1
+    end
+
+    subgraph B[" "]
+        direction TB
+        p2(((p)))
+        x2((x))
+        s2((s))
+        q2((q))
+        r2((r))
+
+        p2 --> x2 & s2
+        s2 --> q2 & r2
+    end
+
+    A --> B
+
+    subgraph C[" "]
+        direction TB
+        p3((p))
+        x3(((x)))
+        s3((s))
+        q3((q))
+        r3((r))
+
+        p3 --> x3 & s3
+        s3 --> q3 & r3
+    end
+
+    subgraph D[" "]
+        direction TB
+        p4((p))
+        x4((x))
+        s4((s))
+        q4((q))
+        r4((r))
+
+        p4 --> x4 & s4
+        s4 --> q4 & r4
+    end
+
+    C --> D
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef double-node fill:lightgrey,stroke:black,stroke-width:2px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class BP,RP,A,B,C,D no-boarder
+class p1,s1,q1,r1,x2,q2,r2,s3,q3,r3,p4,x4,q4,r4 black-node
+class s2,p3,s4 red-node
+class x1,p2,x3 double-node
+```
 
 （情形 3.3）如果 $s$ 是黑色，且其至少有一个红色子结点，则根据 $s$ 和 $p$、红色子结点 和 $s$ 的位置关系分为四种情况，针对不同情况进行旋转和变色：
 
@@ -244,11 +684,140 @@ class RedBlackTree {
 
 如果为 RR 型，交换 $p$ 和 $s$ 的颜色，将 $r$ 变为黑色，然后以 $p$ 为支点进行左旋，移除双黑标记后两个子树黑色结点数恢复平衡。
 
-![RR 型变换](img/rbt-deletion-case-rr.png)
+```mermaid
+---
+title: "RR 型变换"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+flowchart LR
+    subgraph A[" "]
+        direction TB
+        p1((p))
+        x1(((x)))
+        s1((s))
+        q1((q))
+        r1((r))
+
+        p1 --> x1 & s1
+        s1 --> q1 & r1
+    end
+
+    subgraph B[" "]
+        direction TB
+        p2((p))
+        x2(((x)))
+        s2((s))
+        q2((q))
+        r2((r))
+
+        p2 --> x2 & s2
+        s2 --> q2 & r2
+    end
+
+    subgraph C[" "]
+        direction TB
+        s3((s))
+        p3((p))
+        r3((r))
+        x3((x))
+        q3((q))
+
+        s3 --> p3 & r3
+        p3 --> x3 & q3
+    end
+
+    A --> B
+    B --> C
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef double-node fill:lightgrey,stroke:black,stroke-width:2px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B,C no-boarder
+class s1,p2,r2,p3,r3,x3 black-node
+class r1 red-node
+class x1,x2 double-node
+class p1,q1,s2,q2,s3,q3 no-color
+```
 
 如果为 RL 型，将 $s$ 变为红色，将其左子结点变为黑色，以 $s$ 为支点进行右旋后，变为 RR 型。
 
-![RL 型变换](img/rbt-deletion-case-rl.png)
+```mermaid
+---
+title: "RR 型变换"
+config:
+  theme: base
+  themeVariables:
+    fontSize: "24px"
+---
+graph LR
+    subgraph A[" "]
+        direction TB
+        p1((p))
+        x1(((x)))
+        s1((s))
+        q1((q))
+        r1((r))
+        a1((a))
+        b1((b))
+
+        p1 --> x1 & s1
+        s1 --> q1 & r1
+        q1 --> a1 & b1
+    end
+
+    subgraph B[" "]
+        direction TB
+        p2((p))
+        x2(((x)))
+        s2((s))
+        q2((q))
+        r2((r))
+        a2((a))
+        b2((b))
+
+        p2 --> x2 & s2
+        s2 --> q2 & r2
+        q2 --> a2 & b2
+    end
+
+    subgraph C[" "]
+        direction TB
+        p3((p))
+        x3(((x)))
+        q3((q))
+        a3((a))
+        s3((s))
+        b3((b))
+        r3((r))
+
+        p3 --> x3 & q3
+        q3 --> a3 & s3
+        s3 --> b3 & r3
+    end
+
+    A --> B
+    B --> C
+
+classDef no-boarder fill:transparent,stroke-width:0px;
+classDef hidden display:none;
+classDef black-node fill:lightgrey,stroke:black,stroke-width:1px,color:black;
+classDef red-node fill:#ff8080,stroke:black,stroke-width:1px,color:black;
+classDef double-node fill:lightgrey,stroke:black,stroke-width:2px,color:black;
+classDef no-color fill:transparent,stroke:black,stroke-width:1px;
+
+class A,B,C no-boarder
+class s1,r1,a1,b1,q2,r2,a2,b2,q3,a3,b3,r3 black-node
+class q1,s2,s3 red-node
+class x1,x2,x3 double-node
+class p1,p2,p3 no-color
+```
 
 ```java
 class RedBlackTree {

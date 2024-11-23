@@ -48,13 +48,37 @@ class AtomicInteger {
 
 ## volatile
 
-当一个变量被声明为 `volatile` 时，JVM 会保证每次读取变量的值时都从主存中读取，而不会缓存变量的值；而且对它的操作不会被重排序。
+当一个变量被声明为 `volatile` 时，JVM 会保证每次读取变量的值时都从主存中读取，而不会缓存变量的值，写变量值时，JMM 会把写线程本地内存中的该共享变量刷新到主内存中；而且对它的操作不会被重排序。
 
 使用标准：
 
 - 写入变量时并不依赖变量的当前值；或者只有单一的线程修改变量的值；
 - 变量不需要和其他状态变量共同参与不变约束；
 - 访问变量时，没有其他原因需要加锁。
+
+### 双重校验锁
+
+```java
+public class Singleton {
+
+    private volatile static Singleton instance;
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        if (instance == null) {
+            synchronized (Singleton.class) {
+                if (instance == null) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
+创建对象的过程大致分为三个步骤：在堆中分配空间；调用构造函数，初始化实例；将栈中对象引用执行分配的内存空间。如果不使用 `volatile`，JVM 可能会指令重排第二三步，第二个线程可能得到一个未完成初始化的对象，产生空指针异常。
 
 ## FAQ
 

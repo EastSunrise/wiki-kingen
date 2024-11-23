@@ -4,7 +4,7 @@ Dijkstra 算法，使用类似[广度优先搜索](../../ds/graph.md#广度优�
 
 ## 问题
 
-给定加权有向图 $G=\{V,E,W\}$，其顶点集合 $V=\{v_1,v_2,\cdots,v_n\}$，每条边 $e_{i,j}(i\ne j)$ 对应一个权重 $w_{i,j}(w_{i,j}\ge0)$，表示从顶点 $v_i$ 到 $v_{j}$ 的距离。设一源点 $v_s\in V$，求：从 $v_s$ 出发，到其它顶点的最短路径 $d_{s,i}(1\le i\le n)$。
+给定加权有向图 $G=\{V,E,W\}$，其顶点集合 $V=\{v_1,v_2,\cdots,v_n\}$，每条边 $e_{i,j}(i\ne j)$ 对应一个权重 $w_{i,j}(w_{i,j}\ge0)$，表示从顶点 $v_i$ 到 $v_{j}$ 的距离。设一源点 $v_s\in V$，求：从 $v_s$ 出发，到其它顶点的最短路径 $d_{s,i}(1\le i\le n)$。记 $m=|E|$。
 
 ## 定义
 
@@ -51,7 +51,7 @@ $$
 \end{gather}
 $$
 
-重复第2步和第3步直至 $S=V$.
+重复第 2 步和第 3 步直至 $S=V$.
 
 以下证明 $d_{s,k}=f_{s,k}$.
 
@@ -160,7 +160,7 @@ $$
 
 ## 实现
 
-```java
+```java title="暴力实现"
 int[] minDistance(int[][] graph, int n, int s) {
    // dist[v]: the distance from s to v
    int[] dist = new int[n];
@@ -194,9 +194,41 @@ int[] minDistance(int[][] graph, int n, int s) {
 }
 ```
 
-易知，时间复杂度为 $O(|V|^2)$.
+每次暴力搜索下一个最短路径，时间复杂度为 $O(n^2)$.
+
+```java title="堆实现"
+int[] minDistance(List<List<int[]>> graph, int n, int s) {
+   int[] dist = new int[n];
+   Arrays.fill(dist, -1);
+
+   PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+   pq.offer(new int[]{0, s});
+   dist[s] = 0;
+   boolean[] visited = new boolean[n];
+   while (!pq.isEmpty()) {
+      int[] cur = pq.poll();
+      int u = cur[1];
+      if (visited[u]) {
+            continue;
+      }
+      visited[u] = true;
+      for (int[] edge : graph.get(u)) {
+            int v = edge[0], w = edge[1];
+            int d = dist[u] + w;
+            if (dist[v] == -1 || dist[v] > d) {
+               dist[v] = d;
+               pq.offer(new int[]{d, v});
+            }
+      }
+   }
+   return dist;
+}
+```
+
+每次更新路径后，将其放入优先队列中，时间复杂度为 $O(m\log m)$.
 
 ## 参考
 
 - [Dijsktra's algorithm (geeksforgeeks.org)](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/)
+- [最短路 - OI Wiki](https://oi-wiki.org/graph/shortest-path/#dijkstra-%E7%AE%97%E6%B3%95)
 - [最短路径问题—Dijkstra 算法最详解 - 知乎](https://zhuanlan.zhihu.com/p/129373740)

@@ -10,3 +10,4 @@
 ## 参考
 
 - [Apache Kafka](https://kafka.apache.org/documentation/)
+- [尚硅谷 Kafka 教程\_哔哩哔哩](https://www.bilibili.com/video/BV1Gp421m7UN/)

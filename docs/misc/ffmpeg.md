@@ -72,6 +72,16 @@ ffmpeg -i a.mkv -i b.mkv -map 0:v -map -1:a:1 OUTPUT # 选择a.mkv的所有视�
 ffmpeg -i INPUT -c:v copy OUTPUT # 提取视频流
 ```
 
+### 视频编码
+
+CRF（Constant Rate Factor）是控制视频编码的一种常用方式，决定了编码文件的大小和视频的质量。
+
+CRF 的取值范围是 0-51（指数），其中，0 代表无损，23 是默认值，51 代表质量最差。一般正常取值在 17-28.
+
+```sh
+ffmpeg -i input.mp4 -c:v libx264 -crf 23 -c:a copy output.mp4
+```
+
 ## 片段
 
 ```shell
@@ -98,7 +108,7 @@ ffmpeg -ss 02:30 -to 10:20 -i INPUT.mp4 -c copy OUTPUT.mp4
 -itsoffset <offset>
 
 # 字幕增加5秒
-ffmpeg -itsoffset 5 -i subtitle.srt -c copy subtitle_delayed.srt 
+ffmpeg -itsoffset 5 -i subtitle.srt -c copy subtitle_delayed.srt
 ```
 
 ## 裁剪和填充

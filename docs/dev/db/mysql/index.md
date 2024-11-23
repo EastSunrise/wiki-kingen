@@ -61,9 +61,9 @@ systemctl start mysqld
 bind-address = 0.0.0.0
 ```
 
-执行命令 `systemctl restart mysql` 重启 MySQL，并[添加远程连接账号](sql.md#账号管理)。
+执行命令 `systemctl restart mysql` 重启 MySQL，并[添加远程连接账号](sql/dcl.md#账号管理)。
 
 ## 参考
 
 - [MySQL Documentation](https://dev.mysql.com/doc/)
-    - [Installing and Upgrading MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
+- [MySQL :: MySQL Workbench Manual](https://dev.mysql.com/doc/workbench/en/)
