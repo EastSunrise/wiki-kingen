@@ -28,6 +28,45 @@ Expires: Mon, 15 Apr 2024 02:02:29 GMT
 Server: EOS (vny/044F)
 ```
 
-## 参考·
+### 属性
+
+| 请求方法 | 幂等 |
+| -------- | ---- |
+| GET      | 是   |
+| HEAD     | 是   |
+| POST     | 否   |
+| PUT      | 是   |
+| DELETE   | 是   |
+| CONNECT  | 否   |
+| OPTIONS  | 是   |
+| TRACE    | 是   |
+| PATCH    | 否   |
+
+## 状态码
+
+| 状态码                     | 描述                                   |
+| -------------------------- | -------------------------------------- |
+| 200 OK                     | 请求成功并返回请求的数据               |
+| 201 Created                | 新资源创建成功                         |
+| 202 Accepted               | 服务器已接受请求，但尚未处理（异步）   |
+| 204 No Content             | 请求成功，但未返回任何内容             |
+| 301 Moved Permanently      | 资源被永久移动到新位置                 |
+| 400 Bad Request            | 客户端请求错误                         |
+| 401 Unauthorized           | 未认证                                 |
+| 403 Forbidden              | 权限不足                               |
+| 404 Not Found              | 资源未找到                             |
+| 405 Method Not Allowed     | 请求方法不允许                         |
+| 406 Not Acceptable         | 客户端请求的格式不受服务器支持         |
+| 409 Conflict               | 客户端请求与当前服务器状态冲突         |
+| 410 Gone                   | 资源被永久删除                         |
+| 415 Unsupported Media Type | 客户端请求的媒体类型不受服务器支持     |
+| 422 Unprocessable Entity   | 客户端请求格式正确，但无法被服务器理解 |
+| 429 Too Many Requests      | 客户端请求频率过高                     |
+| 500 Internal Server Error  | 服务器内部错误                         |
+| 502 Bad Gateway            | 网关错误                               |
+| 503 Service Unavailable    | 服务不可用                             |
+| 504 Gateway Timeout        | 网关超时                               |
+
+## 参考
 
 - [HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP)

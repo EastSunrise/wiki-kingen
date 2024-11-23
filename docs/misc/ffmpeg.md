@@ -59,17 +59,22 @@ ffmpeg -i a.mkv -i b.mkv -map 0:v -map -1:a:1 OUTPUT # 选择a.mkv的所有视�
 -c[:<stream_specifier>] <codec_fmt>
 -codec[:<stream_specifier>] <codec_fmt>
 -[stream_specifier]codec <codec_fmt>
+
+# 比特率
+-b:[stream_specifier] <bitrate>
 ```
 
 其中，
 
-- `stream_specifier` 表示流类型；
+- `stream_specifier` 表示流类型，v=视频流，a=音频流，s=字幕流；
 - `codec_fmt` 表示编码格式，如需复制流使用 `copy`；
 
 例如，
 
 ```shell
 ffmpeg -i INPUT -c:v copy OUTPUT # 提取视频流
+ffmpeg -i INPUT -c:v libx264 -b:v 1M OUTPUT # 使用h.264编码
+ffmpeg -i INPUT -c:v h264_nvenc -b:v 1M OUTPUT # 使用h.264编码，同时使用GPU加速
 ```
 
 ### 视频编码
@@ -99,6 +104,17 @@ ffmpeg -i input.mp4 -c:v libx264 -crf 23 -c:a copy output.mp4
 
 ```shell
 ffmpeg -ss 02:30 -to 10:20 -i INPUT.mp4 -c copy OUTPUT.mp4
+```
+
+## 拼接
+
+```txt title="videos.txt"
+file '1.mp4'
+file '2.mp4'
+```
+
+```sh
+ffmpeg -f concat -i videos.txt -c copy output.mp4
 ```
 
 ## 偏移
