@@ -79,7 +79,21 @@ git stash clear
 git stash drop stash@{1}
 ```
 
+### commit
+
+常用的提交分类：
+
+- feat: 新功能
+- fix: 修复 bug
+- refactor: 重构代码
+- docs: 文档修改
+- test: 测试代码
+- style: 样式修改
+- chore: 构建过程、版本或辅助工具的变动
+
 ### tag
+
+标签可以用于版本管理，方便版本回退。
 
 ```sh
 # 打标签到最新提交的commit
