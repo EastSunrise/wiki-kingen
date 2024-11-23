@@ -205,6 +205,7 @@ nav:
               - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
               - Gosper's Hack: cs/algo/others/gosper's-hack.md
               - Manachar 算法: cs/algo/others/manachar-algorithm.md
+              - 相似性算法: cs/algo/others/similarity.md
       - 机器学习:
           - cs/ml/index.md
           - 神经网络: cs/ml/neural-networks.md
@@ -275,11 +276,13 @@ nav:
           - HTTP: dev/web/http.md
           - JavaScript:
               - dev/web/js/index.md
+              - Node.js: dev/web/js/nodejs.md
               - React:
                   - dev/web/js/react/index.md
                   - React Router: dev/web/js/react/react-router.md
+              - TypeScript: dev/web/js/typescript.md
+              - Axios: dev/web/js/axios.md
               - jQuery: dev/web/js/jquery.md
-              - Node.js: dev/web/js/nodejs.md
               - Layui: dev/web/js/layui.md
               - Video.js: dev/web/js/video.js.md
               - Hammer.js: dev/web/js/hammer.js.md
@@ -305,6 +308,7 @@ nav:
       - GraphQL: dev/graphql.md
       - Grafana: dev/grafana.md
       - FTP: dev/ftp.md
+      - Rest API: dev/rest-api.md
       - OAuth: dev/oauth.md
       - FasfDFS: dev/fastdfs.md
       - MinIO: dev/minio.md
