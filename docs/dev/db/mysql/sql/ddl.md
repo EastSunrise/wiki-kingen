@@ -4,9 +4,10 @@
 
 ```sql
 # 添加字段
-ALTER TABLE table_name ADD column_name VARCHAR(32) NOT NULL;
+ALTER TABLE table_name ADD col_name column_definition [FIRST | AFTER col_name];
 # 修改字段
-ALTER TABLE table_name MODIFY column_name VARCHAR(64) NOT NULL;
+ALTER TABLE table_name CHANGE old_col_name new_col_name column_definition [FIRST | AFTER col_name];
+ALTER TABLE table_name MODIFY col_name column_definition [FIRST | AFTER col_name];
 
 # 添加普通索引和唯一性索引
 ALTER TABLE table_name ADD INDEX idx_name ( `column_name` );

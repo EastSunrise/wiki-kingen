@@ -152,6 +152,7 @@ nav:
       - 数学:
           - 数论:
               - 欧拉定理: cs/math/number-theory/euler's-theorem.md
+              - 费马平方和定理: cs/math/number-theory/fermat's-theorem-on-sums-of-two-squares.md
           - 求和公式: cs/math/summation.md
           - 正态分布: cs/math/normal-distribution.md
           - 线性代数: cs/math/linear-algebra.md
@@ -199,6 +200,7 @@ nav:
               - Dijkstra's 算法: cs/algo/graph/dijkstra's-algorithm.md
               - Floyd's 算法: cs/algo/graph/floyd's-algorithm.md
               - Tarjan 算法: cs/algo/graph/tarjan-algorithm.md
+              - A* 算法: cs/algo/graph/a-star.md
           - 其它算法:
               - Knuth 洗牌算法: cs/algo/others/knuth-shuffle-algorithm.md
               - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
@@ -257,10 +259,12 @@ nav:
                   - SQL优化: dev/db/mysql/optimization/sql-optimization.md
                   - 索引优化: dev/db/mysql/optimization/index-optimization.md
                   - 查询执行计划: dev/db/mysql/optimization/query-execution-plan.md
+              - 分区: dev/db/mysql/partitioning.md
               - Programs: dev/db/mysql/programs.md
               - FAQ: dev/db/mysql/faq.md
           - MongoDB:
               - dev/db/mongodb/index.md
+              - 分片: dev/db/mongodb/sharding.md
               - Reference: dev/db/mongodb/reference.md
               - Tools: dev/db/mongodb/tools.md
               - FAQ: dev/db/mongodb/faq.md

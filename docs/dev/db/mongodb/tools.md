@@ -1,14 +1,17 @@
 # Tools
 
-## mongoexport
-
-mongoexport 可以将 MongoDB 的数据导出为 JSON 或 CSV 格式。
+## mongoimport
 
 ```sh
-mongoexport --collection=<coll> <options> <connection-string>
+mongoimport <options> <connection-string> <file>
 ```
 
+### 连接选项
+
 `--uri=<connection-string>` 指定连接地址，格式为 `--uri="mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]"`.
+
+!!! note
+    如果 `--uri` 指定的参数和其他选项不能有冲突，比如不能同时指定 `--host`.
 
 `--host=<hostname><:port>, -h=<hostname><:port>` 指定主机名及端口号，默认为 `localhost:27017`.
 
@@ -18,9 +21,40 @@ mongoexport --collection=<coll> <options> <connection-string>
 
 `--password=<password>, -p=<password>` 指定密码。
 
+### 命名空间选项
+
 `--db=<database>, -d=<database>` 指定数据库名。
 
-`--collection=<collection>, -c=<collection>` 指定集合名。
+`--collection=<collection>, -c=<collection>` 指定集合名（必选）。
+
+### 导入选项
+
+`--fields=<field1[,field2]>, -f=<field1,[field2]>, --fieldFile=<filename>` 指定导入字段，以逗号分隔，仅适用 CSV 或 TSV 格式。
+
+`--file=<filename>` 指定导入的文件名。
+
+`--type=<json|csv|tsv>` 指定导入的文件类型，默认为 JSON.
+
+`--headerline` 将导入文件的第一行作为字段名，仅适用 CSV 或 TSV 格式。
+
+`--mode=<insert|upsert|merge|delete>` 指定导入模式，默认为 `insert`。
+
+`--upsertFields=<field1[,field2]>` 指定查询匹配字段，适用于导入模式为 `upsert, merge, delete`，默认为 `_id`.
+
+## mongoexport
+
+mongoexport 可以将 MongoDB 的数据导出为 JSON 或 CSV 格式。
+
+```sh
+mongoexport --collection=<coll> <options> <connection-string>
+```
+
+以下选项同 mongoimport：
+
+- [连接选项](#连接选项)
+- [命名空间选项](#命名空间选项)
+
+### 导出选项
 
 `--fields=<field1[,field2]>, -f=<field1,[field2]>, --fieldFile=<filename>` 指定导出字段，以逗号分隔，默认为所有字段。
 
@@ -38,7 +72,7 @@ mongoexport -d=test -c=test --fields=name,age,address.city --type=csv
 mongoexport -d=test -c=test --query='{"name": "John"}'
 ```
 
-`--type=<string>` 指定导出的文件类型，JSON 或 CSV，默认为 JSON.
+`--type=<json|csv>` 指定导出的文件类型，JSON 或 CSV，默认为 JSON.
 
 `--out=<file>, -o=<file>` 指定导出的文件名，默认输出到 `stdout`.
 
