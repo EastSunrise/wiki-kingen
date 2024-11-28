@@ -265,6 +265,7 @@ nav:
           - MongoDB:
               - dev/db/mongodb/index.md
               - 分片: dev/db/mongodb/sharding.md
+              - Change Streams: dev/db/mongodb/change-streams.md
               - Reference: dev/db/mongodb/reference.md
               - Tools: dev/db/mongodb/tools.md
               - FAQ: dev/db/mongodb/faq.md
