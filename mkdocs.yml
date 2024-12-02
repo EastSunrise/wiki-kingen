@@ -281,6 +281,7 @@ nav:
           - HTTP: dev/web/http.md
           - JavaScript:
               - dev/web/js/index.md
+              - 客户端 Web API: dev/web/js/client-side-web-apis.md
               - Node.js: dev/web/js/nodejs.md
               - React:
                   - dev/web/js/react/index.md
@@ -334,3 +335,4 @@ nav:
       - Fiddler: misc/fiddler.md
       - Charles: misc/charles.md
       - FFmpeg: misc/ffmpeg.md
+      - Clash: misc/clash.md
