@@ -41,6 +41,45 @@ public @interface Test{
 }
 ```
 
+### @Repeatable
+
+允许重复使用同一个注解，例如：
+
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+@Repeatable(RegexList.class)
+@interface Regex {
+
+    String pattern();
+
+    /**
+     * Container annotation used by the Java compiler to store repeated annotations.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.FIELD)
+    @interface RegexList {
+        Regex[] value();
+    }
+}
+
+
+class Bean {
+
+    @Regex(pattern = "^[a-zA-Z]+$")
+    @Regex(pattern = "^[0-9]+$")
+    private String name;
+}
+```
+
+## 类型检查
+
+注解可以用于创建类型检查模块，例如：
+
+```java
+@NonNull String name;
+```
+
 ## 参考
 
 - [Lesson: Annotations (The Java™ Tutorials > Learning the Java Language)](https://docs.oracle.com/javase/tutorial/java/annotations/index.html)

@@ -183,47 +183,33 @@ $$
 ```java
 class PatternSearching {
 
-    // 计算特征函数
-    int[] computeNext(char[] pat) {
-        int j = 0, k = -1, len = pat.length;
-        int[] next = new int[len];
-        // 初始化为-1
-        next[0] = -1;
-        while (j < len - 1) {
-            // 已知next[j]=k，比较p[j]和p[k]
-            if (k == -1 || pat[j] == pat[k]) {
-                // 如果相等，next[j+1]=next[j]+1=k+1
-                k++;
-                j++;
-                next[j] = k;
-            } else {
-                // 否则，寻找next[k]=h
-                k = next[k];
+    int[] computeNext(char[] pat, int m) {
+        int[] next = new int[m];
+        for (int i = 1; i < m; i++) {
+            int k = next[i - 1];
+            while (k > 0 && pat[k] != pat[i]) { // xyz?...xyz?
+                k = next[k - 1];
             }
+            next[i] = pat[k] == pat[i] ? k + 1 : k;
         }
         return next;
     }
 
-    // kmp 算法
     int kmpSearch(char[] txt, char[] pat) {
-        // 计算特征函数
-        int[] next = computeNext(pat);
-        int pLen = pat.length;
+        int n = txt.length, m = pat.length;
+        int[] next = computeNext(pat, m);
         int i = 0, j = 0;
-        while (i < txt.length && j < pLen) {
-            if (txt[i] == pat[j]) {
+        while (i < n && j < m) {
+            if (txt[i] == pat[j]) { // match next pair
                 i++;
                 j++;
-            } else {
-                // 匹配失败，移动模式串
-                if (next[j] == -1) {
-                    i++;
-                } else {
-                    j = next[j];
-                }
+            } else if (j == 0) { // mismatch at the first
+                i++;
+            } else { // move j to the next character after the longest common prefix-suffix
+                j = next[j - 1];
             }
         }
-        return j == pLen ? i - j : -1;
+        return j == m ? i - j : -1;
     }
 }
 ```

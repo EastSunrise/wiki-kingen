@@ -150,9 +150,11 @@ nav:
       - Quarkus: java/quarkus.md
   - CS:
       - 数学:
+          - 微积分:
+              - 泰勒定理: cs/math/calculus/taylor-theorem.md
           - 数论:
-              - 欧拉定理: cs/math/number-theory/euler's-theorem.md
-              - 费马平方和定理: cs/math/number-theory/fermat's-theorem-on-sums-of-two-squares.md
+              - 欧拉定理: cs/math/number-theory/euler-theorem.md
+              - 费马平方和定理: cs/math/number-theory/fermat-theorem-on-sums-of-two-squares.md
           - 求和公式: cs/math/summation.md
           - 正态分布: cs/math/normal-distribution.md
           - 线性代数: cs/math/linear-algebra.md
@@ -193,19 +195,21 @@ nav:
               - KMP 算法: cs/algo/pattern-searching/kmp-algorithm.md
               - BM 算法: cs/algo/pattern-searching/bm-algorithm.md
               - Sunday 算法: cs/algo/pattern-searching/sunday-algorithm.md
+              - AC 自动机: cs/algo/pattern-searching/ac-automaton.md
           - 密钥算法:
               - RSA: cs/algo/crypto/rsa.md
               - SHA: cs/algo/crypto/sha.md
           - 图算法:
-              - Dijkstra's 算法: cs/algo/graph/dijkstra's-algorithm.md
-              - Floyd's 算法: cs/algo/graph/floyd's-algorithm.md
+              - Dijkstra 算法: cs/algo/graph/dijkstra-algorithm.md
+              - Floyd 算法: cs/algo/graph/floyd-algorithm.md
               - Tarjan 算法: cs/algo/graph/tarjan-algorithm.md
+              - 最小生成树: cs/algo/graph/minimum-spanning-tree.md
               - A* 算法: cs/algo/graph/a-star.md
           - 其它算法:
               - Knuth 洗牌算法: cs/algo/others/knuth-shuffle-algorithm.md
               - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
               - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
-              - Gosper's Hack: cs/algo/others/gosper's-hack.md
+              - Gosper's Hack: cs/algo/others/gosper-hack.md
               - Manachar 算法: cs/algo/others/manachar-algorithm.md
               - 相似性算法: cs/algo/others/similarity.md
       - 机器学习:
