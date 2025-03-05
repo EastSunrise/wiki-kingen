@@ -127,6 +127,7 @@ nav:
               - Actuator: java/spring/spring-boot/actuator.md
           - Spring Data:
               - Spring Data Elasticsearch: java/spring/spring-data/elasticsearch.md
+          - Spring Cloud: java/spring/spring-cloud.md
           - Spring Security: java/spring/spring-security.md
           - Spring Batch: java/spring/spring-batch.md
           - Spring LDAP: java/spring/spring-ldap.md
@@ -155,6 +156,7 @@ nav:
           - 数论:
               - 欧拉定理: cs/math/number-theory/euler-theorem.md
               - 费马平方和定理: cs/math/number-theory/fermat-theorem-on-sums-of-two-squares.md
+              - 卢卡斯定理: cs/math/number-theory/lucas-theorem.md
           - 求和公式: cs/math/summation.md
           - 正态分布: cs/math/normal-distribution.md
           - 线性代数: cs/math/linear-algebra.md
@@ -187,15 +189,16 @@ nav:
               - 桶排序: cs/algo/sort/bucket-sort.md
               - 拓扑排序: cs/algo/sort/topological-sort.md
           - 分治算法: cs/algo/divide-and-conquer.md
+          - 字符串:
+              - KMP 算法: cs/algo/string/kmp-algorithm.md
+              - BM 算法: cs/algo/string/bm-algorithm.md
+              - Sunday 算法: cs/algo/string/sunday-algorithm.md
+              - AC 自动机: cs/algo/string/ac-automaton.md
+              - 最长回文子串: cs/algo/string/longest-palindromic-substring.md
           - 动态规划: cs/algo/dynamic-programming.md
           - 贪心算法: cs/algo/greedy-algorithm.md
           - 回溯算法: cs/algo/backtracking.md
           - 分支界定: cs/algo/branch-and-bound.md
-          - 模式匹配:
-              - KMP 算法: cs/algo/pattern-searching/kmp-algorithm.md
-              - BM 算法: cs/algo/pattern-searching/bm-algorithm.md
-              - Sunday 算法: cs/algo/pattern-searching/sunday-algorithm.md
-              - AC 自动机: cs/algo/pattern-searching/ac-automaton.md
           - 密钥算法:
               - RSA: cs/algo/crypto/rsa.md
               - SHA: cs/algo/crypto/sha.md
@@ -210,7 +213,6 @@ nav:
               - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
               - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
               - Gosper's Hack: cs/algo/others/gosper-hack.md
-              - Manachar 算法: cs/algo/others/manachar-algorithm.md
               - 相似性算法: cs/algo/others/similarity.md
       - 机器学习:
           - cs/ml/index.md

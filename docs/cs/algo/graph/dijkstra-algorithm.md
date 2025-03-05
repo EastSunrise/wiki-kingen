@@ -196,7 +196,7 @@ int[] minDistance(int[][] graph, int n, int s) {
 
 每次暴力搜索下一个最短路径，时间复杂度为 $O(n^2)$.
 
-```java title="堆实现"
+```java
 int[] minDistance(List<List<int[]>> graph, int n, int s) {
    int[] dist = new int[n];
    Arrays.fill(dist, -1);
