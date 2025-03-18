@@ -1,0 +1,39 @@
+h1,
+#toc-collapse li[data-level='1']>a {
+    font-family: "Times New Roman", 黑体, serif;
+    font-size: 22pt !important;
+    font-weight: normal !important;
+}
+
+h2,
+#toc-collapse li[data-level='2']>a {
+    font-family: "Times New Roman", 黑体, serif;
+    font-size: 16pt !important;
+    font-weight: bold !important;
+}
+
+h3,
+#toc-collapse li[data-level='5']>a {
+    font-family: "Times New Roman", 黑体, serif;
+    font-size: 14pt !important;
+    font-weight: normal !important;
+}
+
+h4,
+#toc-collapse li[data-level='5']>a {
+    font-family: "Times New Roman", 宋体, serif;
+    font-size: 12pt !important;
+    font-weight: bold !important;
+}
+
+div[role='main'] p {
+    font-family: "Times New Roman", 宋体, serif;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+div[role='main'] li {
+    font-family: "Times New Roman", 宋体, serif;
+    font-size: 10.5pt;
+    font-weight: normal;
+}
