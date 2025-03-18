@@ -161,63 +161,60 @@ nav:
           - 正态分布: cs/math/normal-distribution.md
           - 线性代数: cs/math/linear-algebra.md
           - 傅里叶变换: cs/math/fourier-transform.md
-      - 数据结构:
-          - cs/ds/index.md
-          - 树:
-              - 二叉树: cs/ds/tree/binary-tree.md
-              - 二叉搜索树: cs/ds/tree/binary-search-tree.md
-              - AVL树: cs/ds/tree/avl-tree.md
-              - 红黑树: cs/ds/tree/red-black-tree.md
-              - B+树: cs/ds/tree/b+tree.md
-              - 线段树: cs/ds/tree/segment-tree.md
-          - 堆: cs/ds/heap.md
-          - 散列表: cs/ds/hash-table.md
-          - 图: cs/ds/graph.md
-          - 单调栈: cs/ds/monotonic-stack.md
-          - 并查集: cs/ds/disjoint-set.md
-          - 跳表: cs/ds/skip-list.md
-          - 布隆过滤器: cs/ds/bloom-filter.md
-      - 算法:
-          - 算法分析: cs/algo/index.md
+      - 数据结构和算法:
+          - cs/dsa/index.md
           - 排序:
-              - 选择排序: cs/algo/sort/selection-sort.md
-              - 冒泡排序: cs/algo/sort/bubble-sort.md
-              - 插入排序: cs/algo/sort/insertion-sort.md
-              - 归并排序: cs/algo/sort/merge-sort.md
-              - 快速排序: cs/algo/sort/quick-sort.md
-              - 计数排序: cs/algo/sort/counting-sort.md
-              - 桶排序: cs/algo/sort/bucket-sort.md
-              - 拓扑排序: cs/algo/sort/topological-sort.md
-          - 分治算法: cs/algo/divide-and-conquer.md
+              - 选择排序: cs/dsa/sorting/selection-sort.md
+              - 冒泡排序: cs/dsa/sorting/bubble-sort.md
+              - 插入排序: cs/dsa/sorting/insertion-sort.md
+              - 归并排序: cs/dsa/sorting/merge-sort.md
+              - 快速排序: cs/dsa/sorting/quick-sort.md
+              - 计数排序: cs/dsa/sorting/counting-sort.md
+              - 桶排序: cs/dsa/sorting/bucket-sort.md
+              - 拓扑排序: cs/dsa/sorting/topological-sort.md
           - 字符串:
-              - KMP 算法: cs/algo/string/kmp-algorithm.md
-              - BM 算法: cs/algo/string/bm-algorithm.md
-              - Sunday 算法: cs/algo/string/sunday-algorithm.md
-              - AC 自动机: cs/algo/string/ac-automaton.md
-              - 最长回文子串: cs/algo/string/longest-palindromic-substring.md
-          - 动态规划: cs/algo/dynamic-programming.md
-          - 贪心算法: cs/algo/greedy-algorithm.md
-          - 回溯算法: cs/algo/backtracking.md
-          - 分支界定: cs/algo/branch-and-bound.md
-          - 密钥算法:
-              - RSA: cs/algo/crypto/rsa.md
-              - SHA: cs/algo/crypto/sha.md
-          - 图算法:
-              - Dijkstra 算法: cs/algo/graph/dijkstra-algorithm.md
-              - Floyd 算法: cs/algo/graph/floyd-algorithm.md
-              - Tarjan 算法: cs/algo/graph/tarjan-algorithm.md
-              - 最小生成树: cs/algo/graph/minimum-spanning-tree.md
-              - A* 算法: cs/algo/graph/a-star.md
-          - 其它算法:
-              - Knuth 洗牌算法: cs/algo/others/knuth-shuffle-algorithm.md
-              - 蒙特卡洛树搜索: cs/algo/others/monte-carlo-tree-search.md
-              - 蓄水池抽样算法: cs/algo/others/reservoir-sampling.md
-              - Gosper's Hack: cs/algo/others/gosper-hack.md
-              - 相似性算法: cs/algo/others/similarity.md
-      - 机器学习:
-          - cs/ml/index.md
-          - 神经网络: cs/ml/neural-networks.md
-          - 卷积神经网络: cs/ml/convolutional-neural-networks.md
+              - KMP 算法: cs/dsa/string/kmp-algorithm.md
+              - BM 算法: cs/dsa/string/bm-algorithm.md
+              - Sunday 算法: cs/dsa/string/sunday-algorithm.md
+              - AC 自动机: cs/dsa/string/ac-automaton.md
+              - 回文串: cs/dsa/string/palindromic-string.md
+          - 栈: cs/dsa/stack.md
+          - 堆: cs/dsa/heap.md
+          - 树:
+              - 二叉树: cs/dsa/tree/binary-tree.md
+              - 二叉搜索树: cs/dsa/tree/binary-search-tree.md
+              - AVL树: cs/dsa/tree/avl-tree.md
+              - 红黑树: cs/dsa/tree/red-black-tree.md
+              - B+树: cs/dsa/tree/b+tree.md
+              - 线段树: cs/dsa/tree/segment-tree.md
+          - Hash: cs/dsa/hash.md
+          - 分治算法: cs/dsa/divide-and-conquer.md
+          - 回溯算法: cs/dsa/backtracking.md
+          - 动态规划: cs/dsa/dynamic-programming.md
+          - 贪心算法: cs/dsa/greedy-algorithm.md
+          - 分支界定: cs/dsa/branch-and-bound.md
+          - 图:
+              - cs/dsa/graph/index.md
+              - Dijkstra 算法: cs/dsa/graph/dijkstra-algorithm.md
+              - Floyd 算法: cs/dsa/graph/floyd-algorithm.md
+              - Tarjan 算法: cs/dsa/graph/tarjan-algorithm.md
+              - 最小生成树: cs/dsa/graph/minimum-spanning-tree.md
+              - A* 算法: cs/dsa/graph/a-star.md
+          - 跳表: cs/dsa/skip-list.md
+          - 并查集: cs/dsa/disjoint-set.md
+          - 蒙特卡洛树搜索: cs/dsa/monte-carlo-tree-search.md
+          - Knuth 洗牌算法: cs/dsa/knuth-shuffle-algorithm.md
+          - 蓄水池抽样算法: cs/dsa/reservoir-sampling.md
+          - Gosper's Hack: cs/dsa/gosper-hack.md
+          - 相似性算法: cs/dsa/similarity.md
+          - 加密:
+              - RSA: cs/dsa/crypto/rsa.md
+              - SHA: cs/dsa/crypto/sha.md
+      - 数据科学:
+          - 机器学习: cs/ds/machine-learning.md
+          - 神经网络: cs/ds/neural-networks.md
+          - 卷积神经网络: cs/ds/convolutional-neural-networks.md
+          - RAG: cs/ds/rag.md
       - Problem:
           - 逆序对: cs/problem/inversion-pairs.md
   - Python:
@@ -278,9 +275,11 @@ nav:
           - Oracle:
               - dev/db/oracle/index.md
               - SQL: dev/db/oracle/sql.md
-          - Redis: dev/db/redis.md
+          - Redis:
+              - dev/db/redis/index.md
           - InfluxDB: dev/db/influxdb.md
           - IoTDB: dev/db/iotdb.md
+          - TDEngine: dev/db/tdengine.md
           - PostgreSQL: dev/db/postgresql.md
           - SQLite: dev/db/sqlite.md
       - Web:
@@ -307,23 +306,23 @@ nav:
           - C#: dev/lang/c#.md
           - PHP: dev/lang/php.md
       - 中间件:
+          - Nginx: dev/mw/nginx.md
           - Kafka: dev/mw/kafka.md
           - RabbitMQ: dev/mw/rabbitmq.md
           - ElasticSearch: dev/mw/elasticsearch.md
           - ZooKeeper: dev/mw/zookeeper.md
+          - Prometheus: dev/mw/prometheus.md
+          - FastDFS: dev/mw/fastdfs.md
+          - MinIO: dev/mw/minio.md
       - Linux: dev/linux.md
       - Git: dev/git.md
       - Docker: dev/docker.md
       - Kubernetes: dev/k8s.md
-      - Nginx: dev/nginx.md
-      - Prometheus: dev/prometheus.md
       - GraphQL: dev/graphql.md
       - Grafana: dev/grafana.md
       - FTP: dev/ftp.md
       - Rest API: dev/rest-api.md
       - OAuth: dev/oauth.md
-      - FasfDFS: dev/fastdfs.md
-      - MinIO: dev/minio.md
       - MQTT: dev/mqtt.md
   - Misc:
       - ChatGPT: misc/chatgpt.md

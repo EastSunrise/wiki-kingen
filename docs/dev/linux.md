@@ -19,7 +19,7 @@ vim /etc/ssh/ssh_config     # 编辑配置文件
 /bin/systemctl enable sshd.service  # 开机自启动
 ```
 
-大部分的远程连接（比如 [MySQL](db/mysql/index.md) 和 [Redis](db/redis.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
+大部分的远程连接（比如 [MySQL](db/mysql/index.md) 和 [Redis](db/redis/index.md)）都支持 SSH，此时，SSH 需要配置为允许 TCP 连接：`AllowTcpForwarding yes`。
 
 ### 镜像
 

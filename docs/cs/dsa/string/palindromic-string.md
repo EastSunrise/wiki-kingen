@@ -1,10 +1,10 @@
-# 最长回文子串
+# 回文串
 
-## 问题
+## 最长回文子串
 
 给定一个字符串 $s$，找到其最长的回文子串。
 
-## 动态规划
+### 动态规划
 
 ```python
 def longest_palindromic_substring_dp(s: str) -> str:
@@ -27,7 +27,7 @@ def longest_palindromic_substring_dp(s: str) -> str:
 
 时间和空间复杂度均为 $O(n^2)$.
 
-## 中心扩展法
+### 中心扩展法
 
 ```python
 def longest_palindromic_substring_center_expansion(s: str) -> str:
@@ -47,7 +47,7 @@ def longest_palindromic_substring_center_expansion(s: str) -> str:
     return s[start:start + max_len]
 ```
 
-## 马拉车算法
+### 马拉车算法
 
 马拉车算法（Manacher's Algorithm）是在上述中心扩展法基础上优化的算法。
 
@@ -136,6 +136,29 @@ $$
 
         return s[(mxi - d[mxi]) >> 1:(mxi + d[mxi]) >> 1]
     ```
+
+## 最长回文子序列
+
+给定一个字符串 $s$，找到其最长的回文子序列。
+
+### 动态规划
+
+```python
+def longest_palindromic_subsequence_dp(s: str) -> int:
+    if s is None or len(s) == 0:
+        return 0
+    n = len(s)
+
+    # dp[k][i] is the length of the longest palindromic subsequence of s[i:i+k]
+    dp = [[0] * n] + [[1] * n] + [[0] * n for _ in range(n - 1)]
+    for k in range(2, n + 1):  # length
+        for i in range(n - k + 1):  # start index
+            if s[i] == s[i + k - 1]:
+                dp[k][i] = dp[k - 2][i + 1] + 2
+            else:
+                dp[k][i] = max(dp[k - 1][i], dp[k - 1][i + 1])
+    return dp[n][0]
+```
 
 ## 参考
 
