@@ -215,6 +215,7 @@ nav:
           - 神经网络: cs/ds/neural-networks.md
           - 卷积神经网络: cs/ds/convolutional-neural-networks.md
           - RAG: cs/ds/rag.md
+          - 极小化极大化算法: cs/ds/minimax-algorithm.md
       - Problem:
           - 逆序对: cs/problem/inversion-pairs.md
   - Python:
