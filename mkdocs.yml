@@ -202,7 +202,6 @@ nav:
               - A* 算法: cs/dsa/graph/a-star.md
           - 跳表: cs/dsa/skip-list.md
           - 并查集: cs/dsa/disjoint-set.md
-          - 蒙特卡洛树搜索: cs/dsa/monte-carlo-tree-search.md
           - Knuth 洗牌算法: cs/dsa/knuth-shuffle-algorithm.md
           - 蓄水池抽样算法: cs/dsa/reservoir-sampling.md
           - Gosper's Hack: cs/dsa/gosper-hack.md
@@ -215,7 +214,8 @@ nav:
           - 神经网络: cs/ds/neural-networks.md
           - 卷积神经网络: cs/ds/convolutional-neural-networks.md
           - RAG: cs/ds/rag.md
-          - 极小化极大化算法: cs/ds/minimax-algorithm.md
+          - 极小化极大化算法: cs/ds/minimax.md
+          - 蒙特卡洛树搜索: cs/ds/monte-carlo-tree-search.md
       - Problem:
           - 逆序对: cs/problem/inversion-pairs.md
   - Python:
