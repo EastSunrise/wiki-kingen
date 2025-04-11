@@ -161,6 +161,7 @@ nav:
           - 正态分布: cs/math/normal-distribution.md
           - 线性代数: cs/math/linear-algebra.md
           - 傅里叶变换: cs/math/fourier-transform.md
+          - 贝叶斯定理: cs/math/bayes-theorem.md
       - 数据结构和算法:
           - cs/dsa/index.md
           - 排序:
@@ -214,6 +215,7 @@ nav:
           - 神经网络: cs/ds/neural-networks.md
           - 卷积神经网络: cs/ds/convolutional-neural-networks.md
           - RAG: cs/ds/rag.md
+          - 搜索: cs/ds/search.md
           - 极小化极大化算法: cs/ds/minimax.md
           - 蒙特卡洛树搜索: cs/ds/monte-carlo-tree-search.md
       - Problem:
